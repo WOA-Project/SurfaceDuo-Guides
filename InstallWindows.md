@@ -1,11 +1,11 @@
 # Install Windows on Surface Duo (128GB)
 ## Files Needed 📃
-- TWRP image: twrp.img
-- Parted: parted
-- Boot package: DuoBoot.tar
+- TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
+- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/parted)
+- Boot package: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
 - Custom UEFI: boot.img
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- An ARM64 Windows build of your choice (specifically the install.wim file)
+- An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
 
 ## Warnings ⚠️
