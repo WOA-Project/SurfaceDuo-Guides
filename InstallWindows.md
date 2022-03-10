@@ -120,7 +120,18 @@ You should be thrown in Developer Menu.
 - Mount the partitions you have created using diskpart and assign them some letters:
 
 ```
-I hope you know how to do this because this is still work in progress 🥲
+THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
+ACTUAL COMMANDS START WITH AN HASHTAG (which you'll need to remove)
+
+# list disk
+Find the Duo Disk, and take note of the number.
+# select disk <number>
+# list partition
+You'll be able to recognize the partitions we made earlier by their size. take note of the ESP and WIN partition numbers.
+# select partition <esp-partition-number>
+# assign letter=Y:
+# select partition <win-partition-number>
+# assign letter=X:
 ```
 
 - You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
