@@ -178,3 +178,21 @@ fastboot boot boot.img
 ```
 
 If you did everything right, Windows will now boot! Enjoy!
+
+## Enabling USB
+
+Still assuming that X: is the mounted Duo Windows partiton:
+
+```
+reg load RTS X:\Windows\System32\config\SYSTEM
+```
+
+Now open regedit.exe and edit this registry key:
+
+```
+HKEY_LOCAL_MACHINE\RTS\ControlSet001\Control\USB
+
+OsDefaultRoleSwitchMode
+```
+
+Set the key to value 1 and you're done.
