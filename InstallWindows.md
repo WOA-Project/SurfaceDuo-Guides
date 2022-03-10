@@ -2,7 +2,7 @@
 ## Files Needed 📃
 - TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/parted)
-- Boot package: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
+- Boot package: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/DuoBoot.tar)
 - Custom UEFI: [boot.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this
