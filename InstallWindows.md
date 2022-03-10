@@ -1,12 +1,14 @@
 # Install Windows on Surface Duo (128GB)
-## Files Needed
+## Files Needed 📃
 - TWRP image: twrp.img
 - Parted: parted
 - Boot package: DuoBoot.tar
 - Custom UEFI: boot.img
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
+- An ARM64 Windows build of your choice (specifically the install.wim file)
+- The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
 
-## Warnings
+## Warnings ⚠️
 Don't create partitions from Mass Storage Mode (because ABL will break with blank/spaces in names)
 
 **THIS WILL WIPE ALL YOUR ANDROID DATA**
@@ -18,15 +20,18 @@ This hasn't been tested on 256GB devices. This guide only targets 128GB devices.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-## What you'll get
+## What you'll get 🛒
 You'll end up with both Android and Windows on your Duo. Android and Windows will both split the 128GB memory (64GB and 64GB)
 
 Android will boot normally, and you'll have to use a PC to boot Windows when needed.
 
-## Steps
+## Steps 🛠️
 ### Unlocking the bootloader
 - Backup all your data. **_You'll lose everything you have on Android and will start from scratch_**.
-- From inside Android:
+
+Assuming your Duo is booted to Android and plugged to your PC:
+
+- Open a command prompt on your PC and run this command:
 ```
 adb reboot bootloader
 ```
@@ -83,7 +88,7 @@ mkdir /sdcard/espmnt && mount /dev/block/sda6 /sdcard/espmnt/
 quit
 ```
 
-Let's load the files from duoboot.tar, which will be needed to boot and reach Mass Storage Mode.
+- Let's load the files from duoboot.tar into the Duo, which will be needed to boot and reach Mass Storage Mode:
 
 ```
 adb push <path to duoboot.tar> /sdcard/
@@ -100,16 +105,65 @@ You'll be back into the Duo's bootloader.
 Let's boot the custom UEFI:
 
 ```
-- fastboot boot boot.img
+fastboot boot boot.img
 ```
 
 This step above will be needed every time you'll want to boot Windows.
 
 You should be thrown in Developer Menu. 
 
-Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
+- Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
 
 ### Installing Windows
-[WORK IN PROGRESS]
 
-(summary) From now on apply windows to the windows ntfs partition, bcdboot in esp, you might want to use an unattend to configure oobe given no input for now.
+- Make sure you are in Mass Storage Mode, that your Duo is plugged into your PC
+- Mount the partitions you have created using diskpart and assign them some letters:
+
+```
+I hope you know how to do this because this is still work in progress 🥲
+```
+
+- You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
+
+**_WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition from the next commands. Replace them correctly or you'll lose data on your PC._**
+
+- Run these commands:
+
+```
+dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
+```
+
+This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
+
+- Once that's done:
+
+```
+bcdboot X:\Windows /s Y: /f UEFI
+```
+
+Windows is now installed but has no drivers.
+
+### Installing the drivers
+
+- Extract the drivers, and from the command prompt:
+
+```
+dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
+```
+
+- Once it's done, you can reboot your phone. You'll be able to Android and your phone will work normally. Set it up if you need it.
+
+### Boot Windows 🚀
+
+We're ready to boot!
+
+- Reboot your phone manually to the bootloader (keep the power button + vol down pressed until the Microsoft logo appears, then stop pressing the power
+  button but keep pressing the volume down button).
+
+From a command prompt:
+
+```
+fastboot boot boot.img
+```
+
+If you did everything right, Windows will now boot! Enjoy!
