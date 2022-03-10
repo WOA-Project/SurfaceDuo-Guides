@@ -91,8 +91,8 @@ quit
 - Let's load the files from duoboot.tar into the Duo, which will be needed to boot and reach Mass Storage Mode:
 
 ```
-adb push <path to duoboot.tar> /sdcard/
-adb shell "tar -xf /sdcard/DuoBoot3.tar -C /sdcard/espmnt"
+adb push <path to DuoBoot.tar> /sdcard/
+adb shell "tar -xf /sdcard/DuoBoot.tar -C /sdcard/espmnt"
 adb shell "mv /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi.bak"
 adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi"
 adb reboot bootloader
