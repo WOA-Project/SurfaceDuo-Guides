@@ -68,8 +68,8 @@ print
 
 ```
 rm 6
-mkpart esp fat32 51.9MB 180MB
-mkpart win ntfs 180MB 57344MB
+mkpart esp fat32 51.9MB 300MB
+mkpart win ntfs 300MB 57344MB
 mkpart userdata ext4 57344MB 112GB
 set 6 esp on
 quit
@@ -78,7 +78,18 @@ quit
 This will get you out of parted.
 
 We have deleted partition 6, which was the Android userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files, 
-a win partition that will have Windows, and the last one is the new userdata partition for Android, just smaller. Now let's make them actually usable:
+a win partition that will have Windows, and the last one is the new userdata partition for Android, just smaller. 
+
+<details>
+  <summary>About the partition sizes (technical info, not part of the guide)</summary>
+  <p>
+    The esp partition was originally set to be from 51.9MB to 180MB. Some devices seem to hit a problem while creating that partitions which say that there 
+    aren't enough sectors to create the file system. While 300MB seems a good ending point for everyone, it can be surely be lowered as it probably only wants 256MB of 
+    total size. Feel free to test and change the size accordingly if you understand what you're doing.
+  </p>
+</details>
+
+Now let's make these partitions actually usable:
 
 ```
 mkfs.fat -F32 -s1 /dev/block/sda6
@@ -136,7 +147,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 - You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-**_WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition from the next commands. Replace them correctly or you'll lose data on your PC._**
+**_WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition for the next commands. Replace them correctly or you'll lose data on your PC._**
 
 - Run these commands:
 
@@ -181,7 +192,7 @@ If you did everything right, Windows will now boot! Enjoy!
 
 ## Enabling USB
 
-Still assuming that X: is the mounted Duo Windows partiton:
+Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
 
 ```
 reg load RTS X:\Windows\System32\config\SYSTEM
@@ -195,4 +206,10 @@ HKEY_LOCAL_MACHINE\RTS\ControlSet001\Control\USB
 OsDefaultRoleSwitchMode
 ```
 
-Set the key to value 1 and you're done.
+- Set the key to value `1`
+
+Close regedit, and back to the command prompt:
+
+```
+reg unload RTS
+```
