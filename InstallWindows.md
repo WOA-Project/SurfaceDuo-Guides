@@ -103,7 +103,7 @@ quit
 
 ```
 adb push <path to DuoBoot.tar> /sdcard/
-adb shell "tar -xf /sdcard/DuoBoot.tar -C /sdcard/espmnt"
+adb shell "tar -xf /sdcard/DuoBoot.tar -C /sdcard/espmnt --no-same-owner" 
 adb shell "mv /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi.bak"
 adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi"
 adb reboot bootloader
