@@ -5,6 +5,11 @@
 
 ```
 bcdedit /create /application bootapp /d "Developer Menu"
+```
+
+This command above will print a GUID, copy it and replace it in the following commands:
+
+```
 bcdedit /set <GUID> nointegritychecks on
 bcdedit /set <GUID> path \Windows\System32\boot\developermenu.efi
 bcdedit /set <GUID> inherit {bootloadersettings}
