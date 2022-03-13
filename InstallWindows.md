@@ -16,13 +16,13 @@ Don't create partitions from Mass Storage Mode (because ABL will break with blan
 We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
 but this is **AN EARLY PREVIEW** and things can go wrong.
 
-As of now, the 256GB devices load into the UEFI shell. The development screen does not automatically load. 
+As of now, the 256GB are not supported by the dev team, but testing has shown it is compatible. The size of the Windows system will be larger. 
 128GB devices have full support.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 ## What you'll get 🛒
-You'll end up with both Android and Windows on your Duo. Android and Windows will both split the 128GB memory (64GB and 64GB)
+You'll end up with both Android and Windows on your Duo. Android and Windows will both split the 128GB memory (64GB and 64GB). _For the 256GB Model, the 256GB storage will be split (128GB, 128GB)._
 
 Android will boot normally, and you'll have to use a PC to boot Windows when needed.
 
@@ -67,7 +67,7 @@ print
 - Take note of original sizing, here it was 51.9MB -> 112GB
 - _For 256GB devices, it will be 51.9MB -> 240GB_
 
-- Run these commands for 128GB devices:</summary>
+- Run these commands for 128GB devices:
 ```
 rm 6
 mkpart esp fat32 51.9MB 300MB
@@ -134,7 +134,7 @@ fastboot boot boot.img
 
 This step above will be needed every time you'll want to boot Windows.
 
-You should be thrown in Developer Menu. _This is not the case currently for 256GB devices._
+You should be thrown in Developer Menu.
 
 - Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
 
