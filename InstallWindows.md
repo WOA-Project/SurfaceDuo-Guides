@@ -131,7 +131,7 @@ You should be thrown in Developer Menu.
 - Mount the partitions you have created using diskpart and assign them some letters:
 
 ```
-THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
+⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
 ACTUAL COMMANDS START WITH AN HASHTAG (which you'll need to remove)
 
 # list disk
@@ -147,7 +147,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 - You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-**_WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition for the next commands. Replace them correctly or you'll lose data on your PC._**
+**_⚠️ WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition for the next commands. Replace them correctly or you'll lose data on your PC._**
 
 - Run these commands:
 
@@ -173,7 +173,7 @@ Windows is now installed but has no drivers.
 dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
 ```
 
-- Once it's done, you can reboot your phone. You'll be able to Android and your phone will work normally. Set it up if you need it.
+- Once it's done, you can reboot your phone. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
 
 ### Boot Windows 🚀
 
