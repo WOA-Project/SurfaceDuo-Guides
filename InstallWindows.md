@@ -179,7 +179,9 @@ dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
 ```
 
-You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootloader to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
+### Enabling the Windows Bootmanager to access the Developer Menu
+
+You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootmanager to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
 
 ```
 ❕❕ THESE STEPS ARE NOT REQUIRED BUT HIGHLY RECOMMENDED ❕❕
