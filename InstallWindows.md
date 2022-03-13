@@ -173,6 +173,12 @@ Windows is now installed but has no drivers.
 dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
 ```
 
+- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot):
+
+```
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
+```
+
 - Once it's done, you can reboot your phone. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
 
 ### Boot Windows 🚀
