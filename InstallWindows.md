@@ -144,7 +144,7 @@ You should be thrown in Developer Menu.
 - Mount the partitions you have created using diskpart and assign them some letters:
 
 ```
-THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
+⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
 ACTUAL COMMANDS START WITH AN HASHTAG (which you'll need to remove)
 
 # list disk
@@ -160,7 +160,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 - You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-**_WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition for the next commands. Replace them correctly or you'll lose data on your PC._**
+**_⚠️ WARNING: From now on we'll assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly or you'll lose data on your PC._**
 
 - Run these commands:
 
@@ -186,7 +186,28 @@ Windows is now installed but has no drivers.
 dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
 ```
 
-- Once it's done, you can reboot your phone. You'll be able to Android and your phone will work normally. Set it up if you need it.
+- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot):
+
+```
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
+```
+
+### Enabling the Windows Bootmanager to access the Developer Menu
+
+You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootmanager to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
+
+```
+❕❕ THESE STEPS ARE NOT REQUIRED BUT HIGHLY RECOMMENDED ❕❕
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /create /application bootapp /d "Developer Menu"
+# THE COMMAND ABOVE WILL PRINT A GUID, COPY IT
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> nointegritychecks on
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> path \Windows\System32\boot\developermenu.efi
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> inherit {bootloadersettings}
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> device boot
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
+```
+
+- Once it's done, you can reboot your phone. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
 
 ### Boot Windows 🚀
 
