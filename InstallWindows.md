@@ -147,7 +147,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 - You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-**_⚠️ WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition for the next commands. Replace them correctly or you'll lose data on your PC._**
+**_⚠️ WARNING: From now on we'll assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly or you'll lose data on your PC._**
 
 - Run these commands:
 
@@ -177,6 +177,19 @@ dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
 
 ```
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
+```
+
+You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootloader to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
+
+```
+❕❕ THESE STEPS ARE NOT REQUIRED BUT HIGHLY RECOMMENDED ❕❕
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /create /application bootapp /d "Developer Menu"
+# THE COMMAND ABOVE WILL PRINT A GUID, COPY IT
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> nointegritychecks on
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> path \Windows\System32\boot\developermenu.efi
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> inherit {bootloadersettings}
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> device boot
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
 ```
 
 - Once it's done, you can reboot your phone. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
