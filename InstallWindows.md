@@ -187,10 +187,11 @@ Windows is now installed but has no drivers.
 dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
 ```
 
-- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot):
+- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
 
 ```
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {bootmgr} displaybootmenu yes
 ```
 
 ### Enabling the Windows Bootmanager to access the Developer Menu
