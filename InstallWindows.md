@@ -1,4 +1,4 @@
-# Install Windows on Surface Duo (All Models)
+# Install Windows on Surface Duo
 ## Files Needed 📃
 - TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/parted)
