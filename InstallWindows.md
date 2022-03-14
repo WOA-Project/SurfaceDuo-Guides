@@ -1,4 +1,4 @@
-# Install Windows on Surface Duo (128GB)
+# Install Windows on Surface Duo
 ## Files Needed 📃
 - TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/parted)
@@ -16,12 +16,13 @@ Don't create partitions from Mass Storage Mode (because ABL will break with blan
 We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
 but this is **AN EARLY PREVIEW** and things can go wrong.
 
-This hasn't been tested on 256GB devices. This guide only targets 128GB devices.
+As of now, the 256GB are not supported by the dev team, but testing has shown it is compatible. The size of the Windows system will be larger. 
+128GB devices have full support.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 ## What you'll get 🛒
-You'll end up with both Android and Windows on your Duo. Android and Windows will both split the 128GB memory (64GB and 64GB)
+You'll end up with both Android and Windows on your Duo. Android and Windows will both split the 128GB memory (64GB and 64GB). _For the 256GB Model, the 256GB storage will be split (128GB, 128GB)._
 
 Android will boot normally, and you'll have to use a PC to boot Windows when needed.
 
@@ -64,13 +65,25 @@ print
 
 - **Make sure that the last partition listed is numbered 6.**
 - Take note of original sizing, here it was 51.9MB -> 112GB
-- Run these commands:
+- _For 256GB devices, it will be 51.9MB -> 240GB_
 
+- Run these commands for 128GB devices:
 ```
 rm 6
 mkpart esp fat32 51.9MB 300MB
 mkpart win ntfs 300MB 57344MB
 mkpart userdata ext4 57344MB 112GB
+set 6 esp on
+quit
+```
+
+- Run these commands for 256GB devices:
+
+```
+rm 6
+mkpart esp fat32 51.9MB 300MB
+mkpart win ntfs 300MB 114688MB
+mkpart userdata ext4 114688MB 240GB
 set 6 esp on
 quit
 ```
@@ -121,7 +134,7 @@ fastboot boot boot.img
 
 This step above will be needed every time you'll want to boot Windows.
 
-You should be thrown in Developer Menu. 
+You should be thrown in Developer Menu.
 
 - Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
 
