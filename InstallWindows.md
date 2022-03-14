@@ -5,7 +5,7 @@
 - Boot package: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/DuoBoot.tar)
 - Custom UEFI: [boot.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this
+- An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
 
 ## Warnings ⚠️
@@ -149,23 +149,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 **_WARNING: We'll assume X: is the Win partition and that Y: is the ESP partition for the next commands. Replace them correctly or you'll lose data on your PC._**
 
-- Presuming you are working on a Windows 64-bit machine, download and extract win64.zip file from the UUPMediaCreator repo (listed above). Proceed to directory: `"win-x64\CLI" `
-
--  Inside the CLI directory, open command prompt and run the following command:
-```
-uupdownload -s Professional -v 10.0.19043.1 -r Retail -b Retail -c vb_release -t arm64 -l en-US
-```
-This will download the professional edition of Windows 11 retail copy for arm64 architecture for English version. If you want to change the language, use the standard Windows language pack commands. Installing the right language pack will save a lot of time for download. 
-
-- After 30 - 45 mintues of completed download, you will see a new folder with prefix "10.0.19043.1586..." created inside the CLI folder. This contains all the required Windows 11 files. Let's create an ISO from the Windows 11 build download. Open up the command prompt type:
-
-```
-UUPMediaConverter.exe -u <10.0.19043.1586...name of your Win 11 build folder> -i Win11.iso -l en-US
-```
-
-- This should take 10 minutes. Mount the newly create `Win11.iso` on your windows machine. Copy the file present in your mounted ISO drive `G:\sources\install.wim` to CLI folder. 
-- Open Command prompty in administrator mode and navigate to the CLI folder. 
-- Run these commands:
+- We'll need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/EnableDevMenu.md). When you're ready, run these commands:
 
 ```
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
