@@ -163,7 +163,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 **_⚠️ WARNING: From now on we'll assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly or you'll lose data on your PC._**
 
-- We'll need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/EnableDevMenu.md). When you're ready, run these commands:
+- We'll need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you're ready, run these commands:
 
 ```
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
