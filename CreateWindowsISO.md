@@ -16,7 +16,7 @@ use the standard Windows language pack commands. Installing the right language p
   contains all the required Windows 11 files. Let's create an ISO from the Windows 11 build download. Open up the command prompt and type:
 
 ```
-UUPMediaConverter.exe -u <10.0.19043.1586...name of your Win 11 build folder> -i Win11.iso -l en-US
+UUPMediaConverter.exe -u <10.0.19043.1586...name of your Win 11 build folder> -i Win11.iso -l en-US -e Professional
 ```
 
-- Once that's done, mount the newly create `Win11.iso` on your Windows machine. You will find the install.wim file in your mounted ISO drive in `G:\sources\install.wim`. 
+- Once that's done, mount the newly created `Win11.iso` on your Windows machine. You will find the install.wim file in your mounted ISO drive in `G:\sources\install.wim`. 
