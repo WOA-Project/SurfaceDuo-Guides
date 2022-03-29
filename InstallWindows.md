@@ -110,7 +110,7 @@ mkfs.fat -F32 -s1 /dev/block/sda6
 mkfs.ntfs -f /dev/block/sda7
 mke2fs -t ext4 /dev/block/sda8
 mkdir /sdcard/espmnt && mount /dev/block/sda6 /sdcard/espmnt/
-quit
+exit
 ```
 
 - Let's load the files from duoboot.tar into the Duo, which will be needed to boot and reach Mass Storage Mode:
