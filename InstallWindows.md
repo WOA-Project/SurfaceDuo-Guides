@@ -226,6 +226,13 @@ fastboot boot boot.img
 
 If you did everything right, Windows will now boot! Enjoy!
 
+### Known Issues:
+
+- ⚠️ You'll get a BSOD on your first boot of Windows. This is normal, as the post-installation setup tries to reboot your phone, but reboots aren't supported yet.
+  Just boot Windows again and it should work.
+- The bootloader will show "Windows 10" instead of "Windows 11" if you install Windows 11.
+
+
 ## Enabling USB
 
 Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
