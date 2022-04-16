@@ -7,10 +7,13 @@
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
+- DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 ## Warnings ⚠️
 Don't create partitions from Mass Storage Mode (because ABL will break with blank/spaces in names)
+If you see a warning during the process, it is not normal. Contact us on telegram if you see anything odd
+Don't rerun the commands if you interrupt the process. You may break your partition table
 
 **THIS WILL WIPE ALL YOUR ANDROID DATA**
 
@@ -71,8 +74,8 @@ print
 - Run these commands for 128GB devices:
 ```
 rm 6
-mkpart esp fat32 51.9MB 300MB
-mkpart win ntfs 300MB 57344MB
+mkpart esp fat32 51.9MB 564MB
+mkpart win ntfs 564MB 57344MB
 mkpart userdata ext4 57344MB 112GB
 set 6 esp on
 quit
@@ -82,8 +85,8 @@ quit
 
 ```
 rm 6
-mkpart esp fat32 51.9MB 300MB
-mkpart win ntfs 300MB 114688MB
+mkpart esp fat32 51.9MB 564MB
+mkpart win ntfs 564MB 114688MB
 mkpart userdata ext4 114688MB 240GB
 set 6 esp on
 quit
@@ -181,10 +184,17 @@ Windows is now installed but has no drivers.
 
 ### Installing the drivers
 
-- Extract the drivers, and from the command prompt:
+- Figure out your Surface Duo model. If you have regulatory markings on the back of the device, your device is Duo-EU. If you have nothing, your device is Duo-GEN.
+- Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
+_For Duo-GEN devices (USA)_
 ```
-dism /image:X:\ /add-driver /driver:"<path to extracted drivers>" /recurse
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon_gen.txt" -r "<path to extracted drivers>" -p X:\
+```
+
+_For Duo-EU devices (EU)_
+```
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon_eu.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
 - Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
