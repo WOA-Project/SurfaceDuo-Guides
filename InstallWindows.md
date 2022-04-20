@@ -245,6 +245,9 @@ If you did everything right, Windows will now boot! Enjoy!
 
 ## Enabling USB
 
+
+The device can be controlled using an USB keyboard/mouse. A wireless USB 2.4 GHz USB device can also be connected to the Surface duo. This is only supported using an externally powered USB type C hub capable of power input and output. To enable the usb support on the surfaceDuo follow the instructions:
+
 Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
 
 ```
@@ -257,6 +260,7 @@ Now open regedit.exe and edit this registry key:
 HKEY_LOCAL_MACHINE\RTS\ControlSet001\Control\USB
 
 OsDefaultRoleSwitchMode
+RoleSwitchMode
 ```
 
 - Set the key to value `1`
@@ -266,3 +270,4 @@ Close regedit, and back to the command prompt:
 ```
 reg unload RTS
 ```
+If the USB doesn't work, reboot the device and remount partition and see if RoleSwitchMode is present and set to `1`.
