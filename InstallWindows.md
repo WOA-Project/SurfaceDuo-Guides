@@ -270,4 +270,4 @@ Close regedit, and back to the command prompt:
 ```
 reg unload RTS
 ```
-If the USB doesn't work, reboot the device and remount partition and see if RoleSwitchMode is present and set to `1`.
+If the USB doesn't work, reboot the device and remount partition and see if `RoleSwitchMode` is present and set to `1`.
