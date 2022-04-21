@@ -261,7 +261,7 @@ HKEY_LOCAL_MACHINE\RTS\ControlSet001\Control\USB
 OsDefaultRoleSwitchMode
 ```
 
-- Set the registry values to `1`
+- Set the registry value to `1`
 
 Close regedit, and back to the command prompt:
 
