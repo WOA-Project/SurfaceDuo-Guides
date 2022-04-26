@@ -250,7 +250,7 @@ The device can currently only be controlled using an USB keyboard/mouse. An ethe
 Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
 
 ```
-reg load RTS X:\Windows\System32\config\SYSTEM
+reg load HKLM\RTS X:\Windows\System32\config\SYSTEM
 ```
 
 Now open regedit.exe and go to this registry key:
