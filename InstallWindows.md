@@ -266,7 +266,7 @@ OsDefaultRoleSwitchMode
 Close regedit, and back to the command prompt:
 
 ```
-reg unload RTS
+reg unload HKLM\RTS
 ```
 
 If USB still doesn't appear to work, reboot the device, remount the registry hive and see if `RoleSwitchMode` is present, if it is, set it to `1`.
