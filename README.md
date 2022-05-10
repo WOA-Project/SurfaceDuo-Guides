@@ -12,6 +12,6 @@ Additional Guides:
 
 More:
 
-- [Frequently Asked Questions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/faw.md)
+- [Frequently Asked Questions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/FAQ.md)
 
 Please join [our Telegram group](https://t.me/duowoa) if you need any assistance!
