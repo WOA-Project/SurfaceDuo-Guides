@@ -187,14 +187,8 @@ Windows is now installed but has no drivers.
 - Figure out your Surface Duo model. If you have regulatory markings on the back of the device, your device is Duo-EU. If you have nothing, your device is Duo-GEN.
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
-_For Duo-GEN devices (USA)_
 ```
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon_gen.txt" -r "<path to extracted drivers>" -p X:\
-```
-
-_For Duo-EU devices (EU)_
-```
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon_eu.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
 - Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
@@ -243,9 +237,9 @@ If you did everything right, Windows will now boot! Enjoy!
 - The bootloader will show "Windows 10" instead of "Windows 11" if you install Windows 11.
 
 
-## Enabling USB
+## Enabling USB (Only if you get issues!)
 
-The device can currently only be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to the Surface Duo using USB. This is only supported using an externally powered USB hub capable of power input and output. You can either use an USB-C hub, or an USB A hub provided you use a dongle. Due to the earlyness of the Windows port, the device is not yet able to detect USB devices being plugged in. To force USB host mode on the Surface Duo regardless of USB detection follow the instructions below.
+The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to the Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. Due to the earlyness of the Windows port, the device is not yet able to detect USB devices being plugged in. To force USB host mode on the Surface Duo regardless of USB detection follow the instructions below.
 
 Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
 
