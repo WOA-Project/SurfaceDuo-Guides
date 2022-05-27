@@ -184,7 +184,6 @@ Windows is now installed but has no drivers.
 
 ### Installing the drivers
 
-- Figure out your Surface Duo model. If you have regulatory markings on the back of the device, your device is Duo-EU. If you have nothing, your device is Duo-GEN.
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
 ```
