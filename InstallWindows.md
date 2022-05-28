@@ -199,7 +199,7 @@ Windows is now installed but has no drivers.
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
 ```
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon_gen.txt" -r "<path to extracted drivers>" -p X:\
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
 - Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
