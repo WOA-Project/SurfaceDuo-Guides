@@ -250,16 +250,13 @@ You'll be back into Surface Duo's bootloader.
 
 We're ready to boot!
 
-- Reboot your phone manually to the bootloader (keep the power button + vol down pressed until the Microsoft logo appears, then stop pressing the power
-  button but keep pressing the volume down button).
-
 Let's boot the custom UEFI, from a command prompt:
 
 ```
 fastboot boot uefi.img
 ```
 
-This step above will be needed every time you'll want to boot Windows.
+This step above will be needed every time you'll want to boot Windows and needs to be done from the Bootloader mode.
 
 You should be thrown in the Boot Manager.
 
