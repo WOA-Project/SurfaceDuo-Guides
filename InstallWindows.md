@@ -65,15 +65,22 @@ parted /dev/block/sda
 print
 ```
 
-- ⚠️ Do not run all commands at once, instead run them one by one
-- ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
-- ⚠️ You can kill things if you do these steps wrong
+⚠️ Do not run all commands at once, instead run them one by one
 
-- **Make sure that the last partition listed is numbered 6.**
-- Take note of original sizing, here it was 51.9MB -> 112GB
-- _For 256GB devices, it will be 51.9MB -> 240GB_
+⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
 
-- Run these commands for 128GB devices:
+⚠️ You can kill things if you do these steps wrong
+
+**Make sure that the last partition listed is numbered 6.**
+
+Take note of original sizing, here it was 51.9MB -> 112GB
+
+_For 256GB devices, it will be 51.9MB -> 240GB_
+
+<details>
+  <summary>Run these commands for 128GB devices:</summary>
+  <p>
+
 ```
 rm 6
 mkpart esp fat32 51.9MB 564MB
@@ -83,7 +90,12 @@ set 6 esp on
 quit
 ```
 
-- Run these commands for 256GB devices:
+  </p>
+</details>
+
+<details>
+  <summary>Run these commands for 256GB devices:</summary>
+  <p>
 
 ```
 rm 6
@@ -93,6 +105,9 @@ mkpart userdata ext4 114688MB 240GB
 set 6 esp on
 quit
 ```
+
+  </p>
+</details>
 
 This will get you out of parted.
 
