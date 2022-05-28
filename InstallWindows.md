@@ -13,9 +13,8 @@
     4. [Installing Windows](#installing-windows)
     5. [Installing the drivers](#installing-the-drivers)
     6. [Enabling the Windows Bootmanager to access the Developer Menu](#enabling-the-windows-bootmanager-to-access-the-developer-menu)
-    7. [Booting the Custom UEFI](#booting-the-custom-uefi)
-    8. [Boot Windows 🚀](#boot-windows-)
-    9. [Known Issues](#known-issues)
+    7. [Boot Windows 🚀](#boot-windows-)
+    8. [Known Issues](#known-issues)
 5. [Enabling USB (Only if you get issues!)](#enabling-usb-only-if-you-get-issues)
 
 ## Files/Tools Needed 📃
@@ -247,20 +246,6 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
 
 You'll be back into Surface Duo's bootloader. 
 
-### Booting the Custom UEFI
-
-Let's boot the custom UEFI:
-
-```
-fastboot boot uefi.img
-```
-
-This step above will be needed every time you'll want to boot Windows.
-
-You should be thrown in Developer Menu.
-
-- Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
-
 ### Boot Windows 🚀
 
 We're ready to boot!
@@ -268,11 +253,17 @@ We're ready to boot!
 - Reboot your phone manually to the bootloader (keep the power button + vol down pressed until the Microsoft logo appears, then stop pressing the power
   button but keep pressing the volume down button).
 
-From a command prompt:
+Let's boot the custom UEFI, from a command prompt:
 
 ```
 fastboot boot uefi.img
 ```
+
+This step above will be needed every time you'll want to boot Windows.
+
+You should be thrown in the Boot Manager.
+
+- Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
 
 If you did everything right, Windows will now boot! Enjoy!
 
