@@ -3,7 +3,8 @@
 - TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/parted)
 - Boot package: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/DuoBoot.tar)
-- Custom UEFI: [boot.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Mass Storage Shell Script: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/msc.sh)
+- Custom UEFI: [uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
@@ -19,9 +20,6 @@ Don't rerun the commands if you interrupt the process. You may break your partit
 
 We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
 but this is **AN EARLY PREVIEW** and things can go wrong.
-
-As of now, the 256GB are not supported by the dev team, but testing has shown it is compatible. The size of the Windows system will be larger. 
-128GB devices have full support.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
@@ -66,6 +64,10 @@ adb shell
 parted /dev/block/sda
 print
 ```
+
+- ⚠️ Do not run all commands at once, instead run them one by one
+- ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
+- ⚠️ You can kill things if you do these steps wrong
 
 - **Make sure that the last partition listed is numbered 6.**
 - Take note of original sizing, here it was 51.9MB -> 112GB
@@ -116,31 +118,26 @@ mkdir /sdcard/espmnt && mount /dev/block/sda6 /sdcard/espmnt/
 exit
 ```
 
-- Let's load the files from duoboot.tar into the Duo, which will be needed to boot and reach Mass Storage Mode:
+- Let's load the files from duoboot.tar into the Duo, which will be needed to boot and reach Mass Storage Mode from the UEFI:
 
 ```
 adb push <path to DuoBoot.tar> /sdcard/
 adb shell "tar -xf /sdcard/DuoBoot.tar -C /sdcard/espmnt --no-same-owner" 
 adb shell "mv /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi.bak"
 adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi"
-adb reboot bootloader
 ```
 
-You'll be back into the Duo's bootloader. 
+### Going to Mass Storage
 
-### Booting the Custom UEFI
-
-Let's boot the custom UEFI:
+- Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```
-fastboot boot boot.img
+adb push <path to msc.sh> /sdcard/
+adb shell "chmod +x /sdcard/msc.sh" 
+adb shell "/sdcard/msc.sh"
 ```
 
-This step above will be needed every time you'll want to boot Windows.
-
-You should be thrown in Developer Menu.
-
-- Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
+Duo should now be in USB 3 Mass Storage Mode.
 
 ### Installing Windows
 
@@ -212,7 +209,23 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> device boot
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
 ```
 
-- Once it's done, you can reboot your phone. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
+- Once it's done, you can reboot your phone using ```adb reboot bootloader```. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
+
+You'll be back into the Duo's bootloader. 
+
+### Booting the Custom UEFI
+
+Let's boot the custom UEFI:
+
+```
+fastboot boot uefi.img
+```
+
+This step above will be needed every time you'll want to boot Windows.
+
+You should be thrown in Developer Menu.
+
+- Navigate with the volume up/down buttons to Mass Storage Mode, and press the Power Button to confirm. Once you're in Mass Storage Mode, we're ready to continue.
 
 ### Boot Windows 🚀
 
@@ -224,7 +237,7 @@ We're ready to boot!
 From a command prompt:
 
 ```
-fastboot boot boot.img
+fastboot boot uefi.img
 ```
 
 If you did everything right, Windows will now boot! Enjoy!
@@ -238,7 +251,7 @@ If you did everything right, Windows will now boot! Enjoy!
 
 ## Enabling USB (Only if you get issues!)
 
-The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to the Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. Due to the earlyness of the Windows port, the device is not yet able to detect USB devices being plugged in. To force USB host mode on the Surface Duo regardless of USB detection follow the instructions below.
+The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to the Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on the Surface Duo regardless of USB detection follow the instructions below.
 
 Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
 
