@@ -78,7 +78,7 @@ Take note of original sizing, here it was 51.9MB -> 112GB
 _For 256GB devices, it will be 51.9MB -> 240GB_
 
 <details>
-  <summary>Run these commands for 128GB devices:</summary>
+  <summary>Run these commands for 128GB devices (Click to expand)</summary>
   <p>
 
 ```
@@ -94,7 +94,7 @@ quit
 </details>
 
 <details>
-  <summary>Run these commands for 256GB devices:</summary>
+  <summary>Run these commands for 256GB devices (Click to expand)</summary>
   <p>
 
 ```
