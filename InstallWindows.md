@@ -43,7 +43,7 @@ but this is **AN EARLY PREVIEW** and things can go wrong.
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 ## What you'll get 🛒
-You'll end up with both Android and Windows on your Duo. Android and Windows will both split the 128GB memory (64GB and 64GB). _For the 256GB Model, the 256GB storage will be split (128GB, 128GB)._
+You'll end up with both Android and Windows on your Surface Duo. Android and Windows will both split the 128GB memory (64GB and 64GB). _For the 256GB Model, the 256GB storage will be split (128GB, 128GB)._
 
 Android will boot normally, and you'll have to use a PC to boot Windows when needed.
 
@@ -51,13 +51,13 @@ Android will boot normally, and you'll have to use a PC to boot Windows when nee
 ### Unlocking the bootloader
 - Backup all your data. **_You'll lose everything you have on Android and will start from scratch_**.
 
-Assuming your Duo is booted to Android and plugged to your PC:
+Assuming your Surface Duo is booted to Android and plugged to your PC:
 
 - Open a command prompt on your PC and run this command:
 ```
 adb reboot bootloader
 ```
-- You'll be rebooted to the Duo's bootloader. From there:
+- You'll be rebooted to Surface Duo's bootloader. From there:
 ```
 fastboot flashing unlock
 ```
@@ -77,7 +77,7 @@ adb shell "cp /sdcard/parted /sbin/ && chmod 755 /sbin/parted"
 adb shell
 ```
 
-- Now we're issuing commands directly from inside the Duo using the PC. Let's run parted and make the partitions:
+- Now we're issuing commands directly from inside Surface Duo using the PC. Let's run parted and make the partitions:
 
 ```
 parted /dev/block/sda
@@ -152,7 +152,7 @@ mkdir /sdcard/espmnt && mount /dev/block/sda6 /sdcard/espmnt/
 exit
 ```
 
-- Let's load the files from duoboot.tar into the Duo, which will be needed to boot and reach Mass Storage Mode from the UEFI:
+- Let's load the files from DuoBoot.tar into Surface Duo, which will be needed to boot and reach Mass Storage Mode from the UEFI:
 
 ```
 adb push <path to DuoBoot.tar> /sdcard/
@@ -171,11 +171,11 @@ adb shell "chmod +x /sdcard/msc.sh"
 adb shell "/sdcard/msc.sh"
 ```
 
-Duo should now be in USB 3 Mass Storage Mode.
+Surface Duo should now be in USB 3 Mass Storage Mode.
 
 ### Installing Windows
 
-- Make sure you are in Mass Storage Mode, that your Duo is plugged into your PC
+- Make sure you are in Mass Storage Mode, that your Surface Duo is plugged into your PC
 - Mount the partitions you have created using diskpart and assign them some letters:
 
 ```
@@ -183,7 +183,7 @@ Duo should now be in USB 3 Mass Storage Mode.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you'll need to remove)
 
 # list disk
-Find the Duo Disk, and take note of the number.
+Find the Surface Duo Disk, and take note of the number.
 # select disk <number>
 # list partition
 You'll be able to recognize the partitions we made earlier by their size. take note of the ESP and WIN partition numbers.
@@ -245,7 +245,7 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
 
 - Once it's done, you can reboot your phone using ```adb reboot bootloader```. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
 
-You'll be back into the Duo's bootloader. 
+You'll be back into Surface Duo's bootloader. 
 
 ### Booting the Custom UEFI
 
@@ -285,9 +285,9 @@ If you did everything right, Windows will now boot! Enjoy!
 
 ## Enabling USB (Only if you get issues!)
 
-The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to the Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on the Surface Duo regardless of USB detection follow the instructions below.
+The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on Surface Duo regardless of USB detection follow the instructions below.
 
-Still assuming that X: is the mounted Duo Windows partiton, in a command prompt:
+Still assuming that X: is the mounted Surface Duo Windows partiton, in a command prompt:
 
 ```
 reg load HKLM\RTS X:\Windows\System32\config\SYSTEM
