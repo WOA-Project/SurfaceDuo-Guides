@@ -18,7 +18,6 @@ Global progress: 39.66%
 | 📲 Right Display Panel | Brightness control and color calibration are missing | ⚠️            |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU | ⚠️             |
-| ♋ Wireless            | Requires Wireless subsystem to work | ❌             |
 | ✏️ Right Pen Digitizer | Pen will not register in the right location currently on the right panel | ❌             |
 | 🔋 Battery 1           | Work in progress | ❌             |
 | 🔋 Battery 2           | Work in progress | ❌             |
@@ -28,6 +27,7 @@ Global progress: 39.66%
 | 📺 HDMI / DP out       |             | ❌             |
 | 📌 GPS                 | Requires Wireless subsystem to work | ❌             |
 | 📽️ Miracast            | Requires Wireless subsystem to work | ❌             |
+| ♋ Wireless            | Requires Wireless subsystem to work | ❌             |
 | ♋ Cellular            | Requires Wireless subsystem to work | ❌             |
 | 📸 Camera              | Requires Camera ISP subsystem to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
