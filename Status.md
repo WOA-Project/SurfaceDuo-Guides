@@ -1,6 +1,6 @@
 # Status
 
-Global progress: 60.53%
+Global progress: 39.66%
 
 | Feature             | Description | Working state |
 |---------------------|-------------|---------------|
