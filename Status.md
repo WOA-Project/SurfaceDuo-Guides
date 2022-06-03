@@ -1,6 +1,6 @@
 # Status
 
-Global progress: 39.66%
+Global progress: 46.66%
 
 | Feature             | Description | Working state |
 |---------------------|-------------|---------------|
@@ -13,17 +13,17 @@ Global progress: 39.66%
 | 💻 Lid Hall sensor     | Closing the device will put it into sleep, opening it will wake it up | ✅             |
 | 🌡️ Thermal sensors     |             | ✅             |
 | 📳 Vibration motor     |             | ✅             |
+| 🔋 Battery 1           | Reading manufacturing date is coming soon | ✅             |
+| 🔋 Battery 2           | Reading manufacturing date is coming soon | ✅             |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
 | 📲 Left Display Panel  | Brightness control and color calibration are missing | ⚠️            |
 | 📲 Right Display Panel | Brightness control and color calibration are missing | ⚠️            |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU | ⚠️             |
+| 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
 | ✏️ Right Pen Digitizer | Pen will not register in the right location currently on the right panel | ❌             |
-| 🔋 Battery 1           | Work in progress | ❌             |
-| 🔋 Battery 2           | Work in progress | ❌             |
 | 🔌 Charger             | Work in progress | ❌             |
 | 🔊 Audio               |             | ❌             |
-| 💤 Modern Standby      | Phone will reboot upon entering connected standby | ❌             |
 | 📺 HDMI / DP out       |             | ❌             |
 | 📌 GPS                 | Requires Wireless subsystem to work | ❌             |
 | 📽️ Miracast            | Requires Wireless subsystem to work | ❌             |
