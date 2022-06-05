@@ -1,6 +1,6 @@
 # Status
 
-Global progress: 46.66%
+Global progress: 51.72%
 
 | Feature             | Description | Working state |
 |---------------------|-------------|---------------|
@@ -15,21 +15,21 @@ Global progress: 46.66%
 | 📳 Vibration motor     |             | ✅             |
 | 🔋 Battery 1           | Reading manufacturing date is coming soon | ✅             |
 | 🔋 Battery 2           | Reading manufacturing date is coming soon | ✅             |
+| 📲 Left Display Panel  | Color calibration are missing | ✅            |
+| 📲 Right Display Panel | Color calibration are missing | ✅            |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
-| 📲 Left Display Panel  | Brightness control and color calibration are missing | ⚠️            |
-| 📲 Right Display Panel | Brightness control and color calibration are missing | ⚠️            |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
-| 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU | ⚠️             |
+| 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
 | 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
 | ✏️ Right Pen Digitizer | Pen will not register in the right location currently on the right panel | ❌             |
 | 🔌 Charger             | Work in progress | ❌             |
-| 🔊 Audio               |             | ❌             |
-| 📺 HDMI / DP out       |             | ❌             |
+| 🔊 Audio               | Work in progress | ❌             |
+| 📺 HDMI / DP out       | Work in progress | ❌             |
 | 📌 GPS                 | Requires Wireless subsystem to work | ❌             |
 | 📽️ Miracast            | Requires Wireless subsystem to work | ❌             |
 | ♋ Wireless            | Requires Wireless subsystem to work | ❌             |
 | ♋ Cellular            | Requires Wireless subsystem to work | ❌             |
 | 📸 Camera              | Requires Camera ISP subsystem to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
-| 🧬 Fingerprint scanner |             | ❌             |
+| 🧬 Fingerprint scanner | Work in progress | ❌             |
 | 🧭 Sensors     | Requires Sensors subsystem to work | ❌             |
