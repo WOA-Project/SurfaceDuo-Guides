@@ -15,8 +15,8 @@ Global progress: 51.72%
 | 📳 Vibration motor     |             | ✅             |
 | 🔋 Battery 1           | Reading manufacturing date is coming soon | ✅             |
 | 🔋 Battery 2           | Reading manufacturing date is coming soon | ✅             |
-| 📲 Left Display Panel  | Color calibration are missing | ✅            |
-| 📲 Right Display Panel | Color calibration are missing | ✅            |
+| 📲 Left Display Panel  | Color calibration is missing | ✅            |
+| 📲 Right Display Panel | Color calibration is missing | ✅            |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
