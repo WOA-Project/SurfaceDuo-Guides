@@ -13,5 +13,6 @@ Additional Guides:
 More:
 
 - [Frequently Asked Questions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/FAQ.md)
+- [Current Status of the Windows Port](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md)
 
 Please join [our Telegram group](https://t.me/duowoa) if you need any assistance!
