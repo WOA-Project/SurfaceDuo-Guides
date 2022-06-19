@@ -21,7 +21,7 @@ Global progress: 53.50%
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
 | 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
-| 🧭 Sensors     | Calibration isn't being automatically copied over. Ambient light sensors, Fold sensor, Pedometers are not currently functional. Accuracy of data for posture changes can be incomplete | ⚠️             |
+| 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
 | ✏️ Right Pen Digitizer | Pen will not register in the right location currently on the right panel | ❌             |
 | 🔌 Charger             | Work in progress | ❌             |
 | 🔊 Audio               | Work in progress | ❌             |
