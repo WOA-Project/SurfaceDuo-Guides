@@ -96,15 +96,42 @@ Take note of original sizing, here it was 51.9MB -> 112GB
 _For 256GB devices, it will be 51.9MB -> 240GB_
 
 <details>
-  <summary>Run these commands for 128GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
   <p>
+
+__This command removes the userdata partition__
 
 ```
 rm 6
+```
+
+__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
+
+```
 mkpart esp fat32 51.9MB 564MB
+```
+
+__This command creates the Windows partition.__
+
+```
 mkpart win ntfs 564MB 57344MB
+```
+
+__This command creates the Android data partition back.__
+
+```
 mkpart userdata ext4 57344MB 112GB
+```
+
+__This command sets the ESP partition created earlier as an EFI system partition type.__
+
+```
 set 6 esp on
+```
+
+__This command leaves parted.__
+
+```
 quit
 ```
 
@@ -115,12 +142,39 @@ quit
   <summary>Run these commands for 256GB devices (Click to expand)</summary>
   <p>
 
+__This command removes the userdata partition__
+
 ```
 rm 6
+```
+
+__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
+
+```
 mkpart esp fat32 51.9MB 564MB
+```
+
+__This command creates the Windows partition.__
+
+```
 mkpart win ntfs 564MB 114688MB
+```
+
+__This command creates the Android data partition back.__
+
+```
 mkpart userdata ext4 114688MB 240GB
+```
+
+__This command sets the ESP partition created earlier as an EFI system partition type.__
+
+```
 set 6 esp on
+```
+
+__This command leaves parted.__
+
+```
 quit
 ```
 
