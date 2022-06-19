@@ -300,6 +300,22 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
 
 You'll be back into Surface Duo's bootloader. 
 
+### [Temporary] Copy over calibration files/configuration files for the sensors
+
+_These steps are temporary and will not be needed in future releases. These steps are also not as fully detailed as others and may get updated at a later time_
+
+In order to get most sensors currently working, some manual steps are required.
+
+You will need to backup from mass storage or twrp the following directory: /mnt/vendor/persist/sensors/ and copy over the contents to [Windows Drive Letter]\Windows\System32\Drivers\DriverData\QUALCOMM\fastRPC\persist\sensors (the following directory should already exist after booting Windows once, otherwise create it)
+
+The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer.
+
+Start 7-zip as administrator.
+
+In 7-zip, enter the following into the address bar: ```\\.\```
+
+Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
+
 ### Boot Windows 🚀
 
 We're ready to boot!
