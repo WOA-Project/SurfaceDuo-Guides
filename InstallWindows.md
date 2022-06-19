@@ -139,7 +139,7 @@ quit
 </details>
 
 <details>
-  <summary>Run these commands for 256GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
   <p>
 
 __This command removes the userdata partition__
