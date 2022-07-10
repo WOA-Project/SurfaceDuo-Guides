@@ -1,6 +1,6 @@
 # Status
 
-Global progress: 53.50%
+Global progress: 65.15%
 
 | Feature             | Description | Working state |
 |---------------------|-------------|---------------|
@@ -17,19 +17,23 @@ Global progress: 53.50%
 | 🔋 Battery 2           | Reading manufacturing date is coming soon | ✅             |
 | 📲 Left Display Panel  | Color calibration is missing | ✅            |
 | 📲 Right Display Panel | Color calibration is missing | ✅            |
+| 📌 GPS                 |             | ✅             |
+| 📽️ Miracast            |             | ✅             |
+| ♋ WiFi                |             | ✅             |
+| ♋ Cellular Data       |             | ✅             |
+| ♋ Cellular Texts      |             | ✅             |
+| ♋ Cellular eSIM       |             | ✅             |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
 | 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
 | 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
 | ✏️ Right Pen Digitizer | Pen will not register in the right location currently on the right panel | ❌             |
-| 🔌 Charger             | Work in progress | ❌             |
+| 🔌 Charger             | Work in progress |              |
 | 🔊 Audio               | Work in progress | ❌             |
 | 📺 HDMI / DP out       | Work in progress | ❌             |
-| 📌 GPS                 | Requires Wireless subsystem to work | ❌             |
-| 📽️ Miracast            | Requires Wireless subsystem to work | ❌             |
-| ♋ Wireless            | Requires Wireless subsystem to work | ❌             |
-| ♋ Cellular            | Requires Wireless subsystem to work | ❌             |
-| 📸 Camera              | Requires Camera ISP subsystem to work | ❌             |
+| 📸 Camera              | Requires CDSP Secure Camera/NPU to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
 | 🧬 Fingerprint scanner | Work in progress | ❌             |
+| ♋ Cellular Calls      | Work in progress | ❌             |
+| ♋ Cellular VoLTE      | Work in progress | ❌             |
