@@ -34,7 +34,7 @@ While Surface Duo *technically* supports Windows 10X, no appropriate Windows 10X
 
 ## Steps
 
-- Presuming you are working on a Windows 64-bit machine, download and extract win64.zip file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator). 
+- Presuming you are working on a Windows 64-bit machine, download and extract win64.zip file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest). 
 - Navigate to this directory: `"win-x64\CLI" `
 
 ### Download commands
