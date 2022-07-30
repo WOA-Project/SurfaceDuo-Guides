@@ -23,6 +23,7 @@ Global progress: 65.15%
 | ♋ Cellular Data       |             | ✅             |
 | ♋ Cellular Texts      |             | ✅             |
 | ♋ Cellular eSIM       |             | ✅             |
+| 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32)              |  | ✅             |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
@@ -32,7 +33,7 @@ Global progress: 65.15%
 | 🔌 Charger             | Work in progress |              |
 | 🔊 Audio               | Work in progress | ❌             |
 | 📺 HDMI / DP out       | Work in progress | ❌             |
-| 📸 Camera              | Requires CDSP Secure Camera/NPU to work | ❌             |
+| 📸 Camera Sensor             | Requires CDSP Secure Camera/NPU to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
 | 🧬 Fingerprint scanner | Work in progress | ❌             |
 | ♋ Cellular Calls      | Work in progress | ❌             |
