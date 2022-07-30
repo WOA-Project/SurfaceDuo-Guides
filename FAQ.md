@@ -15,6 +15,14 @@ As common in the chip industry, Chip designs rarely are entirely different in a 
 
 No.
 
+### Will you look into Surface Duo 2 in the future?
+
+¯\\_(ツ)\_/¯
+
+### Do you need a Surface Duo 2?
+
+No, chances are, we may even already have one :-)
+
 ### Could Microsoft have offered Windows on Surface Duo officially, and are they to blame?
 
 We won't comment on the blame part, nobody is to blame. At the end of the day you need to ship a successful product to consumers, something people will want to use as a phone. We think Android was the best choice in that regard. It doesn't prevent us from wanting to also run Windows on here for fun purposes, and eventually real usage. As to whenever Microsoft could have done this officially, we don't think so. This would cost too much engineering resources for something extremely niche, and would have required shell adaptations, and a dedicated support team for this alone, it's simply not worth it to offer both options in our mind. Also where's the fun in getting Windows on a device when it already runs it? :)
