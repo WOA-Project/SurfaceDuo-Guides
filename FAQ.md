@@ -34,3 +34,7 @@ Yes.
 ### I would like to help, how can I reach you
 
 We'll be happy to talk to you on our telegram channel: https://t.me/DuoWOA, note, you can help us with more than driver work, a lot of work is needed as well with documentation, support for the community, testing, developping apps, making a better shell, etc. We welcome any kind of help.
+
+### Are you going to do this for other Snapdragon 855 devices?
+
+No, but we regularly share our contributions to the team behind the [Renegade Project](https://github.com/EDK2-Porting), whose job is to do it for all kinds of other existing Android Devices.
