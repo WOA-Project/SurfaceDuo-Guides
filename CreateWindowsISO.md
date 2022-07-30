@@ -65,7 +65,25 @@ _Windows 11 Pre-release (Latest OS version publicly published by Microsoft with 
 
 <details>
 
+Below is a screenshot of the tablet experience:
+  
 ![https://user-images.githubusercontent.com/3755345/166138815-bdc8d4f4-151b-4d37-aa7a-d68f75c259ce.png](https://media.discordapp.net/attachments/305682313264758785/1001118862063968256/unknown.png)
+  
+In order to force enable this feature, you need to set the following registry value:
+  
+```reg
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"TabletPostureTaskbar"=dword:00000001
+```
+  
+You will also need to enable the following features using a tool like [ViVeTool](https://github.com/thebookisclosed/ViVe/releases/latest):
+
+```
+STTest: 26008830
+ShyTaskbar: 35599125
+```
+  
+---
 
 </details>
 
