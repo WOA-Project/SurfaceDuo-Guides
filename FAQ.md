@@ -38,3 +38,11 @@ We'll be happy to talk to you on our telegram channel: https://t.me/DuoWOA, note
 ### Are you going to do this for other Snapdragon 855 devices?
 
 No, but we regularly share our contributions to the team behind the [Renegade Project](https://github.com/EDK2-Porting), whose job is to do it for all kinds of other existing Android Devices.
+
+### Why?
+
+Because we can, that's honestly the best answer we can give you at the moment. Also memes are fun? :) Also boring phone slabs and tablet slabs are indeed boring. The Surface Duo form factor is something very nice to work with, and something I really wanted to see with Windows or other Operating Systems. That's really the only reason.
+
+### Will there be an April Fools thing for Surface Duo as well like you did with the Lumia 950s?
+
+We won't spoil anything.
