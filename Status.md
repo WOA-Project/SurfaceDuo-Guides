@@ -11,6 +11,8 @@
 
 </details>
 
+- AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android again. In order to make Windows _Unlocked_ like Android, dumping ```modem_fs1``` and ```modem_fs2``` is currently required, and the dumped partitions need to be placed under ```\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs1``` and ```\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs2```
+
 ---
 
 Global progress: 65.15%
