@@ -77,7 +77,7 @@ In order to force enable this feature, you need to set the following registry va
 "TabletPostureTaskbar"=dword:00000001
 ```
   
-You will also need to enable the following features using a tool like [ViVeTool](https://github.com/thebookisclosed/ViVe/releases/latest):
+You may also need to enable the following features using a tool like [ViVeTool](https://github.com/thebookisclosed/ViVe/releases/latest):
 
 ```
 STTest: 26008830
@@ -89,7 +89,7 @@ ShyTaskbar: 35599125
 </details>
 
 ```
-uupdownload -s Professional -e Professional -v 10.0.22593.1 -r External -b Dev -c ni_release -t arm64 -l en-US -y
+uupdownload -s Professional -e Professional -v 10.0.22598.1 -r External -b Dev -c ni_release -t arm64 -l en-US -y
 ```
 
 This will download the professional edition of Windows 11 retail copy for arm64 architecture for English version. If you want to change the language, 
