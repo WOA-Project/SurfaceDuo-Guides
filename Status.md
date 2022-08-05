@@ -33,13 +33,14 @@ _No ETA will be provided for **any** of these development phases_
 
 ---
 
-Global progress: 65.15%
+Global progress: 73.53%
 
 | Feature             | Description | Working state |
 |---------------------|-------------|---------------|
 | 👆 Left Multi Touch    |             | ✅             |
 | 👆 Right Multi Touch   |             | ✅             |
-| ✏️ Left Pen Digitizer  |             | ✅             |
+| ✏️ Left Pen Digitizer  | Calibration needed, otherwise works fine | ✅             |
+| ✏️ Right Pen Digitizer | Calibration needed, otherwise works fine | ✅             |
 | 🔵 Bluetooth           |             | ✅             |
 | 📦 UFS                 |             | ✅             |
 | ⌨️ Side buttons        |             | ✅             |
@@ -56,18 +57,17 @@ Global progress: 65.15%
 | ♋ Cellular Data       |             | ✅             |
 | ♋ Cellular Texts      |             | ✅             |
 | ♋ Cellular eSIM       |             | ✅             |
+| ♋ Cellular Calls      | Call provisioning is work in progress, if calls do not work for you at the moment, you may need to provision the call functionality manually. (Same as on Lumia 950s: https://woa-project.github.io/LumiaWOA/guides/ican0/, value is not different between 950s and Duo either, so if you already have such value, you're good to go, this is temporary!) | ✅             |
 | 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32)              |  | ✅             |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
 | 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
 | 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
 | 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
-| ✏️ Right Pen Digitizer | Pen will not register in the right location currently on the right panel | ❌             |
+| ♋ Cellular VoLTE      | Untested due to lack of App / Software currently | ⚠️             |
 | 🔌 Charger             | Work in progress |              |
 | 🔊 Audio               | Work in progress | ❌             |
 | 📺 HDMI / DP out       | Work in progress | ❌             |
-| 📸 Camera Sensor             | Requires CDSP Secure Camera/NPU to work | ❌             |
+| 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
 | 🧬 Fingerprint scanner | Work in progress | ❌             |
-| ♋ Cellular Calls      | Work in progress | ❌             |
-| ♋ Cellular VoLTE      | Work in progress | ❌             |
