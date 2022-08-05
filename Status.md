@@ -65,7 +65,7 @@ Global progress: 73.53%
 | 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
 | 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
 | ♋ Cellular VoLTE      | Untested due to lack of App / Software currently | ⚠️             |
-| 🔌 Charger             | Work in progress |              |
+| 🔌 Charger             | Work in progress | ❌             |
 | 🔊 Audio               | Work in progress | ❌             |
 | 📺 HDMI / DP out       | Work in progress | ❌             |
 | 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work | ❌             |
