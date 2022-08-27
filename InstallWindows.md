@@ -1,4 +1,4 @@
-# Install Windows on Surface Duo
+# Install Windows on Surface Duo 1
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
