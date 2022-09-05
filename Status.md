@@ -33,7 +33,7 @@ _No ETA will be provided for **any** of these development phases_
 
 ---
 
-Global progress: 73.53%
+Global progress: 76.47%
 
 | Feature             | Description | Working state |
 |---------------------|-------------|---------------|
@@ -59,10 +59,10 @@ Global progress: 73.53%
 | ♋ Cellular eSIM       |             | ✅             |
 | ♋ Cellular Calls      | Call provisioning is work in progress, if calls do not work for you at the moment, you may need to provision the call functionality manually. (Same as on Lumia 950s: https://woa-project.github.io/LumiaWOA/guides/ican0/, value is not different between 950s and Duo either, so if you already have such value, you're good to go, this is temporary!) | ✅             |
 | 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32)              |  | ✅             |
+| 🎆 GPU                 | Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ✅             |
+| 💤 Modern Standby      |  | ✅              |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
 | 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
-| 🎆 GPU                 | Glitches present when rendering frames fast enough, GPU scaling is broken and will lead to crashes of the GPU. Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ⚠️             |
-| 💤 Modern Standby      | Issues may exist depending on battery level | ⚠️              |
 | 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
 | ♋ Cellular VoLTE      | Untested due to lack of App / Software currently | ⚠️             |
 | 🔌 Charger             | Work in progress | ❌             |
