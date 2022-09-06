@@ -50,7 +50,9 @@ Android will boot normally, and you'll have to use a PC to boot Windows when nee
 ### Unlocking the bootloader
 - Backup all your data. **_You'll lose everything you have on Android and will start from scratch_**.
 
-Assuming your Surface Duo is booted to Android and plugged to your PC:
+- In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
+
+Assuming your Surface Duo is booted to Android, plugged to your PC:
 
 - Open a command prompt on your PC and run this command:
 ```
