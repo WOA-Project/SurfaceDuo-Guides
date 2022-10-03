@@ -18,31 +18,34 @@
 5. [Enabling USB (Only if you get issues!)](#enabling-usb-only-if-you-get-issues)
 
 ## Files/Tools Needed 📃
-- TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/twrp.img)
-- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/parted)
-- Boot package: [DuoBoot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/DuoBoot.tar)
-- Mass Storage Shell Script: [msc.sh](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/msc.sh)
-- Custom UEFI: [uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/surfaceduo1-twrp.img)
+- Parted: [surfaceduo1-parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/surfaceduo1-parted)
+- Boot package: [surfaceduo1-boot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/surfaceduo1-boot.tar)
+- Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-Files/surfaceduo1-msc.tar)
+- Windows UEFI: [surfaceduo1-uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- An ARM64 Windows build of your choice (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
+- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
 - DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 ## Warnings ⚠️
-Don't create partitions from Mass Storage Mode (because ABL will break with blank/spaces in names)
-If you see a warning during the process, it is not normal. Contact us on telegram if you see anything odd
-Don't rerun the commands if you interrupt the process. You may break your partition table
+- Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
+- If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you'll break things further.
+- Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+- Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+- Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+- Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 
 **THIS WILL WIPE ALL YOUR ANDROID DATA**
 
 We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
-but this is **AN EARLY PREVIEW** and things can go wrong.
+but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 ## What you'll get 🛒
-You'll end up with both Android and Windows on your Surface Duo. Android and Windows will both split the 128GB memory (64GB and 64GB). _For the 256GB Model, the 256GB storage will be split (128GB, 128GB)._
+You'll end up with both Android and Windows on your Surface Duo. Android and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
 
 Android will boot normally, and you'll have to use a PC to boot Windows when needed.
 
@@ -63,39 +66,55 @@ adb reboot bootloader
 fastboot flashing unlock
 ```
 
+Your phone will wipe itself and reboot to the Out of Box Experience in Android (OOBE). From then:
+
+- In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
+
+- Reboot back into the bootloader menu by running this command:
+
+```
+adb reboot bootloader
+```
+
 ### Making the partitions
 - Start by booting TWRP:
 
 ```
-fastboot boot twrp.img
+fastboot boot surfaceduo1-twrp.img
 ```
 
-- Once inside TWRP, touch will not be working. Keep the phone plugged to your PC and do these commands:
+- Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
 ```
-adb push <path to parted> /sdcard/
-adb shell "cp /sdcard/parted /sbin/ && chmod 755 /sbin/parted"
+adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
+adb shell "cp /sdcard/surfaceduo1-parted /sbin/ && chmod 755 /sbin/parted"
 adb shell
 ```
 
-- Now we're issuing commands directly from inside Surface Duo using the PC. Let's run parted and make the partitions:
+- Now we're issuing commands directly from inside Surface Duo using the PC. Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
 ```
 parted /dev/block/sda
 print
 ```
 
+### Dangerous section
+
+Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired.
+
+!!!! Warning reminder !!!!
+
 ⚠️ Do not run all commands at once, instead run them one by one
+
+⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
 
 ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
 
-⚠️ You can kill things if you do these steps wrong
+⚠️ You can kill things if you do below's steps wrong
 
-**Make sure that the last partition listed is numbered 6.**
+**Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
 
-Take note of original sizing, here it was 51.9MB -> 112GB
-
-_For 256GB devices, it will be 51.9MB -> 240GB_
+Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB -> 240GB) and replace every occurence of 51.9MB and 112GB with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
 
 <details>
   <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
@@ -188,15 +207,6 @@ This will get you out of parted.
 We have deleted partition 6, which was the Android userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files, 
 a win partition that will have Windows, and the last one is the new userdata partition for Android, just smaller. 
 
-<details>
-  <summary>About the partition sizes (technical info, not part of the guide)</summary>
-  <p>
-    The esp partition was originally set to be from 51.9MB to 180MB. Some devices seem to hit a problem while creating that partitions which say that there 
-    aren't enough sectors to create the file system. While 300MB seems a good ending point for everyone, it can be surely be lowered as it probably only wants 256MB of 
-    total size. Feel free to test and change the size accordingly if you understand what you're doing.
-  </p>
-</details>
-
 Now let's make these partitions actually usable:
 
 ```
@@ -210,23 +220,26 @@ exit
 - Let's load the files from DuoBoot.tar into Surface Duo, which will be needed to boot and reach Mass Storage Mode from the UEFI:
 
 ```
-adb push <path to DuoBoot.tar> /sdcard/
-adb shell "tar -xf /sdcard/DuoBoot.tar -C /sdcard/espmnt --no-same-owner" 
+adb push <path to downloaded surfaceduo1-boot.tar> /sdcard/
+adb shell "tar -xf /sdcard/surfaceduo1-boot.tar -C /sdcard/espmnt --no-same-owner" 
 adb shell "mv /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi.bak"
 adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi"
 ```
+
+### End of the Dangerous section
 
 ### Going to Mass Storage
 
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```
-adb push <path to msc.sh> /sdcard/
+adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
+adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner" 
 adb shell "chmod +x /sdcard/msc.sh" 
 adb shell "/sdcard/msc.sh"
 ```
 
-Surface Duo should now be in USB 3 Mass Storage Mode.
+Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
 
 ### Installing Windows
 
@@ -236,6 +249,7 @@ Surface Duo should now be in USB 3 Mass Storage Mode.
 ```
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
 ACTUAL COMMANDS START WITH AN HASHTAG (which you'll need to remove)
+YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DONT ASSIGN FINE, USE ANOTHER ONE.
 
 # list disk
 Find the Surface Duo Disk, and take note of the number.
@@ -250,7 +264,7 @@ You'll be able to recognize the partitions we made earlier by their size. take n
 
 - You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-**_⚠️ WARNING: From now on we'll assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly or you'll lose data on your PC._**
+**_⚠️ WARNING: From now on we'll assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly with what you previously picked or you'll lose data on your PC._**
 
 - We'll need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you're ready, run these commands:
 
@@ -325,7 +339,7 @@ We're ready to boot!
 Let's boot the custom UEFI, from a command prompt:
 
 ```
-fastboot boot uefi.img
+fastboot boot surfaceduo1-uefi.img
 ```
 
 This step above will be needed every time you'll want to boot Windows and needs to be done from the Bootloader mode.
