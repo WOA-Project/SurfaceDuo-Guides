@@ -92,12 +92,7 @@ adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 ```
 
-- Now we're issuing commands directly from inside Surface Duo using the PC. Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
-
-```
-parted /dev/block/sda
-print
-```
+- Now we're issuing commands directly from inside Surface Duo using the PC.
 
 ### Dangerous section
 
@@ -134,6 +129,13 @@ So if you want to change the split, all you have to do is to change the "57344MB
 </details>
 
 ---
+
+- Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
+
+```
+parted /dev/block/sda
+print
+```
 
 **Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
 
