@@ -295,30 +295,30 @@ DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Inte
 - Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
 
 ```
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {default} testsigning on
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set {bootmgr} displaybootmenu yes
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{default}" testsigning on
 ```
 
-### Enabling the Windows Bootmanager to access the Developer Menu
+### Optional: Enabling the Windows Bootmanager to access the Developer Menu
 
 You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootmanager to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
 
 ```
 ❕❕ THESE STEPS ARE NOT REQUIRED BUT HIGHLY RECOMMENDED ❕❕
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /create /application bootapp /d "Developer Menu"
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /create /application bootapp /d "Developer Menu"
 # THE COMMAND ABOVE WILL PRINT A GUID, COPY IT
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> nointegritychecks on
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> path \Windows\System32\boot\developermenu.efi
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> inherit {bootloadersettings}
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set <GUID> device boot
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /displayorder <GUID> /addlast
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" nointegritychecks on
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" path \Windows\System32\boot\developermenu.efi
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" inherit {bootloadersettings}
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" device boot
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /displayorder "<GUID>" /addlast
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{bootmgr}" displaybootmenu yes
 ```
 
 - Once it's done, you can reboot your phone using ```adb reboot bootloader```. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
 
 You'll be back into Surface Duo's bootloader. 
 
-### [Temporary] Copy over calibration files/configuration files for the sensors
+### [Temporary and Optional] Copy over calibration files/configuration files for the sensors
 
 _These steps are temporary and will not be needed in future releases. These steps are also not as fully detailed as others and may get updated at a later time_
 
@@ -326,7 +326,7 @@ In order to get most sensors currently working, some manual steps are required.
 
 You will need to backup from mass storage or twrp the following directory: /mnt/vendor/persist/sensors/ and copy over the contents to [Windows Drive Letter]\Windows\System32\Drivers\DriverData\QUALCOMM\fastRPC\persist\sensors (the following directory should already exist after booting Windows once, otherwise create it)
 
-The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer.
+The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer. You can also use TWRP or Android to get them if you find this easier or 7-zip does not work for you.
 
 Start 7-zip as administrator.
 
@@ -363,7 +363,7 @@ If you did everything right, Windows will now boot! Enjoy!
 
 The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on Surface Duo regardless of USB detection follow the instructions below.
 
-Still assuming that X: is the mounted Surface Duo Windows partiton, in a command prompt:
+Still assuming that X: is the mounted Surface Duo Windows partition, in a command prompt:
 
 ```
 reg load HKLM\RTS X:\Windows\System32\config\SYSTEM
