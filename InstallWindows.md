@@ -5,7 +5,7 @@
 ## Table of Contents
 1. [Files/Tools Needed](#filestools-needed-)
 2. [Warnings ⚠️](#warnings-%EF%B8%8F)
-3. [What you'll get 🛒](#what-youll-get-)
+3. [What you will get 🛒](#what-youll-get-)
 4. [Steps 🛠️](#steps-%EF%B8%8F)
     1. [Unlocking the bootloader](#unlocking-the-bootloader)
     2. [Making the partitions](#making-the-partitions)
@@ -31,7 +31,7 @@
 
 ## Warnings ⚠️
 - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
-- If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you'll break things further.
+- If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 - Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 - Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 - Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
@@ -45,14 +45,14 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-## What you'll get 🛒
-You'll end up with both Android and Windows on your Surface Duo. Android and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
+## What you will get 🛒
+You will end up with both Android and Windows on your Surface Duo. Android and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
 
-Android will boot normally, and you'll have to use a PC to boot Windows when needed.
+Android will boot normally, and you will have to use a PC to boot Windows when needed.
 
 # Steps 🛠️
 ## Unlocking the bootloader
-- Backup all your data. **_You'll lose everything you have on Android and will start from scratch_**.
+- Backup all your data. **_You will lose everything you have on Android and will start from scratch_**.
 
 - In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
 
@@ -62,7 +62,7 @@ Assuming your Surface Duo is booted to Android, plugged to your PC:
 ```
 adb reboot bootloader
 ```
-- You'll be rebooted to Surface Duo's bootloader. From there:
+- You will be rebooted to Surface Duo's bootloader. From there:
 ```
 fastboot flashing unlock
 ```
@@ -92,7 +92,7 @@ adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 ```
 
-- Now we're issuing commands directly from inside Surface Duo using the PC.
+- Now we are issuing commands directly from inside Surface Duo using the PC.
 
 ### Dangerous section
 
@@ -279,7 +279,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 
 ```
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
-ACTUAL COMMANDS START WITH AN HASHTAG (which you'll need to remove)
+ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
 YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DONT ASSIGN FINE, USE ANOTHER ONE.
 IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF YOU DONT WANT TO.
 
@@ -287,18 +287,18 @@ IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF
 Find the Surface Duo Disk, and take note of the number.
 # select disk <number>
 # list partition
-You'll be able to recognize the partitions we made earlier by their size. take note of the ESP and WIN partition numbers.
+You will be able to recognize the partitions we made earlier by their size. take note of the ESP and WIN partition numbers.
 # select partition <esp-partition-number>
 # assign letter=Y:
 # select partition <win-partition-number>
 # assign letter=X:
 ```
 
-- You'll have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
+- You will have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-**_⚠️ WARNING: From now on we'll assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly with what you previously picked or you'll lose data on your PC._**
+**_⚠️ WARNING: From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly with what you previously picked or you will lose data on your PC._**
 
-- We'll need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you're ready, run these commands:
+- We will need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you are ready, run these commands:
 
 ```
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
@@ -306,7 +306,7 @@ dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
 
 This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 
-- Once that's done:
+- Once that is done:
 
 ```
 bcdboot X:\Windows /s Y: /f UEFI
@@ -330,7 +330,7 @@ bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{default}" testsigning on
 
 ## Optional: Enabling the Windows Bootmanager to access the Developer Menu
 
-You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootmanager to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
+You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You will get the Windows Bootmanager to show up at boot, and you will be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
 
 ```
 ❕❕ THESE STEPS ARE NOT REQUIRED BUT HIGHLY RECOMMENDED ❕❕
@@ -344,9 +344,9 @@ bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /displayorder "<GUID>" /addlast
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{bootmgr}" displaybootmenu yes
 ```
 
-- Once it's done, you can reboot your phone using ```adb reboot bootloader```. You'll be able to boot to Android and your phone will work normally. Set it up if you need it.
+- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally. Set it up if you need it.
 
-You'll be back into Surface Duo's bootloader. 
+You will be back into Surface Duo's bootloader. 
 
 ## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
 
@@ -366,7 +366,7 @@ Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk
 
 ## Boot Windows 🚀
 
-We're ready to boot!
+We are ready to boot!
 
 Let's boot the custom UEFI, from a command prompt:
 
@@ -374,7 +374,7 @@ Let's boot the custom UEFI, from a command prompt:
 fastboot boot surfaceduo1-uefi.img
 ```
 
-This step above will be needed every time you'll want to boot Windows and needs to be done from the Bootloader mode.
+This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
 
 You should be thrown in the Boot Manager.
 
