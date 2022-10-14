@@ -255,6 +255,121 @@ bcdboot X:\Windows /s Y: /f UEFI
 
 Windows is now installed but has no drivers.
 
+## Making first run configuration *easier* with 0 drivers
+
+In order to make things easier, and potentially control the device using Remote Desktop Protocol (RDP), use the following unattend.xml file:
+
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+  <settings pass="generalize">
+    <component name="Microsoft-Windows-Pnp-Sysprep" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <PersistAllDeviceInstalls>false</PersistAllDeviceInstalls>
+    </component>
+  </settings>
+  <settings pass="specialize">
+    <component name="Microsoft-Windows-GPIOButtons" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <ConvertibleSlateMode>0</ConvertibleSlateMode>
+    </component>
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <DesktopOptimization>
+        <ShowWindowsStoreAppsOnTaskbar>true</ShowWindowsStoreAppsOnTaskbar>
+      </DesktopOptimization>
+      <ShowPowerButtonOnStartScreen>true</ShowPowerButtonOnStartScreen>
+      <ConvertibleSlateModePromptPreference>0</ConvertibleSlateModePromptPreference>
+    </component>
+  </settings>
+  <settings pass="oobeSystem">
+    <component name="Microsoft-Windows-Deployment" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <DeviceForm>1</DeviceForm>
+    </component>
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <OEMInformation>
+        <SupportURL>http://www.microsoft.com/surface/support</SupportURL>
+      </OEMInformation>
+      <AutoLogon>
+        <Password>
+            <Value></Value>
+            <PlainText>true</PlainText>
+        </Password>
+        <Enabled>true</Enabled>
+        <Username>Gus</Username>
+      </AutoLogon>
+      <OOBE>
+        <HideEULAPage>true</HideEULAPage>
+        <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+        <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+        <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+        <NetworkLocation>Home</NetworkLocation>
+        <SkipUserOOBE>true</SkipUserOOBE>
+        <SkipMachineOOBE>true</SkipMachineOOBE>
+        <ProtectYourPC>1</ProtectYourPC>
+      </OOBE>
+      <UserAccounts>
+        <LocalAccounts>
+          <LocalAccount wcm:action="add">
+            <Password>
+                <Value></Value>
+                <PlainText>true</PlainText>
+            </Password>
+            <Description></Description>
+            <DisplayName>Gus</DisplayName>
+            <Group>Administrators</Group>
+            <Name>Gus</Name>
+          </LocalAccount>
+        </LocalAccounts>
+      </UserAccounts>
+      <RegisteredOrganization></RegisteredOrganization>
+      <RegisteredOwner>Gus</RegisteredOwner>
+      <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+      <FirstLogonCommands>
+        <SynchronousCommand wcm:action="add">
+          <Description>Enable RDP</Description>
+          <Order>1</Order>
+          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Description>Allow Multiple Sessions</Description>
+          <Order>2</Order>
+          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fSingleSessionPerUser /t REG_DWORD /d 0 /f</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Description>Allow No Password Sessions</Description>
+          <Order>3</Order>
+          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v LimitBlankPasswordUse /t REG_DWORD /d 0 /f</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Description>Allow RDP on the network</Description>
+          <Order>4</Order>
+          <CommandLine>netsh advfirewall firewall set rule group="remote desktop" new enable=yes</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Description>Disable firewall</Description>
+          <Order>5</Order>
+          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Services\MpsSvc" /v Start /t REG_DWORD /d 4 /f</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Description>Disable Password Expiration</Description>
+          <Order>6</Order>
+          <CommandLine>wmic UserAccount where Name="Gus" set PasswordExpires=False</CommandLine>
+        </SynchronousCommand>
+      </FirstLogonCommands>
+    </component>
+    <component name="Microsoft-Windows-TabletPC-Platform-Input-Core" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <TouchKeyboardAutoInvokeEnabled>True</TouchKeyboardAutoInvokeEnabled>
+    </component>
+  </settings>
+</unattend>
+```
+
+Place this file under ```\Windows\Panther\unattend.xml``` before first ever boot (you may have to create the panther folder).
+
+Enable WinDBG / KDNET using the instructions provided over there: https://github.com/WOA-Project/SurfaceDuo-Drivers/blob/main/tools/NTDBG.md
+
+Then boot the device up for the first time into Windows, and make sure WinDBG is started on your computer, and attached to the device kernel.
+
+Using KDNET will share your device network connection with your computer. Once the device arrives on the desktop after a few reboots, you can remote into it. In order to get the PC name of the device, break into the debugger, run ```!process 0 1```, view the PEB of a process, you should be able to see environment variable and the hostname to use for your favorite RDP client.
+
 ## Optional: Enabling the Windows Bootmanager to access the Developer Menu
 
 You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You will get the Windows Bootmanager to show up at boot, and you will be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
