@@ -409,3 +409,19 @@ reg unload HKLM\RTS
 ```
 
 If USB still doesn't appear to work, reboot the device, remount the registry hive and see if `RoleSwitchMode` is present, if it is, set it to `1`.
+
+## Additional Context and Notes
+
+If you somehow break entirely your partition table, you might be interested in the original offsets of each partition in order to fix it.
+
+```
+mkpart ssd 6s 7s
+mkpart persist ext4 8s 8199s
+mkpart metadata ext4 8200s 12295s
+mkpart frp 12296s 12423s
+mkpart misc 12424s 12679s
+```
+
+The offsets are valid for both the Surface Duo 1 128GB model, and the Surface Duo 1 256GB model. They do not include userdata. You will have to recreate this yourself.
+
+(NEVER RUN THESE COMMANDS IF YOU DO NOT NEED TO OR YOU ALREADY PARTITIONS IN PLACE, ADVANCED USERS ONLY, YOU MAY KILL YOUR PHONE HERE)
