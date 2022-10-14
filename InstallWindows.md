@@ -87,7 +87,7 @@ fastboot boot surfaceduo1-twrp.img
 
 ```
 adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
-adb shell "cp /sdcard/surfaceduo1-parted /sbin/ && chmod 755 /sbin/parted"
+adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 ```
 
