@@ -36,6 +36,7 @@
 - Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 - Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 - Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
 
 **THIS WILL WIPE ALL YOUR ANDROID DATA**
 
