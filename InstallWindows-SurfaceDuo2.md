@@ -141,7 +141,7 @@ parted /dev/block/sd<Y>
 print
 ```
 
-**Make sure you do not have existing windows partitions or esp, or you'll break thing**
+**Make sure you do not have existing windows partitions or esp, or you will break things**
 
 Take note of original sizing and create partitions with a 50% split of userdata as follows:
 
