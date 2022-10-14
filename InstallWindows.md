@@ -169,7 +169,7 @@ __This command removes the userdata partition__
 rm 6
 ```
 
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
+__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
 ```
 mkpart esp fat32 51.9MB 564MB
