@@ -50,8 +50,8 @@ You'll end up with both Android and Windows on your Surface Duo. Android and Win
 
 Android will boot normally, and you'll have to use a PC to boot Windows when needed.
 
-## Steps 🛠️
-### Unlocking the bootloader
+# Steps 🛠️
+## Unlocking the bootloader
 - Backup all your data. **_You'll lose everything you have on Android and will start from scratch_**.
 
 - In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
@@ -77,7 +77,7 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Android (
 adb reboot bootloader
 ```
 
-### Making the partitions
+## Making the partitions
 - Start by booting TWRP:
 
 ```
@@ -113,9 +113,33 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
 
 ⚠️ You can kill things if you do below's steps wrong
 
+---
+
+<details>
+  <summary>If you want a different allocation split between Windows and Android, you can do so. Just be aware of the following:</summary>
+  <p>
+
+```
+notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
+notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
+```
+
+The commands above work like this:
+
+[tool name] [partition name in gpt] [file system] [starting offset in disk] [ending offset in disk]
+
+So if you want to change the split, all you have to do is to change the "57344MB" in above's example in both commands.
+
+  </p>
+</details>
+
+---
+
 **Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
 
 Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB -> 240GB) and replace every occurence of 51.9MB and 112GB with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
+
+---
 
 <details>
   <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
@@ -160,6 +184,8 @@ quit
   </p>
 </details>
 
+---
+
 <details>
   <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
   <p>
@@ -203,6 +229,8 @@ quit
   </p>
 </details>
 
+---
+
 This will get you out of parted.
 
 We have deleted partition 6, which was the Android userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files, 
@@ -229,7 +257,7 @@ adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/esp
 
 ### End of the Dangerous section
 
-### Going to Mass Storage
+## Going to Mass Storage
 
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
@@ -242,7 +270,7 @@ adb shell "/sdcard/msc.sh"
 
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
 
-### Installing Windows
+## Installing Windows
 
 - Make sure you are in Mass Storage Mode, that your Surface Duo is plugged into your PC
 - Mount the partitions you have created using diskpart and assign them some letters:
@@ -284,7 +312,7 @@ bcdboot X:\Windows /s Y: /f UEFI
 
 Windows is now installed but has no drivers.
 
-### Installing the drivers
+## Installing the drivers
 
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
@@ -298,7 +326,7 @@ DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Inte
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{default}" testsigning on
 ```
 
-### Optional: Enabling the Windows Bootmanager to access the Developer Menu
+## Optional: Enabling the Windows Bootmanager to access the Developer Menu
 
 You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You'll get the Windows Bootmanager to show up at boot, and you'll be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
 
@@ -318,7 +346,7 @@ bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{bootmgr}" displaybootmenu yes
 
 You'll be back into Surface Duo's bootloader. 
 
-### [Temporary and Optional] Copy over calibration files/configuration files for the sensors
+## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
 
 _These steps are temporary and will not be needed in future releases. These steps are also not as fully detailed as others and may get updated at a later time_
 
@@ -334,7 +362,7 @@ In 7-zip, enter the following into the address bar: ```\\.\```
 
 Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
 
-### Boot Windows 🚀
+## Boot Windows 🚀
 
 We're ready to boot!
 
@@ -351,13 +379,6 @@ You should be thrown in the Boot Manager.
 - Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
 
 If you did everything right, Windows will now boot! Enjoy!
-
-### Known Issues:
-
-- ⚠️ You'll get a BSOD on your first boot of Windows. This is normal, as the post-installation setup tries to reboot your phone, but reboots aren't supported yet.
-  Just boot Windows again and it should work.
-- The bootloader will show "Windows 10" instead of "Windows 11" if you install Windows 11.
-
 
 ## Enabling USB (Only if you get issues!)
 
