@@ -93,14 +93,14 @@ _No ETA will be provided for **any** of these development phases_
 |---------------------|-------------|---------------|
 | 📦 UFS                 |             | ✅             |
 | 📲 Left Display Panel  |             | ✅             |
+| ⌨️ Side buttons        |             | ✅             |
+| 💻 Lid Hall sensor     |             | ✅             |
 | 🧮 SoC Cores           | Only one core working | ⚠️             |
 | 👆 Left Multi Touch    |             | ❌             |
 | 👆 Right Multi Touch   |             | ❌             |
 | ✏️ Left Pen Digitizer  |             | ❌             |
 | ✏️ Right Pen Digitizer |             | ❌             |
 | 🔵 Bluetooth           |             | ❌             |
-| ⌨️ Side buttons        |             | ✅             |
-| 💻 Lid Hall sensor     |             | ✅             |
 | 🌡️ Thermal sensors     |             | ❌             |
 | 📳 Vibration motor     |             | ❌             |
 | 🔋 Battery 1           |             | ❌             |
