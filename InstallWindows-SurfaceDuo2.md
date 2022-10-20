@@ -158,19 +158,19 @@ rm <userdata id>
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
 ```
-mkpart esp fat32 <start> <start in mb + 512>MB
+mkpart esp fat32 <start in mb>MB <start in mb + 512>MB
 ```
 
 __This command creates the Windows partition.__
 
 ```
-mkpart win ntfs <start in mb + 512>MB <stop in mb divided in half>
+mkpart win ntfs <start in mb + 512>MB <stop in mb divided in half>MB
 ```
 
 __This command creates the Android data partition back.__
 
 ```
-mkpart userdata ext4 <stop in mb divided in half> <stop>
+mkpart userdata ext4 <stop in mb divided in half>MB <stop in GB>GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
