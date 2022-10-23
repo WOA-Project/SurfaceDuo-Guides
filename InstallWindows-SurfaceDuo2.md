@@ -1,6 +1,6 @@
 # Install Windows on Surface Duo 2
 
-![Surface Duo 2 Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
+![Surface Duo 2 Dual Screen Windows](https://user-images.githubusercontent.com/3755345/197421028-afa8109a-ead9-46c9-985f-d0fac9e342ca.png)
 
 ## Table of Contents
 1. [Files/Tools Needed](#filestools-needed-)
