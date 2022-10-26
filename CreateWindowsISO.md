@@ -62,8 +62,6 @@ _Windows 11 vNext (Dev)_
 uupdownload -s Professional -e Professional -v 10.0.22000.100 -r External -b Dev -c co_release -t arm64 -l en-US
 ```
 
-_Windows 11 Pre-release (Latest OS version publicly published by Microsoft with the new Tablet Mode experience (currently removed))_
-
 <details>
 
 Below is a screenshot of the tablet experience:
@@ -87,10 +85,6 @@ ShyTaskbar: 35599125
 ---
 
 </details>
-
-```
-uupdownload -s Professional -e Professional -v 10.0.22598.1 -r External -b Dev -c ni_release -t arm64 -l en-US -y
-```
 
 This will download the professional edition of Windows 11 retail copy for arm64 architecture for English version. If you want to change the language, 
 use the standard Windows language pack commands. Installing the right language pack will save a lot of time for download. 
