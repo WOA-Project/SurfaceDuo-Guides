@@ -338,7 +338,7 @@ bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /create /application bootapp /d "Deve
 # THE COMMAND ABOVE WILL PRINT A GUID, COPY IT
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" nointegritychecks on
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" path \Windows\System32\boot\developermenu.efi
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" inherit {bootloadersettings}
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" inherit "{bootloadersettings}"
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" device boot
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /displayorder "<GUID>" /addlast
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{bootmgr}" displaybootmenu yes
