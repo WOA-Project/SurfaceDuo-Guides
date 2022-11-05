@@ -255,120 +255,19 @@ bcdboot X:\Windows /s Y: /f UEFI
 
 Windows is now installed but has no drivers.
 
-## Making first run configuration *easier* with 0 drivers
+## Installing the drivers
 
-In order to make things easier, and potentially control the device using Remote Desktop Protocol (RDP), use the following unattend.xml file:
+- Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
-```xml
-<?xml version='1.0' encoding='utf-8'?>
-<unattend xmlns="urn:schemas-microsoft-com:unattend">
-  <settings pass="generalize">
-    <component name="Microsoft-Windows-Pnp-Sysprep" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-      <PersistAllDeviceInstalls>false</PersistAllDeviceInstalls>
-    </component>
-  </settings>
-  <settings pass="specialize">
-    <component name="Microsoft-Windows-GPIOButtons" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-      <ConvertibleSlateMode>0</ConvertibleSlateMode>
-    </component>
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-      <DesktopOptimization>
-        <ShowWindowsStoreAppsOnTaskbar>true</ShowWindowsStoreAppsOnTaskbar>
-      </DesktopOptimization>
-      <ShowPowerButtonOnStartScreen>true</ShowPowerButtonOnStartScreen>
-      <ConvertibleSlateModePromptPreference>0</ConvertibleSlateModePromptPreference>
-    </component>
-  </settings>
-  <settings pass="oobeSystem">
-    <component name="Microsoft-Windows-Deployment" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-      <DeviceForm>1</DeviceForm>
-    </component>
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <OEMInformation>
-        <SupportURL>http://www.microsoft.com/surface/support</SupportURL>
-      </OEMInformation>
-      <AutoLogon>
-        <Password>
-            <Value></Value>
-            <PlainText>true</PlainText>
-        </Password>
-        <Enabled>true</Enabled>
-        <Username>Gus</Username>
-      </AutoLogon>
-      <OOBE>
-        <HideEULAPage>true</HideEULAPage>
-        <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
-        <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
-        <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
-        <NetworkLocation>Home</NetworkLocation>
-        <SkipUserOOBE>true</SkipUserOOBE>
-        <SkipMachineOOBE>true</SkipMachineOOBE>
-        <ProtectYourPC>1</ProtectYourPC>
-      </OOBE>
-      <UserAccounts>
-        <LocalAccounts>
-          <LocalAccount wcm:action="add">
-            <Password>
-                <Value></Value>
-                <PlainText>true</PlainText>
-            </Password>
-            <Description></Description>
-            <DisplayName>Gus</DisplayName>
-            <Group>Administrators</Group>
-            <Name>Gus</Name>
-          </LocalAccount>
-        </LocalAccounts>
-      </UserAccounts>
-      <RegisteredOrganization></RegisteredOrganization>
-      <RegisteredOwner>Gus</RegisteredOwner>
-      <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
-      <FirstLogonCommands>
-        <SynchronousCommand wcm:action="add">
-          <Description>Enable RDP</Description>
-          <Order>1</Order>
-          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f</CommandLine>
-        </SynchronousCommand>
-        <SynchronousCommand wcm:action="add">
-          <Description>Allow Multiple Sessions</Description>
-          <Order>2</Order>
-          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fSingleSessionPerUser /t REG_DWORD /d 0 /f</CommandLine>
-        </SynchronousCommand>
-        <SynchronousCommand wcm:action="add">
-          <Description>Allow No Password Sessions</Description>
-          <Order>3</Order>
-          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v LimitBlankPasswordUse /t REG_DWORD /d 0 /f</CommandLine>
-        </SynchronousCommand>
-        <SynchronousCommand wcm:action="add">
-          <Description>Allow RDP on the network</Description>
-          <Order>4</Order>
-          <CommandLine>netsh advfirewall firewall set rule group="remote desktop" new enable=yes</CommandLine>
-        </SynchronousCommand>
-        <SynchronousCommand wcm:action="add">
-          <Description>Disable firewall</Description>
-          <Order>5</Order>
-          <CommandLine>reg add "HKLM\SYSTEM\CurrentControlSet\Services\MpsSvc" /v Start /t REG_DWORD /d 4 /f</CommandLine>
-        </SynchronousCommand>
-        <SynchronousCommand wcm:action="add">
-          <Description>Disable Password Expiration</Description>
-          <Order>6</Order>
-          <CommandLine>wmic UserAccount where Name="Gus" set PasswordExpires=False</CommandLine>
-        </SynchronousCommand>
-      </FirstLogonCommands>
-    </component>
-    <component name="Microsoft-Windows-TabletPC-Platform-Input-Core" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-      <TouchKeyboardAutoInvokeEnabled>True</TouchKeyboardAutoInvokeEnabled>
-    </component>
-  </settings>
-</unattend>
+```
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
-Place this file under ```\Windows\Panther\unattend.xml``` before first ever boot (you may have to create the panther folder).
+- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
 
-Enable WinDBG / KDNET using the instructions provided over there: https://github.com/WOA-Project/SurfaceDuo-Drivers/blob/main/tools/NTDBG.md
-
-Then boot the device up for the first time into Windows, and make sure WinDBG is started on your computer, and attached to the device kernel.
-
-Using KDNET will share your device network connection with your computer. Once the device arrives on the desktop after a few reboots, you can remote into it. In order to get the PC name of the device, break into the debugger, run ```!process 0 1```, view the PEB of a process, you should be able to see environment variable and the hostname to use for your favorite RDP client.
+```
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{default}" testsigning on
+```
 
 ## Optional: Enabling the Windows Bootmanager to access the Developer Menu
 
@@ -398,6 +297,24 @@ You will be back into Surface Duo 2's bootloader.
 fastboot flash boot_<!X> boot.img
 ```
 
+You will be back into Surface Duo 2's bootloader. 
+
+## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
+
+_These steps are temporary and will not be needed in future releases. These steps are also not as fully detailed as others and may get updated at a later time_
+
+In order to get most sensors currently working, some manual steps are required.
+
+You will need to backup from mass storage or twrp the following directory: /mnt/vendor/persist/sensors/ and copy over the contents to [Windows Drive Letter]\Windows\System32\Drivers\DriverData\QUALCOMM\fastRPC\persist\sensors (the following directory should already exist after booting Windows once, otherwise create it)
+
+The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer. You can also use TWRP or Android to get them if you find this easier or 7-zip does not work for you.
+
+Start 7-zip as administrator.
+
+In 7-zip, enter the following into the address bar: ```\\.\```
+
+Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
+
 ## Boot Windows 🚀
 
 We are ready to boot!
@@ -415,3 +332,32 @@ You should be thrown in the Boot Manager.
 - Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
 
 If you did everything right, Windows will now boot! Enjoy!
+
+## Enabling USB (Only if you get issues!)
+
+The device can currently only be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on Surface Duo 2 regardless of USB detection follow the instructions below.
+
+Still assuming that X: is the mounted Surface Duo Windows partition, in a command prompt:
+
+```
+reg load HKLM\RTS X:\Windows\System32\config\SYSTEM
+```
+
+Now open regedit.exe and go to this registry key:
+
+```
+HKEY_LOCAL_MACHINE\RTS\ControlSet001\Control\USB
+
+OsDefaultRoleSwitchMode
+```
+
+- Set the registry value to `1`
+
+Close regedit, and back to the command prompt:
+
+```
+reg unload HKLM\RTS
+```
+
+If USB still doesn't appear to work, reboot the device, remount the registry hive and see if `RoleSwitchMode` is present, if it is, set it to `1`.
+
