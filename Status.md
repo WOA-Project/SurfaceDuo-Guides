@@ -79,8 +79,8 @@ __Note: This note is provided for informational purposes only, it does not in an
 
 The development for the Windows Port is currently scheduled as follows:
 
-- Milestone #0: Early UEFI/OS bring up, proof of concept **In progress!**
-- Milestone #1: SoC hardware bringup in Windows OS, end goal is to have all hardware blocks/components of the SoC in a functional or communicating state by the end of the milestone, but not have it interface with the OS if it isn't already done.
+- ~~Milestone #0: Early UEFI/OS bring up, proof of concept~~ Completed!
+- Milestone #1: SoC hardware bringup in Windows OS, end goal is to have all hardware blocks/components of the SoC in a functional or communicating state by the end of the milestone, but not have it interface with the OS if it isn't already done. **In progress!**
 - Milestone #2: Bug fixes, this is where we will fix major issues like crashes, etc
 - Milestone #3: Calibration/Tuning, calibrate everything to work as it should be.
 - Milestone #4: To be defined?
@@ -95,16 +95,19 @@ _No ETA will be provided for **any** of these development phases_
 | 📲 Left Display Panel  |             | ✅             |
 | ⌨️ Side buttons        |             | ✅             |
 | 💻 Lid Hall sensor     |             | ✅             |
+| 🌡️ Thermal sensors     |             | ✅             |
+| 🔋 Battery 1           |             | ✅             |
+| 🔋 Battery 2           |             | ✅             |
+| 💤 Modern Standby      |             | ✅             |
+| 🪵 USB C               |             | ✅             |
+| 🔌 Charger             |             | ✅             |
 | 🧮 SoC Cores           | Only one core working | ⚠️             |
 | 👆 Left Multi Touch    |             | ❌             |
 | 👆 Right Multi Touch   |             | ❌             |
 | ✏️ Left Pen Digitizer  |             | ❌             |
 | ✏️ Right Pen Digitizer |             | ❌             |
 | 🔵 Bluetooth           |             | ❌             |
-| 🌡️ Thermal sensors     |             | ❌             |
 | 📳 Vibration motor     |             | ❌             |
-| 🔋 Battery 1           |             | ❌             |
-| 🔋 Battery 2           |             | ❌             |
 | 📲 Right Display Panel |             | ❌             |
 | 📌 GPS                 |             | ❌             |
 | 📽️ Miracast            |             | ❌             |
@@ -114,11 +117,8 @@ _No ETA will be provided for **any** of these development phases_
 | ♋ Cellular eSIM       |             | ❌             |
 | ♋ Cellular Calls      |             | ❌             |
 | 🎆 GPU                 |             | ❌             |
-| 💤 Modern Standby      |             | ❌             |
-| 🪵 USB C               |             | ❌             |
 | 🧭 Sensors             |             | ❌             |
 | ♋ Cellular VoLTE      |             | ❌             |
-| 🔌 Charger             |             | ❌             |
 | 🔊 Audio               |             | ❌             |
 | 📺 HDMI / DP out       |             | ❌             |
 | 📸 Camera Sensors      |             | ❌             |
@@ -126,4 +126,3 @@ _No ETA will be provided for **any** of these development phases_
 | 📸 Camera Flash        |             | ❌             |
 | 🏷️ NFC                 |             | ❌             |
 | 🧬 Fingerprint scanner |             | ❌             |
-| 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
