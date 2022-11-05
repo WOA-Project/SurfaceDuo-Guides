@@ -57,12 +57,12 @@ Global progress: 76.47%
 | 🎆 GPU                 | Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ✅             |
 | 💤 Modern Standby      |  | ✅              |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
-| 🪵 USB C               | Work in progress, functionality may be fully working aside from USB dongles currently. Workaround is available. Audio DAC is not available. | ⚠️             |
+| 🪵 USB C               | Incubating (USB Powerless Dongles) | ⚠️             |
 | 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
 | ♋ Cellular VoLTE      | Untested due to lack of App / Software currently | ⚠️             |
-| 🔌 Charger             |             | ❌             |
+| 🔌 Charger             | Incubating | ⚠️             |
 | 🔊 Audio               |             | ❌             |
-| 📺 HDMI / DP out       |             | ❌             |
+| 📺 HDMI / DP out       | Incubating | ⚠️             |
 | 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
 | 🧬 Fingerprint scanner |             | ❌             |
