@@ -363,6 +363,15 @@ Start 7-zip as administrator.
 In 7-zip, enter the following into the address bar: ```\\.\```
 
 Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
+      
+If, however, the ```persists``` partition isn't available you can use ```adb pull``` to obtain sensor data. Here's how you can do that:
+      
+```
+      adb shell "mkdir /mnt/vendor/persist && mount /dev/block/sda2 /mnt/vendor/persist"
+      adb shell "tar -cf /tmp/vendor.tar /mnt/vendor/persist/sensors" 
+      adb pull /tmp/vendor.tar
+      
+```
 
 ## Boot Windows 🚀
 
