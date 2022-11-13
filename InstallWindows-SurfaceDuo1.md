@@ -390,7 +390,26 @@ You should be thrown in the Boot Manager.
 - Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
 
 If you did everything right, Windows will now boot! Enjoy!
+      
+**Note:** If Touch keyboard don't show up in OOBE, touch somewhere else and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
+## Reinstalling Windows
+**Note:** If you running Windows, you need to reboot to load Android.
+Once in Android, follow these commands:
+- Reboot back into the bootloader menu by running this command:
+
+```
+adb reboot bootloader
+```
+- Start by booting TWRP:
+
+```
+fastboot boot surfaceduo1-twrp.img
+```
+
+Once there, you can go back to the [Going to Mass Storage](https://github.com/WOA-Project/SurfaceDuo-Guides/edit/main/InstallWindows-SurfaceDuo1.md#going-to-mass-storage section and follow the instructions in it and after it.
+      
+      
 ## Enabling USB (Only if you get issues!)
 
 The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on Surface Duo regardless of USB detection follow the instructions below.
@@ -418,7 +437,7 @@ reg unload HKLM\RTS
 ```
 
 If USB still doesn't appear to work, reboot the device, remount the registry hive and see if `RoleSwitchMode` is present, if it is, set it to `1`.
-
+      
 ## Additional Context and Notes
 
 If you somehow break entirely your partition table, you might be interested in the original offsets of each partition in order to fix it.
