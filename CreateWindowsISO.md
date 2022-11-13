@@ -49,12 +49,12 @@ uupdownload -s Professional -e Professional -v 10.0.22000.100 -r Retail -b Retai
 
 _Windows 11 Version 22h2 (Release Preview)_
 ```
-uupdownload -s Professional -e Professional -v 10.0.22000.100 -r External -b ReleasePreview -c co_release -t arm64 -l en-US
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b ReleasePreview -c co_release -t arm64 -l en-US
 ```
 
 _Windows 11 Version 22h2 (Moments #1 / Beta)_
 ```
-uupdownload -s Professional -e Professional -v 10.0.22000.100 -r External -b Beta -c co_release -t arm64 -l en-US
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Beta -c co_release -t arm64 -l en-US
 ```
 
 _Windows 11 vNext (Dev)_
