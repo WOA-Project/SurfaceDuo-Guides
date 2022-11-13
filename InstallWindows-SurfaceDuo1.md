@@ -5,7 +5,7 @@
 ## Table of Contents
 1. [Files/Tools Needed](#filestools-needed-)
 2. [Warnings ⚠️](#warnings-%EF%B8%8F)
-3. [What you will get 🛒](#what-youll-get-)
+3. [What you will get 🛒](#what-you-will-get-)
 4. [Steps 🛠️](#steps-%EF%B8%8F)
     1. [Unlocking the bootloader](#unlocking-the-bootloader)
     2. [Making the partitions](#making-the-partitions)
