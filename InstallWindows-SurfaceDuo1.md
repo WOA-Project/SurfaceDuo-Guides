@@ -391,10 +391,10 @@ You should be thrown in the Boot Manager.
 
 If you did everything right, Windows will now boot! Enjoy!
       
-**Note:** If Touch keyboard don't show up in OOBE, touch somewhere else and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
+**Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
 ## Reinstalling Windows
-**Note:** If you running Windows, you need to reboot to load Android.
+**Note:** If you are running Windows, you need to reboot to boot into Android.
 Once in Android, follow these commands:
 - Reboot back into the bootloader menu by running this command:
 
