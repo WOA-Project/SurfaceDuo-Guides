@@ -92,7 +92,8 @@ use the standard Windows language pack commands. Installing the right language p
 ---
 
 - Once the download is completed, you will see a new folder with prefix "10.0.22000..." created inside the CLI folder. This 
-  contains all the required Windows 11 files. Let's create an ISO from the Windows 11 build download. Open up the command prompt and type:
+  contains all the required Windows 11 files. Let's create an ISO from the Windows 11 build download. 
+  Open up the command prompt as Administrator and type:
 
 ```
 UUPMediaConverter.exe -u <10.0.22000... name of your Windows 11 build folder> -i Windows11_Pro_arm64_en-US.iso -l en-US -e Professional
