@@ -407,7 +407,7 @@ adb reboot bootloader
 fastboot boot surfaceduo1-twrp.img
 ```
 
-Once there, you can go back to the [Going to Mass Storage](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows-SurfaceDuo1.md#going-to-mass-storage section and follow the instructions in it and after it.
+Once there, you can go back to the [Going to Mass Storage](#going-to-mass-storage) section and follow the instructions in it and after it.
       
       
 ## Enabling USB (Only if you get issues!)
