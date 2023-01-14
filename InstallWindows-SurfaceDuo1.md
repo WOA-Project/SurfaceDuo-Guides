@@ -69,7 +69,7 @@ fastboot flashing unlock
 
 Your phone will wipe itself and reboot to the Out of Box Experience in Android (OOBE). From then:
 
-- In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
+- In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" and "OEM Unlock" inside it.
 
 - Reboot back into the bootloader menu by running this command:
 
