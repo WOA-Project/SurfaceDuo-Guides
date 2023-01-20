@@ -8,7 +8,7 @@ This guide aims to document the process to use your own certificates to sign dri
 
 ## Prerequisites
 
-- A technician computer with Windows 11 version 22621 or higher
+- A technician computer with Windows 11 version 22621 or higher and 4K OLED Monitor
 - A Surface Duo with SurfaceDuoPkg version 230X.XX or higher
 - A USB cable
 - The ability to compile SurfaceDuoPkg in order to use your own keyset
