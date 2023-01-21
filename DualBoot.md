@@ -52,7 +52,7 @@ SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 0
 
 For Surface Duo 2:
 ```batch
-SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 2
+SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 1
 ```
 
 ### Merging patched kernel image with the UEFI firmware
