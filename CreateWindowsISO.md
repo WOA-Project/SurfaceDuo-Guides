@@ -76,17 +76,17 @@ While Surface Duo *technically* supports Windows 10X, no appropriate Windows 10X
 
 _Windows 11 Version 22h2_
 ```
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c co_release -t arm64 -l en-US
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c ni_release -t arm64 -l en-US
 ```
 
-_Windows 11 Version 22h2 (Release Preview)_
+_Windows 11 Version Next (Release Preview)_
 ```
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b ReleasePreview -c co_release -t arm64 -l en-US
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b ReleasePreview -c ni_release -t arm64 -l en-US
 ```
 
-_Windows 11 Version 22h2 (Moments #2 / Beta)_
+_Windows 11 Version Next (Beta)_
 ```
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Beta -c co_release -t arm64 -l en-US
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Beta -c ni_release -t arm64 -l en-US
 ```
 
 _Windows vNext (Dev)_
