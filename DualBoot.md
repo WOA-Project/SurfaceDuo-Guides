@@ -12,7 +12,7 @@
  
 ## Steps🛠️
 
-### Generating a dual boot image
+### Getting original boot image information and files
 
 First we need to unpack the stock boot image to gather a few files and information, like so:
 
@@ -41,6 +41,8 @@ dtb address: 0x0000000001f00000
 gus@Bubo:/duo$
 ```
 
+### Patching original kernel image header
+
 Once done, run the kernel patcher utility as such:
 
 For Surface Duo 1:
@@ -53,6 +55,8 @@ For Surface Duo 2:
 SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 2
 ```
 
+### Merging patched kernel image with the UEFI firmware
+
 Now we need to combine our new kernel with our UEFI fd image:
 
 For Surface Duo 1:
@@ -64,6 +68,8 @@ For Surface Duo 2:
 ```bash
 cat ./patchedkernel ./SM8350_EFI.fd > ./hybridkernel
 ```
+
+### Rebuilding a new boot.img file
 
 Now using the files we got earliers as well as the information being output above from unpack_bootimg, we can generate a new dual boot image:
 
