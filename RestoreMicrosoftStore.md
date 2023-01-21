@@ -1,5 +1,18 @@
 # Restore Microsoft Store (Windows 11)
+
 If your Windows 11 build lacks Microsoft Store, follow these steps to fix this issue:
+
+## Method 1: Use the built in Windows Store Reset tool into Windows
+
+Provided your device is connected online, run the following command:
+
+```batch
+wreset -i
+```
+
+You should start seeing installation progress in the notification center.
+
+## Method 2: Manually sideload an appx
 
 - Get access to its appx from Microsoft Store by using, e.g., [AdGuard Store](https://store.rg-adguard.net/) and the link to the Microsoft Store:
 ```
