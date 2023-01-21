@@ -11,6 +11,7 @@ Additional Guides:
 - [Create a Windows ISO with UUPMediaCreator](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - [Activate Windows on your Surface Duo](https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227)
 - [Uninstall Windows and only keep Android (Surface Duo 1 only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Uninstall.md)
+- [Dual Boot between Android and Windows 11 without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
 
 More:
 
