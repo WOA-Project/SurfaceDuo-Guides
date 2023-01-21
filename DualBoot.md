@@ -9,7 +9,7 @@
 - [mkbootimg](https://github.com/WOA-Project/SurfaceDuoPkg/blob/main/ImageResources/mkbootimg.py)
 - [unpack_bootimg.py](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py)
 - Python
- 
+
 ## Steps🛠️
 
 ### Getting original boot image information and files
@@ -126,9 +126,9 @@ fastboot flash boot_<slot> <dualboot.img>
 ```
 
 ## How it Works
-- To boot Android™, leave Duo open while turning it on
-- To boot Windows, close Duo as soon as you turn it on and wait a while to open it again
-  
+- To boot Android™, leave Surface Duo open while turning it on
+- To boot Windows, close Surface Duo as soon as you turn it on and wait a while to open it again
+
 ## Troubleshooting
 If the device keeps going back to the bootloader menu
 ```

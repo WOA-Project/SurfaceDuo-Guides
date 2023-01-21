@@ -31,11 +31,11 @@ Pick ```Microsoft.UI.Xaml.2.7_7.2208.15002.0_arm64__8wekyb3d8bbwe.appx``` or lat
 - Run Windows Powershell as Admin to install the supporting component using the command below:
 
 ```
-Add-AppxPackage -Path .\Microsoft.UI.Xaml.2.7_7.2208.15002.0_arm64__8wekyb3d8bbwe.Appx 
+Add-AppxPackage -Path .\Microsoft.UI.Xaml.2.7_7.2208.15002.0_arm64__8wekyb3d8bbwe.Appx
 ```
 
 - Run Windows Powershell as Admin to install Microsoft Store itself using the command below:
 
 ```
-Add-AppxPackage -Path .\Microsoft.WindowsStore_22210.1401.6.0_neutral___8wekyb3d8bbwe.Msixbundle 
+Add-AppxPackage -Path .\Microsoft.WindowsStore_22210.1401.6.0_neutral___8wekyb3d8bbwe.Msixbundle
 ```
