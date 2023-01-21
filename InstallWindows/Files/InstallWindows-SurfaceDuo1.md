@@ -3,6 +3,7 @@
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
 ## Table of Contents
+
 1. [Files/Tools Needed](#filestools-needed-)
 2. [Warnings ⚠️](#warnings-%EF%B8%8F)
 3. [What you will get 🛒](#what-you-will-get-)
@@ -12,15 +13,12 @@
     3. [Going to Mass Storage](#going-to-mass-storage)
     4. [Installing Windows](#installing-windows)
     5. [Installing the drivers](#installing-the-drivers)
-    6. [Enabling the Windows Bootmanager to access the Developer Menu](#enabling-the-windows-bootmanager-to-access-the-developer-menu)
-    7. [Boot Windows 🚀](#boot-windows-)
-    8. [Known Issues](#known-issues)
-5. [Enabling USB (Only if you get issues!)](#enabling-usb-only-if-you-get-issues)
+    6. [Boot Windows 🚀](#boot-windows-)
 
 ## Files/Tools Needed 📃
+
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 - Parted: [surfaceduo1-parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-parted)
-- Boot package: [surfaceduo1-boot.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-boot.tar)
 - Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-msc.tar)
 - Windows UEFI: [surfaceduo1-uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -30,6 +28,7 @@
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 ## Warnings ⚠️
+
 - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 - Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
@@ -46,12 +45,15 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 ## What you will get 🛒
+
 You will end up with both Android and Windows on your Surface Duo. Android and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
 
 Android will boot normally, and you will have to use a PC to boot Windows when needed.
 
 # Steps 🛠️
+
 ## Unlocking the bootloader
+
 - Backup all your data. **_You will lose everything you have on Android and will start from scratch_**.
 
 - In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
@@ -235,8 +237,8 @@ quit
 
 This will get you out of parted.
 
-We have deleted partition 6, which was the Android userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files, 
-a win partition that will have Windows, and the last one is the new userdata partition for Android, just smaller. 
+We have deleted partition 6, which was the Android userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files,
+a win partition that will have Windows, and the last one is the new userdata partition for Android, just smaller.
 
 Now let's make these partitions actually usable:
 
@@ -248,15 +250,6 @@ mkdir /sdcard/espmnt && mount /dev/block/sda6 /sdcard/espmnt/
 exit
 ```
 
-- Let's load the files from DuoBoot.tar into Surface Duo, which will be needed to boot and reach Mass Storage Mode from the UEFI:
-
-```
-adb push <path to downloaded surfaceduo1-boot.tar> /sdcard/
-adb shell "tar -xf /sdcard/surfaceduo1-boot.tar -C /sdcard/espmnt --no-same-owner" 
-adb shell "mv /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi.bak"
-adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/espmnt/Windows/System32/Boot/ffuloader.efi"
-```
-
 ### End of the Dangerous section
 
 ## Going to Mass Storage
@@ -265,8 +258,8 @@ adb shell "cp /sdcard/espmnt/Windows/System32/Boot/developermenu.efi /sdcard/esp
 
 ```
 adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner" 
-adb shell "chmod +x /sdcard/msc.sh" 
+adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
+adb shell "chmod +x /sdcard/msc.sh"
 adb shell "/sdcard/msc.sh"
 ```
 
@@ -278,7 +271,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 - Mount the partitions you have created using diskpart and assign them some letters:
 
 ```
-⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS. 
+⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
 YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DONT ASSIGN FINE, USE ANOTHER ONE.
 IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF YOU DONT WANT TO.
@@ -322,31 +315,9 @@ Windows is now installed but has no drivers.
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
-- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot) and enable the legacy boot manager:
-
-```
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{default}" testsigning on
-```
-
-## Optional: Enabling the Windows Bootmanager to access the Developer Menu
-
-You might also want to add a boot entry to the Developer Menu, if you want it to be available when needed. You will get the Windows Bootmanager to show up at boot, and you will be able to choose if you want to boot Windows or the Developer Menu. This step is not required, but still highly recommended for now:
-
-```
-❕❕ THESE STEPS ARE NOT REQUIRED BUT HIGHLY RECOMMENDED ❕❕
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /create /application bootapp /d "Developer Menu"
-# THE COMMAND ABOVE WILL PRINT A GUID, COPY IT
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" nointegritychecks on
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" path \Windows\System32\boot\developermenu.efi
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" inherit "{bootloadersettings}"
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "<GUID>" device boot
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /displayorder "<GUID>" /addlast
-bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{bootmgr}" displaybootmenu yes
-```
-
 - Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally. Set it up if you need it.
 
-You will be back into Surface Duo's bootloader. 
+You will be back into Surface Duo's bootloader.
 
 ## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
 
@@ -363,14 +334,14 @@ Start 7-zip as administrator.
 In 7-zip, enter the following into the address bar: ```\\.\```
 
 Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
-      
+
 If, however, the ```persists``` partition isn't available you can use ```adb pull``` to obtain sensor data. Here's how you can do that:
-      
+
 ```
       adb shell "mkdir /mnt/vendor/persist && mount /dev/block/sda2 /mnt/vendor/persist"
-      adb shell "tar -cf /tmp/vendor.tar /mnt/vendor/persist/sensors" 
+      adb shell "tar -cf /tmp/vendor.tar /mnt/vendor/persist/sensors"
       adb pull /tmp/vendor.tar
-      
+
 ```
 
 ## Boot Windows 🚀
@@ -390,10 +361,11 @@ You should be thrown in the Boot Manager.
 - Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
 
 If you did everything right, Windows will now boot! Enjoy!
-      
+
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
 ## Reinstalling Windows
+
 **Note:** If you are running Windows, you need to reboot to boot into Android.
 Once in Android, follow these commands:
 - Reboot back into the bootloader menu by running this command:
@@ -408,36 +380,7 @@ fastboot boot surfaceduo1-twrp.img
 ```
 
 Once there, you can go back to the [Going to Mass Storage](#going-to-mass-storage) section and follow the instructions in it and after it.
-      
-      
-## Enabling USB (Only if you get issues!)
 
-The device can be controlled using an USB keyboard/mouse. An ethernet or WLAN USB device can also be connected to Surface Duo using USB. While USB-C is meant to be working properly by now, you might still need to force an override in case of issues. You can either use an USB-C hub, or an USB A hub provided you use a dongle. To force USB host mode on Surface Duo regardless of USB detection follow the instructions below.
-
-Still assuming that X: is the mounted Surface Duo Windows partition, in a command prompt:
-
-```
-reg load HKLM\RTS X:\Windows\System32\config\SYSTEM
-```
-
-Now open regedit.exe and go to this registry key:
-
-```
-HKEY_LOCAL_MACHINE\RTS\ControlSet001\Control\USB
-
-OsDefaultRoleSwitchMode
-```
-
-- Set the registry value to `1`
-
-Close regedit, and back to the command prompt:
-
-```
-reg unload HKLM\RTS
-```
-
-If USB still doesn't appear to work, reboot the device, remount the registry hive and see if `RoleSwitchMode` is present, if it is, set it to `1`.
-      
 ## Additional Context and Notes
 
 If you somehow break entirely your partition table, you might be interested in the original offsets of each partition in order to fix it.
