@@ -47,8 +47,8 @@ Surface Duo 2 currently supports the following Windows OS versions:
 | Windows 10 Build 19044 (21h2)                                             | ❌         |
 | Windows 10 Build 19045 (22h1)                                             | ❌         |
 | Windows 10 Build 19046 (22h2)                                             | ❌         |
-| Windows 11 Build 22000 (21h2)                                             | ⚠️         |
-| Windows 11 Build 22621 (22h2)                                             | ✅         |
+| Windows 11 Build 22000 (21h2)                                             | ❌         |
+| Windows 11 Build 22621 (22h2)                                             | ❌         |
 | Windows vNext (Zinc Semester)                                             | ✅         |
 
 
