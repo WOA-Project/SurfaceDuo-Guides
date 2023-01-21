@@ -185,28 +185,25 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy">
-  <VersionEx>10.0.0.0</VersionEx>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Base Policy">
+  <VersionEx>10.0.3.0</VersionEx>
   <PolicyTypeID>{A244370E-44C9-4C06-B551-F6016E563076}</PolicyTypeID>
-  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F4AA6C5A234}</PlatformID>
+  <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
   <Rules>
     <Rule>
-      <Option>Enabled:Unsigned System Integrity Policy</Option>
+      <Option>Enabled:Advanced Boot Options Menu</Option>
     </Rule>
     <Rule>
-      <Option>Enabled:Advanced Boot Options Menu</Option>
+      <Option>Disabled:Script Enforcement</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:UMCI</Option>
     </Rule>
     <Rule>
       <Option>Enabled:Inherit Default Policy</Option>
     </Rule>
     <Rule>
       <Option>Enabled:Update Policy No Reboot</Option>
-    </Rule>
-    <Rule>
-      <Option>Enabled:Dynamic Code Security</Option>
-    </Rule>
-    <Rule>
-      <Option>Enabled:Revoked Expired As Unsigned</Option>
     </Rule>
     <Rule>
       <Option>Enabled:Allow Supplemental Policies</Option>
@@ -352,22 +349,29 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
       <CertPublisher Value="Microsoft Corporation" />
       <FileAttribRef RuleID="ID_FILEATTRIB_REFRESH_POLICY" />
     </Signer>
-    <Signer ID="ID_SIGNER_S_1A_1_0_0" Name="OEMA0 KEK Secure Boot">
+    <!--OEMA0 Certicates-->
+    <Signer ID="ID_SIGNER_OEMA0_CA" Name="OEMA0 CA">
       <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
     </Signer>
-    <Signer ID="ID_SIGNER_S_19_1_0_0" Name="OEMA0 KEK Secure Boot">
+    <Signer ID="ID_SIGNER_OEMA0_DRA" Name="OEMA0 Data Recovery Agent">
       <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
     </Signer>
-    <Signer ID="ID_SIGNER_S_1C_1_0" Name="OEMA0 UMCI Codesigning">
+    <Signer ID="ID_SIGNER_OEMA0_KEK" Name="OEMA0 KEK Secure Boot">
       <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
     </Signer>
-    <Signer ID="ID_SIGNER_S_1B_1_0_0" Name="OEMA0 KEK Secure Boot">
+    <Signer ID="ID_SIGNER_OEMA0_KMCI" Name="OEMA0 KMCI Codesigning">
       <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
     </Signer>
-    <Signer ID="ID_SIGNER_S_1D_1" Name="OEMA0 KMCI Codesigning">
+    <Signer ID="ID_SIGNER_OEMA0_PCA" Name="OEMA0 Production PCA 2023">
       <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
     </Signer>
-    <Signer ID="ID_SIGNER_S_1E_1" Name="OEMA0 KMCI Codesigning">
+    <Signer ID="ID_SIGNER_OEMA0_ROOT" Name="OEMA0 Root">
+      <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
+    </Signer>
+    <Signer ID="ID_SIGNER_OEMA0_ROOTPK" Name="OEMA0 Root Platform Key">
+      <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
+    </Signer>
+    <Signer ID="ID_SIGNER_OEMA0_UMCI" Name="OEMA0 UMCI Codesigning">
       <CertRoot Type="TBS" Value="<YOUR CERTFICIATE THUMBPRINT GOES HERE>" />
     </Signer>
   </Signers>
@@ -388,8 +392,12 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
           <AllowedSigner SignerId="ID_SIGNER_WHQL_FLIGHT_SHA2" />
           <!-- Test signer is trusted by ConfigCI, however, it will not be trusted by CI unless testsigning BCD is set -->
           <AllowedSigner SignerId="ID_SIGNER_TEST2010" />
-          <AllowedSigner SignerId="ID_SIGNER_S_1A_1_0_0" />
-          <AllowedSigner SignerId="ID_SIGNER_S_1E_1" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_ROOTPK" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_KEK" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_ROOT" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_CA" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_PCA" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_KMCI" />
         </AllowedSigners>
       </ProductSigners>
     </SigningScenario>
@@ -418,16 +426,23 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
           <AllowedSigner SignerId="ID_SIGNER_MICROSOFT_REFRESH_POLICY" />
           <!-- Test signer is trusted by ConfigCI, however, it will not be trusted by CI unless testsigning BCD is set -->
           <AllowedSigner SignerId="ID_SIGNER_TEST2010_USER" />
-          <AllowedSigner SignerId="ID_SIGNER_S_19_1_0_0" />
-          <AllowedSigner SignerId="ID_SIGNER_S_1C_1_0" />
-          <AllowedSigner SignerId="ID_SIGNER_S_1D_1" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_ROOTPK" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_KEK" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_ROOT" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_CA" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_PCA" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_UMCI" />
+          <AllowedSigner SignerId="ID_SIGNER_OEMA0_KMCI" />
         </AllowedSigners>
       </ProductSigners>
     </SigningScenario>
   </SigningScenarios>
   <UpdatePolicySigners>
-    <UpdatePolicySigner SignerId="ID_SIGNER_S_1B_1_0_0" />
+    <UpdatePolicySigner SignerId="ID_SIGNER_OEMA0_KEK" />
   </UpdatePolicySigners>
+  <SupplementalPolicySigners>
+    <SupplementalPolicySigner SignerId="ID_SIGNER_OEMA0_KEK" />
+  </SupplementalPolicySigners>
   <!-- 
 
     CiSigners are signers that ConfigCI asks CI to trust for all builds, include 
@@ -444,9 +459,9 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
       We need to allow enterprise signing scenario to trust store certificate.
     -->
     <CiSigner SignerId="ID_SIGNER_STORE" />
-    <CiSigner SignerId="ID_SIGNER_S_19_1_0_0" />
-    <CiSigner SignerId="ID_SIGNER_S_1C_1_0" />
-    <CiSigner SignerId="ID_SIGNER_S_1D_1" />
+    <CiSigner SignerId="ID_SIGNER_OEMA0_KEK" />
+    <CiSigner SignerId="ID_SIGNER_OEMA0_UMCI" />
+    <CiSigner SignerId="ID_SIGNER_OEMA0_KMCI" />
   </CiSigners>
   <HvciOptions>0</HvciOptions>
   <Settings>
