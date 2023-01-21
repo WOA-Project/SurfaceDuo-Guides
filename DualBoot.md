@@ -1,7 +1,5 @@
 # Enabling Dual Boot on Duo
 
-⚠️ Hard requirements: This will only work for **Surface Duo 1** running **Android 12 2022.819.16**.
-
 ## Files/Tools Needed 📃
 
 - UEFI Raw FV Image for Surface Duo 1: [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
