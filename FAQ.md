@@ -1,4 +1,5 @@
 # FAQ
+
 ### Can I update Android™ if I have installed Windows?
 
 ✅ Yes! Feel free to do so. All Android™ updates until now have worked fine even if Windows was installed.
@@ -10,18 +11,6 @@ Short Answer: no we don't, but we also think they did _not_. The shipping Surfac
 ### If Qualcomm Technologies Inc. never offered support for the Snapdragon 855, then why is this project even a thing?
 
 As common in the chip industry, Chip designs rarely are entirely different in a whole chip generation. The Snapdragon 855 is part of the same generation of chips as the Snapdragon 8cx and Microsoft SQ1. Differences between these chips aren't a lot, but are enough for the drivers to also not work on the 855. That's why this is sort of possible.
-
-### Is this compatible with the Surface Duo 2?
-
-No.
-
-### Will you look into Surface Duo 2 in the future?
-
-¯\\_(ツ)\_/¯
-
-### Do you need a Surface Duo 2?
-
-No, chances are, we may even already have one :-)
 
 ### Could Microsoft have offered Windows on Surface Duo officially, and are they to blame?
 
@@ -37,7 +26,7 @@ We'll be happy to talk to you on our telegram channel: https://t.me/DuoWOA, note
 
 ### Are you going to do this for other Snapdragon 855 devices?
 
-No, but we regularly share our contributions to the team behind the [Renegade Project](https://github.com/EDK2-Porting), whose job is to do it for all kinds of other existing Android™ Devices.
+No, but we regularly share our contributions to the team behind the [WOA msmnile](https://github.com/WOA-msmnile) and [Renegade Project](https://github.com/EDK2-Porting), whose job is to do it for all kinds of other existing Android™ Devices.
 
 ### Why?
 
