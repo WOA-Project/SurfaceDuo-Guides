@@ -12,7 +12,7 @@
 ## Files/Tools Needed 📃
 
 - A linux virtual machine with parted installed
-- Expert knowledge of what you're doing (this is even more susceptible to bricks than the duo 1 guide, do not follow for now if you are not comfortable, this is very advanced still)
+- Expert knowledge of what you're doing (this is even more susceptible to bricks than the Surface Duo 1 guide, do not follow for now if you are not comfortable, this is very advanced still)
 - Your stock boot image (from ota recovery package)
 - Early Boot package: [surfaceduo2-bootpkg.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-bootpkg.img)
 - Windows UEFI: [surfaceduo2-uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
@@ -29,7 +29,7 @@
 - Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 - Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
 
-**THIS WILL WIPE ALL YOUR ANDROID DATA**
+**THIS WILL WIPE ALL YOUR ANDROID™ DATA**
 
 We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
 but this is **STILL IN PREVIEW** and things can go wrong.
@@ -38,19 +38,19 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 
 ## What you will get 🛒
 
-You will end up with both Android and Windows on your Surface Duo 2. Android and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB or 256GB and 256GB).
+You will end up with both Android™ and Windows on your Surface Duo 2. Android™ and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB or 256GB and 256GB).
 
-Android will boot normally, and you will have to use a PC to boot Windows when needed.
+Android™ will boot normally, and you will have to use a PC to boot Windows when needed.
 
 # Steps 🛠️
 
 ## Unlocking the bootloader
 
-- Backup all your data. **_You will lose everything you have on Android and will start from scratch_**.
+- Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
 
-- In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
+- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
 
-Assuming your Surface Duo 2 is booted to Android, plugged to your PC:
+Assuming your Surface Duo 2 is booted to Android™, plugged to your PC:
 
 - Open a command prompt on your PC and run this command:
 ```
@@ -61,9 +61,9 @@ adb reboot bootloader
 fastboot flashing unlock
 ```
 
-Your phone will wipe itself and reboot to the Out of Box Experience in Android (OOBE). From then:
+Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From then:
 
-- In Android settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
+- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
 
 - Reboot back into the bootloader menu by running this command:
 
@@ -120,7 +120,7 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
 ---
 
 <details>
-  <summary>If you want a different allocation split between Windows and Android, you can do so. Just be aware of the following:</summary>
+  <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
   <p>
 
 ```
@@ -172,7 +172,7 @@ __This command creates the Windows partition.__
 mkpart win ntfs <start in mb + 512>MB <stop in mb divided in half>MB
 ```
 
-__This command creates the Android data partition back.__
+__This command creates the Android™ data partition back.__
 
 ```
 mkpart userdata ext4 <stop in mb divided in half>MB <stop in GB>GB
@@ -195,8 +195,8 @@ quit
 
 This will get you out of parted.
 
-We have deleted the Android userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files,
-a win partition that will have Windows, and the last one is the new userdata partition for Android, just smaller.
+We have deleted the Android™ userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files,
+a win partition that will have Windows, and the last one is the new userdata partition for Android™, just smaller.
 
 Now let's make these partitions actually usable:
 
@@ -259,7 +259,7 @@ Windows is now installed but has no drivers.
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
-- Once it is done, you can reboot your phone by pressing the power button for a few seconds. You will be able to boot to Android and your phone will work normally. Set it up if you need it.
+- Once it is done, you can reboot your phone by pressing the power button for a few seconds. You will be able to boot to Android™ and your phone will work normally. Set it up if you need it.
 
 You will be back into Surface Duo 2's bootloader.
 
@@ -281,7 +281,7 @@ In order to get most sensors currently working, some manual steps are required.
 
 You will need to backup from mass storage or twrp the following directory: /mnt/vendor/persist/sensors/ and copy over the contents to [Windows Drive Letter]\Windows\System32\Drivers\DriverData\QUALCOMM\fastRPC\persist\sensors (the following directory should already exist after booting Windows once, otherwise create it)
 
-The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer. You can also use TWRP or Android to get them if you find this easier or 7-zip does not work for you.
+The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer. You can also use TWRP or Android™ to get them if you find this easier or 7-zip does not work for you.
 
 Start 7-zip as administrator.
 
@@ -320,8 +320,8 @@ If you did everything right, Windows will now boot! Enjoy!
 
 ## Reinstalling Windows
 
-**Note:** If you are running Windows, you need to reboot to boot into Android.
-Once in Android, follow these commands:
+**Note:** If you are running Windows, you need to reboot to boot into Android™.
+Once in Android™, follow these commands:
 - Reboot back into the bootloader menu by running this command:
 
 ```

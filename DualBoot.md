@@ -1,4 +1,4 @@
-# Enabling Dual Boot on Duo
+# Enabling Dual Boot on Surface Duo
 
 ## Files/Tools Needed 📃
 
@@ -126,7 +126,7 @@ fastboot flash boot_<slot> <dualboot.img>
 ```
 
 ## How it Works
-- To boot Android, leave Duo open while turning it on
+- To boot Android™, leave Duo open while turning it on
 - To boot Windows, close Duo as soon as you turn it on and wait a while to open it again
   
 ## Troubleshooting
