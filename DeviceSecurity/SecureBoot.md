@@ -169,12 +169,6 @@ Now that we generated valid UEFI Certificate lists and signed them, we need to e
 
 [PK Byte Array Code Location](https://github.com/WOA-Project/SurfaceDuoPkg/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/SecureBootKeyStoreLib.c#L25-L114)
 
-#### Rebuilding
-
-Once done, recompile SurfaceDuoPkg as usual with your new changes.
-
-_TIP: Use the built in Azure DevOps CI to save time!_
-
 ## Generate a new System Integrity Policy
 
 ### Creating the SiPolicy XML file
@@ -195,9 +189,6 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
     </Rule>
     <Rule>
       <Option>Disabled:Script Enforcement</Option>
-    </Rule>
-    <Rule>
-      <Option>Enabled:UMCI</Option>
     </Rule>
     <Rule>
       <Option>Enabled:Inherit Default Policy</Option>
@@ -491,13 +482,17 @@ $signcerttp = (Get-PfxCertificate -FilePath ".\OEMA0-KEK.cer").Thumbprint
 Copy-Item -Path ".\SiPolicy.bin.p7" -Destination ".\SiPolicy.p7b" -Force
 ```
 
-## Generate a new Self-Signed Driver Enabler package
+### Embed the new policy into the UEFI
 
-Self-Signed Driver Enabler ([SSDE](https://github.com/valinet/ssde) for short) is a driver written by @Valinet designed to help maintain Custom Kernel Policy Signer Licensing persistence in the Operating System. If you understood nothing from this sentence, _this is normal_, but just follow along. (For people curious, you can read the excellent write up by Geoff Chappell on the matter: [Licensed Driver Signing in Windows 10](https://www.geoffchappell.com/notes/windows/license/customkernelsigners.htm))
+#### SiPolicy (SiPolicy.p7b)
 
-In case you do not trust the binary in the Surface Duo Drivers package, feel free to rebuild it using the WDK of your choice. Just be aware the WDK must be of version 18362 if you want to run the driver on 18362 and may require [some api changes in regards to pool apis](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdk-known-issues#issue-in-exallocatepoolzero-exallocatepoolquotazero-and-exallocatepoolpriorityzero-functions-fixed). Once built, replace the sys file (and only this file) in ```/components/ANYSOC/Support/Desktop/SUPPORT.DESKTOP.BASE/Signature/SSDE/ssde.sys```
+[SiPolicy Byte Array Code Location](https://github.com/WOA-Project/SurfaceDuoPkg/blob/e7c821c952da65800dfc885859227c9da1b6d373/Platforms/SurfaceDuoFamilyPkg/Driver/SecureBootProvisioningDxe/SystemIntegrityPolicyDefaultVars.h#L5-L473)
 
-Navigate to ```/components/ANYSOC/Support/Desktop/SUPPORT.DESKTOP.BASE/Signature/SSDE/``` in the driver package you downloaded, replace the existing SiPolicy.p7b file with the one you just built on your own.
+## Rebuilding the UEFI
+
+Once done, recompile SurfaceDuoPkg as usual with your new changes.
+
+_TIP: Use the built in Azure DevOps CI to save time!_
 
 ## Resigning Driver binaries for Kernel Mode use (KMCI)
 
@@ -506,3 +501,9 @@ Navigate to ```/components/ANYSOC/Support/Desktop/SUPPORT.DESKTOP.BASE/Signature
 ## Reinstalling Drivers
 
 ## Boot Test
+
+# About Self-Signed Driver Enabler package
+
+Self-Signed Driver Enabler ([SSDE](https://github.com/valinet/ssde) for short) is a driver written by @Valinet designed to help maintain Custom Kernel Policy Signer Licensing persistence in the Operating System. If you understood nothing from this sentence, _this is normal_, but just follow along. (For people curious, you can read the excellent write up by Geoff Chappell on the matter: [Licensed Driver Signing in Windows 10](https://www.geoffchappell.com/notes/windows/license/customkernelsigners.htm))
+
+In case you do not trust the binary in the Surface Duo Drivers package, feel free to rebuild it using the WDK of your choice. Just be aware the WDK must be of version 18362 if you want to run the driver on 18362 and may require [some api changes in regards to pool apis](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdk-known-issues#issue-in-exallocatepoolzero-exallocatepoolquotazero-and-exallocatepoolpriorityzero-functions-fixed). Once built, replace the sys file (and only this file) in ```/components/ANYSOC/Support/Desktop/SUPPORT.DESKTOP.BASE/Signature/SSDE/ssde.sys```
