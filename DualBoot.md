@@ -10,7 +10,11 @@
 - [unpack_bootimg.py](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py)
 - Python
 
-## Steps🛠️
+## Warnings ⚠️
+
+Once you do this, you will need to follow this guide again each time you update Android™, or your Android™ installation won't boot anymore.
+
+## Steps 🛠️
 
 ### Getting original boot image information and files
 
