@@ -56,7 +56,7 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 - Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
 
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" inside it.
+- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" and "USB Debugging" inside it.
 
 Assuming your Surface Duo is booted to Android™, plugged to your PC:
 
@@ -71,7 +71,7 @@ fastboot flashing unlock
 
 Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From then:
 
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" and "OEM Unlock" inside it.
+- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
 
 - Reboot back into the bootloader menu by running this command:
 
@@ -341,13 +341,31 @@ If, however, the ```persists``` partition isn't available you can use ```adb pul
       adb shell "mkdir /mnt/vendor/persist && mount /dev/block/sda2 /mnt/vendor/persist"
       adb shell "tar -cf /tmp/vendor.tar /mnt/vendor/persist/sensors"
       adb pull /tmp/vendor.tar
-
 ```
 
 ## Boot Windows 🚀
 
 We are ready to boot!
+      
+You'll have two methods of booting Windows. 
+      
+- Enabling Dual Boot
+    - Pros: You'll be able to boot Windows directly from the device
+    - Cons: Every time you update Android, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
+      
+- Manual booting with a PC
+    - Pros: You can freely update Android
+    - Cons: You will need a PC to boot to Windows
 
+In case you want the first option, then follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
+
+---
+<details>
+  <summary>In case you want to manually boot each time: (Click to expand)</summary>
+  <p>
+
+Reboot your device to fastboot, using adb or from the recovery.
+      
 Let's boot the custom UEFI, from a command prompt:
 
 ```
@@ -363,6 +381,10 @@ You should be thrown in the Boot Manager.
 If you did everything right, Windows will now boot! Enjoy!
 
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
+  </p>
+</details>
+      
+---
 
 ## Reinstalling Windows
 
