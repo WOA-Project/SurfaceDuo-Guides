@@ -351,10 +351,10 @@ You'll have two methods of booting Windows.
       
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
-    - Cons: Every time you update Android, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
+    - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
       
 - Manual booting with a PC
-    - Pros: You can freely update Android
+    - Pros: You can freely update Android™
     - Cons: You will need a PC to boot to Windows
 
 In case you want the first option, then follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
