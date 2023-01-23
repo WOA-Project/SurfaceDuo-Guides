@@ -271,6 +271,14 @@ You will be back into Surface Duo 2's bootloader.
 fastboot flash boot_<!X> boot.img
 ```
 
+- Now we want to disable driver signature checks (otherwise Windows will throw a BSOD at boot):
+
+```
+bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /set "{default}" testsigning on
+```
+
+- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally. Set it up if you need it.
+
 You will be back into Surface Duo 2's bootloader.
 
 ## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
