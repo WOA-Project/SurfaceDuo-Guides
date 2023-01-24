@@ -102,27 +102,27 @@ _No ETA will be provided for **any** of these development phases_
 | 🪵 USB C               |             | ✅             |
 | 🔌 Charger             |             | ✅             |
 | 🧮 SoC Cores           | Only one core working | ⚠️             |
-| 👆 Left Multi Touch    |             | ❌             |
-| 👆 Right Multi Touch   |             | ❌             |
-| ✏️ Left Pen Digitizer  |             | ❌             |
-| ✏️ Right Pen Digitizer |             | ❌             |
-| 🔵 Bluetooth           |             | ❌             |
-| 📳 Vibration motor     |             | ❌             |
-| 📲 Right Display Panel |             | ❌             |
-| 📌 GPS                 |             | ❌             |
-| 📽️ Miracast            |             | ❌             |
-| ♋ WiFi                |             | ❌             |
-| ♋ Cellular Data       |             | ❌             |
-| ♋ Cellular Texts      |             | ❌             |
-| ♋ Cellular eSIM       |             | ❌             |
-| ♋ Cellular Calls      |             | ❌             |
-| 🎆 GPU                 |             | ❌             |
-| 🧭 Sensors             |             | ❌             |
-| ♋ Cellular VoLTE      |             | ❌             |
-| 🔊 Audio               |             | ❌             |
-| 📺 HDMI / DP out       |             | ❌             |
-| 📸 Camera Sensors      |             | ❌             |
-| 📸 ToF Sensor          |             | ❌             |
-| 📸 Camera Flash        |             | ❌             |
-| 🏷️ NFC                 |             | ❌             |
-| 🧬 Fingerprint scanner |             | ❌             |
+| 👆 Left Multi Touch    | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
+| 👆 Right Multi Touch   | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
+| ✏️ Left Pen Digitizer  | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
+| ✏️ Right Pen Digitizer | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
+| 🧭 Sensors             | Not all sensors are available | ⚠️             |
+| 🔵 Bluetooth           | Requires Clock Controller fixes | ❌             |
+| 📳 Vibration motor     | Requires PMIC Driver for Haptics | ❌             |
+| 📲 Right Display Panel | Requires GPU | ❌             |
+| 📌 GPS                 | Requires Modem Processor Subsystem | ❌             |
+| 📽️ Miracast            | Requires GPU and requires WiFi | ❌             |
+| ♋ WiFi                | Requires PCIe | ❌             |
+| ♋ Cellular Data       | Requires Modem Processor Subsystem | ❌             |
+| ♋ Cellular Texts      | Requires Modem Processor Subsystem | ❌             |
+| ♋ Cellular eSIM       | Requires Modem Processor Subsystem | ❌             |
+| ♋ Cellular Calls      | Requires Modem Processor Subsystem | ❌             |
+| 🎆 GPU                 | Requires Clock Controller fixes | ❌             |
+| ♋ Cellular VoLTE      | Requires Modem Processor Subsystem | ❌             |
+| 🔊 Audio               | Requires Board Database file and Speaker Ic driver | ❌             |
+| 📺 HDMI / DP out       | Requires GPU | ❌             |
+| 📸 Camera Sensors      | Requires Camera Subsystem | ❌             |
+| 📸 ToF Sensor          | Requires Camera Subsystem | ❌             |
+| 📸 Camera Flash        | Requires Camera Subsystem | ❌             |
+| 🏷️ NFC                 | Requires Secure NFC Applet Interface | ❌             |
+| 🧬 Fingerprint scanner | Requires Secure FPC Applet Interface | ❌             |
