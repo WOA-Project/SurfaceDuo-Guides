@@ -386,23 +386,6 @@ If you did everything right, Windows will now boot! Enjoy!
       
 ---
 
-## Reinstalling Windows
-
-**Note:** If you are running Windows, you need to reboot to boot into Android™.
-Once in Android™, follow these commands:
-- Reboot back into the bootloader menu by running this command:
-
-```
-adb reboot bootloader
-```
-- Start by booting TWRP:
-
-```
-fastboot boot surfaceduo1-twrp.img
-```
-
-Once there, you can go back to the [Going to Mass Storage](#going-to-mass-storage) section and follow the instructions in it and after it.
-
 ## Additional Context and Notes
 
 If you somehow break entirely your partition table, you might be interested in the original offsets of each partition in order to fix it.
