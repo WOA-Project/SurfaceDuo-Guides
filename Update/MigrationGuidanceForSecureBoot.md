@@ -6,13 +6,13 @@ Previous installations require a tiny configuration change in order to be bootab
 
 - Start by booting TWRP:
 
-```
+```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
-```
+```batch
 adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
 adb shell "chmod +x /sdcard/msc.sh"
@@ -22,7 +22,7 @@ adb shell "/sdcard/msc.sh"
 - Make sure you are in Mass Storage Mode, that your Surface Duo is plugged into your PC
 - Mount the partitions you have created using diskpart and assign them some letters:
 
-```
+```batch
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
 YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DONT ASSIGN FINE, USE ANOTHER ONE.
@@ -43,10 +43,10 @@ You will be able to recognize the partitions we made earlier by their size. take
 
 - Now we want to enable driver signature checks (otherwise Windows will go to automatic repair at boot):
 
-```
+```batch
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /deletevalue "{default}" testsigning
 ```
 
-- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally. Set it up if you need it.
+- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally.
 
 You will be back into Surface Duo's bootloader. 

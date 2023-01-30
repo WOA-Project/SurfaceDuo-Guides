@@ -67,30 +67,33 @@ While Surface Duo *technically* supports Windows 10X, no appropriate Windows 10X
 ## Steps
 
 - Presuming you are working on a Windows AMD64 machine, download and extract the ```win-x64.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
+(if you are on a Windows ARM64 machine, use win-arm64 instead, etc..)
 
-- Navigate to this directory: `"win-x64\CLI" `
+NOTE: For apps to be included in the image for 22H1 or higher, please run the tool on Windows 11.
+
+- Navigate to this directory: `"win-x64\CLI"`
 
 ### Download commands
 
 -  Inside the CLI directory, open command prompt and run one of following commands (depending on what version of Windows you would like to use):
 
 _Windows 11 Version 22h2_
-```
+```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c ni_release -t arm64 -l en-US
 ```
 
 _Windows 11 Version Next (Release Preview)_
-```
+```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b ReleasePreview -c ni_release -t arm64 -l en-US
 ```
 
 _Windows 11 Version Next (Beta)_
-```
+```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Beta -c ni_release -t arm64 -l en-US
 ```
 
 _Windows vNext (Dev)_
-```
+```batch
 uupdownload -s Professional -e Professional -v 10.0.22000.100 -r External -b Dev -c co_release -t arm64 -l en-US
 ```
 
@@ -103,7 +106,7 @@ use the standard Windows language pack commands. Installing the right language p
   contains all the required Windows 11 files. Let's create an ISO from the Windows 11 build download.
   Open up the command prompt as Administrator and type:
 
-```
+```batch
 UUPMediaConverter.exe -u <10.0.22000... name of your Windows 11 build folder> -i Windows11_Pro_arm64_en-US.iso -l en-US -e Professional
 ```
 
