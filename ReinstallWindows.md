@@ -58,7 +58,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 
 ## Formatting the existing Windows partition
 
-- Mount the partitions you have created using diskpart and assign them some letters:
+- Mount the partitions you made when you first installed Windows and assign them some letters:
 
 ```
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
