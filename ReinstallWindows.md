@@ -32,7 +32,7 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 
 ## Getting to Mass Storage Mode
 
-- Reboot into the bootloader menu by running this command while inside Android:
+- Reboot into the bootloader menu by running this command while inside Android™:
 
 ```
 adb reboot bootloader
