@@ -15,6 +15,8 @@
 
 Once you do this, you will need to follow this guide again each time you update Android™, or your Android™ installation won't boot anymore.
 
+Please backup your original boot.img image. You will need to reflash it in order to update successfully within android going forward. Or you'll have to use an OTA package.
+
 ## Steps 🛠️
 
 ### Getting original boot image information and files
