@@ -2,9 +2,9 @@
 
 ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../DualBoot.md)
 
-⚠️ If you are upgrade from a version older than 2301.93, you must also follow this guide: [Migration Guidance for Secure Boot](MigrationGuidanceForSecureBoot.md)
+⚠️ If you are upgrading from a version older than 2301.93, you must also follow this guide: [Migration Guidance for Secure Boot](MigrationGuidanceForSecureBoot.md)
 
-⚠️ If you are upgrade from a version older than 2301.93, you must also use version Driver Updater version 1.8.0.0 or higher
+⚠️ If you are upgrading from a version older than 2301.93, you must also use version Driver Updater version 1.8.0.0 or higher
 
 ## Switching to Mass Storage Mode
 
