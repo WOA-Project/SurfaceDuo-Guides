@@ -7,7 +7,7 @@ If your Windows 11 build lacks Microsoft Store, follow these steps to fix this i
 Provided your device is connected online, run the following command:
 
 ```batch
-wreset -i
+wsreset -i
 ```
 
 You should start seeing installation progress in the notification center.
