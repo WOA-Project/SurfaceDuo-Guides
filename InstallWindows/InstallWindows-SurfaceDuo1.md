@@ -345,11 +345,33 @@ If, however, the ```persists``` partition isn't available you can use ```adb pul
 
 ## Boot Windows 🚀
 
-We are ready to boot!
+We are ready to boot for the first time!
+      
+Reboot your device to fastboot, using adb or from the recovery.
+      
+Let's boot the custom UEFI, from a command prompt:
+
+```
+fastboot boot surfaceduo1-uefi.img
+```
+
+This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
+
+You should be thrown in the Boot Manager.
+
+- Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
+
+If you did everything right, Windows will now boot! Enjoy!
+
+**Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
+      
+Let Windows set itself up, and come back once you're on the Windows Desktop on your Surface Duo
+      
+## Boot Windows again after initial installation
       
 You'll have two methods of booting Windows. 
       
-- Enabling Dual Boot
+- Enabling Dual Boot (Not recommended right now, advanced/experienced users only)
     - Pros: You'll be able to boot Windows directly from the device
     - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md)
       
