@@ -271,7 +271,7 @@ You will be back into Surface Duo 2's bootloader.
 fastboot flash boot_<!X> boot.img
 ```
 
-- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally. Set it up if you need it.
+- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone will work normally. Set it up if you need it.
 
 You will be back into Surface Duo 2's bootloader.
 

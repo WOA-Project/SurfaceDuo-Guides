@@ -47,6 +47,6 @@ You will be able to recognize the partitions we made earlier by their size. take
 bcdedit /store "Y:\EFI\Microsoft\BOOT\BCD" /deletevalue "{default}" testsigning
 ```
 
-- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android and your phone will work normally.
+- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone will work normally.
 
 You will be back into Surface Duo's bootloader. 
