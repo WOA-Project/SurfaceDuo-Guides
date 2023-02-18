@@ -319,30 +319,6 @@ DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Inte
 
 You will be back into Surface Duo's bootloader. 
 
-## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
-
-_These steps are temporary and will not be needed in future releases. These steps are also not as fully detailed as others and may get updated at a later time_
-
-In order to get most sensors currently working, some manual steps are required.
-
-You will need to backup from mass storage or twrp the following directory: /mnt/vendor/persist/sensors/ and copy over the contents to [Windows Drive Letter]\Windows\System32\Drivers\DriverData\QUALCOMM\fastRPC\persist\sensors (the following directory should already exist after booting Windows once, otherwise create it)
-
-The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer. You can also use TWRP or Android™ to get them if you find this easier or 7-zip does not work for you.
-
-Start 7-zip as administrator.
-
-In 7-zip, enter the following into the address bar: ```\\.\```
-
-Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
-
-If, however, the ```persists``` partition isn't available you can use ```adb pull``` to obtain sensor data. Here's how you can do that:
-
-```
-      adb shell "mkdir /mnt/vendor/persist && mount /dev/block/sda2 /mnt/vendor/persist"
-      adb shell "tar -cf /tmp/vendor.tar /mnt/vendor/persist/sensors"
-      adb pull /tmp/vendor.tar
-```
-
 ## Boot Windows 🚀
 
 We are ready to boot for the first time!

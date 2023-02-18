@@ -25,6 +25,10 @@ Android™ will have access to the whole memory back again.
 
 ## Steps 🛠️
 
+### Make sure you have not done any dual boot guide!
+
+If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/DualBoot-SurfaceDuo1.md)
+
 ### Booting to TWRP
 
 - Reboot your phone to Surface Duo Bootloader: Press Volume Down + Power until the Microsoft logo appears on the left, then release the power
