@@ -4,7 +4,7 @@
 
 - UEFI Raw FV Image for Surface Duo 1: [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
 - UEFI Raw FV Image for Surface Duo 2: [SM8350_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
-- Stock device boot.img image obtained from an ota package, or from the device itself using ```adb pull```
+- Stock device boot.img image obtained from an ota package, or from the device itself using [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md)
 - Kernel Patching Utility: [SurfaceDuoDualBootKernelImagePatcher](https://github.com/WOA-Project/SurfaceDuoDualBootKernelImagePatcher/releases)
 - [mkbootimg](https://github.com/WOA-Project/SurfaceDuoPkg/blob/main/ImageResources/mkbootimg.py)
 - [unpack_bootimg.py](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py)
