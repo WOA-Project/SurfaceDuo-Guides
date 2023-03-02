@@ -19,5 +19,6 @@ More:
 - [Frequently Asked Questions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/FAQ.md)
 - [Current Status of the Windows Port](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md)
 - [Restore the Microsoft Store on Windows](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/RestoreMicrosoftStore.md)
+- [Extract boot.img or other partitions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md)
 
 Please join [our Telegram group](https://t.me/duowoa) if you need any assistance!
