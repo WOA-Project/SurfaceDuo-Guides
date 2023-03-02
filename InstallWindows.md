@@ -22,7 +22,7 @@ Welcome!
 
 ## Updating Drivers and/or UEFI
 
-- [Restore Microsoft Store](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Update/UpdateDriversAndUEFI.md)
+- [Update Drivers and/or UEFI](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Update/UpdateDriversAndUEFI.md)
 
 ## Help! Something is wrong and the guides do not seem to cover them
 
