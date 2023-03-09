@@ -60,7 +60,7 @@ Surface Duo 2 currently supports the following Windows OS versions:
 
 ---
 
-It should be noted that development primarly is ongoing with the vNext release of Windows 11, and lower versions may be more broken than newer ones. Above table lists all Operating System versions ever released for ARM64 Processors. 1709, 1803 and 1809 are not supported due to being too old to support the Snapdragon 855 System on a Chip (SoC).
+It should be noted that development primarly is ongoing with the vNext release of Windows 11, and lower versions may be more broken than newer ones. Above table lists all Operating System versions ever released for ARM64 Processors. 1709, 1803 and 1809 are not supported due to being too old to support the Snapdragon™ 855 System on a Chip (SoC).
 
 While Surface Duo *technically* supports Windows 10X, no appropriate Windows 10X image is available for *dual screen* ARM64 devices, *only* Single Screen, therefore Windows 10X is not provided as an option. It is still however possible to install it if you're curious, documentation on how to do this may get published at a later time.
 
