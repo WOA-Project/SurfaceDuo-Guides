@@ -31,7 +31,7 @@ If you have followed a guide to use dual boot, please first remove dual boot by 
 
 ### Booting to TWRP
 
-- Reboot your phone to Surface Duo Bootloader: Press Volume Down + Power until the Microsoft logo appears on the left, then release the power
+- Reboot your phone to Surface Duo Bootloader: Press Volume Down + Power until the Microsoft Corporation logo appears on the left, then release the power
   button and keep pressing the volume down button until the bootloader appears.
 - Plug your phone to your PC, open a command prompt and run the following command:
 
@@ -98,7 +98,7 @@ You will be back into Surface Duo's bootloader.
 
 ⚠️⚠️⚠️ If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device. ⚠️⚠️⚠️
 
-- Reboot your Surface Duo to the Bootloader: Press Volume Down + Power until the Microsoft logo appears on the left, then release the power
+- Reboot your Surface Duo to the Bootloader: Press Volume Down + Power until the Microsoft Corporation logo appears on the left, then release the power
   button and keep pressing the volume down button until the bootloader appears.
 
 - Run this command:

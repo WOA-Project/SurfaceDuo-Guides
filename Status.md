@@ -64,7 +64,7 @@ Global progress: 76.47%
 | 🔊 Audio               |             | ❌             |
 | 📺 HDMI / DP out       | Incubating | ⚠️             |
 | 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work | ❌             |
-| 🧑‍💼 Hyper-V             | Requires Microsoft Signed device configuration binary | ❌             |
+| 🧑‍💼 Hyper-V             | Requires Microsoft Corporation Signed device configuration binary | ❌             |
 | 🧬 Fingerprint scanner |             | ❌             |
 
 ## Surface Duo 2
