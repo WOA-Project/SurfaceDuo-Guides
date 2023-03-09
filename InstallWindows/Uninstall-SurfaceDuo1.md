@@ -73,9 +73,30 @@ mkpart userdata ext4 51.9MB 112GB
 mkpart userdata ext4 51.9MB 240GB
 ```
 
-- Once done, run the command `quit` two times.
+__This command leaves parted.__
+
+```
+quit
+```
+
+This will get you out of parted.
+
+Now let's make the userdata partition actually usable:
+
+```
+mke2fs -t ext4 /dev/block/sda6
+exit
+```
+
+- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
+
+- Once Android is confirmed booting, reboot back into the bootloader using ```adb reboot bootloader``` or by pressing Volume Down right at boot.
+
+You will be back into Surface Duo's bootloader. 
 
 ### Relocking the Bootloader
+
+⚠️⚠️⚠️ If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device. ⚠️⚠️⚠️
 
 - Reboot your Surface Duo to the Bootloader: Press Volume Down + Power until the Microsoft logo appears on the left, then release the power
   button and keep pressing the volume down button until the bootloader appears.

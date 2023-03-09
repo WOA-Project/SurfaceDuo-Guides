@@ -246,7 +246,6 @@ Now let's make these partitions actually usable:
 mkfs.fat -F32 -s1 /dev/block/sda6
 mkfs.ntfs -f /dev/block/sda7
 mke2fs -t ext4 /dev/block/sda8
-mkdir /sdcard/espmnt && mount /dev/block/sda6 /sdcard/espmnt/
 exit
 ```
 
