@@ -1,6 +1,6 @@
 # Surface Duo Guides
 
-Guides for the Surface Duo.
+Guides for Surface Duo.
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/197420866-d3bb0534-c848-4cc2-a242-04dae48b0f6e.png)
 

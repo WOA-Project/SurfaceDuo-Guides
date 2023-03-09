@@ -86,7 +86,7 @@ Take note of the ESP and WIN partition numbers.
 - Once you have made sure you have found the right partition, right click on it and select "Format".
 - Make sure the selected file system is NTFS, that "Quick Format" is checked, and leave the rest as it is, and press "Start".
 
-Now the Windows Partition on your Duo should be empty. Let's go ahead and reinstall everything.
+Now the Windows Partition on your Surface Duo should be empty. Let's go ahead and reinstall everything.
 
 ## Installing Windows
 

@@ -24,7 +24,7 @@ Boot to Android™, on your PC open a command prompt window and type:
 adb reboot fastboot
 ```
 
-Your Duo will be rebooted to fastbootd (not fastboot). Once you're there:
+Your Surface Duo will be rebooted to fastbootd (not fastboot). Once you're there:
 
 ```
 fastboot getvar all

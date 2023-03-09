@@ -90,7 +90,7 @@ exit
 
 - Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
 
-- Once Android is confirmed booting, reboot back into the bootloader using ```adb reboot bootloader``` or by pressing Volume Down right at boot.
+- Once Android™ is confirmed booting, reboot back into the bootloader using ```adb reboot bootloader``` or by pressing Volume Down right at boot.
 
 You will be back into Surface Duo's bootloader. 
 

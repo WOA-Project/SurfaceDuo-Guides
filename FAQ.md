@@ -12,9 +12,9 @@ It depends on how you have set up your device.
 
 ⚠️ Yes, but you'll have to follow the [Dual Boot guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/DualBoot.md) again. The boot image needs to be adapted for each Android™ version that gets released. Please note that after updating Android™, you won't be able to boot it anymore until you follow the guide again.
 
-### Do you know if Microsoft had Windows running on the Surface Duo?
+### Do you know if Microsoft had Windows running on Surface Duo?
 
-Short Answer: no we don't, but we also think they did _not_. The shipping Surface Duo device we all have is a Snapdragon 855 based device. The maker of this SoC, Qualcomm Technologies Inc., is the one making the bulk of the drivers to support the SoC, with the rest left to the OEM for their specific hardware. The rumored "Codename Andromeda" device, previously reported on sites like WindowsCentral.com, was a _Snapdragon 845_ based device. The Snapdragon 845 device *does* have official Windows support from Qualcomm Technologies Inc. (see all Laptops with Snapdragon 850 that were sold in 2019) and therefore had Windows support. No Snapdragon 855 device ever did officially, and thus no Windows support could have potentially existed for the Surface Duo we have today.
+Short Answer: no we don't, but we also think they did _not_. The shipping Surface Duo device we all have is a Snapdragon 855 based device. The maker of this SoC, Qualcomm Technologies Inc., is the one making the bulk of the drivers to support the SoC, with the rest left to the OEM for their specific hardware. The rumored "Codename Andromeda" device, previously reported on sites like WindowsCentral.com, was a _Snapdragon 845_ based device. The Snapdragon 845 device *does* have official Windows support from Qualcomm Technologies Inc. (see all Laptops with Snapdragon 850 that were sold in 2019) and therefore had Windows support. No Snapdragon 855 device ever did officially, and thus no Windows support could have potentially existed for Surface Duo we have today.
 
 ### If Qualcomm Technologies Inc. never offered support for the Snapdragon 855, then why is this project even a thing?
 
