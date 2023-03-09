@@ -13,6 +13,7 @@ Additional Guides:
 - [Uninstall Windows and only keep Android™ (Surface Duo 1 only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo1.md)
 - [Dual Boot between Android™ and Windows 11 without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo1.md)
 - [Reinstall Windows (Surface Duo 1 only for now)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
+- [Making Cellular work on Sim Unlocked AT&T Surface Duo 1 devices](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ATTCellular-SurfaceDuo1.md)
 
 More:
 
