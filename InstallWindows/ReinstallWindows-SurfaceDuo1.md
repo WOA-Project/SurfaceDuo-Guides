@@ -4,7 +4,7 @@
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 - Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-msc.tar)
-- Windows UEFI: [surfaceduo1-uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
@@ -101,6 +101,7 @@ This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 - Once that is done:
 
 ```
+rmdir /Q /S Y:\EFI
 bcdboot X:\Windows /s Y: /f UEFI
 ```
 
@@ -112,30 +113,6 @@ Windows is now installed but has no drivers.
 
 ```
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
-```
-
-## [Temporary and Optional] Copy over calibration files/configuration files for the sensors
-
-_These steps are temporary and will not be needed in future releases. These steps are also not as fully detailed as others and may get updated at a later time_
-
-In order to get most sensors currently working, some manual steps are required.
-
-You will need to backup from mass storage or twrp the following directory: /mnt/vendor/persist/sensors/ and copy over the contents to [Windows Drive Letter]\Windows\System32\Drivers\DriverData\QUALCOMM\fastRPC\persist\sensors (the following directory should already exist after booting Windows once, otherwise create it)
-
-The ```persist``` partition should be accessible via mass storage but is formatted using ```EXT4```. In order to be able to read it from Windows without Linux, you may use ```7-zip```. Note down the disk number your device is using when connected in mass storage mode to your computer. You can also use TWRP or Android™ to get them if you find this easier or 7-zip does not work for you.
-
-Start 7-zip as administrator.
-
-In 7-zip, enter the following into the address bar: ```\\.\```
-
-Now open the ```PhysicalDriveX``` file matching your phone, where X is your disk number. You should be able to see persist and browse through it from 7-zip.
-
-If, however, the ```persists``` partition isn't available you can use ```adb pull``` to obtain sensor data. Here's how you can do that:
-
-```
-      adb shell "mkdir /mnt/vendor/persist && mount /dev/block/sda2 /mnt/vendor/persist"
-      adb shell "tar -cf /tmp/vendor.tar /mnt/vendor/persist/sensors"
-      adb pull /tmp/vendor.tar
 ```
 
 ## Boot Windows 🚀

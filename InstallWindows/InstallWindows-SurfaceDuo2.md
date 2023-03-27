@@ -15,7 +15,7 @@
 - Expert knowledge of what you're doing (this is even more susceptible to bricks than the Surface Duo 1 guide, do not follow for now if you are not comfortable, this is very advanced still)
 - Your stock boot image (from ota recovery package)
 - Early Boot package: [surfaceduo2-bootpkg.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-bootpkg.img)
-- Windows UEFI: [surfaceduo2-uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Windows UEFI: [SM8350.UEFI.Surface.Duo.2.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, configure ESP
