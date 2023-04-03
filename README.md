@@ -5,6 +5,7 @@ Guides for Surface Duo.
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/197420866-d3bb0534-c848-4cc2-a242-04dae48b0f6e.png)
 
 - [Install Windows](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows.md)
+- [Install Windows 10X (Surface Duo 1 Only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Install10X/SurfaceDuo1.md)
 
 Additional Guides:
 
