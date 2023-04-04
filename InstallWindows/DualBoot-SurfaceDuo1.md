@@ -174,10 +174,10 @@ adb reboot recovery
      * Do not release the **Power** button before pressing the **Volume Up** button.
   4. Go to "fastboot" in the menu
 
-- Get the Current slot (*Search for current-slot:<slot\>)*
+- Get the current slot
 
 ```batch
-fastboot getvar all
+fastboot getvar current-slot
 ```
 
 - Flash the boot img to that slot
