@@ -276,6 +276,8 @@ fastboot flash win OSPool.img
 <img width="510" alt="image" src="https://user-images.githubusercontent.com/29689637/229379746-9b620153-e70e-4f56-b097-7339aef08fe4.png">
 
 This is going to take a while, especially on the second command. As you can see it took me almost 6 minutes. Take a little walk in the meantime.
+      
+❓ If you're *updating* or *reinstalling* from 10X, you can stop here and reboot! You're done! ✅
     
 ## Completing the Installation
     
