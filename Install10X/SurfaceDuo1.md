@@ -39,7 +39,9 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-✅ If you're already running Windows 10/11 on your device, you can start from [this step: Installing Windows 10X](#installing-windows-10x). Please note that you'll remove your Windows Installation if you do it.
+❓ If you're already running Windows 10/11 on your device, you can start from [this step: Installing Windows 10X](#installing-windows-10x). Please note that you'll remove your Windows Installation if you do it.
+
+❓ If you're running an old release of 10X and want to update it or want to reinstall, start from [this step: Installing Windows 10X](#installing-windows-10x). You'll lose your 10X data if you follow this guide.
 
 ## What you will get 🛒
 
