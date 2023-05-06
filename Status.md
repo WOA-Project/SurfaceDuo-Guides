@@ -4,7 +4,7 @@
 
 #### Important information
 
-- It is expected currently for the boot process to look very rough on the right panel, when the image will change on the left the panel will act normally. This is the beginning, so bear with us for now :) Your displays aren't broken, and won't get damaged.
+- Sometimes the displays might show some "garbage"/"noise". This is expected. This is the beginning, so bear with us for now :) Your displays aren't broken, and won't get damaged.
 
 - AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android™ again. In order to make Windows _Unlocked_ like Android™, dumping ```modem_fs1``` and ```modem_fs2``` is currently required, and the dumped partitions need to be placed under ```\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs1``` and ```\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs2```
 
@@ -34,8 +34,8 @@ Global progress: 76.47%
 |---------------------|-------------|---------------|
 | 👆 Left Multi Touch    |             | ✅             |
 | 👆 Right Multi Touch   |             | ✅             |
-| ✏️ Left Pen Digitizer  | Calibration needed, otherwise works fine | ✅             |
-| ✏️ Right Pen Digitizer | Calibration needed, otherwise works fine | ✅             |
+| ✏️ Left Pen Digitizer  | Precision needs to be refined, otherwise works fine | ✅             |
+| ✏️ Right Pen Digitizer | Precision needs to be refined, otherwise works fine | ✅             |
 | 🔵 Bluetooth           |             | ✅             |
 | 📦 UFS                 |             | ✅             |
 | ⌨️ Side buttons        |             | ✅             |
@@ -57,12 +57,12 @@ Global progress: 76.47%
 | 🎆 GPU                 | Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ✅             |
 | 💤 Modern Standby      |  | ✅              |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
-| 🪵 USB C               | Incubating (USB Powerless Dongles) | ⚠️             |
+| 🪵 USB C               | Some of the features are work in progress (USB Powerless Dongles) | ⚠️             |
 | 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
 | ♋ Cellular VoLTE      | Untested due to lack of App / Software currently | ⚠️             |
-| 🔌 Charger             | Incubating | ⚠️             |
+| 🔌 Charger             | Incubating (not available but work is being made) | ⚠️             |
 | 🔊 Audio               |             | ❌             |
-| 📺 HDMI / DP out       | Incubating | ⚠️             |
+| 📺 HDMI / DP out       | Incubating (not available but work is being made) | ⚠️             |
 | 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Corporation Signed device configuration binary | ❌             |
 | 🧬 Fingerprint scanner |             | ❌             |
