@@ -1,8 +1,8 @@
 # Uninstall Windows and revert your Surface Duo to stock
 
 ## Files/Tools Needed 📃
-- TWRP image: [twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/twrp.img)
-- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
+- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- Parted: [surfaceduo1-parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A PC.
 
@@ -36,7 +36,7 @@ If you have followed a guide to use dual boot, please first remove dual boot by 
 - Plug your phone to your PC, open a command prompt and run the following command:
 
 ```
-fastboot boot twrp.img
+fastboot boot surfaceduo1-twrp.img
 ```
 
 You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
@@ -46,8 +46,8 @@ You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so 
 - Let's copy and run parted:
 
 ```
-adb push <path to parted> /sdcard/
-adb shell "cp /sdcard/parted /sbin/ && chmod 755 /sbin/parted"
+adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
+adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 parted /dev/block/sda
 print
