@@ -60,8 +60,8 @@ Please note that your device is already in twrp, there's no need to put it back 
 
 Assuming the Windows partition is available under X: (will/may be different for you), do the following:
 
-- Copy the ```modem_fs1.img``` file to ```X:\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs1```
-- Copy the ```modem_fs2.img``` file to ```X:\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs2```
+- Copy the ```modem_fs1.img``` file to ```X:\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\bootmodem_fs1```
+- Copy the ```modem_fs2.img``` file to ```X:\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\bootmodem_fs2```
 
-Please note boot_modemfs1 is the name of the file, and not a folder (same for boot_modemfs2).
+Please note bootmodem_fs1 is the name of the file, and not a folder (same for bootmodem_fs2).
 You may have to adjust permissions on the ```X:\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>``` folder in order to copy paste the above's files.
