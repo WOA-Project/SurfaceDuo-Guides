@@ -18,44 +18,31 @@
 
 ## Getting your current boot slot (A/B)
 
-Boot to Android™, on your PC open a command prompt window and type:
-
-```
-adb reboot fastboot
-```
-
-Your Surface Duo will be rebooted to fastbootd (not fastboot). Once you're there:
-
-```
-fastboot getvar all
-```
-
-A lot of text lines will be printed. Look for a line that says `(bootloader) current-slot:`. It can be a or b. In my case:
-
-<img width="204" alt="image" src="https://user-images.githubusercontent.com/29689637/222553048-6d473cbe-820a-452d-a77c-5b42cbd2682b.png">
-
-Take note of your slot, we'll need that later. For the rest of this guide we'll assume it is `b`.
-
-Now let's get back into Android™:
-
-```
-fastboot reboot
-```
-
-## Extracting the boot or other partitions
-
-For the rest of this guide we'll pretend we need to extract the `boot` partition and that our current slot is `b`.
-
-Once we're back in Android™:
+Assuming your Surface Duo is booted to Android™, plugged into to your PC:
 
 ```
 adb reboot bootloader
 ```
 
-When the bootloader menu shows up, boot TWRP:
+Your Surface Duo will reboot into fastboot. Once you're there:
 
 ```
-fastboot boot twrp.img
+fastboot getvar current-slot
+```
+
+A line with the text 'current-slot:' will appear.
+The value can be a or b.
+
+<img width="304" alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/75797743/242037668-45949c27-b4bc-4abb-90a9-b5a4060ba648.png">
+
+Take note of your slot, we'll need that later.
+
+For the rest of this guide we'll pretend we need to extract the `boot` partition and that our current slot is `b`.
+
+Next, we boot into TWRP.
+
+```
+fastboot boot surfaceduo1-twrp.img
 ```
 
 Wait until TWRP finishes loading. Friendly reminder that touch still doesn't work in TWRP.
