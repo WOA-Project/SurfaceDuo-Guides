@@ -45,7 +45,7 @@ Take note of your slot, we´ll assume it is `b`
 
 ## Boot into TWRP
 
-- NWe need to boot into TWRP, to do so, run the following command on your PC:
+- We need to boot into TWRP, to do so, run the following command on your PC:
 
 ```
 fastboot boot surfaceduo1-twrp.img
