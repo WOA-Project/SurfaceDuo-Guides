@@ -1,4 +1,4 @@
-# Extract the boot.img file or other partitions
+# Extract the boot partition or other partitions
 
 ## Files/Tools Needed 📃
 
@@ -18,57 +18,53 @@
 
 ## Getting your current boot slot (A/B)
 
-Boot to Android™, on your PC open a command prompt window and type:
+Assuming your Surface Duo is currently booted into Android™️, connect it to your PC with a USB cable and open a command prompt.
 
-```
-adb reboot fastboot
-```
-
-Your Surface Duo will be rebooted to fastbootd (not fastboot). Once you're there:
-
-```
-fastboot getvar all
-```
-
-A lot of text lines will be printed. Look for a line that says `(bootloader) current-slot:`. It can be a or b. In my case:
-
-<img width="204" alt="image" src="https://user-images.githubusercontent.com/29689637/222553048-6d473cbe-820a-452d-a77c-5b42cbd2682b.png">
-
-Take note of your slot, we'll need that later. For the rest of this guide we'll assume it is `b`.
-
-Now let's get back into Android™:
-
-```
-fastboot reboot
-```
-
-## Extracting the boot or other partitions
-
-For the rest of this guide we'll pretend we need to extract the `boot` partition and that our current slot is `b`.
-
-Once we're back in Android™:
+- First, we need to reboot into the bootloader menu, to do so, run this command on your pc:
 
 ```
 adb reboot bootloader
 ```
 
-When the bootloader menu shows up, boot TWRP:
+Your Surface Duo will reboot into the bootloader menu.
+
+-  In order to retrieve the current active slot, run this command on your PC:
 
 ```
-fastboot boot twrp.img
+fastboot getvar current-slot
 ```
 
-Wait until TWRP finishes loading. Friendly reminder that touch still doesn't work in TWRP.
+A line with the text 'current-slot:' will appear.
+The value can be a or b.
 
-Now we'll need to find the location of our boot partition, as it is different for each device.
+<img width="304" alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/75797743/242037668-45949c27-b4bc-4abb-90a9-b5a4060ba648.png">
 
-On the command prompt:
+Take note of your slot, we´ll assume it is `b`
+
+- For the rest of this guide we´ll assume the current slot is `b` and we want to retrieve the `boot` partition
+
+## Boot into TWRP
+
+- NWe need to boot into TWRP, to do so, run the following command on your PC:
+
+```
+fastboot boot surfaceduo1-twrp.img
+```
+
+Your Surface Duo will boot into TWRP, touch will not work and the device will say it is locked. This is completely normal and expected.
+
+
+## Retrieve the location of our boot partition
+
+- We need to open a shell to issue commands directly to the phone. To do so, run the following command on your PC:
 
 ```
 adb shell
 ```
 
-This will open a shell on our device and show its output on our PC. 
+You are now able to issue commands directly to your phone via your PC.
+
+- Now, we need to find the location of our boot partition, as it is different for each device. To do so, run the following command on your PC:
 
 ```
 ls /dev/block/platform/soc/
@@ -80,28 +76,28 @@ If you're lucky, you'll get only one line of output:
 
 Take note of all the lines that get output from this command. In my case, it's only one and it is `1d84000.ufshc`.
 
-Back into the shell:
+- Next we need to retrieve our mount point for our partition, to do so, run this command:
 
 ```
 ls -al /dev/block/platform/soc/[the last line we took note of]/by-name/
 ```
 
-*In my case the command will be: `ls -al /dev/block/platform/soc/1d84000.ufshc/by-name/`*
+*In my case: `ls -al /dev/block/platform/soc/1d84000.ufshc/by-name/`*
 
-This is going to output a lot of lines, with each partition name having its mount point. Look for the line that says `boot_[your slot]`:
+- This is going to output a lot of lines, with each partition name having its mount point. Look for the line that says `boot_[your slot]`:
 
 <img width="506" alt="image" src="https://user-images.githubusercontent.com/29689637/222557262-7cbe0114-a218-4d60-9da3-2e04a9733bd6.png">
 
-Now let's take note of its mount point, in my case: `/dev/block/sde26`.
+- Now let's take note of its mount point, in my case: `/dev/block/sde26`.
 
 Let's make an image of the partition:
 
 ```
 dd if=/dev/block/[your mount point] of=/tmp/boot.img
 ```
-*In my case, the command will be: `dd if=/dev/block/sde26 of=/tmp/boot.img`.*
+*In my case: `dd if=/dev/block/sde26 of=/tmp/boot.img`.*
 
-Now let's exit the shell and extract the boot.img from the device:
+- Now let's exit the shell and pull the boot.img from the device, to do so, run the following command on your PC:
 
 ```
 exit
@@ -109,6 +105,6 @@ exit
 adb pull /tmp/boot.img
 ```
 
-We're done! 🥳🎈
+If you did everything correctly, you will now have your `boot.img`. Enjoy! 🥳
 
 <img width="531" alt="image" src="https://user-images.githubusercontent.com/29689637/222561203-7f2dc375-e500-4201-a538-8cd0ba6d7559.png">
