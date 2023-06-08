@@ -29,10 +29,10 @@ Once done, open a Command Prompt window on your Windows computer (not PowerShell
 
 First we need to unpack the stock boot image to gather a few files and information, like so from an OS with python installed:
 
-Assuming you downloaded every file you needed in B:\Duo:
+Assuming you downloaded every file you needed:
 
 ```batch
-B:\Duo>python3 unpack_bootimg.py --boot_img boot.img
+python3 unpack_bootimg.py --boot_img boot.img
 ```
 
 This command will extract specific files from the original boot image extracted earlier, but will also print some vital/important information on screen, here's an example of such information:
@@ -75,13 +75,13 @@ Once done, run the kernel patcher utility as such:
 For Surface Duo 1:
 
 ```batch
-B:\Duo>SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 0
+SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 0
 ```
 
 For Surface Duo 2:
 
 ```batch
-B:\Duo>SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 1
+SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 1
 ```
 
 ### Merging patched kernel image with the UEFI firmware
@@ -91,13 +91,13 @@ Now we need to combine our new kernel with our UEFI fd image from a Command Prom
 For Surface Duo 1:
 
 ```batch
-B:\Duo>copy /b .\patchedkernel + .\SM8150_EFI.fd .\hybridkernel
+copy /b .\patchedkernel + .\SM8150_EFI.fd .\hybridkernel
 ```
 
 For Surface Duo 2:
 
 ```batch
-B:\Duo>copy /b .\patchedkernel + .\SM8350_EFI.fd .\hybridkernel
+copy /b .\patchedkernel + .\SM8350_EFI.fd .\hybridkernel
 ```
 
 ### Rebuilding a new boot.img file
@@ -107,13 +107,13 @@ Now using the files we got earliers as well as the information being output abov
 For Surface Duo 1:
 
 ```batch
-B:\Duo>python3 mkbootimg.py --kernel hybridkernel --ramdisk ramdisk -o dualboot.img --pagesize 4096 --header_version 2 --cmdline "<command line>" --dtb dtb --base 0x0 --os_version <os version> --os_patch_level <os patch level> --second_offset 0xf00000
+python3 mkbootimg.py --kernel hybridkernel --ramdisk ramdisk -o dualboot.img --pagesize 4096 --header_version 2 --cmdline "<command line>" --dtb dtb --base 0x0 --os_version <os version> --os_patch_level <os patch level> --second_offset 0xf00000
 ```
 
 For Surface Duo 2:
 
 ```batch
-B:\Duo>python3 mkbootimg.py --kernel hybridkernel --ramdisk ramdisk -o dualboot.img --pagesize 4096 --header_version 3 --cmdline "<command line>" --base 0x0 --os_version <os version> --os_patch_level <os patch level>
+python3 mkbootimg.py --kernel hybridkernel --ramdisk ramdisk -o dualboot.img --pagesize 4096 --header_version 3 --cmdline "<command line>" --base 0x0 --os_version <os version> --os_patch_level <os patch level>
 ```
   
 ### Testing the newly made image
@@ -125,13 +125,13 @@ Before risking to brick your device, it is good practice to test your image to m
 First go to the bootloader menu with:
   
 ```batch
-B:\Duo>adb reboot bootloader
+adb reboot bootloader
 ```
 
 Now, boot your newly image like so, with the device folded flat/open:
   
 ```batch
-B:\Duo>fastboot boot dualboot.img
+fastboot boot dualboot.img
 ```
   
 If your device boots into Android™ just fine, like before, you did well! your image is fully working for Android™ use. Make sure you can unlock the device fine and use it as normal before proceeding further.
@@ -143,13 +143,13 @@ Now we'll test the ability to boot into Windows in roughly the same way.
 Go to the bootloader menu once more with:
   
 ```batch
-B:\Duo>adb reboot bootloader
+adb reboot bootloader
 ```
 
 Now, boot your newly image like so, this time with the device closed, not opened:
   
 ```batch
-B:\Duo>fastboot boot dualboot.img
+fastboot boot dualboot.img
 ```
   
 If your device boots into Windows just fine, like before, you did well! your image is fully working for Windows use. Make sure you can unlock the device fine and use it as normal before proceeding further.
