@@ -10,13 +10,13 @@
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 
-- Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 
 - Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-msc.tar)
 
-- The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
+- The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
 
-- DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/)
+- DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
 
 - A Windows PC
 
@@ -75,13 +75,13 @@ You will be back into Surface Duo's bootloader.
 
 Simply use the latest UEFI image
 
-- Assuming you are in Surface Duo´s bootloader, run the following command to boot into Windows:
+- Assuming you are in Surface Duo's bootloader, run the following command to boot into Windows:
 
 ```batch
 fastboot boot uefi.img
 ```
 
-- If you are in Android, boot into Surface Duo´s bootloader using the following command:
+- If you are in Android™, boot into Surface Duo's bootloader using the following command:
 
 
 ```batch
