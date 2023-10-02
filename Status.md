@@ -4,8 +4,6 @@
 
 #### Important information
 
-- Sometimes the displays might show some "garbage"/"noise". This is expected. This is the beginning, so bear with us for now :) Your displays aren't broken, and won't get damaged.
-
 - AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android™ again. In order to make Windows _Unlocked_ like Android™, dumping ```modem_fs1``` and ```modem_fs2``` is currently required, and the dumped partitions need to be placed under ```\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs1``` and ```\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>\boot_modemfs2```
 
 #### Keep up with the development in real time
@@ -28,44 +26,44 @@ _No ETA will be provided for **any** of these development phases_
 
 ---
 
-Global progress: 76.47%
+Global progress: 80.88%
 
-| Feature             | Description | Working state |
-|---------------------|-------------|---------------|
-| 👆 Left Multi Touch    |             | ✅             |
-| 👆 Right Multi Touch   |             | ✅             |
-| ✏️ Left Pen Digitizer  | Precision needs to be refined, otherwise works fine | ✅             |
-| ✏️ Right Pen Digitizer | Precision needs to be refined, otherwise works fine | ✅             |
+| Feature                | Description | Working state |
+|------------------------|-------------|---------------|
 | 🔵 Bluetooth           |             | ✅             |
 | 📦 UFS                 |             | ✅             |
 | ⌨️ Side buttons        |             | ✅             |
-| 💻 Lid Hall sensor     | Closing the device will put it into sleep, opening it will wake it up | ✅             |
 | 🌡️ Thermal sensors     |             | ✅             |
 | 📳 Vibration motor     |             | ✅             |
-| 🔋 Battery 1           | Reading manufacturing date is coming soon | ✅             |
-| 🔋 Battery 2           | Reading manufacturing date is coming soon | ✅             |
-| 📲 Left Display Panel  | Color calibration is missing | ✅            |
-| 📲 Right Display Panel | Color calibration is missing | ✅            |
+| 🔋 Battery 1           |             | ✅             |
+| 🔋 Battery 2           |             | ✅             |
+| 🔌 Charger             |             | ✅             |
 | 📌 GPS                 |             | ✅             |
 | 📽️ Miracast            |             | ✅             |
 | ♋ WiFi                |             | ✅             |
 | ♋ Cellular Data       |             | ✅             |
 | ♋ Cellular Texts      |             | ✅             |
 | ♋ Cellular eSIM       |             | ✅             |
+| 🎆 GPU                 |             | ✅             |
+| 💤 Modern Standby      |             | ✅             |
+| 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32)        |             | ✅             |
+| 💻 Lid Hall sensor     | Closing the device will put it into sleep, opening it will wake it up                | ✅             |
+| 👆 Left Multi Touch    | Precision needs to be refined (far right area may not respond), otherwise works fine | ✅             |
+| 👆 Right Multi Touch   | Precision needs to be refined (far right area may not respond), otherwise works fine | ✅             |
+| ✏️ Left Pen Digitizer  | Precision needs to be refined (far right area may not respond), otherwise works fine | ✅             |
+| ✏️ Right Pen Digitizer | Precision needs to be refined (far right area may not respond), otherwise works fine | ✅             |
+| 📲 Left Display Panel  | Color calibration is missing                                                         | ✅             |
+| 📲 Right Display Panel | Color calibration is missing                                                         | ✅             |
 | ♋ Cellular Calls      | Call provisioning is work in progress, if calls do not work for you at the moment, you may need to provision the call functionality manually. (Same as on Lumia 950s: https://woa-project.github.io/LumiaWOA/guides/ican0/, value is not different between 950s and Surface Duo either, so if you already have such value, you're good to go, this is temporary!) | ✅             |
-| 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32)              |  | ✅             |
-| 🎆 GPU                 | Initial boot may leave the right display with artifacts, locking and unlocking the device will fix this issue | ✅             |
-| 💤 Modern Standby      |  | ✅              |
-| 🧮 SoC Cores           | Prime core frequency isn't scaled up | ⚠️             |
-| 🪵 USB C               | Some of the features are work in progress (USB Powerless Dongles) | ⚠️             |
-| 🧭 Sensors     | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
-| ♋ Cellular VoLTE      | Untested due to lack of App / Software currently | ⚠️             |
-| 🔌 Charger             | Incubating (not available but work is being made) | ⚠️             |
-| 🔊 Audio               |             | ❌             |
-| 📺 HDMI / DP out       | Incubating (not available but work is being made) | ⚠️             |
-| 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work | ❌             |
+| 🧮 SoC Cores           | Prime core frequency isn't scaled up                                                                           | ⚠️             |
+| 🪵 USB C               | Some of the features are work in progress (USB Powerless Dongles)                                              | ⚠️             |
+| 🧭 Sensors             | Calibration isn't being automatically copied over. Pedometers and Motion sensors are not currently functional. | ⚠️             |
+| ♋ Cellular VoLTE      | Untested due to lack of App / Software currently                                                               | ⚠️             |
+| 📺 HDMI / DP out       | Incubating (not available but work is being made)                                                              | ⚠️             |
+| 🔊 Audio               |                                                                   | ❌             |
+| 📸 Camera Sensor       | Requires CDSP Secure Camera/NPU to work                           | ❌             |
 | 🧑‍💼 Hyper-V             | Requires Microsoft Corporation Signed device configuration binary | ❌             |
-| 🧬 Fingerprint scanner |             | ❌             |
+| 🧬 Fingerprint scanner |                                                                   | ❌             |
 
 ## Surface Duo 2
 
