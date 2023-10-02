@@ -49,8 +49,7 @@ fastboot boot surfaceduo1-twrp.img
 ```batch
 adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
-adb shell "chmod +x /sdcard/msc.sh"
-adb shell "/sdcard/msc.sh"
+adb shell "sh /sdcard/msc.sh"
 ```
 
 ## Updating Drivers

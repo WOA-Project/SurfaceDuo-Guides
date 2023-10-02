@@ -292,11 +292,10 @@ fastboot boot surfaceduo1-twrp.img
 - Friendly reminder that touch in TWRP still doesn't work.
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
-```
+```batch
 adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
-adb shell "chmod +x /sdcard/msc.sh"
-adb shell "/sdcard/msc.sh"
+adb shell "sh /sdcard/msc.sh"
 ```
 <img width="605" alt="image" src="https://user-images.githubusercontent.com/29689637/229380153-355063fb-4cf4-468b-9780-875b2667b79a.png">
 

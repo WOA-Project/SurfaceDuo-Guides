@@ -36,11 +36,10 @@ fastboot boot surfaceduo1-twrp.img
 Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal.
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
-```
+```batch
 adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
-adb shell "chmod +x /sdcard/msc.sh"
-adb shell "/sdcard/msc.sh"
+adb shell "sh /sdcard/msc.sh"
 ```
 
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
