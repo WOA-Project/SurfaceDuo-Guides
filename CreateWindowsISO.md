@@ -22,7 +22,7 @@ Surface Duo 1 currently supports the following Windows OS versions:
 | Windows 11 Build 22000 (21h2)                                             | ✅         |
 | Windows 11 Build 22621 (22h2)                                             | ✅         |
 | Windows 11 Build 22621 (23h1)                                             | ✅         |
-| Windows 11 September 2023 Moment (23h2)                                   | ✅         |
+| Windows 11 Build 22631 (23h2)                                             | ✅         |
 | Windows vNext (Gallium Semester)                                          | ✅         |
 
 
@@ -52,7 +52,7 @@ Surface Duo 2 currently supports the following Windows OS versions:
 | Windows 11 Build 22000 (21h2)                                             | ❌         |
 | Windows 11 Build 22621 (22h2)                                             | ❌         |
 | Windows 11 Build 22621 (23h1)                                             | ❌         |
-| Windows 11 September 2023 Moment (23h2)                                   | ❌         |
+| Windows 11 Build 22631 (23h2)                                             | ❌         |
 | Windows vNext (Gallium Semester)                                          | ✅         |
 
 
@@ -81,24 +81,33 @@ NOTE: For apps to be included in the image for 22H1 or higher, please run the to
 
 -  Inside the CLI directory, open command prompt and run one of following commands (depending on what version of Windows you would like to use):
 
+#### Latest Production Versions (Recommended)
+
 _Windows 11 Version 22h2_
 ```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c ni_release -t arm64 -l en-US
 ```
 
-_Windows 11 Version Next (Release Preview)_
+#### Latest Windows Insider Program Versions
+
+_Windows 11 Version Next (Release Preview Channel)_
 ```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b ReleasePreview -c ni_release -t arm64 -l en-US
 ```
 
-_Windows 11 Version Next (Beta)_
+_Windows 11 Version Next (Beta Channel)_
 ```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Beta -c ni_release -t arm64 -l en-US
 ```
 
-_Windows vNext (Dev)_
+_Windows vNext (Dev Channel)_
 ```batch
-uupdownload -s Professional -e Professional -v 10.0.22000.100 -r External -b Dev -c co_release -t arm64 -l en-US
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Dev -c ni_release -t arm64 -l en-US
+```
+
+_Windows vNext (Canary Channel)_
+```batch
+uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b CanaryChannel -c ni_release -t arm64 -l en-US
 ```
 
 This will download the professional edition of Windows 11 retail copy for arm64 architecture for English version. If you want to change the language,
