@@ -83,7 +83,13 @@ NOTE: For apps to be included in the image for 22H1 or higher, please run the to
 
 #### Latest Production Versions (Recommended)
 
-_Windows 11 Version 22h2_
+This will get you the latest currently supported _stable_ version of Windows 11, which is the recommended option for most people to use on your device.
+
+Windows Insider Program's channel builds may be more unstable, and less tested for use on Surface Duo devices. They'll also break more often than production versions, and require more recurrent updating.
+
+If you value stability, please use below's command to download the latest stable version of Windows 11:
+
+_Windows 11 Version 23h2_
 ```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c ni_release -t arm64 -l en-US
 ```
@@ -122,6 +128,8 @@ _Windows vNext (Canary Channel)_
 ```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b CanaryChannel -c ni_release -t arm64 -l en-US
 ```
+
+---
 
 This will download the professional edition of Windows 11 retail copy for arm64 architecture for English version. If you want to change the language,
 use the standard Windows language pack commands. Installing the right language pack will save a lot of time for download.
