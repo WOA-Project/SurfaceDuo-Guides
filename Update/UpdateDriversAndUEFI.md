@@ -68,7 +68,7 @@ DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Inte
 adb reboot bootloader
 ```
 
-You will be back into Surface Duo's bootloader. 
+You will be back into Surface Duo's bootloader.
 
 ## Updating UEFI
 

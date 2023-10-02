@@ -37,7 +37,7 @@ python3 unpack_bootimg.py --boot_img boot.img
 
 This command will extract specific files from the original boot image extracted earlier, but will also print some vital/important information on screen, here's an example of such information:
 
-```
+```batch
 boot magic: ANDROID!
 kernel_size: 38262800
 kernel load address: 0x00008000
@@ -65,7 +65,7 @@ To avoid mistakes/reusing values, we've replaced them above. You will want to no
 - os version: ```<os version>```
 - os patch level: ```<os patch level>```
 - command line args: ```<command line>```
-  
+
 later in the guide, you will have to replace every occurence of ```<os version>```, ```<os patch level>```, ```<command line>``` with the values you collected above, without the ```<>``` of course!
 
 ### Patching original kernel image header
@@ -115,49 +115,49 @@ For Surface Duo 2:
 ```batch
 python3 mkbootimg.py --kernel hybridkernel --ramdisk ramdisk -o dualboot.img --pagesize 4096 --header_version 3 --cmdline "<command line>" --base 0x0 --os_version <os version> --os_patch_level <os patch level>
 ```
-  
+
 ### Testing the newly made image
-  
+
 Before risking to brick your device, it is good practice to test your image to make sure it fully works to avoid further issues.
 
 #### Testing Android™ works
 
 First go to the bootloader menu with:
-  
+
 ```batch
 adb reboot bootloader
 ```
 
 Now, boot your newly image like so, with the device folded flat/open:
-  
+
 ```batch
 fastboot boot dualboot.img
 ```
-  
+
 If your device boots into Android™ just fine, like before, you did well! your image is fully working for Android™ use. Make sure you can unlock the device fine and use it as normal before proceeding further.
-  
+
 #### Testing Windows works
 
 Now we'll test the ability to boot into Windows in roughly the same way.
 
 Go to the bootloader menu once more with:
-  
+
 ```batch
 adb reboot bootloader
 ```
 
 Now, boot your newly image like so, this time with the device closed, not opened:
-  
+
 ```batch
 fastboot boot dualboot.img
 ```
-  
+
 If your device boots into Windows just fine, like before, you did well! your image is fully working for Windows use. Make sure you can unlock the device fine and use it as normal before proceeding further.
 
 We have now certified our image works. In case it does not, please make sure you used a matching boot.img file to generate your file, and correctly used the information provided at the beginning of the guide in commands.
-  
+
 Reboot the device back to Android™ from the start menu, power, reboot.
-  
+
 ### Flashing newly made image
 
 Now that our image is confirmed working:

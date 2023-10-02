@@ -15,7 +15,7 @@
 
 - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-- Don't rerun the commands if you interrupt the process. You may break your partition table. 
+- Don't rerun the commands if you interrupt the process. You may break your partition table.
 - Do not run all commands at once.
 - Do not commit *any* typo with *any* commands.
 - Be familiar with command line interfaces.
@@ -34,13 +34,13 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 
 - Reboot into the bootloader menu by running this command while inside Android™:
 
-```
+```batch
 adb reboot bootloader
 ```
 
 - Now let's boot TWRP:
 
-```
+```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 
@@ -59,7 +59,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 
 - Mount the partitions you made when you first installed Windows and assign them some letters:
 
-```
+```batch
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
 YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DON'T ASSIGN FINE, USE ANOTHER ONE.
@@ -69,7 +69,7 @@ IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF
 Find the Surface Duo Disk, and take note of the number.
 # select disk <number>
 # list partition
-You will be able to recognize the partitions you made the first time you installed Windows by their size. 
+You will be able to recognize the partitions you made the first time you installed Windows by their size.
 Take note of the ESP and WIN partition numbers.
 # select partition <esp-partition-number>
 # assign letter=Y:
@@ -91,7 +91,7 @@ Now the Windows Partition on your Surface Duo should be empty. Let's go ahead an
 
 - We will need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you are ready, run these commands:
 
-```
+```batch
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
 ```
 
@@ -99,7 +99,7 @@ This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 
 - Once that is done:
 
-```
+```batch
 rmdir /Q /S Y:\EFI
 bcdboot X:\Windows /s Y: /f UEFI
 ```
@@ -110,20 +110,20 @@ Windows is now installed but has no drivers.
 
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
-```
+```batch
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
 ## Boot Windows 🚀
 
 We are ready to boot!
-      
-You'll have two methods of booting Windows. 
-      
+
+You'll have two methods of booting Windows.
+
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
     - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo1.md)
-      
+
 - Manual booting with a PC
     - Pros: You can freely update Android™
     - Cons: You will need a PC to boot to Windows
@@ -136,10 +136,10 @@ In case you want the first option, then follow [this guide](https://github.com/W
   <p>
 
 Reboot your device to fastboot, using adb or from the recovery.
-      
+
 Let's boot the custom UEFI, from a command prompt:
 
-```
+```batch
 fastboot boot surfaceduo1-uefi.img
 ```
 

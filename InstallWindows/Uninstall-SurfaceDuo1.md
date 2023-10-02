@@ -35,7 +35,7 @@ If you have followed a guide to use dual boot, please first remove dual boot by 
   button and keep pressing the volume down button until the bootloader appears.
 - Plug your phone to your PC, open a command prompt and run the following command:
 
-```
+```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 
@@ -45,7 +45,7 @@ You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so 
 
 - Let's copy and run parted:
 
-```
+```batch
 adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
 adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
@@ -61,7 +61,7 @@ You'll get a list of partitions.
 
 ⚠️ The next command will wipe all your data. Please make sure that you have backed everything up. ⚠️
 
-```
+```batch
 rm 6
 rm 7
 rm 8
@@ -75,7 +75,7 @@ mkpart userdata ext4 51.9MB 240GB
 
 __This command leaves parted.__
 
-```
+```batch
 quit
 ```
 
@@ -83,7 +83,7 @@ This will get you out of parted.
 
 Now let's make the userdata partition actually usable:
 
-```
+```batch
 mke2fs -t ext4 /dev/block/sda6
 exit
 ```
@@ -92,7 +92,7 @@ exit
 
 - Once Android™ is confirmed booting, reboot back into the bootloader using ```adb reboot bootloader``` or by pressing Volume Down right at boot.
 
-You will be back into Surface Duo's bootloader. 
+You will be back into Surface Duo's bootloader.
 
 ### Relocking the Bootloader
 
@@ -103,7 +103,7 @@ You will be back into Surface Duo's bootloader.
 
 - Run this command:
 
-```
+```batch
 fastboot flashing lock
 ```
 

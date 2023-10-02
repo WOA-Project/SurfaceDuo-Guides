@@ -60,11 +60,11 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 Assuming your Surface Duo is booted to Android™, plugged to your PC:
 
 - Open a command prompt on your PC and run this command:
-```
+```batch
 adb reboot bootloader
 ```
 - You will be rebooted to Surface Duo's bootloader. From there:
-```
+```batch
 fastboot flashing unlock
 ```
 
@@ -74,20 +74,20 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Android�
 
 - Reboot back into the bootloader menu by running this command:
 
-```
+```batch
 adb reboot bootloader
 ```
 
 ## Making the partitions
 - Start by booting TWRP:
 
-```
+```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
-```
+```batch
 adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
 adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
@@ -115,7 +115,7 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
   <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
   <p>
 
-```
+```batch
 notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
 notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
 ```
@@ -133,7 +133,7 @@ So if you want to change the split, all you have to do is to change the "57344MB
 
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
-```
+```batch
 parted /dev/block/sda
 print
 ```
@@ -150,37 +150,37 @@ Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB
 
 __This command removes the userdata partition__
 
-```
+```batch
 rm 6
 ```
 
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
-```
+```batch
 mkpart esp fat32 51.9MB 564MB
 ```
 
 __This command creates the Windows partition.__
 
-```
+```batch
 mkpart win ntfs 564MB 57344MB
 ```
 
 __This command creates the Android™ data partition back.__
 
-```
+```batch
 mkpart userdata ext4 57344MB 112GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
-```
+```batch
 set 6 esp on
 ```
 
 __This command leaves parted.__
 
-```
+```batch
 quit
 ```
 
@@ -195,37 +195,37 @@ quit
 
 __This command removes the userdata partition__
 
-```
+```batch
 rm 6
 ```
 
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
-```
+```batch
 mkpart esp fat32 51.9MB 564MB
 ```
 
 __This command creates the Windows partition.__
 
-```
+```batch
 mkpart win ntfs 564MB 114688MB
 ```
 
 __This command creates the Android™ data partition back.__
 
-```
+```batch
 mkpart userdata ext4 114688MB 240GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
-```
+```batch
 set 6 esp on
 ```
 
 __This command leaves parted.__
 
-```
+```batch
 quit
 ```
 
@@ -241,7 +241,7 @@ a win partition that will have Windows, and the last one is the new userdata par
 
 Now let's make these partitions actually usable:
 
-```
+```batch
 mkfs.fat -F32 -s1 /dev/block/sda6
 mkfs.ntfs -f /dev/block/sda7
 mke2fs -t ext4 /dev/block/sda8
@@ -249,41 +249,41 @@ exit
 ```
 
 ### End of the Dangerous section
-    
+
 ## Installing Windows 10X
 
 Reboot your phone to fastboot:
-    
-```
+
+```batch
 adb reboot bootloader
 ```
 <img width="265" alt="image" src="https://user-images.githubusercontent.com/29689637/229379406-f86ecc5a-1252-47bb-8a75-27b1ae540357.png">
-    
+
 Now let's clean the partitions we've just created with fastboot:
-    
-```
+
+```batch
 fastboot erase win
 fastboot erase esp
 ```
 <img width="475" alt="image" src="https://user-images.githubusercontent.com/29689637/229379441-759bf96f-6b79-448d-b1d4-b7ef42b427ba.png">
-    
+
 And install the 10X images:
-    
-```
+
+```batch
 fastboot flash esp BS_EFIESP.img
 fastboot flash win OSPool.img
 ```
 <img width="510" alt="image" src="https://user-images.githubusercontent.com/29689637/229379746-9b620153-e70e-4f56-b097-7339aef08fe4.png">
 
 This is going to take a while, especially on the second command. As you can see it took me almost 6 minutes. Take a little walk in the meantime.
-      
+
 ❓ If you're *updating* or *reinstalling* from 10X, you can stop here and reboot! You're done! ✅
-    
+
 ## Completing the Installation
-    
+
 - Start by booting TWRP (you might need to manually reboot your device into fastboot if this gets stuck):
 
-```
+```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 <img width="491" alt="image" src="https://user-images.githubusercontent.com/29689637/229380091-3f13dac1-930e-4d53-aa43-a38f48111f41.png">
@@ -301,18 +301,18 @@ adb shell "sh /sdcard/msc.sh"
 
 
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
-    
+
 - Open diskpart:
-    
-```
+
+```batch
 diskpart
 ```
 <img width="247" alt="image" src="https://user-images.githubusercontent.com/29689637/229380180-607e859e-4153-4c55-b94b-57352ba6e55f.png">
 
-    
+
 - Run these commands one by one, replacing the IDs with yours:
-    
-```
+
+```batch
 list disk
 sel dis <id of the disk, in my case it is 5>
 list partition
@@ -321,29 +321,29 @@ set id=E75CAF8F-F680-4CEE-AFA3-B001E56EFC2D
 ```
 <img width="306" alt="image" src="https://user-images.githubusercontent.com/29689637/229380406-4f23a6c5-3223-42f0-b84c-7ff24a7443a8.png">
 <img width="323" alt="image" src="https://user-images.githubusercontent.com/29689637/229380438-97ce534f-bf8e-4a38-b928-7f5d30fdb0a7.png">
-    
+
 We're done!
 
 - Let's exit diskpart:
 
-```
+```batch
 exit
 ```
-    
+
 We'll need a custom UEFI to boot to Windows 10X.
-    
+
 ## Boot Windows 10X
-    
+
 - Reboot your device to fastboot
 
-```
+```batch
 adb reboot bootloader
 ```
-    
+
 - Once into fastboot, let's run the custom UEFI, which will boot to 10X:
-    
-```
+
+```batch
 fastboot boot uefi.img
 ```
-    
+
 Done! You'll now be booted into Windows 10X. ⚠️ First boot will take a bunch of minutes, so WAIT AND DON'T REBOOT!

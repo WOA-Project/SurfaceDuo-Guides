@@ -53,11 +53,11 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 Assuming your Surface Duo 2 is booted to Android™, plugged to your PC:
 
 - Open a command prompt on your PC and run this command:
-```
+```batch
 adb reboot bootloader
 ```
 - You will be rebooted to Surface Duo 2's bootloader. From there:
-```
+```batch
 fastboot flashing unlock
 ```
 
@@ -67,7 +67,7 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Android�
 
 - Reboot back into the bootloader menu by running this command:
 
-```
+```batch
 adb reboot bootloader
 ```
 
@@ -75,7 +75,7 @@ adb reboot bootloader
 
 - Start by getting your current active slot:
 
-```
+```batch
 fastboot getvar current-slot
 ```
 
@@ -83,7 +83,7 @@ Depending on your current device state, you will either get ```current-slot: a``
 
 - Flash the previously downloaded mass storage boot package to the opposite slot:
 
-```
+```batch
 fastboot flash boot_<!X> surfaceduo2-bootpkg.img
 ```
 
@@ -91,7 +91,7 @@ fastboot flash boot_<!X> surfaceduo2-bootpkg.img
 
 Let's boot the custom UEFI:
 
-```
+```batch
 fastboot boot surfaceduo2-uefi.img
 ```
 
@@ -123,7 +123,7 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
   <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
   <p>
 
-```
+```batch
 notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
 notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
 ```
@@ -141,7 +141,7 @@ So if you want to change the split, all you have to do is to change the "57344MB
 
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!): (replace [Y] with the right sd file on your linux system for the LUN with userdata (the biggest one))
 
-```
+```batch
 parted /dev/block/sd<Y>
 print
 ```
@@ -156,38 +156,38 @@ Take note of original sizing and create partitions with a 50% split of userdata 
 
 __This command removes the userdata partition__
 
-```
+```batch
 rm <userdata id>
 ```
 
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
-```
+```batch
 mkpart esp fat32 <start in mb>MB <start in mb + 512>MB
 ```
 
 __This command creates the Windows partition.__
 
-```
+```batch
 mkpart win ntfs <start in mb + 512>MB <stop in mb divided in half>MB
 ```
 
 __This command creates the Android™ data partition back.__
 
-```
+```batch
 mkpart userdata ext4 <stop in mb divided in half>MB <stop in GB>GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 Note: below's userdata id is the original one, now mapping to the esp partition
 
-```
+```batch
 set <userdata id> esp on
 ```
 
 __This command leaves parted.__
 
-```
+```batch
 quit
 ```
 
@@ -200,7 +200,7 @@ a win partition that will have Windows, and the last one is the new userdata par
 
 Now let's make these partitions actually usable:
 
-```
+```batch
 mkfs.fat -F32 -s1 /dev/block/sd<Y><userdata id>
 mkfs.ntfs -f /dev/block/sd<Y><userdata id + 1>
 mke2fs -t ext4 /dev/block/sd<Y><userdata id + 2>
@@ -214,7 +214,7 @@ exit
 - Now plug back Surface Duo 2 into your Windows machine
 - Mount the partitions you have created using diskpart and assign them some letters:
 
-```
+```batch
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
 YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DONT ASSIGN FINE, USE ANOTHER ONE.
@@ -237,7 +237,7 @@ You will be able to recognize the partitions we made earlier by their size. take
 
 - We will need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you are ready, run these commands:
 
-```
+```batch
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
 ```
 
@@ -245,7 +245,7 @@ This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 
 - Once that is done:
 
-```
+```batch
 bcdboot X:\Windows /s Y: /f UEFI
 ```
 
@@ -255,7 +255,7 @@ Windows is now installed but has no drivers.
 
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
-```
+```batch
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
@@ -267,7 +267,7 @@ You will be back into Surface Duo 2's bootloader.
 
 - Flash the stock boot.img to the opposite slot:
 
-```
+```batch
 fastboot flash boot_<!X> boot.img
 ```
 
@@ -281,7 +281,7 @@ We are ready to boot!
 
 Let's boot the custom UEFI, from a command prompt:
 
-```
+```batch
 fastboot boot surfaceduo2-uefi.img
 ```
 
@@ -297,7 +297,7 @@ If you did everything right, Windows will now boot! Enjoy!
 Once in Android™, follow these commands:
 - Reboot back into the bootloader menu by running this command:
 
-```
+```batch
 adb reboot bootloader
 ```
 
