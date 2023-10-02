@@ -174,16 +174,12 @@ adb reboot recovery
      * Do not release the **Power** button before pressing the **Volume Up** button.
   4. Go to "fastboot" in the menu
 
-- Get the current slot
+- Flash the boot image (dualboot.img) to the device:
+
+__Replace ```<dualboot.img>``` (including the ```<``` and ```>``` with the full path to your image file!)
 
 ```batch
-fastboot getvar current-slot
-```
-
-- Flash the boot img to that slot
-
-```batch
-fastboot flash boot_<slot> <dualboot.img>
+fastboot flash boot <dualboot.img>
 ```
 
 ## Reverting changes for Android™ Updates or uninstallation
