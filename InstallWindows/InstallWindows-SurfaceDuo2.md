@@ -287,10 +287,6 @@ fastboot boot surfaceduo2-uefi.img
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
 
-You should be thrown in the Boot Manager.
-
-- Navigate with the volume up/down buttons to Mass Storage Mode or Windows, and press the Power Button to confirm.
-
 If you did everything right, Windows will now boot! Enjoy!
 
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
