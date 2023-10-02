@@ -1,6 +1,6 @@
 # Status
 
-## Surface Duo 1
+## Surface Duo (First Gen)
 
 #### Important information
 

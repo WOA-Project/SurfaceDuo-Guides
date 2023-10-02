@@ -12,7 +12,7 @@
 ## Files/Tools Needed 📃
 
 - A linux virtual machine with parted installed
-- Expert knowledge of what you're doing (this is even more susceptible to bricks than the Surface Duo 1 guide, do not follow for now if you are not comfortable, this is very advanced still)
+- Expert knowledge of what you're doing (this is even more susceptible to bricks than the Surface Duo (First Gen) guide, do not follow for now if you are not comfortable, this is very advanced still)
 - Your stock boot image (from ota recovery package)
 - Early Boot package: [surfaceduo2-bootpkg.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-bootpkg.img)
 - Windows UEFI: [SM8350.UEFI.Surface.Duo.2.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)

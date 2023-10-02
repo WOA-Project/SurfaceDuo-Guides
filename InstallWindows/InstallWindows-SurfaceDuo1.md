@@ -1,4 +1,4 @@
-# Install Windows on Surface Duo 1
+# Install Windows on Surface Duo (First Gen)
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
@@ -386,6 +386,6 @@ mkpart frp 12296s 12423s
 mkpart misc 12424s 12679s
 ```
 
-The offsets are valid for both the Surface Duo 1 128GB model, and the Surface Duo 1 256GB model. They do not include userdata. You will have to recreate this yourself.
+The offsets are valid for both the Surface Duo (First Gen) 128GB model, and the Surface Duo (First Gen) 256GB model. They do not include userdata. You will have to recreate this yourself.
 
 (NEVER RUN THESE COMMANDS IF YOU DO NOT NEED TO OR YOU ALREADY PARTITIONS IN PLACE, ADVANCED USERS ONLY, YOU MAY KILL YOUR PHONE HERE)

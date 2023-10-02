@@ -1,4 +1,4 @@
-# Install Windows 10X on Surface Duo 1
+# Install Windows 10X on Surface Duo (First Gen)
 
 ## Table of Contents
 
