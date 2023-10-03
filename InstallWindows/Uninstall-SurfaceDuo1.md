@@ -46,6 +46,7 @@ You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so 
 - Let's copy and run parted:
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to parted that was downloaded earlier> /sdcard/
 adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
@@ -84,6 +85,7 @@ This will get you out of parted.
 Now let's make the userdata partition actually usable:
 
 ```batch
+setenforce 0
 mke2fs -t ext4 /dev/block/sda6
 exit
 ```

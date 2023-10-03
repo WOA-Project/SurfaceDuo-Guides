@@ -48,6 +48,7 @@ Once inside TWRP, touch will not be working and the device will say it is locked
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to downloaded msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"

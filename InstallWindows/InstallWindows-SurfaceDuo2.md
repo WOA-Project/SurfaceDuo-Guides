@@ -136,7 +136,7 @@ So if you want to change the split, all you have to do is to change the "57693MB
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
 ```batch
-adb shell "setenforce 0"
+setenforce 0
 parted /dev/block/sda
 print
 ```
@@ -223,7 +223,7 @@ a win partition that will have Windows, and the last one is the new userdata par
 Now let's make these partitions actually usable:
 
 ```batch
-adb shell "setenforce 0"
+setenforce 0
 mkfs.fat -F32 -s1 /dev/block/sda8
 mkfs.ntfs -f /dev/block/sda9
 mke2fs -t ext4 /dev/block/sda10

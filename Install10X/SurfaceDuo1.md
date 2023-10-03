@@ -88,6 +88,7 @@ fastboot boot surfaceduo1-twrp.img
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to parted that was downloaded earlier> /sdcard/
 adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
@@ -134,6 +135,7 @@ So if you want to change the split, all you have to do is to change the "57344MB
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
 ```batch
+setenforce 0
 parted /dev/block/sda
 print
 ```
@@ -242,6 +244,7 @@ a win partition that will have Windows, and the last one is the new userdata par
 Now let's make these partitions actually usable:
 
 ```batch
+setenforce 0
 mkfs.fat -F32 -s1 /dev/block/sda6
 mkfs.ntfs -f /dev/block/sda7
 mke2fs -t ext4 /dev/block/sda8
@@ -293,6 +296,7 @@ fastboot boot surfaceduo1-twrp.img
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to downloaded msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"

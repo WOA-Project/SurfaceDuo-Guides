@@ -88,6 +88,7 @@ This will get you out of parted.
 Now let's make the userdata partition actually usable:
 
 ```batch
+setenforce 0
 mke2fs -t ext4 /dev/block/sda8
 exit
 ```
