@@ -327,7 +327,7 @@ We are ready to boot for the first time!
 
 Reboot your device to fastboot, using adb or from the recovery.
 
-Let's boot the custom UEFI, from a command prompt:
+Let's boot the UEFI, from a command prompt:
 
 ```batch
 fastboot boot surfaceduo1-uefi.img
@@ -362,7 +362,7 @@ In case you want the dual boot option, then follow [this guide](https://github.c
 
 Reboot your device to fastboot, using adb or from the recovery.
 
-Let's boot the custom UEFI, from a command prompt:
+Let's boot the UEFI, from a command prompt:
 
 ```batch
 fastboot boot surfaceduo1-uefi.img

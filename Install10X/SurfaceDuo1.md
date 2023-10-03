@@ -334,7 +334,7 @@ We're done!
 exit
 ```
 
-We'll need a custom UEFI to boot to Windows 10X.
+We'll need a UEFI to boot to Windows 10X.
 
 ## Boot Windows 10X
 
@@ -344,7 +344,7 @@ We'll need a custom UEFI to boot to Windows 10X.
 adb reboot bootloader
 ```
 
-- Once into fastboot, let's run the custom UEFI, which will boot to 10X:
+- Once into fastboot, let's run the UEFI, which will boot to 10X:
 
 ```batch
 fastboot boot uefi.img
