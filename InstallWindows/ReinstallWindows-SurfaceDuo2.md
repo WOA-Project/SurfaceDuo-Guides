@@ -1,10 +1,10 @@
-# Reinstall Windows on Surface Duo (First Gen)
+# Reinstall Windows on Surface Duo 2
 
 ## Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Windows UEFI: [SM8350.UEFI.Surface.Duo.2.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)
@@ -19,7 +19,7 @@
 - Do not run all commands at once.
 - Do not commit *any* typo with *any* commands.
 - Be familiar with command line interfaces.
-- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
+- When using TWRP, it is normal and expected for the phone to be detected as an Asus phone and for touch to not work.
 
 **THIS WILL WIPE ALL YOUR WINDOWS DATA**
 
@@ -41,13 +41,14 @@ adb reboot bootloader
 - Now let's boot TWRP:
 
 ```batch
-fastboot boot surfaceduo1-twrp.img
+fastboot boot surfaceduo2-twrp.img
 ```
 
 Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal.
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to downloaded msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"
@@ -111,7 +112,7 @@ Windows is now installed but has no drivers.
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
 ```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.txt" -r "<path to extracted drivers>" -p X:\
 ```
 
 ## Boot Windows 🚀
@@ -140,7 +141,7 @@ Reboot your device to fastboot, using adb or from the recovery.
 Let's boot the custom UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot surfaceduo2-uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.

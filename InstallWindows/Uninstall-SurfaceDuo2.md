@@ -1,7 +1,7 @@
-# Uninstall Windows and revert your Surface Duo (First Gen) to stock
+# Uninstall Windows and revert your Surface Duo 2 to stock
 
 ## Files/Tools Needed 📃
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A PC.
@@ -36,7 +36,7 @@ If you have followed a guide to use dual boot, please first remove dual boot by 
 - Plug your phone to your PC, open a command prompt and run the following command:
 
 ```batch
-fastboot boot surfaceduo1-twrp.img
+fastboot boot surfaceduo2-twrp.img
 ```
 
 You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
@@ -46,6 +46,7 @@ You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so 
 - Let's copy and run parted:
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to parted that was downloaded earlier> /sdcard/
 adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
@@ -55,22 +56,25 @@ print
 
 You'll get a list of partitions.
 
-- Make sure that partitions 6, 7 and 8 are your ESP, Windows and userdata partitions. We'll assume they are for this guide.
+- Make sure that partitions 8, 9 and 10 are your ESP, Windows and userdata partitions. We'll assume they are for this guide.
   If they aren't, take note of these numbers and use them in the next steps. Please make sure these are right, or you'll end up
   bricking your Surface Duo.
 
 ⚠️ The next command will wipe all your data. Please make sure that you have backed everything up. ⚠️
 
 ```batch
-rm 6
-rm 7
 rm 8
+rm 9
+rm 10
 
 # FOR 128GB DEVICES ONLY: ---
-mkpart userdata ext4 51.9MB 112GB
+mkpart userdata ext4 401MB 110GB
 
 # FOR 256GB DEVICES ONLY: ---
-mkpart userdata ext4 51.9MB 240GB
+TODO: Please file an issue to help us!
+
+# FOR 512GB DEVICES ONLY: ---
+TODO: Please file an issue to help us!
 ```
 
 __This command leaves parted.__
@@ -84,7 +88,7 @@ This will get you out of parted.
 Now let's make the userdata partition actually usable:
 
 ```batch
-mke2fs -t ext4 /dev/block/sda6
+mke2fs -t ext4 /dev/block/sda8
 exit
 ```
 

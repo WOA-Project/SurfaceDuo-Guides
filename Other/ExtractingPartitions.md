@@ -2,9 +2,16 @@
 
 ## Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
+
+### For Surface Duo (First Gen)
+
+- TWRP image for Surface Duo (First Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+
+### For Surface Duo 2
+
+- TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 
 ## Warnings ⚠️
 
@@ -14,7 +21,7 @@
 - Do not run all commands at once.
 - Do not commit *any* typo with *any* commands.
 - Be familiar with command line interfaces.
-- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
+- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
 
 ## Getting your current boot slot (A/B)
 
@@ -47,9 +54,19 @@ Take note of your slot, we´ll assume it is `b`
 
 - We need to boot into TWRP, to do so, run the following command on your PC:
 
+For Surface Duo (First Gen):
+
 ```batch
 fastboot boot surfaceduo1-twrp.img
 ```
+
+For Surface Duo 2:
+
+```batch
+fastboot boot surfaceduo2-twrp.img
+```
+
+---
 
 Your Surface Duo will boot into TWRP, touch will not work and the device will say it is locked. This is completely normal and expected.
 
@@ -59,6 +76,7 @@ Your Surface Duo will boot into TWRP, touch will not work and the device will sa
 - We need to open a shell to issue commands directly to the phone. To do so, run the following command on your PC:
 
 ```batch
+adb shell "setenforce 0"
 adb shell
 ```
 

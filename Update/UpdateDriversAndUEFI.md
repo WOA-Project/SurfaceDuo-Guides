@@ -8,10 +8,6 @@
 ## Files/Tools needed 📃
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-
-- Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
-
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 
 - The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
@@ -20,9 +16,21 @@
 
 - A Windows PC
 
+### For Surface Duo (First Gen)
+
+- TWRP image for Surface Duo (First Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+
+- Windows UEFI for Surface Duo (First Gen): [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+
+### For Surface Duo 2
+
+- TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
+
+- Windows UEFI for Surface Duo 2: [SM8350.UEFI.Surface.Duo.2.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+
 ## Warnings ⚠️
 
-- ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo1.md)
+- ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
 
 - ⚠️ If you are upgrading from a version older than 2301.93, you must also follow this guide: [Migration Guidance for Secure Boot](MigrationGuidanceForSecureBoot.md)
 
@@ -32,7 +40,7 @@
 
 - Do not run all commands at once.
 
-- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
+- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
 
 ## Steps 🛠️
 
@@ -40,13 +48,24 @@
 
 - Start by booting TWRP:
 
+For Surface Duo (First Gen):
+
 ```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 
+For Surface Duo 2:
+
+```batch
+fastboot boot surfaceduo2-twrp.img
+```
+
+---
+
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
 ```batch
+adb shell "setenforce 0"
 adb push <path to downloaded msc.tar> /sdcard/
 adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"
@@ -58,9 +77,19 @@ adb shell "sh /sdcard/msc.sh"
 
 - Extract the driver package, extract the driver updater zip, and open a command prompt in the directory containing DriverUpdater.exe:
 
+For Surface Duo (First Gen):
+
 ```batch
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
 ```
+
+For Surface Duo 2:
+
+```batch
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.txt" -r "<path to extracted drivers>" -p X:\
+```
+
+---
 
 - Once it is done, you can reboot your phone using:
 
