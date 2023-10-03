@@ -117,7 +117,7 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
   <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
   <p>
 
-```batch
+```bash
 notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
 notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
 ```
@@ -135,7 +135,7 @@ So if you want to change the split, all you have to do is to change the "57344MB
 
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
-```batch
+```bash
 setenforce 0
 parted /dev/block/sda
 print
@@ -153,37 +153,37 @@ Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB
 
 __This command removes the userdata partition__
 
-```batch
+```bash
 rm 6
 ```
 
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
-```batch
+```bash
 mkpart esp fat32 51.9MB 564MB
 ```
 
 __This command creates the Windows partition.__
 
-```batch
+```bash
 mkpart win ntfs 564MB 57344MB
 ```
 
 __This command creates the Android™ data partition back.__
 
-```batch
+```bash
 mkpart userdata ext4 57344MB 112GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
-```batch
+```bash
 set 6 esp on
 ```
 
 __This command leaves parted.__
 
-```batch
+```bash
 quit
 ```
 
@@ -198,37 +198,37 @@ quit
 
 __This command removes the userdata partition__
 
-```batch
+```bash
 rm 6
 ```
 
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
-```batch
+```bash
 mkpart esp fat32 51.9MB 564MB
 ```
 
 __This command creates the Windows partition.__
 
-```batch
+```bash
 mkpart win ntfs 564MB 114688MB
 ```
 
 __This command creates the Android™ data partition back.__
 
-```batch
+```bash
 mkpart userdata ext4 114688MB 240GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
-```batch
+```bash
 set 6 esp on
 ```
 
 __This command leaves parted.__
 
-```batch
+```bash
 quit
 ```
 
@@ -244,7 +244,7 @@ a win partition that will have Windows, and the last one is the new userdata par
 
 Now let's make these partitions actually usable:
 
-```batch
+```bash
 setenforce 0
 mkfs.fat -F32 -s1 /dev/block/sda6
 mkfs.ntfs -f /dev/block/sda7
@@ -382,7 +382,7 @@ If you did everything right, Windows will now boot! Enjoy!
 
 If you somehow break entirely your partition table, you might be interested in the original offsets of each partition in order to fix it.
 
-```batch
+```bash
 mkpart ssd 6s 7s
 mkpart persist ext4 8s 8199s
 mkpart metadata ext4 8200s 12295s

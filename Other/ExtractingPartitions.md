@@ -84,7 +84,7 @@ You are now able to issue commands directly to your phone via your PC.
 
 - Now, we need to find the location of our boot partition, as it is different for each device. To do so, run the following command on your PC:
 
-```batch
+```bash
 ls /dev/block/platform/soc/
 ```
 
@@ -96,7 +96,7 @@ Take note of all the lines that get output from this command. In my case, it's o
 
 - Next we need to retrieve our mount point for our partition, to do so, run this command:
 
-```batch
+```bash
 ls -al /dev/block/platform/soc/[the last line we took note of]/by-name/
 ```
 
@@ -110,16 +110,19 @@ ls -al /dev/block/platform/soc/[the last line we took note of]/by-name/
 
 Let's make an image of the partition:
 
-```batch
+```bash
 dd if=/dev/block/[your mount point] of=/tmp/boot.img
 ```
+
 *In my case: `dd if=/dev/block/sde26 of=/tmp/boot.img`.*
 
 - Now let's exit the shell and pull the boot.img from the device, to do so, run the following command on your PC:
 
-```batch
+```bash
 exit
+```
 
+```batch
 adb pull /tmp/boot.img
 ```
 

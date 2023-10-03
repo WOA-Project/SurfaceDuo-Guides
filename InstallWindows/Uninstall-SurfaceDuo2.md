@@ -50,6 +50,10 @@ adb shell "setenforce 0"
 adb push <path to parted that was downloaded earlier> /sdcard/
 adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
+```
+
+```bash
+setenforce 0
 parted /dev/block/sda
 print
 ```
@@ -62,7 +66,7 @@ You'll get a list of partitions.
 
 ⚠️ The next command will wipe all your data. Please make sure that you have backed everything up. ⚠️
 
-```batch
+```bash
 rm 8
 rm 9
 rm 10
@@ -79,7 +83,7 @@ TODO: Please file an issue to help us!
 
 __This command leaves parted.__
 
-```batch
+```bash
 quit
 ```
 
@@ -87,7 +91,7 @@ This will get you out of parted.
 
 Now let's make the userdata partition actually usable:
 
-```batch
+```bash
 setenforce 0
 mke2fs -t ext4 /dev/block/sda8
 exit
