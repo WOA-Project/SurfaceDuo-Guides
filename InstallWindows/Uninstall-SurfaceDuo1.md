@@ -2,7 +2,7 @@
 
 ## Files/Tools Needed 📃
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Parted: [surfaceduo1-parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-parted)
+- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A PC.
 
@@ -46,8 +46,8 @@ You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so 
 - Let's copy and run parted:
 
 ```batch
-adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
-adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
+adb push <path to parted that was downloaded earlier> /sdcard/
+adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 parted /dev/block/sda
 print

@@ -18,8 +18,8 @@
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Parted: [surfaceduo1-parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-parted)
-- Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-msc.tar)
+- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
+- Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
@@ -89,8 +89,8 @@ fastboot boot surfaceduo1-twrp.img
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
 ```batch
-adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
-adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
+adb push <path to parted that was downloaded earlier> /sdcard/
+adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 ```
 
@@ -256,8 +256,8 @@ exit
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
-adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
+adb push <path to downloaded msc.tar> /sdcard/
+adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"
 ```
 

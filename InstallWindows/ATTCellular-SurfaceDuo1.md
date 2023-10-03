@@ -5,7 +5,7 @@ AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-msc.tar)
+- Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - Windows Command Prompt, Linux is not required
 
 ## Warnings ⚠️
@@ -37,8 +37,8 @@ Once inside TWRP, touch will not be working and the device will say it is locked
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
-adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
+adb push <path to downloaded msc.tar> /sdcard/
+adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"
 ```
 

@@ -15,8 +15,8 @@
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Parted: [surfaceduo1-parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-parted)
-- Mass Storage Shell Script: [surfaceduo1-msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-msc.tar)
+- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
+- Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - Windows UEFI (Without Secure Boot): [SM8150.UEFI.Surface.Duo.1.No.SecureBoot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - The 10X Image Files (`BS_EFIESP.img` and `OSPool.img`). You can find them [here](https://t.me/DuoWOA_Announcements/379)
@@ -88,8 +88,8 @@ fastboot boot surfaceduo1-twrp.img
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
 ```batch
-adb push <path to surfaceduo1-parted that was downloaded earlier> /sdcard/
-adb shell "mv /sdcard/surfaceduo1-parted /sbin/parted && chmod 755 /sbin/parted"
+adb push <path to parted that was downloaded earlier> /sdcard/
+adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
 adb shell
 ```
 
@@ -293,8 +293,8 @@ fastboot boot surfaceduo1-twrp.img
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
-adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
+adb push <path to downloaded msc.tar> /sdcard/
+adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"
 ```
 <img width="605" alt="image" src="https://user-images.githubusercontent.com/29689637/229380153-355063fb-4cf4-468b-9780-875b2667b79a.png">

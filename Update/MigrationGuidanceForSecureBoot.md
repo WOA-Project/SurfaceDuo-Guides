@@ -13,8 +13,8 @@ fastboot boot surfaceduo1-twrp.img
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
 ```batch
-adb push <path to downloaded surfaceduo1-msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/surfaceduo1-msc.tar -C /sdcard --no-same-owner"
+adb push <path to downloaded msc.tar> /sdcard/
+adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
 adb shell "sh /sdcard/msc.sh"
 ```
 
