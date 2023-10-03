@@ -23,9 +23,13 @@ Welcome 🥰! Thanks for being interested in trying out this project. We thought
 
 - [Create a Windows ISO with UUPMediaCreator](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
 - [Activate Windows on your Surface Duo](https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227)
-- [Uninstall Windows and only keep Android™ (Surface Duo (First Gen) only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo1.md)
+- Uninstall Windows and only keep Android™:
+    - [Surface Duo (First Gen)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo1.md)
+    - [Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo2.md)
 - [Dual Boot between Android™ and Windows 11 without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
-- [Reinstall Windows (Surface Duo (First Gen) only for now)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
+- Reinstall Windows:
+    - [Surface Duo (First Gen)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
+    - [Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo2.md)
 - [Making Cellular work on Sim Unlocked AT&T Surface Duo (First Gen) devices](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ATTCellular-SurfaceDuo1.md)
 
 ## More Resources:
