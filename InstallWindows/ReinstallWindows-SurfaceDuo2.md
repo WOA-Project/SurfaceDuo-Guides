@@ -32,11 +32,14 @@ but this is **STILL IN PREVIEW** and things can go wrong.
 
 ## Getting to Mass Storage Mode
 
-- Reboot into the bootloader mode by running this command while inside Android™:
+- Reboot into the Bootloader mode by running this command while inside Android™:
 
 ```batch
 adb reboot bootloader
 ```
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 - Now let's boot TWRP:
 
@@ -136,7 +139,10 @@ In case you want the dual boot option, then follow [this guide](https://github.c
   <summary>In case you want to manually boot each time: (Click to expand)</summary>
   <p>
 
-Reboot your device to fastboot, using adb or from the recovery.
+Reboot your device to the Bootloader mode, using adb or from the recovery.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 Let's boot the UEFI, from a command prompt:
 

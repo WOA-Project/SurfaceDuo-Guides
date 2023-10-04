@@ -21,11 +21,14 @@ AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android
 
 ## Getting to Mass Storage Mode
 
-- Reboot into the bootloader mode by running this command while inside Android™:
+- Reboot into the Bootloader mode by running this command while inside Android™:
 
 ```batch
 adb reboot bootloader
 ```
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 - Now let's boot TWRP:
 

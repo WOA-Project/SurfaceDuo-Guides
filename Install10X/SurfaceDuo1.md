@@ -77,7 +77,7 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Androidâ„
 
 - In Androidâ„¢ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
 
-- Reboot back into the bootloader mode by running this command:
+- Reboot back into the Bootloader mode by running this command:
 
 ```batch
 adb reboot bootloader
@@ -263,7 +263,7 @@ exit
 
 ## Installing Windows 10X
 
-Reboot your phone to the bootloader mode:
+Reboot your phone to the Bootloader mode:
 
 ```batch
 adb reboot bootloader
@@ -296,7 +296,7 @@ This is going to take a while, especially on the second command. As you can see 
 
 ## Completing the Installation
 
-- Start by booting TWRP (you might need to manually reboot your device into fastboot if this gets stuck):
+- Start by booting TWRP (you might need to manually reboot your device into the Bootloader mode if this gets stuck):
 
 ```batch
 fastboot boot surfaceduo1-twrp.img
@@ -350,7 +350,7 @@ We'll need a UEFI to boot to Windows 10X.
 
 ## Boot Windows 10X
 
-- Reboot your device to the bootloader mode
+- Reboot your device to the Bootloader mode
 
 ```batch
 adb reboot bootloader
@@ -359,7 +359,7 @@ adb reboot bootloader
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-- Once into the bootloader mode, let's run the UEFI, which will boot to 10X:
+- Once into the Bootloader mode, let's run the UEFI, which will boot to 10X:
 
 ```batch
 fastboot boot uefi.img

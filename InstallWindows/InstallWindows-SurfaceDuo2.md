@@ -61,10 +61,17 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 Assuming your Surface Duo is booted to Android™, plugged to your PC:
 
 - Open a command prompt on your PC and run this command:
+
 ```batch
 adb reboot bootloader
 ```
-- You will be rebooted to Surface Duo's bootloader. From there:
+
+You will be rebooted to Surface Duo's bootloader.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
+- From there:
 ```batch
 fastboot flashing unlock
 ```
@@ -73,11 +80,14 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Android�
 
 - In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
 
-- Reboot back into the bootloader mode by running this command:
+- Reboot back into the Bootloader mode by running this command:
 
 ```batch
 adb reboot bootloader
 ```
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 ## Making the partitions
 - Start by booting TWRP:
@@ -299,11 +309,17 @@ DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Inte
 
 You will be back into Surface Duo's bootloader.
 
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
 ## Boot Windows 🚀
 
 We are ready to boot for the first time!
 
-Reboot your device to fastboot, using adb or from the recovery.
+Reboot your device to the Bootloader mode, using adb or from the recovery.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 Let's boot the UEFI, from a command prompt:
 
@@ -338,7 +354,10 @@ In case you want the dual boot option, then follow [this guide](https://github.c
   <summary>In case you want to manually boot each time: (Click to expand)</summary>
   <p>
 
-Reboot your device to fastboot, using adb or from the recovery.
+Reboot your device to the Bootloader mode, using adb or from the recovery.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 Let's boot the UEFI, from a command prompt:
 

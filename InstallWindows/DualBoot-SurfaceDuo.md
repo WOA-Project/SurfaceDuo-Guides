@@ -122,7 +122,7 @@ Before risking to brick your device, it is good practice to test your image to m
 
 #### Testing Android™ works
 
-First go to the bootloader mode with:
+First go to the Bootloader mode with:
 
 ```batch
 adb reboot bootloader
@@ -140,7 +140,7 @@ If your device boots into Android™ just fine, like before, you did well! your 
 
 Now we'll test the ability to boot into Windows in roughly the same way.
 
-Go to the bootloader mode once more with:
+Go to the Bootloader mode once more with:
 
 ```batch
 adb reboot bootloader
@@ -193,7 +193,7 @@ To revert the changes and go back to a clean state, simply flash the original bo
 
 ## Troubleshooting
 
-If the device keeps going back to the bootloader mode
+If the device keeps going back to the Bootloader mode
 
 ```batch
 fastboot set_active <alternative slot from current>

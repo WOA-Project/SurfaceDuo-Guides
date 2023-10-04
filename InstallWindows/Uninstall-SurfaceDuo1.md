@@ -33,6 +33,10 @@ If you have followed a guide to use dual boot, please first remove dual boot by 
 
 - Reboot your phone to Surface Duo Bootloader: Press Volume Down + Power until the Microsoft Corporation logo appears on the left, then release the power
   button and keep pressing the volume down button until the bootloader appears.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
 - Plug your phone to your PC, open a command prompt and run the following command:
 
 ```batch
@@ -96,9 +100,15 @@ exit
 
 - Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
 
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
 - Once Android™ is confirmed booting, reboot back into the bootloader using ```adb reboot bootloader``` or by pressing Volume Down right at boot.
 
 You will be back into Surface Duo's bootloader.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 ### Relocking the Bootloader
 
@@ -106,6 +116,9 @@ You will be back into Surface Duo's bootloader.
 
 - Reboot your Surface Duo to the Bootloader: Press Volume Down + Power until the Microsoft Corporation logo appears on the left, then release the power
   button and keep pressing the volume down button until the bootloader appears.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 - Run this command:
 
