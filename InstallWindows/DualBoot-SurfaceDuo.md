@@ -174,6 +174,9 @@ Now that our image is confirmed working:
 adb reboot recovery
 ```
 
+![Surface Duo in Locked Recovery mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0198103d-d44d-40d5-af45-8e60744dfb96)
+_Image of what you should see right now: Surface Duo in Locked Recovery mode_
+
 - Go to fastbootd. To do that, on recovery:
   1. Press and hold **Power** then press **Volume Up**
   2. Release **Volume Up**, release **Power**
