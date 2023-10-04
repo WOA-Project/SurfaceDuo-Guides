@@ -13,15 +13,14 @@
 
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 
-## Warnings ⚠️
-
-- Read the entire guide before starting. Make sure you understand all of what you're going to do!
-- If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-- Don't rerun the commands if you interrupt the process. You may break things.
-- Do not run all commands at once.
-- Do not commit *any* typo with *any* commands.
-- Be familiar with command line interfaces.
-- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
+> [!WARNING]  
+> - Read the entire guide before starting. Make sure you understand all of what you're going to do!
+> - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
+> - Don't rerun the commands if you interrupt the process. You may break things.
+> - Do not run all commands at once.
+> - Do not commit *any* typo with *any* commands.
+> - Be familiar with command line interfaces.
+> - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
 
 ## Getting your current boot slot (A/B)
 

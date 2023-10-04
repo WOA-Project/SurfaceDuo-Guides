@@ -11,13 +11,12 @@
 - Python 3 (the one from the Microsoft Store will do just fine)
 - Windows Command Prompt, Linux is not required
 
-## Warnings ⚠️
-
-Once you do this, you will need to follow this guide again each time you update Android™, or your Android™ installation won't boot anymore.
-
-Please backup your original boot.img image. You will need to reflash it in order to update successfully within Android™ going forward. Or you'll have to use an OTA package.
-
-You cannot relock the bootloader if the boot image was modified using this guide. You will have to restore the original file to do so with instructions mentioned below. The uninstall guide also cannot be followed until you follow the restore part at the bottom of this guide.
+> [!WARNING]  
+> Once you do this, you will need to follow this guide again each time you update Android™, or your Android™ installation won't boot anymore.
+>
+> Please backup your original boot.img image. You will need to reflash it in order to update successfully within Android™ going forward. Or you'll have to use an OTA package.
+>
+> You cannot relock the bootloader if the boot image was modified using this guide. You will have to restore the original file to do so with instructions mentioned below. The uninstall guide also cannot be followed until you follow the restore part at the bottom of this guide.
 
 ## Steps 🛠️
 

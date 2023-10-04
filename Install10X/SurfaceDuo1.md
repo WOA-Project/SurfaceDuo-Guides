@@ -3,7 +3,6 @@
 ## Table of Contents
 
 1. [Files/Tools Needed](#filestools-needed-)
-2. [Warnings ⚠️](#warnings-%EF%B8%8F)
 3. [What you will get 🛒](#what-you-will-get-)
 4. [Steps 🛠️](#steps-%EF%B8%8F)
     1. [Unlocking the bootloader](#unlocking-the-bootloader)
@@ -22,20 +21,19 @@
 - The 10X Image Files (`BS_EFIESP.img` and `OSPool.img`). You can find them [here](https://t.me/DuoWOA_Announcements/379)
 - A Windows PC to execute most of the commands in this guide
 
-## Warnings ⚠️
+> [!WARNING]  
+> - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
+> - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
+> - Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+> - Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+> - Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+> - Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+> - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
 
-- Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
-- If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-- Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-- Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-- Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-- Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
-
-**THIS WILL WIPE ALL YOUR ANDROID™ DATA**
-
-We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
-but this is **STILL IN PREVIEW** and things can go wrong.
+> [!IMPORTANT]
+> **THIS WILL WIPE ALL YOUR ANDROID™ DATA**
+> We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
+> but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
@@ -108,15 +106,12 @@ adb shell
 
 Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired.
 
-!!!! Warning reminder !!!!
-
-⚠️ Do not run all commands at once, instead run them one by one
-
-⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
-
-⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
-
-⚠️ You can kill things if you do below's steps wrong
+> [!WARNING]  
+> !!!! Warning reminder !!!!
+> ⚠️ Do not run all commands at once, instead run them one by one
+> ⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
+> ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
+> ⚠️ You can kill things if you do below's steps wrong
 
 ---
 
