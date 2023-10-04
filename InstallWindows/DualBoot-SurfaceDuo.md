@@ -128,6 +128,9 @@ First go to the Bootloader mode with:
 adb reboot bootloader
 ```
 
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
 Now, boot your newly image like so, with the device folded flat/open:
 
 ```batch
@@ -145,6 +148,9 @@ Go to the Bootloader mode once more with:
 ```batch
 adb reboot bootloader
 ```
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 Now, boot your newly image like so, this time with the device closed, not opened:
 
@@ -174,9 +180,12 @@ adb reboot recovery
      * Do not release the **Power** button before pressing the **Volume Up** button.
   4. Go to "fastboot" in the menu
 
+![Surface Duo in Fastbootd mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fbd0d1b9-fdf1-4102-8c8a-c29c44ab9c4f)
+_Image of what you should see right now: Surface Duo in Fastbootd mode_
+
 - Flash the boot image (dualboot.img) to the device:
 
-__Replace ```<dualboot.img>``` (including the ```<``` and ```>``` with the full path to your image file!)
+_Replace ```<dualboot.img>``` (including the ```<``` and ```>``` with the full path to your image file!)_
 
 ```batch
 fastboot flash boot <dualboot.img>
