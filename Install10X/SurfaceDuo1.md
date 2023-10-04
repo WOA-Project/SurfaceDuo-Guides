@@ -73,7 +73,7 @@ From there:
 fastboot flashing unlock
 ```
 
-Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From then:
+Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From there:
 
 - In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
 
