@@ -164,7 +164,7 @@ We have now certified our image works. In case it does not, please make sure you
 
 - Reboot the device back to Android™ from the start menu, power, reboot:
 
-![Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b7539be2-bfda-4d56-bd5c-4166da9ed299)
+![Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fabc1514-4e8a-47cd-80d7-8655674384c7)
 _Image of what you should see and do right now: Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted_
 
 ### Flashing newly made image
