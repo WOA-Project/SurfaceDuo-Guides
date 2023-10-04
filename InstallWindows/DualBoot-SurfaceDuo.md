@@ -162,7 +162,10 @@ If your device boots into Windows just fine, like before, you did well! your ima
 
 We have now certified our image works. In case it does not, please make sure you used a matching boot.img file to generate your file, and correctly used the information provided at the beginning of the guide in commands.
 
-Reboot the device back to Android™ from the start menu, power, reboot.
+- Reboot the device back to Android™ from the start menu, power, reboot:
+
+![Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b7539be2-bfda-4d56-bd5c-4166da9ed299)
+_Image of what you should see and do right now: Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted_
 
 ### Flashing newly made image
 
