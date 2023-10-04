@@ -27,13 +27,16 @@
 
 Assuming your Surface Duo is currently booted into Android™️, connect it to your PC with a USB cable and open a command prompt.
 
-- First, we need to reboot into the bootloader menu, to do so, run this command on your pc:
+- First, we need to reboot into the bootloader mode, to do so, run this command on your pc:
 
 ```batch
 adb reboot bootloader
 ```
 
-Your Surface Duo will reboot into the bootloader menu.
+Your Surface Duo will reboot into the bootloader mode.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 -  In order to retrieve the current active slot, run this command on your PC:
 

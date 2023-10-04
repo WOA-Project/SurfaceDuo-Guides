@@ -63,7 +63,12 @@ Assuming your Surface Duo is booted to Android™, plugged to your PC:
 ```batch
 adb reboot bootloader
 ```
-- You will be rebooted to Surface Duo's bootloader. From there:
+- You will be rebooted to Surface Duo's bootloader.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
+From there:
 ```batch
 fastboot flashing unlock
 ```
@@ -72,11 +77,14 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Android�
 
 - In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
 
-- Reboot back into the bootloader menu by running this command:
+- Reboot back into the bootloader mode by running this command:
 
 ```batch
 adb reboot bootloader
 ```
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 ## Making the partitions
 - Start by booting TWRP:
@@ -255,11 +263,15 @@ exit
 
 ## Installing Windows 10X
 
-Reboot your phone to fastboot:
+Reboot your phone to the bootloader mode:
 
 ```batch
 adb reboot bootloader
 ```
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
 <img width="265" alt="image" src="https://user-images.githubusercontent.com/29689637/229379406-f86ecc5a-1252-47bb-8a75-27b1ae540357.png">
 
 Now let's clean the partitions we've just created with fastboot:
@@ -338,13 +350,16 @@ We'll need a UEFI to boot to Windows 10X.
 
 ## Boot Windows 10X
 
-- Reboot your device to fastboot
+- Reboot your device to the bootloader mode
 
 ```batch
 adb reboot bootloader
 ```
 
-- Once into fastboot, let's run the UEFI, which will boot to 10X:
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
+- Once into the bootloader mode, let's run the UEFI, which will boot to 10X:
 
 ```batch
 fastboot boot uefi.img

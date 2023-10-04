@@ -73,7 +73,7 @@ Your phone will wipe itself and reboot to the Out of Box Experience in Androidâ„
 
 - In Androidâ„¢ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
 
-- Reboot back into the bootloader menu by running this command:
+- Reboot back into the bootloader mode by running this command:
 
 ```batch
 adb reboot bootloader

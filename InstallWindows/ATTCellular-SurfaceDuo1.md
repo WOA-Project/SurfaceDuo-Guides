@@ -21,7 +21,7 @@ AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android
 
 ## Getting to Mass Storage Mode
 
-- Reboot into the bootloader menu by running this command while inside Android™:
+- Reboot into the bootloader mode by running this command while inside Android™:
 
 ```batch
 adb reboot bootloader
