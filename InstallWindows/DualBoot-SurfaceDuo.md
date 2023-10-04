@@ -181,7 +181,11 @@ _Image of what you should see right now: Surface Duo in Locked Recovery mode_
   1. Press and hold **Power** then press **Volume Up**
   2. Release **Volume Up**, release **Power**
      * Do not release the **Power** button before pressing the **Volume Up** button.
-  4. Go to "fastboot" in the menu
+
+![Surface Duo in Recovery mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/9a4a2dd7-7a72-4ed4-8f1e-7e8de627995f)
+_Image of what you should see right now: Surface Duo in Recovery mode_
+
+  4. Select "Enter fastboot" in the menu by using the **Volume Up** and/or the **Volume Down** button to go up and down, and press the **Power** button to select/confirm.
 
 ![Surface Duo in Fastbootd mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fbd0d1b9-fdf1-4102-8c8a-c29c44ab9c4f)
 _Image of what you should see right now: Surface Duo in Fastbootd mode_
