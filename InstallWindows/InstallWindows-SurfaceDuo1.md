@@ -26,7 +26,7 @@
 - DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
-> [!WARNING]  
+> [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 > - Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
@@ -37,7 +37,9 @@
 
 > [!IMPORTANT]
 > **THIS WILL WIPE ALL YOUR ANDROID™ DATA**
+>
 > We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
+>
 > but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
@@ -109,11 +111,15 @@ adb shell
 
 Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired.
 
-> [!WARNING]  
+> [!WARNING]
 > !!!! Warning reminder !!!!
+>
 > ⚠️ Do not run all commands at once, instead run them one by one
+>
 > ⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
+>
 > ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
+>
 > ⚠️ You can kill things if you do below's steps wrong
 
 ---
@@ -296,7 +302,7 @@ You will be able to recognize the partitions we made earlier by their size. take
 
 - You will have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
-> [!WARNING]  
+> [!WARNING]
 > From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly with what you previously picked or you will lose data on your PC.
 
 - We will need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md). When you are ready, run these commands:

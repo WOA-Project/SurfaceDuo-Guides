@@ -13,7 +13,7 @@
 
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 
-> [!WARNING]  
+> [!WARNING]
 > - Read the entire guide before starting. Make sure you understand all of what you're going to do!
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 > - Don't rerun the commands if you interrupt the process. You may break things.

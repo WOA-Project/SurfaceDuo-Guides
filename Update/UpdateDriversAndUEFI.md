@@ -22,7 +22,7 @@
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 - Windows UEFI for Surface Duo 2: [SM8350.UEFI.Surface.Duo.2.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 
-> [!WARNING]  
+> [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
 > - ⚠️ If you are upgrading from a version older than 2301.93, you must reinstall using this guide:
 >     - [Reinstall Windows (Surface Duo (First Gen))](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
@@ -63,7 +63,7 @@ adb shell "sh /sdcard/msc.sh"
 
 ## Updating Drivers
 
-> [!WARNING]  
+> [!WARNING]
 > From now on we will assume X: is the Win partition for all commands. Replace them correctly with what you previously picked or you will lose data on your PC.
 
 - Extract the driver package, extract the driver updater zip, and open a command prompt in the directory containing DriverUpdater.exe:

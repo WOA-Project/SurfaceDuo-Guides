@@ -8,7 +8,9 @@
 
 > [!IMPORTANT]
 > **THIS WILL WIPE ALL YOUR ANDROID™ DATA**
+>
 > We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
+>
 > but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**

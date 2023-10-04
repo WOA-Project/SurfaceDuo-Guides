@@ -11,7 +11,7 @@
 - Python 3 (the one from the Microsoft Store will do just fine)
 - Windows Command Prompt, Linux is not required
 
-> [!WARNING]  
+> [!WARNING]
 > Once you do this, you will need to follow this guide again each time you update Android™, or your Android™ installation won't boot anymore.
 >
 > Please backup your original boot.img image. You will need to reflash it in order to update successfully within Android™ going forward. Or you'll have to use an OTA package.
