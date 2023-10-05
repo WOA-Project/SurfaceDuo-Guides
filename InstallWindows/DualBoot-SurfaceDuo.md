@@ -2,7 +2,7 @@
 
 ## Files/Tools Needed 📃
 
-- UEFI Raw FV Image for Surface Duo (First Gen): [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
+- UEFI Raw FV Image for Surface Duo (1st Gen): [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
 - UEFI Raw FV Image for Surface Duo 2: [SM8350_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
 - Stock device boot.img image obtained from an ota package, or from the device itself using [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md)
 - Kernel Patching Utility: [SurfaceDuoDualBootKernelImagePatcher](https://github.com/WOA-Project/SurfaceDuoDualBootKernelImagePatcher/releases)
@@ -71,7 +71,7 @@ later in the guide, you will have to replace every occurence of ```<os version>`
 
 Once done, run the kernel patcher utility as such:
 
-For Surface Duo (First Gen):
+For Surface Duo (1st Gen):
 
 ```batch
 SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 0
@@ -87,7 +87,7 @@ SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 1
 
 Now we need to combine our new kernel with our UEFI fd image from a Command Prompt (cmd.exe _not_ PowerShell):
 
-For Surface Duo (First Gen):
+For Surface Duo (1st Gen):
 
 ```batch
 copy /b .\patchedkernel + .\SM8150_EFI.fd .\hybridkernel
@@ -103,7 +103,7 @@ copy /b .\patchedkernel + .\SM8350_EFI.fd .\hybridkernel
 
 Now using the files we got earliers as well as the information being output above from unpack_bootimg, we can generate a new dual boot image from an OS with python installed:
 
-For Surface Duo (First Gen):
+For Surface Duo (1st Gen):
 
 ```batch
 python3 mkbootimg.py --kernel hybridkernel --ramdisk ramdisk -o dualboot.img --pagesize 4096 --header_version 2 --cmdline "<command line>" --dtb dtb --base 0x0 --os_version <os version> --os_patch_level <os patch level> --second_offset 0xf00000
@@ -163,8 +163,8 @@ We have now certified our image works. In case it does not, please make sure you
 
 - Reboot the device back to Android™ from the start menu, power, reboot:
 
-![Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fabc1514-4e8a-47cd-80d7-8655674384c7)
-_Image of what you should see and do right now: Surface Duo in Windows 11, Start Menu Opened, Power Menu opened, Reboot option highlighted_
+![Surface Duo in Windows, Start Menu Opened, Power Menu opened, Reboot option highlighted](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fabc1514-4e8a-47cd-80d7-8655674384c7)
+_Image of what you should see and do right now: Surface Duo in Windows, Start Menu Opened, Power Menu opened, Reboot option highlighted_
 
 ### Flashing newly made image
 

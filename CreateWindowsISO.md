@@ -7,7 +7,7 @@ You can find out which Windows versions are supported for each device model [her
 - Presuming you are working on a Windows AMD64 machine, download and extract the ```win-x64.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
 (if you are on a Windows ARM64 machine, use win-arm64 instead, etc..)
 
-NOTE: For apps to be included in the image for 22H1 or higher, please run the tool on Windows 11.
+NOTE: For apps to be included in the image for Windows 11 Version 22H1 or higher, please run the tool on Windows 11.
 
 - Navigate to this directory: `"win-x64\CLI"`
 
@@ -23,7 +23,7 @@ Windows Insider Program's channel builds may be more unstable, and less tested f
 
 If you value stability, please use below's command to download the latest stable version of Windows 11:
 
-_Windows 11 Version 23h2_
+_Windows 11 Version 23H2_
 ```batch
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c ni_release -t arm64 -l en-US
 ```
@@ -65,17 +65,17 @@ uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Can
 
 ---
 
-This will download the professional edition of Windows 11 retail copy for arm64 architecture for English version. If you want to change the language,
+This will download the professional edition of Windows for arm64 architecture for English version. If you want to change the language,
 use the standard Windows language pack commands. Installing the right language pack will save a lot of time for download.
 
 ---
 
 - Once the download is completed, you will see a new folder with prefix "10.0.22000..." created inside the CLI folder. This
-  contains all the required Windows 11 files. Let's create an ISO from the Windows 11 build download.
+  contains all the required Windows files. Let's create an ISO from the Windows build download.
   Open up the command prompt as Administrator and type:
 
 ```batch
-UUPMediaConverter.exe -u <10.0.22000... name of your Windows 11 build folder> -i Windows11_Pro_arm64_en-US.iso -l en-US -e Professional
+UUPMediaConverter.exe -u <10.0.22000... name of your Windows build folder> -i Windows11_Pro_arm64_en-US.iso -l en-US -e Professional
 ```
 
 - Once that's done, mount the newly created `Windows11_Pro_arm64_en-US.iso` on your Windows machine. You will find the install.wim file in your mounted ISO drive in `G:\sources\install.wim`.

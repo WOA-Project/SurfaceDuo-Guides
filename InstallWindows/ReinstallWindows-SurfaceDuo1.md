@@ -1,4 +1,4 @@
-# Reinstall Windows on Surface Duo (First Gen)
+# Reinstall Windows on Surface Duo (1st Gen)
 
 ## Files/Tools Needed 📃
 

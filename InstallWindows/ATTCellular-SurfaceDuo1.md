@@ -1,4 +1,4 @@
-# Making Cellular work on Sim Unlocked AT&T Surface Duo (First Gen) devices
+# Making Cellular work on Sim Unlocked AT&T Surface Duo (1st Gen) devices
 
 AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android™ again. In order to make Windows _Unlocked_ like Android™ some steps are required.
 

@@ -1,4 +1,4 @@
-# Uninstall Windows and revert your Surface Duo (First Gen) to stock
+# Uninstall Windows and revert your Surface Duo (1st Gen) to stock
 
 ## Files/Tools Needed 📃
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)

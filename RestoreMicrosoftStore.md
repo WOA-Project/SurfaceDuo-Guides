@@ -1,6 +1,6 @@
-# Restore the Microsoft Store (Windows 11)
+# Restore the Microsoft Store (Windows)
 
-If your Windows 11 build lacks the Microsoft Store, follow these steps to fix this issue:
+If your Windows build lacks the Microsoft Store, follow these steps to fix this issue:
 
 ## Method 1: Use the built in Windows Store Reset tool into Windows
 

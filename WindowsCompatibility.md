@@ -1,8 +1,8 @@
 # Compatibility
 
-## Surface Duo (First Gen)
+## Surface Duo (1st Gen)
 
-Surface Duo (First Gen) currently supports the following Windows OS versions:
+Surface Duo (1st Gen) currently supports the following Windows OS versions:
 
 | Operating System                                                          | Supported? |
 |---------------------------------------------------------------------------|------------|

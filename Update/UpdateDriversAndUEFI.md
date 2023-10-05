@@ -12,10 +12,10 @@
 - DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
 - A Windows PC
 
-### For Surface Duo (First Gen)
+### For Surface Duo (1st Gen)
 
-- TWRP image for Surface Duo (First Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Windows UEFI for Surface Duo (First Gen): [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- TWRP image for Surface Duo (1st Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- Windows UEFI for Surface Duo (1st Gen): [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 
 ### For Surface Duo 2
 
@@ -25,7 +25,7 @@
 > [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
 > - ⚠️ If you are upgrading from a version older than 2301.93, you must reinstall using this guide:
->     - [Reinstall Windows (Surface Duo (First Gen))](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
+>     - [Reinstall Windows (Surface Duo (1st Gen))](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
 >     - [Reinstall Windows (Surface Duo 2)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo2.md)
 > - ⚠️ If you are upgrading from a version older than 2301.93, you must also use version Driver Updater version 1.8.0.0 or higher
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
@@ -38,7 +38,7 @@
 
 - Start by booting TWRP:
 
-For Surface Duo (First Gen):
+For Surface Duo (1st Gen):
 
 ```batch
 fastboot boot surfaceduo1-twrp.img
@@ -68,7 +68,7 @@ adb shell "sh /sdcard/msc.sh"
 
 - Extract the driver package, extract the driver updater zip, and open a command prompt in the directory containing DriverUpdater.exe:
 
-For Surface Duo (First Gen):
+For Surface Duo (1st Gen):
 
 ```batch
 DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\

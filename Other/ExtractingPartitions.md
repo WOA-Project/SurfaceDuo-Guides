@@ -5,9 +5,9 @@
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
 
-### For Surface Duo (First Gen)
+### For Surface Duo (1st Gen)
 
-- TWRP image for Surface Duo (First Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- TWRP image for Surface Duo (1st Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 
 ### For Surface Duo 2
 
@@ -56,7 +56,7 @@ Take note of your slot, we´ll assume it is `b`
 
 - We need to boot into TWRP, to do so, run the following command on your PC:
 
-For Surface Duo (First Gen):
+For Surface Duo (1st Gen):
 
 ```batch
 fastboot boot surfaceduo1-twrp.img
