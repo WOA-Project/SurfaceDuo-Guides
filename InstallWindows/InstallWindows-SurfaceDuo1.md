@@ -2,22 +2,9 @@
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
-## Table of Contents
-
-1. [Files/Tools Needed](#filestools-needed-)
-3. [What you will get 🛒](#what-you-will-get-)
-4. [Steps 🛠️](#steps-%EF%B8%8F)
-    1. [Unlocking the bootloader](#unlocking-the-bootloader)
-    2. [Making the partitions](#making-the-partitions)
-    3. [Going to Mass Storage](#going-to-mass-storage)
-    4. [Installing Windows](#installing-windows)
-    5. [Installing the drivers](#installing-the-drivers)
-    6. [Boot Windows 🚀](#boot-windows-)
-
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -29,10 +16,10 @@
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-> - Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
+> - Don't rerun the commands if you interrupt the process. You may break your partition table.
+> - Do not run all commands at once.
+> - Do not commit *any* typo with *any* commands.
+> - Be familiar with command line interfaces.
 > - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
 
 > [!IMPORTANT]
@@ -52,35 +39,13 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 # Steps 🛠️
 
-## Unlocking the bootloader
+## Partitioning
 
-- Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
+If not already done, please first proceed with the [Partitioning](Partitioning-SurfaceDuo1.md) guide for Surface Duo 1. Come back once you're done. If you already followed this guide, please instead follow the [Reinstall Windows](ReinstallWindows-SurfaceDuo1.md) guide, not this one.
 
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" and "USB Debugging" inside it.
+## Getting to Mass Storage Mode
 
-Assuming your Surface Duo is booted to Android™, plugged to your PC:
-
-- Open a command prompt on your PC and run this command:
-```batch
-adb reboot bootloader
-```
-
-You will be rebooted to Surface Duo's bootloader.
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-- From there:
-
-```batch
-fastboot flashing unlock
-```
-
-Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From there:
-
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
-
-- Reboot back into the Bootloader mode by running this command:
+- Reboot into the Bootloader mode by running this command while inside Android™:
 
 ```batch
 adb reboot bootloader
@@ -89,181 +54,13 @@ adb reboot bootloader
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-## Making the partitions
 - Start by booting TWRP:
 
 ```batch
 fastboot boot surfaceduo1-twrp.img
 ```
 
-- Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
-
-```batch
-adb shell "setenforce 0"
-adb push <path to parted that was downloaded earlier> /sdcard/
-adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
-adb shell
-```
-
-- Now we are issuing commands directly from inside Surface Duo using the PC.
-
-### Dangerous section
-
-Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired.
-
-> [!WARNING]
-> !!!! Warning reminder !!!!
->
-> ⚠️ Do not run all commands at once, instead run them one by one
->
-> ⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
->
-> ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
->
-> ⚠️ You can kill things if you do below's steps wrong
-
----
-
-<details>
-  <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
-  <p>
-
-```bash
-notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
-notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
-```
-
-The commands above work like this:
-
-[tool name] [partition name in gpt] [file system] [starting offset in disk] [ending offset in disk]
-
-So if you want to change the split, all you have to do is to change the "57344MB" in above's example in both commands.
-
-  </p>
-</details>
-
----
-
-- Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
-
-```bash
-setenforce 0
-parted /dev/block/sda
-print
-```
-
-**Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
-
-Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB -> 240GB) and replace every occurence of 51.9MB and 112GB with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
-
----
-
-<details>
-  <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
-  <p>
-
-__This command removes the userdata partition__
-
-```bash
-rm 6
-```
-
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
-
-```bash
-mkpart esp fat32 51.9MB 564MB
-```
-
-__This command creates the Windows partition.__
-
-```bash
-mkpart win ntfs 564MB 57344MB
-```
-
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 57344MB 112GB
-```
-
-__This command sets the ESP partition created earlier as an EFI system partition type.__
-
-```bash
-set 6 esp on
-```
-
-__This command leaves parted.__
-
-```bash
-quit
-```
-
-  </p>
-</details>
-
----
-
-<details>
-  <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
-  <p>
-
-__This command removes the userdata partition__
-
-```bash
-rm 6
-```
-
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
-
-```bash
-mkpart esp fat32 51.9MB 564MB
-```
-
-__This command creates the Windows partition.__
-
-```bash
-mkpart win ntfs 564MB 114688MB
-```
-
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 114688MB 240GB
-```
-
-__This command sets the ESP partition created earlier as an EFI system partition type.__
-
-```bash
-set 6 esp on
-```
-
-__This command leaves parted.__
-
-```bash
-quit
-```
-
-  </p>
-</details>
-
----
-
-This will get you out of parted.
-
-We have deleted partition 6, which was the Android™ userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files,
-a win partition that will have Windows, and the last one is the new userdata partition for Android™, just smaller.
-
-Now let's make these partitions actually usable:
-
-```bash
-setenforce 0
-mkfs.fat -F32 -s1 /dev/block/sda6
-mkfs.ntfs -f /dev/block/sda7
-mke2fs -t ext4 /dev/block/sda8
-exit
-```
-
-### End of the Dangerous section
+- Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal.
 
 ## Going to Mass Storage
 
@@ -286,7 +83,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 ```batch
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
-YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DONT ASSIGN FINE, USE ANOTHER ONE.
+YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DON'T ASSIGN FINE, USE ANOTHER ONE.
 IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF YOU DONT WANT TO.
 
 # list disk
@@ -396,21 +193,3 @@ If you did everything right, Windows will now boot! Enjoy!
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
   </p>
 </details>
-
----
-
-## Additional Context and Notes
-
-If you somehow break entirely your partition table, you might be interested in the original offsets of each partition in order to fix it.
-
-```bash
-mkpart ssd 6s 7s
-mkpart persist ext4 8s 8199s
-mkpart metadata ext4 8200s 12295s
-mkpart frp 12296s 12423s
-mkpart misc 12424s 12679s
-```
-
-The offsets are valid for both the Surface Duo (1st Gen) 128GB model, and the Surface Duo (1st Gen) 256GB model. They do not include userdata. You will have to recreate this yourself.
-
-(NEVER RUN THESE COMMANDS IF YOU DO NOT NEED TO OR YOU ALREADY PARTITIONS IN PLACE, ADVANCED USERS ONLY, YOU MAY KILL YOUR PHONE HERE)
