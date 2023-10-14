@@ -67,36 +67,22 @@ To avoid mistakes/reusing values, we've replaced them above. You will want to no
 
 later in the guide, you will have to replace every occurence of ```<os version>```, ```<os patch level>```, ```<command line>``` with the values you collected above, without the ```<>``` of course!
 
-### Patching original kernel image header
+### Patching original kernel image header and merging the UEFI with it
 
-Once done, run the kernel patcher utility as such:
+Now we need to combine our new kernel with our UEFI fd image from a Command Prompt (cmd.exe _not_ PowerShell).
+
+Run the kernel patcher utility as such:
 
 For Surface Duo (1st Gen):
 
 ```batch
-SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 0
+SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\SM8150_EFI.fd 0 .\hybridkernel
 ```
 
 For Surface Duo 2:
 
 ```batch
-SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\patchedkernel 1
-```
-
-### Merging patched kernel image with the UEFI firmware
-
-Now we need to combine our new kernel with our UEFI fd image from a Command Prompt (cmd.exe _not_ PowerShell):
-
-For Surface Duo (1st Gen):
-
-```batch
-copy /b .\patchedkernel + .\SM8150_EFI.fd .\hybridkernel
-```
-
-For Surface Duo 2:
-
-```batch
-copy /b .\patchedkernel + .\SM8350_EFI.fd .\hybridkernel
+SurfaceDuoDualBootKernelImagePatcher.exe .\kernel .\SM8350_EFI.fd 1 .\hybridkernel
 ```
 
 ### Rebuilding a new boot.img file
