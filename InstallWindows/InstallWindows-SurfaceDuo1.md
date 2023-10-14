@@ -39,9 +39,13 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 # Steps 🛠️
 
+## Unlocking the Bootloader
+
+If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader-SurfaceDuo1.md) guide for Surface Duo 1. Come back once you're done. If you already followed this guide, please skip the unlocking section.
+
 ## Partitioning
 
-If not already done, please first proceed with the [Partitioning](Partitioning-SurfaceDuo1.md) guide for Surface Duo 1. Come back once you're done. If you already followed this guide, please instead follow the [Reinstall Windows](ReinstallWindows-SurfaceDuo1.md) guide, not this one.
+If not already done, please proceed with the [Partitioning](Partitioning-SurfaceDuo1.md) guide for Surface Duo 1. Come back once you're done. If you already followed this guide, please instead follow the [Reinstall Windows](ReinstallWindows-SurfaceDuo1.md) guide, not this one.
 
 ## Getting to Mass Storage Mode
 

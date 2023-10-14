@@ -1,12 +1,4 @@
-# Install Windows on Surface Duo (1st Gen)
-
-## Table of Contents
-
-1. [Files/Tools Needed](#filestools-needed-)
-3. [What you will get 🛒](#what-you-will-get-)
-4. [Steps 🛠️](#steps-%EF%B8%8F)
-    1. [Unlocking the bootloader](#unlocking-the-bootloader)
-    2. [Making the partitions](#making-the-partitions)
+# Partitioning Surface Duo (1st Gen)
 
 ## Files/Tools Needed 📃
 
@@ -41,35 +33,9 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 # Steps 🛠️
 
-## Unlocking the bootloader
+## Making the partitions
 
-- Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
-
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" and "USB Debugging" inside it.
-
-Assuming your Surface Duo is booted to Android™, plugged to your PC:
-
-- Open a command prompt on your PC and run this command:
-```batch
-adb reboot bootloader
-```
-
-You will be rebooted to Surface Duo's bootloader.
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-- From there:
-
-```batch
-fastboot flashing unlock
-```
-
-Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From there:
-
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
-
-- Reboot back into the Bootloader mode by running this command:
+- Reboot into the Bootloader mode by running this command while inside Android™:
 
 ```batch
 adb reboot bootloader
@@ -79,6 +45,7 @@ adb reboot bootloader
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
 ## Making the partitions
+
 - Start by booting TWRP:
 
 ```batch
