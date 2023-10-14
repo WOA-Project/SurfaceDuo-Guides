@@ -221,6 +221,18 @@ exit
 
 ### End of the Dangerous section
 
+## Rebooting into Android
+
+Now, reboot into Android again:
+
+```batch
+adb reboot
+```
+
+Your phone will reboot to the Out of Box Experience in Android™ (OOBE). Set it up. From there:
+
+- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
+
 ## The End
 
 And we're done, please continue to [Installing Windows](InstallWindows-SurfaceDuo1.md)
