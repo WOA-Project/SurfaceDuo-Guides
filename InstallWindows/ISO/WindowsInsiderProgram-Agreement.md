@@ -4,9 +4,9 @@
 
 _Make our lawyers happy_
 
-The Windows Insider Program is subject to additional terms and conditions, consultable at https://www.microsoft.com/en-us/windowsinsider/program-agreement
+The Windows Insider Program is subject to additional terms and conditions, available at https://www.microsoft.com/en-us/windowsinsider/program-agreement
 
-Please consule the above agreement in order to get the most current version, a dated copy is made available below:
+Please consult the above agreement in order to get the most current version, a dated copy is made available below:
 
 ## Microsoft Windows Insider Program Agreement
 
