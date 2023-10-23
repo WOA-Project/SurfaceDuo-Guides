@@ -28,41 +28,6 @@ _Windows 11 Version 23H2_
 uupdownload -s Professional -e Professional -v 10.0.22621.100 -r Retail -b Retail -c ni_release -t arm64 -l en-US
 ```
 
-#### Latest Windows Insider Program Versions
-
-Microsoft releases Insider Preview builds to you through channels, which are each designed to bring you a different experience based on the quality of Windows you need for your life and your device. When choosing a channel, you should keep in mind:
-
-- How stable you need your device to be
-- What level of issues you can handle on your device
-- How early in development you'd like to see features and changes
-- Whether or not you need Microsoft support
-
-As Microsoft continues to evolve the way they're building and releasing Windows in the future, they may introduce new channels to bring you new experiences.
-
-![Windows Insider Channels, Recommended Ones](https://learn.microsoft.com/en-us/windows-insider/images/channelsmovev2.png)
-
-For more information about the insider program, please see the [Windows Insider Program website](https://insider.windows.com)
-
-_Windows 11 Version Next (Release Preview Channel)_
-```batch
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b ReleasePreview -c ni_release -t arm64 -l en-US
-```
-
-_Windows 11 Version Next (Beta Channel)_
-```batch
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Beta -c ni_release -t arm64 -l en-US
-```
-
-_Windows vNext (Dev Channel)_
-```batch
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b Dev -c ni_release -t arm64 -l en-US
-```
-
-_Windows vNext (Canary Channel)_
-```batch
-uupdownload -s Professional -e Professional -v 10.0.22621.100 -r External -b CanaryChannel -c ni_release -t arm64 -l en-US
-```
-
 ---
 
 This will download the professional edition of Windows for arm64 architecture for English version. If you want to change the language,
@@ -70,7 +35,7 @@ use the standard Windows language pack commands. Installing the right language p
 
 ---
 
-- Once the download is completed, you will see a new folder with prefix "10.0.22000..." created inside the CLI folder. This
+- Once the download is completed, you will see a new folder with prefix "10.0.22000..." (or something different!) created inside the CLI folder. This
   contains all the required Windows files. Let's create an ISO from the Windows build download.
   Open up the command prompt as Administrator and type:
 
