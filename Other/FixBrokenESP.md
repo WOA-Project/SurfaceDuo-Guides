@@ -52,8 +52,16 @@ fastboot boot surfaceduo1-twrp.img
 > [!WARNING]
 >THIS COMMAND MUST NEVER BE RAN IF THE ESP PARTITION IS NOT PRESENT AND ONLY ANDROID IS ON THE DEVICE!
 
+### For Surface Duo (1st Gen)
+
 ```bash
 mkfs.fat -F32 -s1 /dev/block/sda6
+```
+
+### For Surface Duo 2
+
+```bash
+mkfs.fat -F32 -s1 /dev/block/sda8
 ```
 
 ## Going to Mass Storage
