@@ -67,6 +67,7 @@ You'll get a list of partitions.
 - Make sure that partitions 6, 7 and 8 are your ESP, Windows and userdata partitions. We'll assume they are for this guide.
   If they aren't, take note of these numbers and use them in the next steps. Please make sure these are right, or you'll end up
   bricking your Surface Duo.
+- Note: you may also see Windows Recovery Partitions, you can also delete those, but nothing else.
 
 ⚠️ The next command will wipe all your data. Please make sure that you have backed everything up. ⚠️
 

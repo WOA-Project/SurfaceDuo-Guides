@@ -127,19 +127,19 @@ rm 8
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
 ```bash
-mkpart esp fat32 401MB 913MB
+mkpart esp fat32 401MB 661MB
 ```
 
 __This command creates the Windows partition.__
 
 ```bash
-mkpart win ntfs 913MB 57693MB
+mkpart win ntfs 661MB 66197MB
 ```
 
 __This command creates the Android™ data partition back.__
 
 ```bash
-mkpart userdata ext4 57693MB 110GB
+mkpart userdata ext4 66197MB 110GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__

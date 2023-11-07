@@ -127,19 +127,19 @@ rm 6
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
 ```bash
-mkpart esp fat32 51.9MB 564MB
+mkpart esp fat32 51.9MB 312MB
 ```
 
-__This command creates the Windows partition.__
+__This command creates the Windows partition. Size = (64GB/65536MB) = (65848MB - 312MB), Start (Disk Offset) = (312MB), End (Disk Offset) = (65848MB)__
 
 ```bash
-mkpart win ntfs 564MB 57344MB
+mkpart win ntfs 312MB 65848MB
 ```
 
-__This command creates the Android™ data partition back.__
+__This command creates the Android™ data partition back. Size = (47.7GB/48840MB) = (112GB - 65848MB) = (114688MB - 65848MB), Start (Disk Offset) = (65848MB), End (Disk Offset) = (112GB) = (114688MB)__
 
 ```bash
-mkpart userdata ext4 57344MB 112GB
+mkpart userdata ext4 65848MB 112GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
@@ -172,13 +172,13 @@ rm 6
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
 ```bash
-mkpart esp fat32 51.9MB 564MB
+mkpart esp fat32 51.9MB 312MB
 ```
 
 __This command creates the Windows partition.__
 
 ```bash
-mkpart win ntfs 564MB 114688MB
+mkpart win ntfs 312MB 114688MB
 ```
 
 __This command creates the Android™ data partition back.__
