@@ -49,7 +49,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 
 ## Dumping Modem partitions
 
-Using the following guide (../Other/ExtractingPartitions.md), extract the following partitions:
+Using [the following guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md), extract the following partitions:
 
 - ```modem_fs1```
 - ```modem_fs2```
