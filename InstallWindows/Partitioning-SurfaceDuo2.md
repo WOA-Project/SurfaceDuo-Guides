@@ -127,19 +127,19 @@ rm 8
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
 
 ```bash
-mkpart esp fat32 401MB 661MB
+mkpart esp fat32 401MB 674MB
 ```
 
 __This command creates the Windows partition.__
 
 ```bash
-mkpart win ntfs 661MB 66197MB
+mkpart win ntfs 674MB 69394MB
 ```
 
 __This command creates the Android™ data partition back.__
 
 ```bash
-mkpart userdata ext4 66197MB 110GB
+mkpart userdata ext4 69394MB 110GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
@@ -163,7 +163,41 @@ quit
   <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
   <p>
 
-TODO: Please file an issue to help us!
+__This command removes the userdata partition__
+
+```bash
+rm 8
+```
+
+__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
+
+```bash
+mkpart esp fat32 401MB 674MB
+```
+
+__This command creates the Windows partition.__
+
+```bash
+mkpart win ntfs 674MB 138113MB
+```
+
+__This command creates the Android™ data partition back.__
+
+```bash
+mkpart userdata ext4 138113MB 238GB
+```
+
+__This command sets the ESP partition created earlier as an EFI system partition type.__
+
+```bash
+set 8 esp on
+```
+
+__This command leaves parted.__
+
+```bash
+quit
+```
 
   </p>
 </details>
