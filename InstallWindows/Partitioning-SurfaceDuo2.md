@@ -4,6 +4,7 @@
 
 - TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
+- File System Support Package for TWRP image: [surfaceduo2-twrp-fssupport.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp-fssupport.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
 
@@ -57,7 +58,11 @@ fastboot boot surfaceduo2-twrp.img
 ```batch
 adb shell "setenforce 0"
 adb push <path to parted that was downloaded earlier> /sdcard/
+adb push <path to downloaded surfaceduo2-twrp-fssupport.tar> /sdcard/
 adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
+adb shell "tar -xf /sdcard/surfaceduo2-twrp-fssupport.tar -C /sdcard/fssupport --no-same-owner"
+adb shell "chmod 755 /sdcard/fssupport/*"
+adb shell "mv /sdcard/fssupport/* /sbin/"
 adb shell
 ```
 

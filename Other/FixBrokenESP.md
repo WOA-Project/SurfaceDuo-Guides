@@ -13,6 +13,7 @@
 ### For Surface Duo 2
 
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
+- File System Support Package for TWRP image: [surfaceduo2-twrp-fssupport.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp-fssupport.tar)
 
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
@@ -55,13 +56,19 @@ fastboot boot surfaceduo1-twrp.img
 ### For Surface Duo (1st Gen)
 
 ```bash
-mkfs.fat -F32 -s1 /dev/block/sda6
+adb shell "setenforce 0"
+adb shell "mkfs.fat -F32 -s1 /dev/block/sda6"
 ```
 
 ### For Surface Duo 2
 
 ```bash
-mkfs.fat -F32 -s1 /dev/block/sda8
+adb shell "setenforce 0"
+adb push <path to downloaded surfaceduo2-twrp-fssupport.tar> /sdcard/
+adb shell "tar -xf /sdcard/surfaceduo2-twrp-fssupport.tar -C /sdcard/fssupport --no-same-owner"
+adb shell "chmod 755 /sdcard/fssupport/*"
+adb shell "mv /sdcard/fssupport/* /sbin/"
+adb shell "mkfs.fat -F32 -s1 /dev/block/sda8"
 ```
 
 ## Going to Mass Storage
