@@ -70,7 +70,7 @@ adb shell
 
 ### Dangerous section
 
-Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired.
+Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired or drunk (yes, we're serious).
 
 > [!WARNING]
 > !!!! Warning reminder !!!!
@@ -81,7 +81,11 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
 >
 > ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
 >
-> ⚠️ You can kill things if you do below's steps wrong
+> ⚠️ You can kill your phone permanently if you do below's steps wrong, for real.
+>
+> ⚠️ DO NOT, UNDER ANY CIRCUMSTANCES, RERUN, ANY, OF BELOW'S COMMANDS, EVEN IF A SINGLE ONE. DOING THIS WILL PERMANENTLY CAUSE HAVOC TO YOUR DEVICE. DO. NOT. RERUN. ANY. OF. THESE. COMMANDS. AFTER. RUNNING. ANY. SINGLE. ONE. OF. THEM. ONCE. You can rerun them __only__ if you completed the installation, and followed the uninstall guide, never if you messed up anything, or didn't proceed with the uninstall guide yet.
+>
+> ⚠️ If you end up messing up, or "forgetting" to run a command, DO NOT RERUN ANYTHING. CONTACT US IMMEDIATELY ON TELEGRAM. EXPLAIN WHAT YOU DID. POST A SCREENSHOT OF THE "print" PARTED COMMAND OUTPUT DONE LAST TO KNOW THE CURRENT STATUS AND NOT THE ONE PRIOR TO 20 OTHER COMMANDS.
 
 ---
 
@@ -129,7 +133,7 @@ __This command removes the userdata partition__
 rm 8
 ```
 
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
+__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
 ```bash
 mkpart esp fat32 401MB 674MB
@@ -174,7 +178,7 @@ __This command removes the userdata partition__
 rm 8
 ```
 
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
+__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
 ```bash
 mkpart esp fat32 401MB 674MB
