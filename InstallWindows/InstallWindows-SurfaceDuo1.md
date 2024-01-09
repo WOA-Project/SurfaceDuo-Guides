@@ -96,9 +96,9 @@ Find the Surface Duo Disk, and take note of the number.
 # list partition
 You will be able to recognize the partitions we made earlier by their size. take note of the ESP and WIN partition numbers.
 # select partition <esp-partition-number>
-# assign letter=<THE LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE!>
+# assign letter=<THE LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE! (Example: X)>:
 # select partition <win-partition-number>
-# assign letter=<ANOTHER LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE!>
+# assign letter=<ANOTHER LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE! (Example: Y)>:
 ```
 
 - You will have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
