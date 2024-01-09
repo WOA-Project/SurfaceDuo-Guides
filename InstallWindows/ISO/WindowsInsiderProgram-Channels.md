@@ -2,20 +2,7 @@
 
 You can find out which Windows versions are supported for each device model [here](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/WindowsCompatibility.md)
 
-## Steps
-
-- Presuming you are working on a Windows AMD64 machine, download and extract the ```win-x64.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
-(if you are on a Windows ARM64 machine, use win-arm64 instead, etc..)
-
-NOTE: For apps to be included in the image for Windows 11 Version 22H1 or higher, please run the tool on Windows 11.
-
-- Navigate to this directory: `"win-x64\CLI"`
-
-### Download commands
-
--  Inside the CLI directory, open command prompt and run one of following commands (depending on what version of Windows you would like to use):
-
-#### Latest Windows Insider Program Versions
+### Option: Latest Windows Insider Program Versions
 
 Microsoft releases Insider Preview builds to you through channels, which are each designed to bring you a different experience based on the quality of Windows you need for your life and your device. When choosing a channel, you should keep in mind:
 
@@ -29,6 +16,28 @@ As Microsoft continues to evolve the way they're building and releasing Windows 
 ![Windows Insider Channels, Recommended Ones](https://learn.microsoft.com/en-us/windows-insider/images/channelsmovev2.png)
 
 For more information about the insider program, please see the [Windows Insider Program website](https://insider.windows.com)
+
+## Steps
+
+- Presuming you are working on a Windows AMD64 machine, download and extract the ```win-XXX.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
+
+What version do I download?
+
+- If your computer (different from the device or disk you want to update!) is running Windows on an Intel or AMD 64-bit CPU, please get the ```win-x64.zip``` file.
+
+- If your computer (different from the device or disk you want to update!) is running Windows on an Intel or AMD 32-bit CPU, please get the ```win-x86.zip``` file.
+
+- If your computer (different from the device or disk you want to update!) is running Windows on a Qualcomm or Apple 64-bit CPU, please get the ```win-arm64.zip``` file.
+
+- If your computer (different from the device or disk you want to update!) is running Windows on a ARM32 CPU or anything else, consider getting another device as this program simply is not compatible with your PC.
+
+NOTE: For apps to be included in the image for Windows 11 Version 22H1 or higher, please run the tool on Windows 11.
+
+- Navigate to the directory you extracted the downloaded ZIP file onto, you should see files like ```uupdownload.exe``` inside.
+
+### Download commands
+
+-  Inside the directory, open command prompt and run one of following commands (depending on what version of Windows you would like to use):
 
 _Windows 11 Version Next (Release Preview Channel)_
 ```batch
@@ -57,9 +66,14 @@ use the standard Windows language pack commands. Installing the right language p
 
 ---
 
-- Once the download is completed, you will see a new folder with prefix "10.0.22000..." (or something different!) created inside the CLI folder. This
-  contains all the required Windows files. Let's create an ISO from the Windows build download.
-  Open up the command prompt as Administrator and type:
+- Once the download is completed, you will see a new folder with prefix "10.0.22000..." (or something different!) created inside the extracted folder. This
+  contains all the required Windows files.
+
+### Creation commands
+
+Let's create an ISO from the Windows build download.
+
+Open up the command prompt as Administrator and type:
 
 ```batch
 UUPMediaConverter.exe -u <10.0.22000... name of your Windows build folder> -i Windows11_Pro_arm64_en-US.iso -l en-US -e Professional
