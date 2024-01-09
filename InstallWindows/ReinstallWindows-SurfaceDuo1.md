@@ -117,7 +117,7 @@ Windows is now installed but has no drivers.
 - Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
 
 ```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.xml" -r "<path to extracted drivers>" -p X:\
 ```
 
 ## Boot Windows 🚀

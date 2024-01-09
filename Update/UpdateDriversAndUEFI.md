@@ -71,13 +71,13 @@ adb shell "sh /sdcard/msc.sh"
 For Surface Duo (1st Gen):
 
 ```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.txt" -r "<path to extracted drivers>" -p X:\
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.xml" -r "<path to extracted drivers>" -p X:\
 ```
 
 For Surface Duo 2:
 
 ```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.txt" -r "<path to extracted drivers>" -p X:\
+DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.xml" -r "<path to extracted drivers>" -p X:\
 ```
 
 ---
