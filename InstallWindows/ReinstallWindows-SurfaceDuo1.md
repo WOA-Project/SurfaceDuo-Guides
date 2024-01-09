@@ -67,7 +67,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 ```batch
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
 ACTUAL COMMANDS START WITH AN HASHTAG (which you will need to remove)
-YOU DO NOT HAVE TO USE Y or X, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DON'T ASSIGN FINE, USE ANOTHER ONE.
+YOU DO NOT HAVE TO USE THE LETTERS WE USE AT ALL!!!, THEY ONLY NEED TO BE FREE LETTERS. IF LETTERS DON'T ASSIGN FINE, USE ANOTHER ONE.
 IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF YOU DONT WANT TO.
 
 # list disk
@@ -77,15 +77,15 @@ Find the Surface Duo Disk, and take note of the number.
 You will be able to recognize the partitions you made the first time you installed Windows by their size.
 Take note of the ESP and WIN partition numbers.
 # select partition <esp-partition-number>
-# assign letter=Y:
+# assign letter=<THE LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE!>
 # select partition <win-partition-number>
-# assign letter=X:
+# assign letter=<ANOTHER LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE!>
 ```
 
 - You will have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
 > [!WARNING]
-> From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. Replace them correctly with what you previously picked or you will lose data on your PC.
+From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.
 
 - Now open the file explorer, find the just-mounted Windows drive. BE CAREFUL! If you choose the wrong device, you WILL LOSE IMPORTANT DATA ON YOUR PC! Check that the letter is the same one you've assigned before. In our case, it's X:\.
 - Once you have made sure you have found the right partition, right click on it and select "Format".
