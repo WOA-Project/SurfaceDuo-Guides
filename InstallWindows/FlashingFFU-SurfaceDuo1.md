@@ -125,6 +125,8 @@ If you did everything right, Windows will now boot! Enjoy!
 
 Let Windows set itself up, and come back once you're on the Windows Desktop on your Surface Duo
 
+**Note 2:** If you get a BSOD (bugcheck screen) during initial setup, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
+
 ## Boot Windows again after initial installation
 
 You'll have two methods of booting Windows.
