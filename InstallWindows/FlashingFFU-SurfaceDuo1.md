@@ -59,7 +59,7 @@ fastboot boot uefi.img
 
 - Press the Volume Down Key on the side of your device til you see something like shown below on screen:
 
-![Surface Duo in FFU Loader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/)
+![Surface Duo in FFU Loader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb)
 
 Congratulations, you're now in FFU Loader.
 
@@ -71,9 +71,13 @@ Congratulations, you're now in FFU Loader.
 C:\Scratch\FFU-Loader-Tools>ImageUtility.exe FlashDevice -Path C:\Scratch\OEMEP_128GB_Windows_11_26040.1000.ffu
 ```
 
+![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7770ef0a-62d9-49de-a9b0-f8e4f3a58933)
+
 - You should now see the device flashing on both your computer and on the device, wait til the process is complete. In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
 
 - Once done you should be seeing the following screen:
+
+![Surface Duo in FFU Loader mode, flashed](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba3c33df-9eb5-4b21-90da-7b8b0c3a5faf)
 
 - Now reboot the device, you should be back to the bootloader menu:
 
