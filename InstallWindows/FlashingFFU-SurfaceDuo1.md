@@ -4,20 +4,17 @@
 
 ## Files/Tools Needed 📃
 
-- Windows UEFI: [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip)
-- An FFU file for Surface Duo (1st Gen)
+- An FFU file for Surface Duo (1st Gen): [FFU Release Channel](https://t.me/DuoWOA_FFUs)
 - A Windows PC to flash the device
 
 > [!WARNING]
-> - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-> - Don't rerun the commands if you interrupt the process. You may break your partition table.
 > - Do not run all commands at once.
 > - Do not commit *any* typo with *any* commands.
 > - Be familiar with command line interfaces.
-> - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
 
 > [!IMPORTANT]
 > **THIS WILL WIPE ALL YOUR ANDROID™ DATA AND WINDOWS DATA!**
@@ -30,7 +27,7 @@
 
 ## What you will get 🛒
 
-You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage (64GB and 64GB or 64GB and 192GB).
+You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage.
 
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
@@ -68,7 +65,7 @@ Congratulations, you're now in FFU Loader.
 - Open a command prompt where you extracted the FFU-Loader-Tools archive, and run the following commands:
 
 ```batch
-C:\Scratch\FFU-Loader-Tools>ImageUtility.exe FlashDevice -Path C:\Scratch\OEMEP_128GB_Windows_11_26040.1000.ffu
+ImageUtility.exe FlashDevice -Path <Path to the FFU File you downloaded>
 ```
 
 ![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7770ef0a-62d9-49de-a9b0-f8e4f3a58933)
@@ -82,7 +79,7 @@ C:\Scratch\FFU-Loader-Tools>ImageUtility.exe FlashDevice -Path C:\Scratch\OEMEP_
 - Now reboot the device, you should be back to the bootloader menu:
 
 ```batch
-C:\Scratch\FFU-Loader-Tools>ImageUtility.exe RebootDevice
+ImageUtility.exe RebootDevice
 ```
 
 - In case the bootloader menu does not automatically come up, press the volume down when running above command to be 100% sure you go into the bootloader menu.
@@ -99,7 +96,6 @@ fastboot set_active other
 ```batch
 REM Only if you meet above criteria
 fastboot erase userdata
-fastboot format userdata
 ```
 
 ## Boot Windows 🚀
@@ -135,7 +131,7 @@ You'll have two methods of booting Windows.
     - Pros: You can freely update Android™
     - Cons: You will need a PC to boot to Windows
 
-- Enabling Dual Boot (Not recommended right now, advanced/experienced users only)
+- Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
     - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
 

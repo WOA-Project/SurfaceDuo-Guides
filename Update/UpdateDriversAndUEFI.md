@@ -8,19 +8,19 @@
 
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- The driver set: [SurfaceDuo-Drivers-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
+- The driver set: [SurfaceDuo-Drivers-2XXX.XX-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
 - DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
 - A Windows PC
 
 ### For Surface Duo (1st Gen)
 
 - TWRP image for Surface Duo (1st Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Windows UEFI for Surface Duo (1st Gen): [SM8150.UEFI.Surface.Duo.1.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI for Surface Duo (1st Gen): [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 
 ### For Surface Duo 2
 
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
-- Windows UEFI for Surface Duo 2: [SM8350.UEFI.Surface.Duo.2.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI for Surface Duo 2: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 
 > [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
