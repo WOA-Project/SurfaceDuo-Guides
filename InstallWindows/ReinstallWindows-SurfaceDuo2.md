@@ -4,7 +4,7 @@
 
 - TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- Windows UEFI: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
+- Windows UEFI: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ISO/GetWindows.md)
 - The driver set: [SurfaceDuo-Drivers-2XXX.XX-Desktop-Zeta.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/)

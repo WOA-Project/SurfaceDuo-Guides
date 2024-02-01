@@ -20,7 +20,7 @@
 ### For Surface Duo 2
 
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
-- Windows UEFI for Surface Duo 2: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI for Surface Duo 2: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 
 > [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
