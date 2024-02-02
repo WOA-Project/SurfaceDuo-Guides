@@ -441,7 +441,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 - Once into the Bootloader mode, let's run the UEFI, which will boot to 10X:
 
 ```batch
-fastboot boot uefi.img
+fastboot boot surfaceduo1-uefi.img
 ```
 
 Done! You'll now be booted into Windows 10X. ⚠️ First boot will take a bunch of minutes, so WAIT AND DON'T REBOOT!
