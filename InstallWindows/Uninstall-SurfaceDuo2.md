@@ -161,12 +161,15 @@ print
 
 You'll get a list of partitions.
 
-- Make sure that partitions 8, 9 and 10 are your ESP, Windows and userdata partitions. We'll assume they are for this guide.
-  If they aren't, take note of these numbers and use them in the next steps. Please make sure these are right, or you'll end up
-  bricking your Surface Duo.
-- Note: you may also see Windows Recovery Partitions, you can also delete those, but nothing else.
+> [!CAUTION]
+> Make sure that partitions 8, 9 and the last one are your esp, win and userdata partitions.
+> If they aren't, you will end up damaging your device (potentially in a permanent manner), please contact us on telegram for assistance in such case.
+> It is possible for you to see more partitions than esp, win, and userdata. Typically, some devices may have partitions for the Windows Recovery Environment after the win partition and then userdata.
+> The following guidelines cover even above scenario, and can be followed safely, on both devices with just esp, win, and userdata, and the other devices, with esp, win, some recovery partitions, and userdata.
+> What remains important is that these partitions start at index 8, and you see no other partition than the aforementioned esp, win, recovery environement or userdata partitions. If you do, please reach out to us on telegram for assistance.
 
-⚠️ The next command will wipe all your data. Please make sure that you have backed everything up. ⚠️
+> [!WARNING]
+> The next command will wipe all your windows and Android™ data. Before continuing, if you have important documents, please make sure that you have backed everything up on both Android™ and Windows.
 
 ```bash
 rm 8

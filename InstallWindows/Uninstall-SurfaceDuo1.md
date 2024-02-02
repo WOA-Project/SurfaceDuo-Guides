@@ -161,24 +161,61 @@ print
 
 You'll get a list of partitions.
 
-- Make sure that partitions 6, 7 and 8 are your ESP, Windows and userdata partitions. We'll assume they are for this guide.
-  If they aren't, take note of these numbers and use them in the next steps. Please make sure these are right, or you'll end up
-  bricking your Surface Duo.
-- Note: you may also see Windows Recovery Partitions, you can also delete those, but nothing else.
+> [!CAUTION]
+> Make sure that partitions 6, 7 and the last one are your esp, win and userdata partitions.
+> If they aren't, you will end up damaging your device (potentially in a permanent manner), please contact us on telegram for assistance in such case.
+> It is possible for you to see more partitions than esp, win, and userdata. Typically, some devices may have partitions for the Windows Recovery Environment after the win partition and then userdata.
+> The following guidelines cover even above scenario, and can be followed safely, on both devices with just esp, win, and userdata, and the other devices, with esp, win, some recovery partitions, and userdata.
+> What remains important is that these partitions start at index 6, and you see no other partition than the aforementioned esp, win, recovery environement or userdata partitions. If you do, please reach out to us on telegram for assistance.
 
-⚠️ The next command will wipe all your data. Please make sure that you have backed everything up. ⚠️
+> [!WARNING]
+> The next command will wipe all your windows and Android™ data. Before continuing, if you have important documents, please make sure that you have backed everything up on both Android™ and Windows.
+
+- First, in above print command, locate every partition that exist after the "misc" partition, as we can see, for us, they are esp, win, and userdata, you may have the same ones, but you may also see, esp, win, "other partitions", and userdata. These other partitions can be the windows recovery environement, but please make sure they aren't anything else. You should not be seeing partitions named "ssd", "persist", "metadata", "frp", or "misc" starting from index 6 all the way to the end. If you do, please reach out and do not continue with this guide.
+
+Here's an example of what we're keeping an eye on here for our example (remember, for you it may be different but likely not) highlited inside a red rectangle:
+
+![Image Of win/esp/userdata]()
+
+All partitions from index 6, to the end here, must be removed, so let's proceed with removing each, in our case, we want to remove the esp partition (number 6), the win partition (number 7), and the userdata partition (number 8).
+
+- Let's start from number 6 (esp)
 
 ```bash
 rm 6
+```
+
+- Then number 7 (win)
+
+```bash
 rm 7
+```
+
+- And lastly, for us, the last index, number 8 (userdata)
+
+```bash
 rm 8
+```
 
-# FOR 128GB DEVICES ONLY: ---
+- Now that we have removed all partitions from index 6 to the last one, let's recreate user data.
+
+- If you have a 128GB Surface Duo model, run the following command:
+
+```bash
 mkpart userdata ext4 51.9MB 112GB
+```
 
-# FOR 256GB DEVICES ONLY: ---
+- If you have a 256GB Surface Duo model, run the following command:
+
+```bash
 mkpart userdata ext4 51.9MB 240GB
 ```
+
+In our case we have a 256GB Surface Duo model, so we're running the second command, like so:
+
+![Image Of userdata creation]()
+
+- Let's now leave parted
 
 __This command leaves parted.__
 
@@ -186,13 +223,19 @@ __This command leaves parted.__
 quit
 ```
 
-This will get you out of parted.
+This will get you out of parted and back to the device shell.
 
-Now let's make the userdata partition actually usable:
+![Image Of device shell after parted quit]()
+
+- Now let's make the userdata partition actually usable:
 
 ```bash
-setenforce 0
 mke2fs -t ext4 /dev/block/sda6
+```
+
+- And leave the device shell
+
+```bash
 exit
 ```
 
