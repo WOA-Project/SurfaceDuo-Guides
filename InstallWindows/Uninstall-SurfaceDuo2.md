@@ -157,7 +157,7 @@ parted /dev/block/sda
 print
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/34483136-05a4-4235-9fe4-347ec4da6ef1)
+![image](TODO)
 
 You'll get a list of partitions.
 
@@ -185,7 +185,7 @@ All partitions from index 8, to the end here, must be removed, so let's proceed 
 rm 8
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/399d5c05-87c9-4e63-a019-ad66ab3df6a8)
+![image](TODO)
 
 - Then number 9 (win)
 
@@ -193,7 +193,7 @@ rm 8
 rm 9
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ad669d20-598e-4057-ada3-4bb4e8a5d312)
+![image](TODO)
 
 - And lastly, for us, the last index, number 10 (userdata)
 
@@ -201,7 +201,7 @@ rm 9
 rm 10
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/07107d91-387e-47ee-8759-50b4b3431644)
+![image](TODO)
 
 - Now that we have removed all partitions from index 8 to the last one, let's recreate user data.
 
@@ -245,7 +245,7 @@ quit
 
 This will get you out of parted and back to the device shell.
 
-![Image Of device shell after parted quit](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/486b864f-5754-4dcd-8fdc-b0570576908e)
+![Image Of device shell after parted quit](TODO)
 
 - Now let's make the userdata partition actually usable:
 
@@ -253,11 +253,11 @@ This will get you out of parted and back to the device shell.
 mke2fs -t ext4 /dev/block/sda8
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/db1a81de-db10-4912-87f2-c639c5abcaa2)
+![image](TODO)
 
 - As you can see, mke2fs notifies us, the previous partitions (esp) is here, simply confirm by answering "y" like so:
 
- ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ff4941d5-3566-4514-8826-c2640f957655)
+ ![image](TODO)
 
 - And leave the device shell
 
@@ -265,7 +265,7 @@ mke2fs -t ext4 /dev/block/sda8
 exit
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba4bd37e-a8c8-4f08-9d50-026c11ebd740)
+![image](TODO)
 
 - Once it is done, you can reboot your phone using ```adb reboot```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
 
