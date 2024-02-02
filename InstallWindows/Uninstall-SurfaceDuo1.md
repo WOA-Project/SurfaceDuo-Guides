@@ -225,7 +225,13 @@ As you can see, parted notifies us the partition may not be aligned for best per
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/024ccc49-f51d-4e56-a897-e26be304720b)
 
-- Let's now leave parted
+- Let's now run the print command:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/9a48aac1-9e7a-4925-ad3c-855aefbc35a9)
+
+Please confirm that you see the exact same thing as we do above, except the total storage capacity. If you do not, your device may permanently be damaged if you reboot or turn it off now. Please reach out as soon as you can to prevent rendering your device a paper weight to telegram for assistance, and remain calm and patient.
+
+- Let's now leave parted after confirming we did well previously:
 
 ```bash
 quit
