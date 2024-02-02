@@ -249,7 +249,7 @@ mke2fs -t ext4 /dev/block/sda6
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/db1a81de-db10-4912-87f2-c639c5abcaa2)
 
-- As you can see, parted notifies us, the previous partitions (esp) is here, simply confirm by answering "y" like so:
+- As you can see, mke2fs notifies us, the previous partitions (esp) is here, simply confirm by answering "y" like so:
 
  ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ff4941d5-3566-4514-8826-c2640f957655)
 
