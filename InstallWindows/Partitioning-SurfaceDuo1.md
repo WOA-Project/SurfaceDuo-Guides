@@ -325,7 +325,7 @@ adb reboot
 
 ![Android™ - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
 
-Congratulations, you successfully unlocked your bootloader.
+Congratulations, you successfully partitioned your device.
 
 - Assuming your Surface Duo is booted to Android™, plugged to your PC
 
