@@ -38,11 +38,29 @@ adb reboot bootloader
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-- Start by booting TWRP:
+Start by booting TWRP:
+
+- Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
 
 ```batch
-fastboot boot surfaceduo1-twrp.img
+fastboot boot
 ```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
+
+- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy Path"
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
+
+- Then go back to the Command Prompt window we started writing text in previously, and simply, right click on it with your mouse (or long press if you're on a touch device), you should now see this:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e97d514b-a314-4faf-9622-75bdab066985)
+
+- Now you can press enter
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
+
+You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
 
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal.
 
