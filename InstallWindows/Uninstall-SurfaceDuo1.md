@@ -265,9 +265,9 @@ exit
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b29403a5-3dbf-4151-91cf-467dcc4e5c54)
 
-- You should now be seeing the Android Out of Box Experience (OOBE). Setup your phone to confirm it works correctly if you need it.
+- You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly if you need it.
 
-![Android - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
+![Android™ - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
 
 - Once your phone is confirmed working, congratulations, you successfully uninstalled Windows from your device.
 
@@ -369,12 +369,12 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 fastboot flashing lock
 ```
 
-- Confirm that you want to relock the bootloader using your device side buttons, your device will erase itself and restart into the Android Out of box Experience Again.
-If your device doesn't go into Android but the bootloader menu, this means you performed additional modifications to your device previously, and you must undo them. You need to reunlock your device now using "fastboot flashing unlock", and undo them according to the instructions you or someone else provided you)
+- Confirm that you want to relock the bootloader using your device side buttons, your device will erase itself and restart into the Android™ Out of box Experience Again.
+If your device doesn't go into Android™ but the bootloader menu, this means you performed additional modifications to your device previously, and you must undo them. You need to reunlock your device now using "fastboot flashing unlock", and undo them according to the instructions you or someone else provided you)
 
-- You should now be seeing the Android Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
+- You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
 
-![Android - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
+![Android™ - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
 
 Congratulations, you successfully relocked your bootloader.
 
