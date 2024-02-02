@@ -75,7 +75,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy Path"
+- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 
@@ -107,7 +107,7 @@ adb push
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e318851b-aac0-460b-be26-d5d40f4dfb67)
 
-- Go find the parted file you downloaded earlier, right click it, click "Copy Path"
+- Go find the parted file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/947f8fc2-4d55-4fad-8507-615e8257b537)
 
@@ -315,11 +315,11 @@ You may however want to also relock the bootloader of the device, please note th
 
 ![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
 
-- Turn on the OEM Unlock option as shown above, then, scroll all the way down til you see the USB Debugging option
+- Turn on the "OEM unlocking" option as shown above, then, scroll all the way down til you see the "USB debugging" option
 
 ![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
 
-- And turn on the USB Debugging option
+- And turn on the "USB debugging" option
 
 ![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
 
@@ -422,6 +422,6 @@ Now, you may want to forbid unlocking the bootloader again for additional securi
 
 ![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
 
-- Turn off the OEM Unlock option as shown above, then turn off the developer options toggle at the very top
+- Turn off the "OEM unlocking" option as shown above, then turn off the developer options toggle at the very top
 
 🎉 Congratulations, your Surface Duo is back to factory settings.

@@ -69,11 +69,11 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 ![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
 
-- Turn on the OEM Unlock option as shown above, then, scroll all the way down til you see the USB Debugging option
+- Turn on the "OEM unlocking" option as shown above, then, scroll all the way down til you see the "USB debugging" option
 
 ![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
 
-- And turn on the USB Debugging option
+- And turn on the "USB debugging" option
 
 ![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
 
@@ -171,11 +171,11 @@ Congratulations, you successfully unlocked your bootloader.
 
 ![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
 
-- Scroll all the way down til you see the USB Debugging option
+- Scroll all the way down til you see the "USB debugging" option
 
 ![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
 
-- And turn on the USB Debugging option
+- And turn on the "USB debugging" option
 
 ![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
 

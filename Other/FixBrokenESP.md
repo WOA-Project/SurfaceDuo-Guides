@@ -48,7 +48,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy Path"
+- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 
