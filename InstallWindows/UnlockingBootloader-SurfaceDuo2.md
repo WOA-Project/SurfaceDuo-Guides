@@ -87,7 +87,16 @@ Assuming your Surface Duo is booted to Android™, plugged to your PC:
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24760f21-dc1b-48e6-9ae3-0aeb16f8953c)
 
-- Run the following command to ensure your phone is detected by your PC, if you see "no device", check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following:
+- Run the following command to ensure your phone is detected by your PC
+
+```batch
+adb devices
+```
+
+> [!ERROR]
+> If you see no device listed, check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following image below this notice.
+> It is possible certain computers see no update offered (like Windows ARM64 Computers or other older machines with no functional Windows Update). If this is your case, we also provide Drivers for you to download
+> at the following location, you will have to install them using Device Manager on your PC. [Download USB Drivers](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/USB-Drivers.zip)
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b3a8b091-1b34-47e4-bd6e-c286ee808f14)
 
