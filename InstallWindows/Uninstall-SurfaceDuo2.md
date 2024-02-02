@@ -269,7 +269,7 @@ exit
 
 - Once it is done, you can reboot your phone using ```adb reboot```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b29403a5-3dbf-4151-91cf-467dcc4e5c54)
+![image](TODO)
 
 - You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly if you need it.
 
