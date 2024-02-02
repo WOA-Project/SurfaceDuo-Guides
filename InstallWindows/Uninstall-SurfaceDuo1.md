@@ -175,7 +175,7 @@ You'll get a list of partitions.
 
 Here's an example of what we're keeping an eye on here for our example (remember, for you it may be different but likely not) highlited inside a red rectangle:
 
-![Image Of win/esp/userdata]()
+![Image Of win/esp/userdata](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/47bd99c0-bfa9-46b7-994c-139bcc6224ae)
 
 All partitions from index 6, to the end here, must be removed, so let's proceed with removing each, in our case, we want to remove the esp partition (number 6), the win partition (number 7), and the userdata partition (number 8).
 
@@ -185,17 +185,23 @@ All partitions from index 6, to the end here, must be removed, so let's proceed 
 rm 6
 ```
 
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/399d5c05-87c9-4e63-a019-ad66ab3df6a8)
+
 - Then number 7 (win)
 
 ```bash
 rm 7
 ```
 
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ad669d20-598e-4057-ada3-4bb4e8a5d312)
+
 - And lastly, for us, the last index, number 8 (userdata)
 
 ```bash
 rm 8
 ```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/07107d91-387e-47ee-8759-50b4b3431644)
 
 - Now that we have removed all partitions from index 6 to the last one, let's recreate user data.
 
@@ -213,11 +219,13 @@ mkpart userdata ext4 51.9MB 240GB
 
 In our case we have a 256GB Surface Duo model, so we're running the second command, like so:
 
-![Image Of userdata creation]()
+![Image Of userdata creation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e174eee8-6dde-41b6-b5d0-d45afffba0a0)
+
+As you can see, parted notifies us the partition may not be aligned for best performance, if you get such warning as well, simply enter i like so:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/024ccc49-f51d-4e56-a897-e26be304720b)
 
 - Let's now leave parted
-
-__This command leaves parted.__
 
 ```bash
 quit
@@ -225,7 +233,7 @@ quit
 
 This will get you out of parted and back to the device shell.
 
-![Image Of device shell after parted quit]()
+![Image Of device shell after parted quit](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/486b864f-5754-4dcd-8fdc-b0570576908e)
 
 - Now let's make the userdata partition actually usable:
 
@@ -233,38 +241,175 @@ This will get you out of parted and back to the device shell.
 mke2fs -t ext4 /dev/block/sda6
 ```
 
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/db1a81de-db10-4912-87f2-c639c5abcaa2)
+
+- As you can see, parted notifies us, the previous partitions (esp) is here, simply confirm by answering "y" like so:
+
+ ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ff4941d5-3566-4514-8826-c2640f957655)
+
 - And leave the device shell
 
 ```bash
 exit
 ```
 
-- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba4bd37e-a8c8-4f08-9d50-026c11ebd740)
+
+- Once it is done, you can reboot your phone using ```adb reboot```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b29403a5-3dbf-4151-91cf-467dcc4e5c54)
+
+- You should now be seeing the Android Out of Box Experience (OOBE). Setup your phone to confirm it works correctly if you need it.
+
+![Android - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
+
+- Once your phone is confirmed working, congratulations, you successfully uninstalled Windows from your device.
+
+You may however want to also relock the bootloader of the device, please note that you cannot relock the bootloader of your device if you flashed a custom rom as well as installed Windows before, or modified the boot partition for dual boot, or other purposes. Please look into undoing such changes before proceeding forward.
+
+### In order to relock the bootloader
+
+- Start by turning on your Surface Duo into Android™, and unlock it
+
+- Using the Microsoft Launcher, find the settings app
+
+![A1 Android™ - Open Settings](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19)
+
+- Open the Android™ Settings app
+
+![A2 Android™ - Settings Opened](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6)
+
+- Scroll down to the about section, and open it
+
+![A3 Android™ - Settings About](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118)
+
+- Scroll all the way down til you see the Build Number field
+
+![A4 Android™ - Settings About Down](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699)
+
+- Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps
+
+![A5 Android™ - Settings About Down Tap Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d)
+
+- Once done tapping 7 times, you should be seeing this popup instead
+
+![A6 Android™ - Settings About Down Tap Dev Done](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1)
+
+- Now go to the System section, you should see a new Developer options section like shown below
+
+![A7 Android™ - Settings System with Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7)
+
+- Go to the Developer options section
+
+![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
+
+- Turn on the OEM Unlock option as shown above, then, scroll all the way down til you see the USB Debugging option
+
+![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
+
+- And turn on the USB Debugging option
+
+![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
+
+Assuming your Surface Duo is booted to Android™, plugged to your PC:
+
+- Open a command prompt on your PC
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ab36aa10-6617-4680-ac06-bb58b7a0c3bb)
+
+- Go to the folder where you extracted the Google Android™ Platform tools using the CD command and the path of the folder, like so:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24760f21-dc1b-48e6-9ae3-0aeb16f8953c)
+
+- Run the following command to ensure your phone is detected by your PC
+
+```batch
+adb devices
+```
+
+> [!TIP]
+> If you see no device listed, check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following image below this notice.
+> It is possible certain computers see no update offered (like Windows ARM64 Computers or other older machines with no functional Windows Update). If this is your case, we also provide Drivers for you to download
+> at the following location, you will have to install them using Device Manager on your PC. [Download USB Drivers](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/USB-Drivers.zip)
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b3a8b091-1b34-47e4-bd6e-c286ee808f14)
+
+- Run the following command now
+
+```batch
+adb reboot bootloader
+```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f4db0f2e-40a1-4822-9675-41cd56ab5062)
+
+- Your phone will ask for permission to authorize your computer to execute commands, accept it:
+
+![Screenshot_20230811-024721](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/515c2f89-6a71-4e01-b3e1-94e4805cb69f)
+
+- Now run the following command again, it should now work properly:
+
+```batch
+adb reboot bootloader
+```
+
+You will be rebooted to Surface Duo's bootloader.
 
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-- Once Android™ is confirmed booting, reboot back into the bootloader using ```adb reboot bootloader``` or by pressing Volume Down right at boot.
-
-You will be back into Surface Duo's bootloader.
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-### Relocking the Bootloader
-
-⚠️⚠️⚠️ If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device. ⚠️⚠️⚠️
-
-- Reboot your Surface Duo to the Bootloader: Press Volume Down + Power until the Microsoft Corporation logo appears on the left, then release the power
-  button and keep pressing the volume down button until the bootloader appears.
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-- Run this command:
+- From there:
 
 ```batch
 fastboot flashing lock
 ```
 
-- Reboot your Surface Duo, and Android™ should boot.
+- Confirm that you want to relock the bootloader using your device side buttons, your device will erase itself and restart into the Android Out of box Experience Again.
+If your device doesn't go into Android but the bootloader menu, this means you performed additional modifications to your device previously, and you must undo them. You need to reunlock your device now using "fastboot flashing unlock", and undo them according to the instructions you or someone else provided you)
+
+- You should now be seeing the Android Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
+
+![Android - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
+
+Congratulations, you successfully relocked your bootloader.
+
+Now, you may want to forbid unlocking the bootloader again for additional security and peace of mind
+
+### In order to turn off the ability to unlock the bootloader of the device
+
+- Start by turning on your Surface Duo into Android™, and unlock it
+
+- Using the Microsoft Launcher, find the settings app
+
+![A1 Android™ - Open Settings](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19)
+
+- Open the Android™ Settings app
+
+![A2 Android™ - Settings Opened](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6)
+
+- Scroll down to the about section, and open it
+
+![A3 Android™ - Settings About](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118)
+
+- Scroll all the way down til you see the Build Number field
+
+![A4 Android™ - Settings About Down](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699)
+
+- Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps
+
+![A5 Android™ - Settings About Down Tap Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d)
+
+- Once done tapping 7 times, you should be seeing this popup instead
+
+![A6 Android™ - Settings About Down Tap Dev Done](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1)
+
+- Now go to the System section, you should see a new Developer options section like shown below
+
+![A7 Android™ - Settings System with Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7)
+
+- Go to the Developer options section
+
+![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
+
+- Turn off the OEM Unlock option as shown above, then turn off the developer options toggle at the very top
+
+🎉 Congratulations, your Surface Duo is back to factory settings.
