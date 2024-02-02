@@ -35,11 +35,76 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 - Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
 
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" and "USB Debugging" inside it.
+- Start by turning on your Surface Duo into Android™, and unlock it
+
+- Using the Microsoft Launcher, find the settings app
+
+![A1 Android™ - Open Settings](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19)
+
+- Open the Android™ Settings app
+
+![A2 Android™ - Settings Opened](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6)
+
+- Scroll down to the about section, and open it
+
+![A3 Android™ - Settings About](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118)
+
+- Scroll all the way down til you see the Build Number field
+
+![A4 Android™ - Settings About Down](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699)
+
+- Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps
+
+![A5 Android™ - Settings About Down Tap Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d)
+
+- Once done tapping 7 times, you should be seeing this popup instead
+
+![A6 Android™ - Settings About Down Tap Dev Done](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1)
+
+- Now go to the System section, you should see a new Developer options section like shown below
+
+![A7 Android™ - Settings System with Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7)
+
+- Go to the Developer options section
+
+![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
+
+- Turn on the OEM Unlock option as shown above, then, scroll all the way down til you see the USB Debugging option
+
+![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
+
+- And turn on the USB Debugging option
+
+![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
 
 Assuming your Surface Duo is booted to Android™, plugged to your PC:
 
-- Open a command prompt on your PC and run this command:
+- Open a command prompt on your PC
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ab36aa10-6617-4680-ac06-bb58b7a0c3bb)
+
+- Go to the folder where you extracted the Google Android™ Platform tools using the CD command and the path of the folder, like so:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24760f21-dc1b-48e6-9ae3-0aeb16f8953c)
+
+- Run the following command to ensure your phone is detected by your PC, if you see "no device", check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b3a8b091-1b34-47e4-bd6e-c286ee808f14)
+
+- Run the following command now
+
+```batch
+adb reboot bootloader
+```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f4db0f2e-40a1-4822-9675-41cd56ab5062)
+
+- Your phone will ask for permission to authorize your computer to execute commands, accept it:
+
+![Screenshot_20230811-024721](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/515c2f89-6a71-4e01-b3e1-94e4805cb69f)
+
+- Now run the following command again, it should now work properly:
+
 ```batch
 adb reboot bootloader
 ```
@@ -55,9 +120,9 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 fastboot flashing unlock
 ```
 
-Your phone will wipe itself and reboot to the Out of Box Experience in Android™ (OOBE). From there:
+Your phone will wipe itself and reboot to the Out of Box Experience (OOBE) in Android™. From there:
 
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "USB debugging" inside it.
+- In Android™ settings, enable the Developer Settings menu again like we did earlier (7 consecutive taps on Build Number), and turn on "USB debugging" inside it. OEM Unlocking will already be turned on, there's no need to turn it back on again.
 
 ## The End
 
