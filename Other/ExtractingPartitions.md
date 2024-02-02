@@ -108,7 +108,6 @@ You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so 
 
 Your Surface Duo will boot into TWRP, touch will not work and the device will say it is locked. This is completely normal and expected.
 
-
 ## Retrieve the location of our boot partition
 
 - We need to open a shell to issue commands directly to the phone. To do so, run the following command on your PC:

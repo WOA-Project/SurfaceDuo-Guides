@@ -141,7 +141,6 @@ fastboot boot uefi.img
 
 - If you are in Android™, boot into Surface Duo's bootloader using the following command:
 
-
 ```batch
 adb reboot bootloader
 ```

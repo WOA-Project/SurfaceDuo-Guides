@@ -394,7 +394,6 @@ adb shell "sh /sdcard/msc.sh"
 ```
 <img width="605" alt="image" src="https://user-images.githubusercontent.com/29689637/229380153-355063fb-4cf4-468b-9780-875b2667b79a.png">
 
-
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
 
 - Open diskpart:
@@ -403,7 +402,6 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 diskpart
 ```
 <img width="247" alt="image" src="https://user-images.githubusercontent.com/29689637/229380180-607e859e-4153-4c55-b94b-57352ba6e55f.png">
-
 
 - Run these commands one by one, replacing the IDs with yours:
 

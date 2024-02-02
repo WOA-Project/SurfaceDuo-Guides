@@ -1,6 +1,6 @@
-# How to recreate the ESP partition for Windows 
+# How to recreate the ESP partition for Windows
 
-## Files/Tools Needed 📃 
+## Files/Tools Needed 📃
 
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)

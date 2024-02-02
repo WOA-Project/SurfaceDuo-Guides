@@ -23,7 +23,6 @@ https://apps.microsoft.com/store/detail/microsoft-store/9WZDNCRFJBMP?hl=en-us&gl
 
 Pick ```Microsoft.WindowsStore_22210.1401.6.0_neutral___8wekyb3d8bbwe.Msixbundle``` or later version.
 
-
 - Download supporting component, Microsoft.UI.Xaml, from the page opened above:
 
 Pick ```Microsoft.UI.Xaml.2.7_7.2208.15002.0_arm64__8wekyb3d8bbwe.appx``` or later version.

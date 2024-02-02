@@ -23,7 +23,6 @@ Surface Duo (1st Gen) currently supports the following Windows OS versions:
 | Windows 11 Build 22631 (23h2)                                             | ✅         |
 | Windows vNext (Gallium Semester)                                          | ✅         |
 
-
 ❌: Not supported, important issues present
 
 ⚠️: Not supported, minor issues present, not actively maintained anymore
@@ -52,7 +51,6 @@ Surface Duo 2 currently supports the following Windows OS versions:
 | Windows 11 Build 22621 (23h1)                                             | ❌         |
 | Windows 11 Build 22631 (23h2)                                             | ❌         |
 | Windows vNext (Gallium Semester)                                          | ✅         |
-
 
 ❌: Not supported, important issues present
 

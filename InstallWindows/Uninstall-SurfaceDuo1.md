@@ -102,7 +102,7 @@ adb shell "setenforce 0"
 - Now, let's copy parted onto the device, first, start by typing the following text, but do not press enter just yet
 
 ```batch
-adb push 
+adb push
 ```
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e318851b-aac0-460b-be26-d5d40f4dfb67)

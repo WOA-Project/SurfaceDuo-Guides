@@ -6,7 +6,7 @@ Guides for running Windows on Surface Duo.
 
 ## A few notes
 
-> [!NOTE] 
+> [!NOTE]
 > Welcome 🥰! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further:
 >
 > ℹ️ We recommend you try this on a Surface Duo (1st Gen) device. While Surface Duo 2 is supported, it currently is in a proof of concept stage, with the experience of using Windows on it being worse in _every single metric_ (including performance) and way less hardware working, and super slow speeds compared to Surface Duo (1st Gen)
