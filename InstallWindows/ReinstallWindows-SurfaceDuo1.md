@@ -106,7 +106,7 @@ Take note of the ESP and WIN partition numbers.
 - You will have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
 > [!WARNING]
-From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.
+> From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.
 
 - Now open the file explorer, find the just-mounted Windows drive. BE CAREFUL! If you choose the wrong device, you WILL LOSE IMPORTANT DATA ON YOUR PC! Check that the letter is the same one you've assigned before. In our case, it's X:\.
 - Once you have made sure you have found the right partition, right click on it and select "Format".

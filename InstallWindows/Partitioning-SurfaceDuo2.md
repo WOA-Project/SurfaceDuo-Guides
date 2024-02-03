@@ -182,26 +182,6 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
 
 ---
 
-<details>
-  <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
-  <p>
-
-```bash
-notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57693MB
-notmkpart userdata ext4 57693MB <REDACTED FOR EXAMPLE PURPOSES>
-```
-
-The commands above work like this:
-
-[tool name] [partition name in gpt] [file system] [starting offset in disk] [ending offset in disk]
-
-So if you want to change the split, all you have to do is to change the "57693MB" in above's example in both commands.
-
-  </p>
-</details>
-
----
-
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
 ```bash

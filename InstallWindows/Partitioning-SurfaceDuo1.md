@@ -172,26 +172,6 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
 
 ---
 
-<details>
-  <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
-  <p>
-
-```bash
-notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
-notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
-```
-
-The commands above work like this:
-
-[tool name] [partition name in gpt] [file system] [starting offset in disk] [ending offset in disk]
-
-So if you want to change the split, all you have to do is to change the "57344MB" in above's example in both commands.
-
-  </p>
-</details>
-
----
-
 - Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
 
 ```bash
@@ -202,7 +182,7 @@ print
 
 **Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
 
-Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB -> 240GB) and replace every occurence of 51.9MB and 112GB with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
+Take note of original sizing, here it was 112GB (256GB variant: 240GB) and replace every occurence of 112GB (256GB variant: 240GB) with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
 
 ---
 
@@ -216,28 +196,28 @@ __This command removes the userdata partition__
 rm 6
 ```
 
+__This command creates the Android™ data partition back.__
+
+```bash
+mkpart userdata ext4 12680s 9271515s
+```
+
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
 ```bash
-mkpart esp fat32 51.9MB 325MB
+mkpart esp fat32 9271516s 9338067s
 ```
 
 __This command creates the Windows partition.__
 
 ```bash
-mkpart win ntfs 325MB 69045MB
-```
-
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 69045MB 112GB
+mkpart win ntfs 9338068s 112GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
 ```bash
-set 6 esp on
+set 7 esp on
 ```
 
 __This command leaves parted.__
@@ -261,28 +241,28 @@ __This command removes the userdata partition__
 rm 6
 ```
 
+__This command creates the Android™ data partition back.__
+
+```bash
+mkpart userdata ext4 12680s 24887739s
+```
+
 __This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
 
 ```bash
-mkpart esp fat32 51.9MB 325MB
+mkpart esp fat32 24887740s 24954291s
 ```
 
 __This command creates the Windows partition.__
 
 ```bash
-mkpart win ntfs 325MB 137764MB
-```
-
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 137764MB 240GB
+mkpart win ntfs 24954292s 240GB
 ```
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
 ```bash
-set 6 esp on
+set 7 esp on
 ```
 
 __This command leaves parted.__
@@ -298,16 +278,15 @@ quit
 
 This will get you out of parted.
 
-We have deleted partition 6, which was the Android™ userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files,
-a win partition that will have Windows, and the last one is the new userdata partition for Android™, just smaller.
+We have deleted partition 6, which was the Android™ userdata partition, and created 3 partitions: the new userdata partition for Android™, just smaller; an esp partition which will contain the Windows boot files; and the last one, a win partition that will have Windows.
 
 Now let's make these partitions actually usable:
 
 ```bash
 setenforce 0
-mkfs.fat -F32 -s1 /dev/block/sda6
-mkfs.ntfs -f /dev/block/sda7
-mke2fs -t ext4 /dev/block/sda8
+mke2fs -t ext4 /dev/block/sda6
+mkfs.fat -F32 -s1 /dev/block/sda7
+mkfs.ntfs -f /dev/block/sda8
 exit
 ```
 
