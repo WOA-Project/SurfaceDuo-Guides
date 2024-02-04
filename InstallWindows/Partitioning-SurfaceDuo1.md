@@ -193,7 +193,7 @@ print
 
 You'll get a list of partitions.
 
-**Make sure that the last partition listed is numbered 6. If it is not, below's commands may damahe your phone. Contact us if that's your case**
+**Make sure that the last partition listed is numbered 6. If it is not, below's commands may damage your phone. Contact us if that's your case**
 
 Take note of original sizing value of the userdata, we highlighted the given for you below, you will need it shortly.
 
