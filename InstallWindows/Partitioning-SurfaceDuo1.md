@@ -6,7 +6,7 @@
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
-- The Partition Offsets Helper tool: []
+- The Partition Offsets Helper tool: [PartitionOffsetsHelperTool.exe](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/PartitionOffsetsHelperTool.exe)
 
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
