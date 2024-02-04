@@ -1,11 +1,15 @@
 # Partitioning Surface Duo (1st Gen)
 
+> [!CAUTION]
+> This guide is ongoing severe changes, please hold off til this notice is shown
+
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
+- The Partition Offsets Helper tool: []
 
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
@@ -153,42 +157,96 @@ adb shell
 
 ### Dangerous section
 
-Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired or drunk (yes, we're serious).
-
 > [!WARNING]
-> !!!! Warning reminder !!!!
+> This section if followed incorrectly could make your device unusable and require dedicated fixing steps that would be better given through assistance within our telegram channel.
 >
-> ⚠️ Do not run all commands at once, instead run them one by one
+> Please carefully follow every step, and try to not commit typos by missing numbers or characters, as those may make the device unusable.
 >
-> ⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
+> Further more, rerunning these commands after running them once ever can also damage your device, so do not refollow this section ever again.
 >
-> ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
+> You can only refollow such instructions when you have followed our uninstall guide first.
 >
-> ⚠️ You can kill your phone permanently if you do below's steps wrong, for real.
+> A warning or unexpected message is, well, unexpected, contact us if you see one, and do not attempt to fix anything by yourself.
 >
-> ⚠️ DO NOT, UNDER ANY CIRCUMSTANCES, RERUN, ANY, OF BELOW'S COMMANDS, EVEN IF A SINGLE ONE. DOING THIS WILL PERMANENTLY CAUSE HAVOC TO YOUR DEVICE. DO. NOT. RERUN. ANY. OF. THESE. COMMANDS. AFTER. RUNNING. ANY. SINGLE. ONE. OF. THEM. ONCE. You can rerun them __only__ if you completed the installation, and followed the uninstall guide, never if you messed up anything, or didn't proceed with the uninstall guide yet.
->
-> ⚠️ If you end up messing up, or "forgetting" to run a command, DO NOT RERUN ANYTHING. CONTACT US IMMEDIATELY ON TELEGRAM. EXPLAIN WHAT YOU DID. POST A SCREENSHOT OF THE "print" PARTED COMMAND OUTPUT DONE LAST TO KNOW THE CURRENT STATUS AND NOT THE ONE PRIOR TO 20 OTHER COMMANDS.
+> Flashing a Microsoft provided "recovery" package will not help you recover from such failures, and may even make matters worse. Contact us instead.
 
----
-
-- Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
+- Let's now run parted:
 
 ```bash
-setenforce 0
 parted /dev/block/sda
+```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/94775441-8ffc-4fd5-bcdb-872704268078)
+
+- Let's now run a specific unit command:
+
+```bash
+unit s
+```
+
+- And let's execute parted's print command:
+
+```bash
 print
 ```
 
-**Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
+![image]()
 
-Take note of original sizing, here it was 112GB (256GB variant: 240GB) and replace every occurence of 112GB (256GB variant: 240GB) with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
+You'll get a list of partitions.
 
----
+**Make sure that the last partition listed is numbered 6. If it is not, below's commands may damahe your phone. Contact us if that's your case**
 
-<details>
-  <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
-  <p>
+Take note of original sizing, we highlighted the given for you below, you will need it shortly.
+
+![image]()
+
+- Now run the Partition Offsets Helper Tool you downloaded earlier (PartitionOffsetsHelperTool.exe) by double clicking on it
+
+![image]()
+
+- Answer whenever or not your device is a 128GB model or 256GB model (Y = 128GB, N = 256GB)
+
+![image]()
+
+- Answer which total storage capacity you want to give to Android
+
+![image]()
+
+- Now select with your mouse all 3 commands
+
+![image]()
+
+- Right click on the command prompt
+
+![image]()
+
+- Open Notepad
+
+![image]()
+
+- Paste all of them here
+
+![image]()
+
+- Edit the highlighted value below with the one you noted earlier, replacing it fully, here's a before for us:
+
+![image]()
+
+- And here's after the edit:
+
+![image]()
+
+- Go back to the Partition Offsets Helper Tool window/command prompt
+
+![image]()
+
+- Press enter, the window will exit.
+
+- Go back to the parted window/command prompt
+
+![image]()
+
+- Run the following command first
 
 __This command removes the userdata partition__
 
@@ -196,68 +254,37 @@ __This command removes the userdata partition__
 rm 6
 ```
 
-__This command creates the Android™ data partition back.__
+![image]()
 
-```bash
-mkpart userdata ext4 12680s 9271515s
-```
+- Now come back to Notepad
 
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
+![image]()
 
-```bash
-mkpart esp fat32 9271516s 9338067s
-```
+- Copy the first command
 
-__This command creates the Windows partition.__
+![image]()
 
-```bash
-mkpart win ntfs 9338068s 112GB
-```
+- Paste it with right click onto the parted window, and press enter
 
-__This command sets the ESP partition created earlier as an EFI system partition type.__
+![image]()
 
-```bash
-set 7 esp on
-```
+- Copy the second command
 
-__This command leaves parted.__
+![image]()
 
-```bash
-quit
-```
+- Paste it with right click onto the parted window, and press enter
 
-  </p>
-</details>
+![image]()
 
----
+- Copy the third command
 
-<details>
-  <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
-  <p>
+![image]()
 
-__This command removes the userdata partition__
+- Paste it with right click onto the parted window, and press enter
 
-```bash
-rm 6
-```
+![image]()
 
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 12680s 24887739s
-```
-
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
-
-```bash
-mkpart esp fat32 24887740s 24954291s
-```
-
-__This command creates the Windows partition.__
-
-```bash
-mkpart win ntfs 24954292s 240GB
-```
+- Run the following command
 
 __This command sets the ESP partition created earlier as an EFI system partition type.__
 
@@ -265,16 +292,15 @@ __This command sets the ESP partition created earlier as an EFI system partition
 set 7 esp on
 ```
 
+![image]()
+
 __This command leaves parted.__
 
 ```bash
 quit
 ```
 
-  </p>
-</details>
-
----
+![image]()
 
 This will get you out of parted.
 
@@ -282,13 +308,37 @@ We have deleted partition 6, which was the Android™ userdata partition, and cr
 
 Now let's make these partitions actually usable:
 
+- Start with this command:
+
 ```bash
-setenforce 0
 mke2fs -t ext4 /dev/block/sda6
+```
+
+![image]()
+
+- Then continue with this command:
+
+```bash
 mkfs.fat -F32 -s1 /dev/block/sda7
+```
+
+![image]()
+
+- Then finish with this command:
+
+```bash
 mkfs.ntfs -f /dev/block/sda8
+```
+
+![image]()
+
+- And let's exit the device shell
+
+```bash
 exit
 ```
+
+![image]()
 
 ### End of the Dangerous section
 
@@ -362,9 +412,21 @@ If you somehow break entirely your partition table, you might be interested in t
 
 ```bash
 mkpart ssd 6s 7s
+```
+
+```bash
 mkpart persist ext4 8s 8199s
+```
+
+```bash
 mkpart metadata ext4 8200s 12295s
+```
+
+```bash
 mkpart frp 12296s 12423s
+```
+
+```bash
 mkpart misc 12424s 12679s
 ```
 
