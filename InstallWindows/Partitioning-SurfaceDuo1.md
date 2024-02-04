@@ -1,8 +1,5 @@
 # Partitioning Surface Duo (1st Gen)
 
-> [!CAUTION]
-> This guide is ongoing severe changes, please hold off til this notice is shown
-
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
@@ -184,67 +181,71 @@ parted /dev/block/sda
 unit s
 ```
 
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0fe3ffc5-6924-42fd-8a99-5a712c9d55cf)
+
 - And let's execute parted's print command:
 
 ```bash
 print
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bc8e7c3a-a7e2-4fe0-8944-958b5c05ff1d)
 
 You'll get a list of partitions.
 
 **Make sure that the last partition listed is numbered 6. If it is not, below's commands may damahe your phone. Contact us if that's your case**
 
-Take note of original sizing, we highlighted the given for you below, you will need it shortly.
+Take note of original sizing value of the userdata, we highlighted the given for you below, you will need it shortly.
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f6024cc3-4ca7-4438-ac68-05ec76f5193c)
 
 - Now run the Partition Offsets Helper Tool you downloaded earlier (PartitionOffsetsHelperTool.exe) by double clicking on it
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/67479178-3371-4b46-8f47-6047b77ad9d1)
 
 - Answer whenever or not your device is a 128GB model or 256GB model (Y = 128GB, N = 256GB)
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7816ca59-c604-49c0-8306-fbec383d939e)
 
 - Answer which total storage capacity you want to give to Android
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/030c9802-cefc-4d4e-849a-2303d6dcbfb2)
 
 - Now select with your mouse all 3 commands
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f88f0ff5-88a2-4753-8424-f72235c0ec9c)
 
-- Right click on the command prompt
+- Right click on the command prompt, the selection will vanish and no menu will show, this is expected
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/9c836619-ddd2-47d4-af4f-4c18d84d91cb)
 
 - Open Notepad
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0e8b297d-46d1-4630-b18c-179cbf59bac5)
 
 - Paste all of them here
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2ad6b7c1-3c9c-4f15-ab27-3de1b628195e)
 
 - Edit the highlighted value below with the one you noted earlier, replacing it fully, here's a before for us:
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/537b6cce-4e83-4749-aeeb-6106281e10e3)
 
 - And here's after the edit:
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f1b31d9f-93c1-48b1-b57b-ea9b8feb8ffc)
+
+It is possible both values are the same, do not worry about it if that's the case, above, we intentionally showed different values as well to illustrate
 
 - Go back to the Partition Offsets Helper Tool window/command prompt
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5698c1b9-2f2d-464c-bfc8-e6735781ba80)
 
 - Press enter, the window will exit.
 
 - Go back to the parted window/command prompt
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b816c5d3-8f97-4e25-9e80-f89e37a8088f)
 
 - Run the following command first
 
@@ -254,35 +255,41 @@ __This command removes the userdata partition__
 rm 6
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7fadcbe9-417f-4b1e-ad01-a327ad5549a5)
 
 - Now come back to Notepad
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/004b0b9c-b787-4120-8e82-f9d34a4941ee)
 
 - Copy the first command
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/262bc3c6-642f-435f-a5f7-83b72ac98341)
 
 - Paste it with right click onto the parted window, and press enter
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6b562673-4a63-4173-be65-576faba91465)
+
+It is possible that parted says the partition is not aligned for best performance, if that's the case for you, ignore such warning by answering "i" like so:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/c628c986-4961-4f4a-a9ba-c1b0c9020fe1)
 
 - Copy the second command
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f1866b37-796e-4197-b116-cd3b067eb76e)
 
 - Paste it with right click onto the parted window, and press enter
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6ca1e25c-cce5-474a-9383-5a837a2246f5)
 
 - Copy the third command
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e6141946-6515-42a4-9200-015c6faa619c)
 
 - Paste it with right click onto the parted window, and press enter
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a9b80c43-21fe-42bc-aab3-4c2cee0b48a2)
+
+It is possible that parted says the partition is not aligned for best performance, if that's the case for you, ignore such warning by answering "i" again
 
 - Run the following command
 
@@ -292,7 +299,19 @@ __This command sets the ESP partition created earlier as an EFI system partition
 set 7 esp on
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/544c0071-3c58-4e8b-94ad-134537b69945)
+
+- Run the following command to sanity check what you did:
+
+```bash
+print
+```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ed74fafd-509f-46d8-b8a5-4466b48bc0a2)
+
+If this looks good, proceed to below's step, if something looks horribly wrong, contact us.
+
+- Run the following command
 
 __This command leaves parted.__
 
@@ -300,7 +319,7 @@ __This command leaves parted.__
 quit
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/89ebd6fe-bcd8-4e83-a5bf-1dec1a627e2d)
 
 This will get you out of parted.
 
@@ -314,7 +333,7 @@ Now let's make these partitions actually usable:
 mke2fs -t ext4 /dev/block/sda6
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/d86116ef-710e-4082-8534-f7a4eee7f4bc)
 
 - Then continue with this command:
 
@@ -322,7 +341,7 @@ mke2fs -t ext4 /dev/block/sda6
 mkfs.fat -F32 -s1 /dev/block/sda7
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/895da3c9-a86f-490e-9ca6-07b7a9bdd5d4)
 
 - Then finish with this command:
 
@@ -330,7 +349,7 @@ mkfs.fat -F32 -s1 /dev/block/sda7
 mkfs.ntfs -f /dev/block/sda8
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/d7d76303-3a4c-4348-aee8-7da91623fadb)
 
 - And let's exit the device shell
 
@@ -338,7 +357,7 @@ mkfs.ntfs -f /dev/block/sda8
 exit
 ```
 
-![image]()
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/05b8a148-f679-4832-9827-26131790868b)
 
 ### End of the Dangerous section
 
@@ -349,6 +368,8 @@ Now, reboot into Android again:
 ```batch
 adb reboot
 ```
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0862e5e-8378-481e-929a-7d777d7978ec)
 
 - You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
 
