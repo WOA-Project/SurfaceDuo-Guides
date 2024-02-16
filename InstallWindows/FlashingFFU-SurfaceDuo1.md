@@ -96,16 +96,10 @@ fastboot set_active other
 If this is your first time flashing this FFU file, please also erase your Android™ userdata partition (this is not required if you already flashed this FFU file, or, you previously installed windows manually using our guides on a 128gb device (256gb users need to follow these commands regardless)) (You will have to setup Android™ again after)
 If you do not meet above condition, you can directly skip to the boot Windows Step.
 
-- Let's first erase the userdata partition
+- Let's first erase the userdata partition and reboot back to Android™
 
 ```batch
-fastboot erase userdata
-```
-
-- Let's now reboot back to Android™
-
-```batch
-fastboot reboot
+fastboot reboot -w
 ```
 
 - You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
