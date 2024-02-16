@@ -425,3 +425,11 @@ Now, you may want to forbid unlocking the bootloader again for additional securi
 - Turn off the "OEM unlocking" option as shown above, then turn off the developer options toggle at the very top
 
 🎉 Congratulations, your Surface Duo is back to factory settings.
+
+<i>© 2020-2024 The Duo WOA Authors
+
+Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.
+
+Android is a registered trademark of Google LLC.
+
+Hello from Seattle, France, Italy.</i>

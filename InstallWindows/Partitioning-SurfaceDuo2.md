@@ -398,3 +398,11 @@ The offsets are valid for both the Surface Duo 2 128GB model, and the Surface Du
 
   </p>
 </details>
+
+<i>© 2020-2024 The Duo WOA Authors
+
+Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.
+
+Android is a registered trademark of Google LLC.
+
+Hello from Seattle, France, Italy.</i>

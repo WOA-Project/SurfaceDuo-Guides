@@ -179,3 +179,11 @@ If you did everything right, Windows will now boot! Enjoy!
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
   </p>
 </details>
+
+<i>© 2020-2024 The Duo WOA Authors
+
+Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.
+
+Android is a registered trademark of Google LLC.
+
+Hello from Seattle, France, Italy.</i>

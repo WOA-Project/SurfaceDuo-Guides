@@ -38,3 +38,11 @@ Add-AppxPackage -Path .\Microsoft.UI.Xaml.2.7_7.2208.15002.0_arm64__8wekyb3d8bbw
 ```batch
 Add-AppxPackage -Path .\Microsoft.WindowsStore_22210.1401.6.0_neutral___8wekyb3d8bbwe.Msixbundle
 ```
+
+<i>© 2020-2024 The Duo WOA Authors
+
+Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.
+
+Android is a registered trademark of Google LLC.
+
+Hello from Seattle, France, Italy.</i>
