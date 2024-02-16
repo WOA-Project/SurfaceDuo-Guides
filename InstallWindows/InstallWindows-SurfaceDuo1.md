@@ -16,7 +16,6 @@ There are two methods to install Windows:
           <li>Simple</li>
           <li>Lack of options in regards to OS version, language, edition, storage allocation</li>
         </ul><br>
-        <br>
         <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/FlashingFFU-SurfaceDuo1.md">FFU Guide</a>
       </p>
     </td>
@@ -30,7 +29,6 @@ There are two methods to install Windows:
           <li>Complicated for inexperienced user, and can lead to mistakes breaking the device if done incorrectly</li>
           <li>Highly customizable in regards to OS version, language, edition, storage allocation</li>
         </ul><br>
-        <br>
         <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/InstallWindowsManually-SurfaceDuo1.md">Manual Guide</a>
       </p>
     </td>
