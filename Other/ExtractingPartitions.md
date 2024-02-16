@@ -167,10 +167,14 @@ If you did everything correctly, you will now have your `boot.img`. Enjoy! 🥳
 
 <img width="531" alt="image" src="https://user-images.githubusercontent.com/29689637/222561203-7f2dc375-e500-4201-a538-8cd0ba6d7559.png">
 
-<i>© 2020-2024 The Duo WOA Authors
+---
 
-Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.
+_**© 2020-2024 The Duo WOA Authors**_
 
-Android is a registered trademark of Google LLC.
+_Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Surface Duo, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Android is a registered trademark of Google LLC. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface._
 
-Hello from Seattle, France, Italy.</i>
+_**Limited emergency calling**_
+
+_Running Windows on your Surface Duo is not a replacement for a proper phone operating system and does not have emergency calling capabilities._
+
+_**Hello from Seattle (US), France, Italy.**_

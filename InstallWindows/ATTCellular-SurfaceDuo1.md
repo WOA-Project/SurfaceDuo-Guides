@@ -87,10 +87,14 @@ Assuming the Windows partition is available under X: (will/may be different for 
 Please note bootmodem_fs1 is the name of the file, and not a folder (same for bootmodem_fs2).
 You may have to adjust permissions on the ```X:\Windows\System32\DriverStore\FileRepository\qcremotefs8150_<random data here>``` folder in order to copy paste the above's files.
 
-<i>© 2020-2024 The Duo WOA Authors
+---
 
-Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.
+_**© 2020-2024 The Duo WOA Authors**_
 
-Android is a registered trademark of Google LLC.
+_Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Surface Duo, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Android is a registered trademark of Google LLC. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface._
 
-Hello from Seattle, France, Italy.</i>
+_**Limited emergency calling**_
+
+_Running Windows on your Surface Duo is not a replacement for a proper phone operating system and does not have emergency calling capabilities._
+
+_**Hello from Seattle (US), France, Italy.**_
