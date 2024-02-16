@@ -21,6 +21,19 @@ There are two methods to install Windows:
     </td>
     <td>
       <p align="center">
+        <a href="https://aka.ms/comingsoon"><img src="https://raw.githubusercontent.com/gus33000/UUPMediaCreator/main/Assets/logo.png" width="176"></a><br>
+        <b>Coming Soon: Install Windows using the WOA Deployment tool</b><br>
+        <ul>
+          <li>Easy</li>
+          <li>Takes a little bit of time</li>
+          <li>Doable for most people</li>
+          <li>Customizable in regards to OS version, language, edition, storage allocation</li>
+        </ul><br>
+        <a href="https://aka.ms/comingsoon">Tool Guide</a>
+      </p>
+    </td>
+    <td>
+      <p align="center">
         <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/InstallWindowsManually-SurfaceDuo1.md"><img src="https://raw.githubusercontent.com/gus33000/UUPMediaCreator/main/Assets/logo.png" width="176"></a><br>
         <b>Install Windows Manually yourself</b><br>
         <ul>
