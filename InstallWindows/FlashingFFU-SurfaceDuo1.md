@@ -51,7 +51,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 - Start by booting the UEFI:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot uefi.img
 ```
 
 - Press the Volume Down Key on the side of your device til you see something like shown below on screen:
@@ -164,7 +164,7 @@ We are ready to boot for the first time!
 Let's boot the UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
@@ -204,7 +204,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 Let's boot the UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.

@@ -1,6 +1,6 @@
 # Flashing a Full Flash Update Image (.FFU) on Surface Duo 2
 
-![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
+![Surface Duo 2 Dual Screen Windows](https://user-images.githubusercontent.com/3755345/197421028-afa8109a-ead9-46c9-985f-d0fac9e342ca.png)
 
 ## Files/Tools Needed 📃
 
@@ -51,7 +51,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 - Start by booting the UEFI:
 
 ```batch
-fastboot boot surfaceduo2-uefi.img
+fastboot boot uefi.img
 ```
 
 - Press the Volume Down Key on the side of your device til you see something like shown below on screen:
@@ -164,7 +164,7 @@ We are ready to boot for the first time!
 Let's boot the UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo2-uefi.img
+fastboot boot uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
@@ -202,7 +202,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 Let's boot the UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo2-uefi.img
+fastboot boot uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.

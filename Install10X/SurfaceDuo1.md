@@ -16,7 +16,7 @@
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- Windows UEFI (Without Secure Boot): [SM8150.UEFI.Surface.Duo.1.No.SecureBoot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI (Without Secure Boot): [SM8150.UEFI.Surface.Duo.1.No.SecureBoot.zip/uefi_nosb.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - The 10X Image Files (`BS_EFIESP.img` and `OSPool.img`). You can find them [here](https://t.me/DuoWOA_Announcements/379)
 - A Windows PC to execute most of the commands in this guide
@@ -439,7 +439,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 - Once into the Bootloader mode, let's run the UEFI, which will boot to 10X:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot uefi_nosb.img
 ```
 
 Done! You'll now be booted into Windows 10X. ⚠️ First boot will take a bunch of minutes, so WAIT AND DON'T REBOOT!
