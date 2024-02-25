@@ -11,7 +11,6 @@
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ISO/GetWindows.md)
 - The driver set: [SurfaceDuo-Drivers-2XXX.XX-Desktop-Zeta.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
-- DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 > [!WARNING]
@@ -106,13 +105,28 @@ Windows is now installed but has no drivers.
 
 ## Installing the drivers
 
-- Extract the drivers, Extract driver updater, and from the command prompt in the DriverUpdater.exe directory:
+- Download the latest driver package from https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest
 
-```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.xml" -r "<path to extracted drivers>" -p X:\
-```
+Note: Here's a table of what to download if you're a bit lost:
 
-- Once it is done, you can reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone will work normally. Set it up if you need it.
+| File Name                                      | Target Device         |
+|------------------------------------------------|-----------------------|
+| SurfaceDuo-Drivers-XXXX.XX-Desktop-Epsilon.zip | Surface Duo (1st Gen) |
+| SurfaceDuo-Drivers-XXXX.XX-Desktop-Zeta.zip    | Surface Duo 2         |
+
+- Extract the driver package, and go to the folder where you extracted it.
+
+- Double click the ```OfflineUpdater.cmd``` file.
+
+- Accept the User Account Control warning when prompted
+
+- Enter the drive letter of the connected phone in mass storage, as we previously mentioned, for us it's currently ```X:```, but it may very well be different for you. In our example, we enter ```X:``` and then press enter.
+
+- The process may take a while, once it is done, you will be prompted to press any key, press enter when that's the case.
+
+Congratulations, you just installed your drivers!
+
+- You can now reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone will work normally. Set it up if you need it.
 
 You will be back into Surface Duo's bootloader.
 
