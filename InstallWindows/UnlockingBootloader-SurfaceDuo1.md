@@ -181,7 +181,7 @@ Congratulations, you successfully unlocked your bootloader.
 
 ## The End
 
-And we're done, please continue to [Partitioning](Partitioning-SurfaceDuo1.md)
+And we're done, please continue with the previous guide that made you land here :)
 
 ---
 

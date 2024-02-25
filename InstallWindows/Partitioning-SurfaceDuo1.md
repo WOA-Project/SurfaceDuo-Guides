@@ -421,7 +421,7 @@ Congratulations, you successfully partitioned your device.
 
 ## The End
 
-And we're done, please continue to [Installing Windows](InstallWindowsManually-SurfaceDuo1.md)
+And we're done, please continue with the previous guide that made you land here :)
 
 ---
 
