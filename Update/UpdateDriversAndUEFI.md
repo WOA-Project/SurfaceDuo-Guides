@@ -9,7 +9,14 @@
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - The driver set: [SurfaceDuo-Drivers-2XXX.XX-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
-- DriverUpdater, to install the driver set: [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
+
+Note: Here's a table of what to download if you're a bit lost:
+
+| File Name                                      | Target Device         |
+|------------------------------------------------|-----------------------|
+| SurfaceDuo-Drivers-XXXX.XX-Desktop-Epsilon.zip | Surface Duo (1st Gen) |
+| SurfaceDuo-Drivers-XXXX.XX-Desktop-Zeta.zip    | Surface Duo 2         |
+
 - A Windows PC
 
 ### For Surface Duo (1st Gen)
