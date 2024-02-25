@@ -102,23 +102,28 @@ adb shell "sh /sdcard/msc.sh"
 > [!WARNING]
 > From now on we will assume X: is the Win partition for all commands. Replace them correctly with what you previously picked or you will lose data on your PC.
 
-- Extract the driver package, extract the driver updater zip, and open a command prompt in the directory containing DriverUpdater.exe:
+- Download the latest driver package from https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest
 
-For Surface Duo (1st Gen):
+Note: Here's a table of what to download if you're a bit lost:
 
-```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\epsilon.xml" -r "<path to extracted drivers>" -p X:\
-```
+| File Name                                      | Target Device         |
+|------------------------------------------------|-----------------------|
+| SurfaceDuo-Drivers-XXXX.XX-Desktop-Epsilon.zip | Surface Duo (1st Gen) |
+| SurfaceDuo-Drivers-XXXX.XX-Desktop-Zeta.zip    | Surface Duo 2         |
 
-For Surface Duo 2:
+- Extract the driver package, and go to the folder where you extracted it.
 
-```batch
-DriverUpdater.exe -d "<path to extracted drivers>\definitions\Desktop\ARM64\Internal\zeta.xml" -r "<path to extracted drivers>" -p X:\
-```
+- Double click the ```OfflineUpdater.cmd``` file.
 
----
+- Accept the User Account Control warning when prompted
 
-- Once it is done, you can reboot your phone using:
+- Enter the drive letter of the connected phone in mass storage, as we previously mentioned, for us it's currently ```I:```, but it may very well be different for you. In our example, we enter ```I:``` and then press enter.
+
+- The process may take a while, once it is done, you will be prompted to press any key, press enter when that's the case.
+
+Congratulations, you just updated your drivers!
+
+- You can now reboot your phone using:
 
 ```batch
 adb reboot bootloader
