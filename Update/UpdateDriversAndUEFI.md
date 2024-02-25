@@ -117,7 +117,7 @@ Note: Here's a table of what to download if you're a bit lost:
 
 - Accept the User Account Control warning when prompted
 
-- Enter the drive letter of the connected phone in mass storage, as we previously mentioned, for us it's currently ```I:```, but it may very well be different for you. In our example, we enter ```I:``` and then press enter.
+- Enter the drive letter of the connected phone in mass storage, as we previously mentioned, for us it's currently ```X:```, but it may very well be different for you. In our example, we enter ```X:``` and then press enter.
 
 - The process may take a while, once it is done, you will be prompted to press any key, press enter when that's the case.
 
