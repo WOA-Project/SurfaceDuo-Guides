@@ -1,13 +1,13 @@
-# Flashing a Full Flash Update Image (.FFU) on Surface Duo (1st Gen)
+# Flashing a Full Flash Update Image (.FFU) on Surface Duo 2
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
 ## Files/Tools Needed 📃
 
-- Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip)
-- An FFU file for Surface Duo (1st Gen): [FFU Release Channel](https://t.me/DuoWOA_FFUs)
+- An FFU file for Surface Duo 2: [FFU Release Channel](https://t.me/DuoWOA_FFUs)
 - A Windows PC to flash the device
 
 > [!WARNING]
@@ -35,7 +35,7 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 ## Unlocking the Bootloader
 
-If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader-SurfaceDuo1.md) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please skip the unlocking section.
+If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader-SurfaceDuo2.md) guide for Surface Duo 2. Come back once you're done. If you already followed this guide, please skip the unlocking section.
 
 ## Getting to FFU Loader
 
@@ -51,7 +51,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 - Start by booting the UEFI:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot surfaceduo2-uefi.img
 ```
 
 - Press the Volume Down Key on the side of your device til you see something like shown below on screen:
@@ -164,7 +164,7 @@ We are ready to boot for the first time!
 Let's boot the UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot surfaceduo2-uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
@@ -174,8 +174,6 @@ If you did everything right, Windows will now boot! Enjoy!
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
 Let Windows set itself up, and come back once you're on the Windows Desktop on your Surface Duo
-
-**Note 2:** If you get a BSOD (bugcheck screen) during initial setup, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
 
 ## Boot Windows again after initial installation
 
@@ -204,7 +202,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 Let's boot the UEFI, from a command prompt:
 
 ```batch
-fastboot boot surfaceduo1-uefi.img
+fastboot boot surfaceduo2-uefi.img
 ```
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
