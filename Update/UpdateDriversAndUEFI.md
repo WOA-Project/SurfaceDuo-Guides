@@ -41,7 +41,45 @@ Note: Here's a table of what to download if you're a bit lost:
 
 ## Steps 🛠️
 
-### Switching to Mass Storage Mode
+## Going to the Bootloader menu
+
+- Start by turning on your Surface Duo into Android™, and unlock it
+
+- Open a command prompt on your PC
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ab36aa10-6617-4680-ac06-bb58b7a0c3bb)
+
+- Go to the folder where you extracted the Google Android™ Platform tools using the CD command and the path of the folder, like so:
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24760f21-dc1b-48e6-9ae3-0aeb16f8953c)
+
+- Run the following command to ensure your phone is detected by your PC
+
+```batch
+adb devices
+```
+
+> [!TIP]
+> If you see no device listed, check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following image below this notice.
+> It is possible certain computers see no update offered (like Windows ARM64 Computers or other older machines with no functional Windows Update). If this is your case, we also provide Drivers for you to download
+> at the following location, you will have to install them using Device Manager on your PC. [Download USB Drivers](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/USB-Drivers.zip)
+
+![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b3a8b091-1b34-47e4-bd6e-c286ee808f14)
+
+- Run the following command now
+
+```batch
+adb reboot bootloader
+```
+
+You will be rebooted to Surface Duo's bootloader.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
+---
+
+## Booting to TWRP
 
 - Start by booting TWRP:
 
@@ -94,6 +132,8 @@ fastboot boot
 You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
 
 ---
+
+### Switching to Mass Storage Mode
 
 - Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
 
