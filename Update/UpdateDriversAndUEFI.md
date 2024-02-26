@@ -191,14 +191,8 @@ Simply use the latest UEFI image
 fastboot boot uefi.img
 ```
 
-- If you are in Android™, boot into Surface Duo's bootloader using the following command:
-
-```batch
-adb reboot bootloader
-```
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
+> [!TIP]
+> You can setup dual boot again if you need it by using the latest UEFI files and following the dual boot guide again (in case of a manual file creation), or by flashing one of the prebuilt dual boot images (see UEFI release notes for more details on both).
 
 ---
 
