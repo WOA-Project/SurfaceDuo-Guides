@@ -7,8 +7,8 @@ Surface Duo (1st Gen) currently supports the following Windows OS versions:
 | Operating System                                                          | Supported? |
 |---------------------------------------------------------------------------|------------|
 | Windows 10 Build 16299 (1709)                                             | ❌         |
-| Windows 10 Build 17134 (1803)                                             | ❌         |
-| Windows 10 Build 17763 (1809)                                             | ❌         |
+| Windows 10 Build 17134 (1803)                                             | ⚠️         |
+| Windows 10 Build 17763 (1809)                                             | ⚠️         |
 | Windows 10 Build 18362 (1903)                                             | ⚠️         |
 | Windows 10 Build 18363 (1909)                                             | ⚠️         |
 | Windows 10 Build 19041 (2004)                                             | ✅         |
@@ -21,7 +21,7 @@ Surface Duo (1st Gen) currently supports the following Windows OS versions:
 | Windows 11 Build 22621 (22h2)                                             | ✅         |
 | Windows 11 Build 22621 (23h1)                                             | ✅         |
 | Windows 11 Build 22631 (23h2)                                             | ✅         |
-| Windows vNext (Gallium Semester)                                          | ✅         |
+| Windows vNext (Germanium Semester)                                        | ✅         |
 
 ❌: Not supported, important issues present
 
@@ -50,7 +50,7 @@ Surface Duo 2 currently supports the following Windows OS versions:
 | Windows 11 Build 22621 (22h2)                                             | ❌         |
 | Windows 11 Build 22621 (23h1)                                             | ❌         |
 | Windows 11 Build 22631 (23h2)                                             | ❌         |
-| Windows vNext (Gallium Semester)                                          | ✅         |
+| Windows vNext (Germanium Semester)                                        | ✅         |
 
 ❌: Not supported, important issues present
 
