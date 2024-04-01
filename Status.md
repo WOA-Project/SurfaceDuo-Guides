@@ -99,7 +99,7 @@ _No ETA will be provided for **any** of these development phases_
 | 💤 Modern Standby      |             | ✅             |
 | 🪵 USB C               |             | ✅             |
 | 🔌 Charger             |             | ✅             |
-| 🧮 SoC Cores           | Only one core working | ⚠️             |
+| 🧮 SoC Cores           | Prime core frequency isn't scaled up                                                                           | ⚠️             |
 | 👆 Left Multi Touch    | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
 | 👆 Right Multi Touch   | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
 | ✏️ Left Pen Digitizer  | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
