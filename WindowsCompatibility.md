@@ -21,7 +21,7 @@ Surface Duo (1st Gen) and Surface Duo 2 currently supports the following Windows
 | Windows 11 Version 22h2            | 22621        | Nickel                   | WDDM 3.1                     | 1.33                     | ✅                               | ❌                      |                                 | See Note (1)            |
 | Windows 11 Version 23h1            | 22621        | Nickel                   | WDDM 3.1                     | 1.33                     | ✅                               | ❌                      |                                 | See Note (1)            |
 | Windows 11 Version 23h2            | 22631        | Nickel                   | WDDM 3.2                     | 1.33                     | ✅                               | ❌                      |                                 | See Note (1)            |
-| Windows 11 Version 24h2            | 26100        | Germanium                | WDDM TBF                     | WDF TBF                  | ✅                               | ✅                      |                                 |                         |
+| Windows 11 Version 24h2            | 26100        | Germanium                | WDDM 3.2                     | 1.33                     | ✅                               | ✅                      |                                 |                         |
 | Windows vNext (Dilithium Semester) | TBR          | Dilithium                | WDDM vNext                   | WDF vNext                | ✅                               | ✅                      |                                 |                         |
 
 ❌: Not supported, important issues present
