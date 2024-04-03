@@ -21,7 +21,8 @@ Surface Duo (1st Gen) and Surface Duo 2 currently supports the following Windows
 | Windows 11 Version 22h2            | 22621        | Nickel                   | WDDM 3.1                     | 1.33                     | ✅                               | ❌                      |                                 | See Note (1)            |
 | Windows 11 Version 23h1            | 22621        | Nickel                   | WDDM 3.1                     | 1.33                     | ✅                               | ❌                      |                                 | See Note (1)            |
 | Windows 11 Version 23h2            | 22631        | Nickel                   | WDDM 3.2                     | 1.33                     | ✅                               | ❌                      |                                 | See Note (1)            |
-| Windows vNext (Germanium Semester) | TBR          | Germanium                | WDDM vNext                   | WDF vNext                | ✅                               | ✅                      |                                 |                         |
+| Windows 11 Version 24h2            | 26100        | Germanium                | WDDM TBF                     | WDF TBF                  | ✅                               | ✅                      |                                 |                         |
+| Windows vNext (Dilithium Semester) | TBR          | Dilithium                | WDDM vNext                   | WDF vNext                | ✅                               | ✅                      |                                 |                         |
 
 ❌: Not supported, important issues present
 
@@ -31,19 +32,19 @@ Surface Duo (1st Gen) and Surface Duo 2 currently supports the following Windows
 
 ---
 
-1: This version of Windows does not support the System on Chip (SoC)
+1: This version of Windows does not support the System on Chip (SoC).
 
-2: This version of Windows is not actively tested or developped against anymore and may suffer from some intermittent compatibility issues with newer Driver Releases. It is however meant to have the same hardware support as newer versions of Windows. It can also be used to reieve the ICan0 value to setup phone / cellular call binding on newer versions of Windows.
+2: This version of Windows is not actively tested or developped against anymore. It may suffer from some intermittent compatibility issues with newer Driver Releases. It is however meant to have the same hardware support as newer versions of Windows due to no technical limitation with the drivers. It can also be used to reieve the ICan0 value to setup phone / cellular call binding on newer versions of Windows.
 
-3: This version of Windows uses the Windows Display Driver Model version 2.5. The current GPU driver supports WDDM 2.6 as a strict minimum. So GPU acceleration, and both displays will not be working. Only the left display will be working thanks to the UEFI framebuffer support. Some issues are presents in regards to subsystems and cellular as well.
+3: This version of Windows uses the Windows Display Driver Model version 2.5. The current GPU driver supports WDDM 2.6 as a strict minimum. So GPU acceleration, and both displays, will not be working. Only the left display will be working thanks to the UEFI framebuffer support. Some issues are presents in regards to subsystems and cellular as well.
 
-4: This version of Windows uses the Windows Display Driver Model version 2.4. The current GPU driver supports WDDM 2.6 as a strict minimum. So GPU acceleration, and both displays will not be working. Only the left display will be working thanks to the UEFI framebuffer support. Some issues are presents in regards to subsystems and cellular as well.
+4: This version of Windows uses the Windows Display Driver Model version 2.4. The current GPU driver supports WDDM 2.6 as a strict minimum. So GPU acceleration, and both displays, will not be working. Only the left display will be working thanks to the UEFI framebuffer support. Some issues are presents in regards to subsystems and cellular as well.
 
-5: While this version fully supports the SoC Core hardware (Timer, Interrupt Controller etc...), the WDF versions supported predate 2.25. Therefore, drivers built using newer WDF versions (like the current ones) will not run on this version without severe modifications. Versions higher fully work due to the "build on older, run on newer" principle. For more information, read [this documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/building-a-wdf-driver-for-multiple-versions-of-windows) on the subject.
+5: While this version fully supports the SoC Core hardware (Timer, Interrupt Controller etc...), the WDF versions supported predate 2.25. Therefore, drivers built using newer WDF versions (like the current ones) will not run on this version without severe modifications. Versions higher fully work due to the "build on newer, run on older" principle. For more information, read [this documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/building-a-wdf-driver-for-multiple-versions-of-windows) on the subject.
 
 ---
 
-It should be noted that development primarly is ongoing with the vNext release of Windows 11, and lower versions may be more broken than newer ones. Above table lists all Operating System versions ever released for ARM64 Processors. 1709, 1803 and 1809 are not supported due to being too old to support the Snapdragon™ 855 System on a Chip (SoC).
+It should be noted that development primarly is ongoing with the vNext release of Windows 11, and lower versions may be more broken than newer ones. Above table lists all Operating System versions ever released for ARM64 Processors.
 
 ---
 
