@@ -2,8 +2,8 @@
 
 ## Files/Tools Needed 📃
 
-- UEFI Raw FV Image for Surface Duo (1st Gen): [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
-- UEFI Raw FV Image for Surface Duo 2: [SM8350_EFI.fd](https://github.com/WOA-Project/SurfaceDuoPkg/releases)
+- UEFI Raw FV Image for Surface Duo (1st Gen): [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
+- UEFI Raw FV Image for Surface Duo 2: [SM8350_EFI.fd](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 - Stock device boot.img image obtained from an ota package, or from the device itself using [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md)
 - Kernel Patching Utility: [SurfaceDuoDualBootKernelImagePatcher](https://github.com/WOA-Project/SurfaceDuoDualBootKernelImagePatcher/releases)
 - [mkbootimg](https://github.com/WOA-Project/SurfaceDuoPkg/blob/main/ImageResources/mkbootimg.py)
