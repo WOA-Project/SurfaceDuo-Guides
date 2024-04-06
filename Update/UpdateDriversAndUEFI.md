@@ -8,7 +8,7 @@
 
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- The driver set: [SurfaceDuo-Drivers-2XXX.XX-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest)
+- The driver set: [SurfaceDuo-Drivers-2XXX.XX-Full.zip](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 
 Note: Here's a table of what to download if you're a bit lost:
 
@@ -22,12 +22,12 @@ Note: Here's a table of what to download if you're a bit lost:
 ### For Surface Duo (1st Gen)
 
 - TWRP image for Surface Duo (1st Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
-- Windows UEFI for Surface Duo (1st Gen): [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI for Surface Duo (1st Gen): [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 
 ### For Surface Duo 2
 
 - TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
-- Windows UEFI for Surface Duo 2: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuoPkg/releases/latest)
+- Windows UEFI for Surface Duo 2: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 
 > [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
@@ -149,7 +149,7 @@ adb shell "sh /sdcard/msc.sh"
 > [!WARNING]
 > From now on we will assume X: is the Win partition for all commands. Replace them correctly with what you previously picked or you will lose data on your PC.
 
-- Download the latest driver package from https://github.com/WOA-Project/SurfaceDuo-Drivers/releases/latest
+- Download the latest driver package from https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest
 
 Note: Here's a table of what to download if you're a bit lost:
 
