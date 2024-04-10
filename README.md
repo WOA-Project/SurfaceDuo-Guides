@@ -27,7 +27,7 @@ Guides for running Windows on Surface Duo.
 - Uninstall Windows and only keep Android™:
     - [Surface Duo (1st Gen)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo1.md)
     - [Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo2.md)
-- [Dual Boot between Android™ and Windows without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
+- [Dual Boot between Android™ and Windows without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
 - Reinstall Windows:
     - [Surface Duo (1st Gen)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
     - [Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo2.md)

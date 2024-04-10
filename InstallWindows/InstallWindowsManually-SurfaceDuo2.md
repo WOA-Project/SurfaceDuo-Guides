@@ -41,7 +41,7 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 ## Unlocking the Bootloader
 
-If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader-SurfaceDuo2.md) guide for Surface Duo 2. Come back once you're done. If you already followed this guide, please skip the unlocking section.
+If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader.md) guide for Surface Duo 2. Come back once you're done. If you already followed this guide, please skip the unlocking section.
 
 ## Partitioning
 
@@ -166,9 +166,9 @@ You'll have two methods of booting Windows.
 
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
-    - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
+    - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
 
-In case you want the dual boot option, then follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
+In case you want the dual boot option, then follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
 
 ---
 <details>

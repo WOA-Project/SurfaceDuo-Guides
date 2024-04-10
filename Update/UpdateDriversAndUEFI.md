@@ -30,7 +30,7 @@ Note: Here's a table of what to download if you're a bit lost:
 - Windows UEFI for Surface Duo 2: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 
 > [!WARNING]
-> - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo.md)
+> - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot.md)
 > - ⚠️ If you are upgrading from a version older than 2301.93, you must reinstall using this guide:
 >     - [Reinstall Windows (Surface Duo (1st Gen))](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
 >     - [Reinstall Windows (Surface Duo 2)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo2.md)

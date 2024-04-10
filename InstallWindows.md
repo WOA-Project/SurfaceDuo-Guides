@@ -14,8 +14,8 @@ Welcome!
 
 ## Installing and Uninstalling Dual Boot
 
-- [Surface Duo (1st Gen)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
-- [Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo.md)
+- [Surface Duo (1st Gen)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
+- [Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
 
 ## Uninstalling Windows without dual boot installed
 
