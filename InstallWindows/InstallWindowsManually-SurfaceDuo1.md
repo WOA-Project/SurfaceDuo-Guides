@@ -2,6 +2,21 @@
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
+Table of Contents:
+
+* [Install Windows on Surface Duo (1st Gen)](#install-windows-on-surface-duo-1st-gen)
+   * [Files/Tools Needed 📃](#filestools-needed-)
+   * [What you will get 🛒](#what-you-will-get-)
+* [Steps 🛠️](#steps-️)
+   * [Unlocking the Bootloader](#unlocking-the-bootloader)
+   * [Partitioning](#partitioning)
+   * [Getting to Mass Storage Mode](#getting-to-mass-storage-mode)
+   * [Going to Mass Storage](#going-to-mass-storage)
+   * [Installing Windows](#installing-windows)
+   * [Installing the drivers](#installing-the-drivers)
+   * [Boot Windows 🚀](#boot-windows-)
+   * [Boot Windows again after initial installation](#boot-windows-again-after-initial-installation)
+
 ## Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)

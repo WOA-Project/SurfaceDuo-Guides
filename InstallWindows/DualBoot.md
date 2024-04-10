@@ -1,5 +1,21 @@
 # Enabling Dual Boot on Surface Duo
 
+Table of Contents:
+
+* [Enabling Dual Boot on Surface Duo](#enabling-dual-boot-on-surface-duo)
+   * [Files/Tools Needed 📃](#filestools-needed-)
+   * [Steps 🛠️](#steps-️)
+      * [Getting original boot image information and files](#getting-original-boot-image-information-and-files)
+      * [Patching original kernel image header and merging the UEFI with it](#patching-original-kernel-image-header-and-merging-the-uefi-with-it)
+      * [Rebuilding a new boot.img file](#rebuilding-a-new-bootimg-file)
+      * [Testing the newly made image](#testing-the-newly-made-image)
+         * [Testing Android™ works](#testing-android-works)
+         * [Testing Windows works](#testing-windows-works)
+      * [Flashing newly made image](#flashing-newly-made-image)
+   * [Reverting changes for Android™ Updates or uninstallation](#reverting-changes-for-android-updates-or-uninstallation)
+   * [How it Works](#how-it-works)
+   * [Troubleshooting](#troubleshooting)
+
 ## Files/Tools Needed 📃
 
 - UEFI Raw FV Image for Surface Duo (1st Gen): [SM8150_EFI.fd](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)

@@ -1,5 +1,19 @@
 # Flashing a Full Flash Update Image (.FFU) on Surface Duo
 
+Table of Contents:
+
+* [Flashing a Full Flash Update Image (.FFU) on Surface Duo](#flashing-a-full-flash-update-image-ffu-on-surface-duo)
+   * [Files/Tools Needed 📃](#filestools-needed-)
+   * [What you will get 🛒](#what-you-will-get-)
+* [Steps 🛠️](#steps-️)
+   * [Unlocking the Bootloader](#unlocking-the-bootloader)
+   * [Acquiring all files](#acquiring-all-files)
+   * [Getting to FFU Loader](#getting-to-ffu-loader)
+   * [Flashing the Windows FFU Image](#flashing-the-windows-ffu-image)
+   * [Reset Android™](#reset-android)
+   * [Boot Windows 🚀](#boot-windows-)
+   * [Boot Windows again after initial installation](#boot-windows-again-after-initial-installation)
+
 ## Files/Tools Needed 📃
 
 - Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img or Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)

@@ -1,5 +1,15 @@
 # Unlocking the Bootloader on Surface Duo
 
+Table of Contents:
+
+* [Unlocking the Bootloader on Surface Duo](#unlocking-the-bootloader-on-surface-duo)
+   * [Files/Tools Needed 📃](#filestools-needed-)
+   * [What you will get 🛒](#what-you-will-get-)
+* [Steps 🛠️](#steps-️)
+   * [Acquiring all files](#acquiring-all-files)
+   * [Unlocking the bootloader](#unlocking-the-bootloader)
+   * [The End](#the-end)
+
 ## Files/Tools Needed 📃
 
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
