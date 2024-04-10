@@ -1,13 +1,13 @@
-# Flashing a Full Flash Update Image (.FFU) on Surface Duo 2
+# Flashing a Full Flash Update Image (.FFU) on Surface Duo
 
-![Surface Duo 2 Dual Screen Windows](https://user-images.githubusercontent.com/3755345/197421028-afa8109a-ead9-46c9-985f-d0fac9e342ca.png)
+![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
 ## Files/Tools Needed 📃
 
-- Windows UEFI: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
+- Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img or Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip)
-- An FFU file for Surface Duo 2: [FFU Release Channel](https://t.me/DuoWOA_FFUs)
+- An FFU file for Surface Duo: [FFU Release Channel](https://t.me/DuoWOA_FFUs)
 - A Windows PC to flash the device
 
 > [!WARNING]
@@ -35,7 +35,84 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 ## Unlocking the Bootloader
 
-If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader.md) guide for Surface Duo 2. Come back once you're done. If you already followed this guide, please skip the unlocking section.
+If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader.md) guide for Surface Duo. Come back once you're done. If you already followed this guide, please skip the unlocking section.
+
+## Acquiring all files
+
+First, start by going to the [FFU Release Channel](https://t.me/DuoWOA_FFUs) on your computer.
+
+![FFU-1-Chan](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5e4a3551-0c9f-480c-9022-21214b4dc9fa)
+
+Once on the page, click on "View in telegram". Please note due to FFU files being hosted on telegram, you will need a telegram account and application to access this resource. We do not currently make FFUs available on another website. If you do not have an account, register one.
+
+Once viewed in telegram, scroll down til you see the FFU you want to download. In our example, we want to download the FFU File for Surface Duo (1st Gen) that maximizes all the storage space for Windows. You may want a different one for a different device or storage configuration. Pick wisely the file you want, the channel will include information to help you decide, as well as important information often for these images. Carefully read them and consider them while following this guide later on.
+
+![FFU-2-Files](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4fa7d0d0-7df3-4ae5-9bcc-d612be996368)
+
+Start by downloading all the files of the FFU you want by clicking on both, and waiting til they're fully downloaded on your computer. You will know the files are downloading due to the spinning progress bar, and once complete, a filled file icon.
+
+![FFU-3-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/566048d9-600f-4401-9006-2db4c7c6327a)
+
+Get 7-zip if you do not already have it and install it.
+
+Then extract your FFU file out of the split archive you just downloaded using 7-zip by going to the download folder where the split archive is, right clicking, 7-zip, extract.
+
+Once done, download the [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip) on your computer and save them. Please note these tools currently do not work on ARM64 Windows devices unfortunately. You will need an x86/x86_64 computer to flash a FFU file on your device for now.
+
+![FFUTools-1-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/af4683d1-8245-411b-bd51-99cb2c171551)
+
+Now, go to the [latest release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest) of the drivers and UEFI for Surface Duo on your computer:
+
+![ReleasePage-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6ab6495f-1c1b-47da-bd64-8a89fe80d901)
+
+Please take some time to read the latest release notes, they may contain very important last minute information that you want to know. Once read, scroll down to the bottom:
+
+![ReleasePage-2-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f175c4e1-ee2e-4b0b-8d48-798be939b1b8)
+
+Now you got two outcomes:
+
+- If you are flashing a FFU file for Windows 10X, or a FFU file for Windows 10 version 1909 or older, you want to download the Secure Boot disabled UEFI packages
+- If you are flashing any other type of FFU, download the normal UEFI (Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img or Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img)
+
+Save the UEFI package on your computer and extract it.
+
+We're done downloading everything needed to setup our device.
+
+<details>
+    <summary>In case you lost the platform tools from google, here's how to acquire them again: <b>Click to expand</b></summary>
+    <p>
+
+        
+First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
+
+![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
+
+Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
+
+![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
+
+Click on it, an EULA will open like below:
+
+![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
+
+Scroll all the way down (after reading it if that's your thing)
+
+![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
+
+Tick "I have read and agree to above terms conditions"
+
+![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
+
+And click download
+
+![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
+
+Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
+
+![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+    </p>
+</details>
 
 ## Getting to FFU Loader
 
@@ -91,16 +168,16 @@ fastboot set_active other
 fastboot set_active other
 ```
 
+And reboot your device
+```batch
+fastboot reboot
+```
+
 ## Reset Android™
 
-If this is your first time flashing this FFU file, please also erase your Android™ userdata partition (this is not required if you already flashed this FFU file, or, you previously installed windows manually using our guides on a 128gb device (256gb users need to follow these commands regardless)) (You will have to setup Android™ again after)
-If you do not meet above condition, you can directly skip to the boot Windows Step.
-
-- Let's first erase the userdata partition and reboot back to Android™
-
-```batch
-fastboot reboot -w
-```
+If this is your first time flashing this FFU file, or you're flashing a different storage or layout configuration image, you will lose all of your Android™ data. Further more, you will also not have Android boot successfully.
+If this isn't your case, feel free to ignore this section, Android™ should still boot fine.
+If this is your case, when booting Android™, you will get notified Android cannot boot anymore. In this screen, you must select "Factory Reset" instead of "Try again" or else, Android™ will refuse to boot again.
 
 - You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
 
@@ -174,6 +251,8 @@ If you did everything right, Windows will now boot! Enjoy!
 **Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
 Let Windows set itself up, and come back once you're on the Windows Desktop on your Surface Duo
+
+**Note 2:** If you get a BSOD (bugcheck screen) during initial setup, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
 
 ## Boot Windows again after initial installation
 
