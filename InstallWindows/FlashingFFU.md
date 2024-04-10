@@ -109,7 +109,7 @@ Save the file on your computer, and extract the zip file by opening it, and sele
 
 ![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
 
-    </p>
+  </p>
 </details>
 
 ## Getting to FFU Loader
