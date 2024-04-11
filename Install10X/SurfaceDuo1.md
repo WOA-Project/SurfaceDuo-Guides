@@ -477,7 +477,7 @@ exit
 
 We'll need a UEFI to boot to Windows 10X.
 
-## Boot Windows 10X
+## Boot Windows 🚀
 
 - Reboot your device to the Bootloader mode
 
