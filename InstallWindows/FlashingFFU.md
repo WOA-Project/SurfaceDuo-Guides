@@ -75,7 +75,9 @@ Here's how to acquire an FFU file and the matching UEFI image for Surface Duo:
 <td>
 
 [OEMEP_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMEP_128GB_HalfSplit.ffu)
+
 Size: 6779731968 bytes (6465 MiB)
+
 SHA1: `C57A2B011F57ECFE9F1E4237D2B7411FCCC13123`
 </td>
 <td>
@@ -97,7 +99,9 @@ Assumed Compatibility with 256gb variants (may have issues but should work, if i
 <td>
 
 [OEMEP_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMEP_256GB_HalfSplit.ffu)
+
 Size: 6719864832 bytes (6408 MiB)
+
 SHA1: `DB3FE450EBD85575290EB9C8C40E67D74C8FEC00`
 </td>
 <td>
@@ -119,7 +123,9 @@ No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo!
 <td>
 
 [OEMEP_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMEP_MaximizedForWindows.ffu)
+
 Size: 6733119488 bytes (6421 MiB)
+
 SHA1: `8B3332F95336B02A46DD674F9A28AB283DB907DC`
 </td>
 <td>
@@ -141,7 +147,9 @@ Official Variant: 4GB only for Android, everything else for Windows, 256GB users
 <td>
 
 [OEMZE_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMZE_128GB_HalfSplit.ffu)
+
 Size: 6376570880 bytes (6081 MiB)
+
 SHA1: `02BCC5F564237266E2A6E36C0C2CFD0A4ACB2A60`
 </td>
 <td>
@@ -163,7 +171,9 @@ Assumed Compatibility with 256gb and 512gb variants (may have issues but should 
 <td>
 
 [OEMZE_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMZE_256GB_HalfSplit.ffu)
+
 Size: 6370099200 bytes (6075 MiB)
+
 SHA1: `8FE12AA2E3E44CA4541A0BE60B5CD6DF330E4DB7`
 </td>
 <td>
@@ -185,7 +195,9 @@ No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo! 
 <td>
 
 [OEMZE_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMZE_MaximizedForWindows.ffu)
+
 Size: 6379028480 bytes (6083 MiB)
+
 SHA1: `0F760AF40B9B7183B179EEAB75B4FD04C6E52BE8`
 </td>
 <td>
