@@ -2,7 +2,12 @@
 
 ## Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
+- TWRP image:
+
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
+
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - File System Support Package for TWRP image: [surfaceduo2-twrp-fssupport.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp-fssupport.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -33,6 +38,44 @@ You will end up with both Android™ and Windows on your Surface Duo. Android™
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
 # Steps 🛠️
+
+## Acquiring all files
+
+<details>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
+    <p>
+
+
+First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
+
+![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
+
+Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
+
+![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
+
+Click on it, an EULA will open like below:
+
+![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
+
+Scroll all the way down (after reading it if that's your thing)
+
+![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
+
+Tick "I have read and agree to above terms conditions"
+
+![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
+
+And click download
+
+![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
+
+Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
+
+![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+  </p>
+</details>
 
 ## Going to the Bootloader menu
 
@@ -197,7 +240,7 @@ Take note of original sizing, here it was 401MB -> 110GB (256GB variant: 401MB -
 ---
 
 <details>
-  <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 128GB devices (<b>Click to expand</b>)</summary>
   <p>
 
 __This command removes the userdata partition__
@@ -242,7 +285,7 @@ quit
 ---
 
 <details>
-  <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 256GB devices (<b>Click to expand</b>)</summary>
   <p>
 
 __This command removes the userdata partition__
@@ -287,7 +330,7 @@ quit
 ---
 
 <details>
-  <summary>Run these commands one by one for 512GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 512GB devices (<b>Click to expand</b>)</summary>
   <p>
 
 TODO: Please file an issue to help us!

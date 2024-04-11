@@ -16,7 +16,15 @@ Table of Contents:
 
 ## Files/Tools Needed 📃
 
-- Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img or Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
+- You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
+
+UEFI Image:
+
+| File Name                              | Target Device         |
+|----------------------------------------|-----------------------|
+| Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip | Surface Duo (1st Gen) |
+| Surface.Duo.2.UEFI.Fast.Boot.zip       | Surface Duo 2         |
+
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip)
 - An FFU file for Surface Duo: [FFU Release Channel](https://t.me/DuoWOA_FFUs)
@@ -91,10 +99,10 @@ Save the UEFI package on your computer and extract it.
 We're done downloading everything needed to setup our device.
 
 <details>
-    <summary>In case you lost the platform tools from google, here's how to acquire them again: <b>Click to expand</b></summary>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
     <p>
 
-        
+
 First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
 
 ![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
@@ -276,13 +284,13 @@ You'll have two methods of booting Windows.
 
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
-    - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
+    - Cons: Every time you update Android™, you'll have to follow [this guide](/InstallWindows/DualBoot.md)
 
-In case you want the dual boot option, then follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
+In case you want the dual boot option, then follow [this guide](/InstallWindows/DualBoot.md)
 
 ---
 <details>
-  <summary>In case you want to manually boot each time: (Click to expand)</summary>
+  <summary>In case you want to manually boot each time: (<b>Click to expand</b>)</summary>
   <p>
 
 Reboot your device to the Bootloader mode, using adb or from the recovery.

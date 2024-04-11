@@ -2,12 +2,29 @@
 
 ## Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
+
+UEFI Image:
+
+| File Name                              | Target Device         |
+|----------------------------------------|-----------------------|
+| Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip | Surface Duo (1st Gen) |
+
+Windows Drivers:
+
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| SurfaceDuo-Drivers-v2XXX.XX-Desktop-Epsilon.zip | Surface Duo (1st Gen) |
+
+- TWRP image:
+
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
+
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ISO/GetWindows.md)
-- The driver set: [SurfaceDuo-Drivers-2XXX.XX-Desktop-Epsilon.zip](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
+- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](/InstallWindows/ISO/GetWindows.md)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 > [!WARNING]
@@ -29,6 +46,44 @@
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 # Steps 🛠️
+
+## Acquiring all files
+
+<details>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
+    <p>
+
+
+First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
+
+![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
+
+Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
+
+![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
+
+Click on it, an EULA will open like below:
+
+![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
+
+Scroll all the way down (after reading it if that's your thing)
+
+![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
+
+Tick "I have read and agree to above terms conditions"
+
+![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
+
+And click download
+
+![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
+
+Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
+
+![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+  </p>
+</details>
 
 ## Getting to Mass Storage Mode
 
@@ -115,7 +170,7 @@ Now the Windows Partition on your Surface Duo should be empty. Let's go ahead an
 
 ## Installing Windows
 
-- We will need our install.wim file now. If you haven't it already, you can [use this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ISO/GetWindows.md). When you are ready, run these commands:
+- We will need our install.wim file now. If you haven't it already, you can [use this guide](/InstallWindows/ISO/GetWindows.md). When you are ready, run these commands:
 
 ```batch
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
@@ -169,13 +224,13 @@ You'll have two methods of booting Windows.
 
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
-    - Cons: Every time you update Android™, you'll have to follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
+    - Cons: Every time you update Android™, you'll have to follow [this guide](/InstallWindows/DualBoot.md)
 
-In case you want the dual boot option, then follow [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
+In case you want the dual boot option, then follow [this guide](/InstallWindows/DualBoot.md)
 
 ---
 <details>
-  <summary>In case you want to manually boot each time: (Click to expand)</summary>
+  <summary>In case you want to manually boot each time: (<b>Click to expand</b>)</summary>
   <p>
 
 Reboot your device to the Bootloader mode, using adb or from the recovery.

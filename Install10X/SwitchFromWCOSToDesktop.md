@@ -8,13 +8,15 @@ This guide will help you switch back to Windows Desktop after having installed a
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
 
-### For Surface Duo (1st Gen)
+- TWRP image:
 
-- TWRP image for Surface Duo (1st Gen): [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
+| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
 
 ### For Surface Duo 2
 
-- TWRP image for Surface Duo 2: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
 - File System Support Package for TWRP image: [surfaceduo2-twrp-fssupport.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp-fssupport.tar)
 
 > [!WARNING]
@@ -28,6 +30,44 @@ This guide will help you switch back to Windows Desktop after having installed a
 > - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
 
 # Steps 🛠️
+
+## Acquiring all files
+
+<details>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
+    <p>
+
+
+First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
+
+![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
+
+Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
+
+![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
+
+Click on it, an EULA will open like below:
+
+![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
+
+Scroll all the way down (after reading it if that's your thing)
+
+![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
+
+Tick "I have read and agree to above terms conditions"
+
+![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
+
+And click download
+
+![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
+
+Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
+
+![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+  </p>
+</details>
 
 ## Making the partitions
 

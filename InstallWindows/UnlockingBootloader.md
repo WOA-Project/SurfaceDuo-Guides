@@ -39,6 +39,11 @@ You will end up with both Android™ and an unlocked bootloader on your Surface 
 
 ## Acquiring all files
 
+<details>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
+    <p>
+
+
 First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
 
 ![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
@@ -66,6 +71,9 @@ And click download
 Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
 
 ![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+  </p>
+</details>
 
 ## Unlocking the bootloader
 

@@ -1,8 +1,8 @@
 # Creating a Windows ISO with UUPMediaCreator
 
-You can find out which Windows versions are supported for each device model [here](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/WindowsCompatibility.md)
+You can find out which Windows versions are supported for each device model [here](/WindowsCompatibility.md)
 
-### Option: Latest Windows Insider Program Versions
+**Option: Latest Windows Insider Program Versions**
 
 Microsoft releases Insider Preview builds to you through channels, which are each designed to bring you a different experience based on the quality of Windows you need for your life and your device. When choosing a channel, you should keep in mind:
 
@@ -17,7 +17,7 @@ As Microsoft continues to evolve the way they're building and releasing Windows 
 
 For more information about the insider program, please see the [Windows Insider Program website](https://insider.windows.com)
 
-## Steps
+# Steps 🛠️
 
 - Presuming you are working on a Windows AMD64 machine, download and extract the ```win-XXX.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
 
@@ -35,7 +35,7 @@ NOTE: For apps to be included in the image for Windows 11 Version 22H1 or higher
 
 - Navigate to the directory you extracted the downloaded ZIP file onto, you should see files like ```uupdownload.exe``` inside.
 
-### Download commands
+## Download commands
 
 -  Inside the directory, open command prompt and run one of following commands (depending on what version of Windows you would like to use):
 
@@ -69,7 +69,7 @@ use the standard Windows language pack commands. Installing the right language p
 - Once the download is completed, you will see a new folder with prefix "10.0.22000..." (or something different!) created inside the extracted folder. This
   contains all the required Windows files.
 
-### Creation commands
+## Creation commands
 
 Let's create an ISO from the Windows build download.
 

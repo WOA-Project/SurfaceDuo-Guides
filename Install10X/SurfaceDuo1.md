@@ -1,10 +1,10 @@
 # Install Windows 10X on Surface Duo (1st Gen)
 
-## Table of Contents
+Table of Contents:
 
 1. [Files/Tools Needed](#filestools-needed-)
-3. [What you will get 🛒](#what-you-will-get-)
-4. [Steps 🛠️](#steps-%EF%B8%8F)
+2. [What you will get 🛒](#what-you-will-get-)
+3. [Steps 🛠️](#steps-%EF%B8%8F)
     1. [Unlocking the bootloader](#unlocking-the-bootloader)
     2. [Making the partitions](#making-the-partitions)
     3. [Installing Windows 10X](#installing-windows-10x)
@@ -13,10 +13,22 @@
 
 ## Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
+
+UEFI Image:
+
+| File Name                                                   | Target Device         |
+|-------------------------------------------------------------|-----------------------|
+| Surface.Duo.1st.Gen.UEFI.Secure.Boot.Disabled.Fast.Boot.zip | Surface Duo (1st Gen) |
+
+- TWRP image:
+
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
+
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
-- Windows UEFI (Without Secure Boot): [SM8150.UEFI.Surface.Duo.1.No.SecureBoot.zip/uefi_nosb.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - The 10X Image Files (`BS_EFIESP.img` and `OSPool.img`). You can find them [here](https://t.me/DuoWOA_Announcements/379)
 - A Windows PC to execute most of the commands in this guide
@@ -50,6 +62,44 @@ You will end up with both Android™ and Windows 10X on your Surface Duo. Androi
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
 # Steps 🛠️
+
+## Acquiring all files
+
+<details>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
+    <p>
+
+
+First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
+
+![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
+
+Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
+
+![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
+
+Click on it, an EULA will open like below:
+
+![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
+
+Scroll all the way down (after reading it if that's your thing)
+
+![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
+
+Tick "I have read and agree to above terms conditions"
+
+![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
+
+And click download
+
+![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
+
+Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
+
+![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+  </p>
+</details>
 
 ## Unlocking the bootloader
 
@@ -219,7 +269,7 @@ Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB
 ---
 
 <details>
-  <summary>Run these commands one by one for 128GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 128GB devices (<b>Click to expand</b>)</summary>
   <p>
 
 __This command removes the userdata partition__
@@ -264,7 +314,7 @@ quit
 ---
 
 <details>
-  <summary>Run these commands one by one for 256GB devices (Click to expand)</summary>
+  <summary>Run these commands one by one for 256GB devices (<b>Click to expand</b>)</summary>
   <p>
 
 __This command removes the userdata partition__

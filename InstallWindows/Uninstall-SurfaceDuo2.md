@@ -1,7 +1,13 @@
 # Uninstall Windows and revert your Surface Duo 2 to stock
 
 ## Files/Tools Needed 📃
-- TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img)
+
+- TWRP image:
+
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
+
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A PC.
@@ -23,13 +29,51 @@ A normal Surface Duo, with Android™ only. Just like you had it before installi
 
 Android™ will have access to the whole memory back again.
 
-## Steps 🛠️
+# Steps 🛠️
 
-### Make sure you have not done any dual boot guide!
+## Acquiring all files
 
-If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot.md)
+<details>
+    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
+    <p>
 
-### Going to the Bootloader menu
+
+First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
+
+![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
+
+Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
+
+![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
+
+Click on it, an EULA will open like below:
+
+![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
+
+Scroll all the way down (after reading it if that's your thing)
+
+![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
+
+Tick "I have read and agree to above terms conditions"
+
+![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
+
+And click download
+
+![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
+
+Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
+
+![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
+
+  </p>
+</details>
+
+## Make sure you have not done any dual boot guide!
+
+If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/InstallWindows/DualBoot.md)
+
+## Going to the Bootloader menu
 
 - Start by turning on your Surface Duo into Android™, and unlock it
 
@@ -65,7 +109,7 @@ You will be rebooted to Surface Duo's bootloader.
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-### Booting to TWRP
+## Booting to TWRP
 
 - Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
 
@@ -89,7 +133,7 @@ fastboot boot
 
 You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
 
-### Restoring the original partitions
+## Restoring the original partitions
 
 - Once booted into TWRP, start by running the following command to make sure everything we do is accepted by the device:
 
@@ -279,7 +323,7 @@ exit
 
 You may however want to also relock the bootloader of the device, please note that you cannot relock the bootloader of your device if you flashed a custom rom as well as installed Windows before, or modified the boot partition for dual boot, or other purposes. Please look into undoing such changes before proceeding forward.
 
-### In order to relock the bootloader
+## In order to relock the bootloader
 
 - Start by turning on your Surface Duo into Android™, and unlock it
 
@@ -386,7 +430,7 @@ Congratulations, you successfully relocked your bootloader.
 
 Now, you may want to forbid unlocking the bootloader again for additional security and peace of mind
 
-### In order to turn off the ability to unlock the bootloader of the device
+## In order to turn off the ability to unlock the bootloader of the device
 
 - Start by turning on your Surface Duo into Android™, and unlock it
 

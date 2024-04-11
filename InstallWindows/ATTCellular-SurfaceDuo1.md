@@ -4,7 +4,12 @@ AT&T devices that are _Unlocked_ will be simlocked in Windows but not in Android
 
 ## Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img)
+- TWRP image:
+
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
+
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/msc.tar)
 - Windows Command Prompt, Linux is not required
 
@@ -68,7 +73,7 @@ Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently call
 
 ## Dumping Modem partitions
 
-Using [the following guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md), extract the following partitions:
+Using [the following guide](/Other/ExtractingPartitions.md), extract the following partitions:
 
 - ```modem_fs1```
 - ```modem_fs2```
