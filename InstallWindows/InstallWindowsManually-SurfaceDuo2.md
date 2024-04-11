@@ -72,6 +72,36 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 ## Acquiring all files
 
+Here's how to acquire a Driver archive file and the matching UEFI image for Surface Duo:
+
+<table>
+<tr>
+<td>Drivers File</td>
+<td>UEFI File</td>
+<td>Target Device</td>
+<td>OS Version</td>
+<td>Notes</td>
+</tr>
+<tr>
+<td>
+
+[SurfaceDuo-Drivers-v2404.03C-Desktop-Zeta.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/SurfaceDuo-Drivers-v2404.03C-Desktop-Zeta.7z)
+</td>
+<td>
+
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.Fast.Boot.zip)
+- [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.FD.for.making.your.own.Dual.Boot.Image.zip)
+</td>
+<td>Surface Duo 2</td>
+<td>Windows 11 Version 24H2 and higher</td>
+<td><details>
+
+N/A
+</details></td>
+</tr>
+</table>
+
 <details>
     <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
     <p>

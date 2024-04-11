@@ -59,7 +59,7 @@ If not already done, please first proceed with the [Unlocking the Bootloader](Un
 
 ## Acquiring all files
 
-Here's how to acquire an FFU file for Surface Duo:
+Here's how to acquire an FFU file and the matching UEFI image for Surface Duo:
 
 <table>
 <tr>
