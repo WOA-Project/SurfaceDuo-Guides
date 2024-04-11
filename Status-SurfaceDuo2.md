@@ -30,15 +30,15 @@ _No ETA will be provided for **any** of these development phases_
 | 💻 Lid Hall sensor     |                                                                                                                           | ✅             |
 | 📦 UFS                 |                                                                                                                           | ✅             |
 | 📲 Left Display Panel  |                                                                                                                           | ✅             |
-| 🔋 Battery 1           |                                                                                                                           | ✅             |
-| 🔋 Battery 2           |                                                                                                                           | ✅             |
-| 🔌 Charger             |                                                                                                                           | ✅             |
-| 🪵 USB C               |                                                                                                                           | ✅             |
+| 🔋 Battery 1           |                                                                                                                           | ❌ (Errata with latest update) |
+| 🔋 Battery 2           |                                                                                                                           | ❌ (Errata with latest update) |
+| 🔌 Charger             |                                                                                                                           | ❌ (Errata with latest update) |
+| 🪵 USB C               |                                                                                                                           | ❌ (Errata with latest update) |
 | ✏️ Left Pen Digitizer  | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
 | ✏️ Right Pen Digitizer | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
 | 👆 Left Multi Touch    | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
 | 👆 Right Multi Touch   | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
-| 🧭 Sensors             | Not all sensors are available                                                                                             | ⚠️             |
+| 🧭 Sensors             | Not all sensors are available                                                                                             | ❌ (Errata with latest update) |
 | 🧮 SoC Cores           | Prime core frequency isn't scaled up                                                                                      | ⚠️             |
 | ♋ Cellular Calls      | Requires Modem Processor Subsystem                                                                                        | ❌             |
 | ♋ Cellular Data       | Requires Modem Processor Subsystem                                                                                        | ❌             |
