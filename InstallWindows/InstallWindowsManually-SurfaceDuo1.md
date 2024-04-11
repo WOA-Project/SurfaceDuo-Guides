@@ -44,6 +44,8 @@ Windows Drivers:
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](/InstallWindows/ISO/GetWindows.md)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
+## Disclaimers
+
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.

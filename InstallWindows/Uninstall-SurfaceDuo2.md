@@ -12,6 +12,8 @@
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A PC.
 
+## Disclaimers
+
 > [!IMPORTANT]
 > **THIS WILL WIPE ALL YOUR ANDROID™ DATA**
 >

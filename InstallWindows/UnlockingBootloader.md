@@ -15,6 +15,8 @@ Table of Contents:
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC
 
+## Disclaimers
+
 > [!WARNING]
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 > - Don't rerun the commands if you interrupt the process.

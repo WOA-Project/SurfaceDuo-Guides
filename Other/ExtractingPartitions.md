@@ -12,6 +12,8 @@
 | [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
 | [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
 
+## Disclaimers
+
 > [!WARNING]
 > - Read the entire guide before starting. Make sure you understand all of what you're going to do!
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.

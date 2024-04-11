@@ -19,6 +19,8 @@ This guide will help you switch back to Windows Desktop after having installed a
 
 - File System Support Package for TWRP image: [surfaceduo2-twrp-fssupport.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp-fssupport.tar)
 
+## Disclaimers
+
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - Read the entire guide before starting. Make sure you understand all of what you're going to do!

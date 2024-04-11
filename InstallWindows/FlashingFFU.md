@@ -30,6 +30,8 @@ UEFI Image:
 - An FFU file for Surface Duo
 - A Windows PC to flash the device
 
+## Disclaimers
+
 > [!WARNING]
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 > - Do not run all commands at once.

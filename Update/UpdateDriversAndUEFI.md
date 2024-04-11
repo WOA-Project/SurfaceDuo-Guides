@@ -34,6 +34,8 @@ Windows Drivers:
 | [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
 | [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
 
+## Disclaimers
+
 > [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](/InstallWindows/DualBoot.md)
 > - ⚠️ If you are upgrading from a version older than 2301.93, you must reinstall using this guide:

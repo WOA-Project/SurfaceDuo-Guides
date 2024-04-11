@@ -33,6 +33,8 @@ UEFI Image:
 - The 10X Image Files (`BS_EFIESP.img` and `OSPool.img`). You can find them [here](https://t.me/DuoWOA_Announcements/379)
 - A Windows PC to execute most of the commands in this guide
 
+## Disclaimers
+
 > [!WARNING]
 > - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.

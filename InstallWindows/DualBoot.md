@@ -34,6 +34,8 @@ UEFI Raw FV Image:
 - Python 3 (the one from the Microsoft Store will do just fine)
 - Windows Command Prompt, Linux is not required
 
+## Disclaimers
+
 > [!WARNING]
 > Once you do this, you will need to follow this guide again each time you update Android™, or your Android™ installation won't boot anymore.
 >
