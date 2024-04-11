@@ -26,7 +26,7 @@ UEFI Image:
 | Surface.Duo.2.UEFI.Fast.Boot.zip       | Surface Duo 2         |
 
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip)
+- [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/FFU-Loader-Tools.zip)
 - An FFU file for Surface Duo: [FFU Release Channel](https://t.me/DuoWOA_FFUs)
 - A Windows PC to flash the device
 
@@ -77,7 +77,7 @@ Get 7-zip if you do not already have it and install it.
 
 Then extract your FFU file out of the split archive you just downloaded using 7-zip by going to the download folder where the split archive is, right clicking, 7-zip, extract.
 
-Once done, download the [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/FFU-Loader-Tools.zip) on your computer and save them. Please note these tools currently do not work on ARM64 Windows devices unfortunately. You will need an x86/x86_64 computer to flash a FFU file on your device for now.
+Once done, download the [FFU Tools](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/FFU-Loader-Tools.zip) on your computer and save them. Please note these tools currently do not work on ARM64 Windows devices unfortunately. You will need an x86/x86_64 computer to flash a FFU file on your device for now.
 
 ![FFUTools-1-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/af4683d1-8245-411b-bd51-99cb2c171551)
 

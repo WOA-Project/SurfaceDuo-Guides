@@ -30,7 +30,7 @@ UEFI Raw FV Image:
 - Stock device boot.img image obtained from an ota package, or from the device itself using [the extracting partition guide](/Other/ExtractingPartitions.md).
 - Kernel Patching Utility: [SurfaceDuoDualBootKernelImagePatcher](https://github.com/WOA-Project/SurfaceDuoDualBootKernelImagePatcher/releases/latest)
 - [mkbootimg](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/ImageResources/mkbootimg.py)
-- [unpack_bootimg.py](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/InstallWindows/Files/unpack_bootimg.py)
+- [unpack_bootimg.py](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/unpack_bootimg.py)
 - Python 3 (the one from the Microsoft Store will do just fine)
 - Windows Command Prompt, Linux is not required
 
