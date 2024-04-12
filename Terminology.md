@@ -14,6 +14,11 @@ This page helps define the name of a few boot mode/states and terminology you ma
 
 Bare Metal Recovery, also refered to incorrectly by Microsoft as a *Recovery Package* in the case of Surface Duo. These zip files are obtained primarly from https://aka.ms/sri, and only allow reflashing the Android Partition. They cannot be used to fix any issue that doesn't relate to modifying Android partition content such as a modified partition table or Windows being installed. Sideloading/Flashing those will never remove Windows, nor fix any partition layout kind of issues.
 
+## SFPD
+
+Surface Provisioning Data (SFPD) is a Surface Specific partition holding device unique factory authored calibration and provisioning data. It contains many things such as the device serial number, board number, chassis number, regulatory assets, screen alignement data, tokens, widevine authorization attestations, SecureProcessor initial NVRAM, Panel colorimetry calibration data & etc...
+This data normally cannot be edited on retail devices, and any attempt of doing so will blow a specific fuse rendering your device a complete paperweight. It should not be edited by force.
+
 ## Boot Modes
 
 ### Android™
