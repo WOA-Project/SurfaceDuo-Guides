@@ -1,1 +1,0 @@
-The Factory G6 Burner FW is meant to be used in conjunction with OneToolBox.exe to recalibrate existing Digitizer panels, or brand new panel equipment.
