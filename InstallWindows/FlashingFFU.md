@@ -66,9 +66,9 @@ Here's how to acquire an FFU file and the matching UEFI image for Surface Duo:
 ### Surface Duo (1st Gen)
 
 UEFI files:
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2406.36C.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2406.36C.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2406.36C.FD.for.making.your.own.Dual.Boot.Image.zip)
 
 FFU files:
 <table>
@@ -81,13 +81,13 @@ FFU files:
 <td>
 For 128GB variants
 
-[OEMEP_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMEP_128GB_HalfSplit.ffu)
+[OEMEP_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMEP_128GB_HalfSplit.ffu)
 
-Size: 6779731968 bytes (6465 MiB)
+Size: 6.54 GB
 
-SHA1: `C57A2B011F57ECFE9F1E4237D2B7411FCCC13123`
+SHA1: `4DAC5BDF3CEAC91CF6CEC837C9E62124B294652E`
 </td>
-<td>Windows 11 Version 24H2 (26100.1) (en-US)</td>
+<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
 <td><details>
 
 Assumed Compatibility with 256gb variants (may have issues but should work, if issues arise we're not responsible and you should be able to recover either way, the main issue is more the split being 64(Windows)/192(Android) than anything else!).
@@ -99,13 +99,13 @@ Assumed Compatibility with 256gb variants (may have issues but should work, if i
 <td>
 For 256GB variants
 
-[OEMEP_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMEP_256GB_HalfSplit.ffu)
+[OEMEP_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMEP_256GB_HalfSplit.ffu)
 
-Size: 6719864832 bytes (6408 MiB)
+Size: 6.48 GB
 
-SHA1: `DB3FE450EBD85575290EB9C8C40E67D74C8FEC00`
+SHA1: `03823926295BCD8E0F62B450BAAE4D27C2BAD797`
 </td>
-<td>Windows 11 Version 24H2 (26100.1) (en-US)</td>
+<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
 <td><details>
 
 No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo!
@@ -117,13 +117,13 @@ No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo!
 <td>
 4GB Android, everything else for Windows
 
-[OEMEP_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMEP_MaximizedForWindows.ffu)
+[OEMEP_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMEP_MaximizedForWindows.ffu)
 
-Size: 6733119488 bytes (6421 MiB)
+Size: 6.49 GB
 
-SHA1: `8B3332F95336B02A46DD674F9A28AB283DB907DC`
+SHA1: `3E86F9EA584B363BC96DD6CADFFB6B212ADA702E`
 </td>
-<td>Windows 11 Version 24H2 (26100.1) (en-US)</td>
+<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
 <td><details>
 
 Official Variant: 4GB only for Android, everything else for Windows, 256GB users may have to expand the MainOS partition using Disk Management in windows by using the "Extend Partition" option.
@@ -137,9 +137,9 @@ Official Variant: 4GB only for Android, everything else for Windows, 256GB users
 ### Surface Duo 2
 
 UEFI Files:
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.Fast.Boot.zip)
-- [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2406.36C.Fast.Boot.zip)
+- [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2406.36C.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2406.36C.FD.for.making.your.own.Dual.Boot.Image.zip)
 
 FFU Files
 <table>
@@ -152,13 +152,13 @@ FFU Files
 <td>
 For 128GB variants
 
-[OEMZE_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMZE_128GB_HalfSplit.ffu)
+[OEMZE_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMZE_128GB_HalfSplit.ffu)
 
-Size: 6376570880 bytes (6081 MiB)
+Size: 5.95 GB
 
-SHA1: `02BCC5F564237266E2A6E36C0C2CFD0A4ACB2A60`
+SHA1: `16442384F00F7BA5D0B8C5E5C7B43F6A35A37A67`
 </td>
-<td>Windows 11 Version 24H2 (26100.1) (en-US)</td>
+<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
 <td><details>
 
 Assumed Compatibility with 256gb and 512gb variants (may have issues but should work, if issues arise we're not responsible and you should be able to recover either way, the main issue is more the split being 64(Windows)/192(Android) than anything else!).
@@ -170,13 +170,13 @@ Assumed Compatibility with 256gb and 512gb variants (may have issues but should 
 <td>
 For 256GB variants
 
-[OEMZE_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMZE_256GB_HalfSplit.ffu)
+[OEMZE_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMZE_256GB_HalfSplit.ffu)
 
-Size: 6370099200 bytes (6075 MiB)
+Size: 5.95 GB
 
-SHA1: `8FE12AA2E3E44CA4541A0BE60B5CD6DF330E4DB7`
+SHA1: `0A387D025EF300297E7897D1E79D3D9FA48D13CC`
 </td>
-<td>Windows 11 Version 24H2 (26100.1) (en-US)</td>
+<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
 <td><details>
 
 No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo! Assumed Compatibility with 512gb variants (may have issues but should work, if issues arise we're not responsible and you should be able to recover either way, the main issue is more the split being different than anything else!). 
@@ -188,13 +188,13 @@ No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo! 
 <td>
 4GB Android, everything else for Windows
 
-[OEMZE_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2404.03/OEMZE_MaximizedForWindows.ffu)
+[OEMZE_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMZE_MaximizedForWindows.ffu)
 
-Size: 6379028480 bytes (6083 MiB)
+Size: 5.95 GB
 
-SHA1: `0F760AF40B9B7183B179EEAB75B4FD04C6E52BE8`
+SHA1: `152DBA85BF29ABC8817F0DB5A1F9DAA546B8AA67`
 </td>
-<td>Windows 11 Version 24H2 (26100.1) (en-US)</td>
+<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
 <td><details>
 
 Official Variant: 4GB only for Android, everything else for Windows, 256GB/512GB users may have to expand the MainOS partition using Disk Management in windows by using the "Extend Partition" option.
