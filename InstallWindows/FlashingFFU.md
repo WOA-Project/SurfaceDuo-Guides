@@ -200,13 +200,21 @@ Download WOA Device Manager using the link provided above, extract it, double ta
 
 Open WOA Device Manager.
 
+![Screenshot 2024-06-22 183133](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba7b4289-1c23-4138-9428-1d9e8c90af10)
+
 ## Getting to FFU Loader
 
 - Plug your device into your computer inside Android™
 
+![Screenshot 2024-06-22 183159](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7)
+
 - Go into the Switch Mode Section of WOA Device Manager
 
+![Screenshot 2024-06-22 183227](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563)
+
 - Click Switch to Windows mode
+
+![Screenshot 2024-06-22 183235](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77)
 
 - When the device shows the Rainbow color bars on its screen, Press the Volume Down Key on the side of your device til you see something like shown below on screen:
 
@@ -214,19 +222,33 @@ Open WOA Device Manager.
 
 - WOA Device Manager will detect your device in UFP mode
 
+![Screenshot 2024-06-22 183302](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461)
+
 Congratulations, you're now in FFU Loader.
 
 ## Flashing the Windows FFU Image
 
 - Go to the Flash Section of WOA Device Manager
 
+![Screenshot 2024-06-22 183326](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6773ecbb-0de3-4cd4-9aa3-76ac02d7a273)
+
 - Pick your FFU File, and click "Flash FFU Image"
 
-![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7770ef0a-62d9-49de-a9b0-f8e4f3a58933)
+![Screenshot 2024-06-22 183344](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b6fd0499-0c34-410c-9e2d-25b331b7a2be)
 
 - You should now see the device flashing on both your computer and on the device, wait til the process is complete. In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
 
+![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7770ef0a-62d9-49de-a9b0-f8e4f3a58933)
+
+![Screenshot 2024-06-22 183429](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0)
+
+![Screenshot 2024-06-22 184517](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6096f9e7-d16b-40c5-abfa-d8a740b35a8c)
+
 - Wait til the process is finished, and you should be back into Android™ or a boot failure screen. If you are seeing a boot failure option, see below section entitled "Reset Android™"
+
+![Screenshot 2024-06-22 184506](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4dfd039a-0e3d-4bd4-b429-b303edc57f0d)
+
+![Screenshot 2024-06-22 184530](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3c3e49e1-b991-42ac-93d7-14d9f615d721)
 
 ## Reset Android™
 
@@ -286,6 +308,10 @@ We are ready to boot for the first time!
 
 - Inside WOA Device Manager, go to switch mode, and select "Switch to Windows".
 
+![Screenshot 2024-06-22 183227](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a5fb15b1-6a43-45b5-b440-df243b076b9c)
+
+![Screenshot 2024-06-22 183235](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6)
+
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
 
 If you did everything right, Windows will now boot! Enjoy!
@@ -317,9 +343,15 @@ In case you want the dual boot option, then follow [this guide](/InstallWindows/
 
 - Plug your phone into your computer, inside Android™
 
+![Screenshot 2024-06-22 183159](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f66dfeff-f7c0-4c2f-a83a-ad103eae2003)
+
 - Inside WOA Device Manager, go to switch mode, and select "Switch to Windows".
 
+![Screenshot 2024-06-22 183227](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7a123c59-fa58-46a8-85f6-b715ac83ade3)
+
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
+
+![Screenshot 2024-06-22 183235](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6)
 
 If you did everything right, Windows will now boot! Enjoy!
 
