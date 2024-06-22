@@ -87,13 +87,13 @@ Here's how to acquire a Driver archive file and the matching UEFI image for Surf
 <tr>
 <td>
 
-[SurfaceDuo-Drivers-v2404.03C-Desktop-Epsilon.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/SurfaceDuo-Drivers-v2404.03C-Desktop-Epsilon.7z)
+[SurfaceDuo-Drivers-v2406.36-Desktop-Epsilon.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/SurfaceDuo-Drivers-v2406.36-Desktop-Epsilon.7z)
 </td>
 <td>
 
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
 </td>
 <td>Surface Duo (1st Gen)</td>
 <td>Windows 10 Version 2004 and higher</td>
@@ -105,13 +105,13 @@ N/A
 <tr>
 <td>
 
-[SurfaceDuo-Drivers-v2404.03C-Desktop-Epsilon.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/SurfaceDuo-Drivers-v2404.03C-Desktop-Epsilon.7z)
+[SurfaceDuo-Drivers-v2406.36-Desktop-Epsilon.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/SurfaceDuo-Drivers-v2406.36-Desktop-Epsilon.7z)
 </td>
 <td>
 
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Secure.Boot.Disabled.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Secure.Boot.Disabled.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.1st.Gen.UEFI-v2404.03C.Secure.Boot.Disabled.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Secure.Boot.Disabled.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Secure.Boot.Disabled.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Secure.Boot.Disabled.FD.for.making.your.own.Dual.Boot.Image.zip)
 </td>
 <td>Surface Duo (1st Gen)</td>
 <td>Windows 10 Version 1803 to Windows 10 Version 1909</td>

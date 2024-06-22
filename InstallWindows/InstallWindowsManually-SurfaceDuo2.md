@@ -87,13 +87,13 @@ Here's how to acquire a Driver archive file and the matching UEFI image for Surf
 <tr>
 <td>
 
-[SurfaceDuo-Drivers-v2404.03C-Desktop-Zeta.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/SurfaceDuo-Drivers-v2404.03C-Desktop-Zeta.7z)
+[SurfaceDuo-Drivers-v2406.36-Desktop-Zeta.7z](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/SurfaceDuo-Drivers-v2406.36-Desktop-Zeta.7z)
 </td>
 <td>
 
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.Fast.Boot.zip)
-- [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2404.03C/Surface.Duo.2.UEFI-v2404.03C.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.Fast.Boot.zip)
+- [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
 </td>
 <td>Surface Duo 2</td>
 <td>Windows 11 Version 24H2 and higher</td>
