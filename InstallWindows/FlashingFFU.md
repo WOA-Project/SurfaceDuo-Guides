@@ -238,17 +238,11 @@ Congratulations, you're now in FFU Loader.
 
 - You should now see the device flashing on both your computer and on the device, wait til the process is complete. In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
 
-![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7770ef0a-62d9-49de-a9b0-f8e4f3a58933)
+![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12)
 
 ![Screenshot 2024-06-22 183429](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0)
 
-![Screenshot 2024-06-22 184517](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6096f9e7-d16b-40c5-abfa-d8a740b35a8c)
-
 - Wait til the process is finished, and you should be back into Android™ or a boot failure screen. If you are seeing a boot failure option, see below section entitled "Reset Android™"
-
-![Screenshot 2024-06-22 184506](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4dfd039a-0e3d-4bd4-b429-b303edc57f0d)
-
-![Screenshot 2024-06-22 184530](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3c3e49e1-b991-42ac-93d7-14d9f615d721)
 
 ## Reset Android™
 
