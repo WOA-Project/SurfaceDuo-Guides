@@ -24,9 +24,6 @@ Table of Contents:
 
 > [!WARNING]
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-> - Do not run all commands at once.
-> - Do not commit *any* typo with *any* commands.
-> - Be familiar with command line interfaces.
 
 > [!IMPORTANT]
 > **THIS WILL WIPE ALL YOUR ANDROID™ DATA AND WINDOWS DATA!**
@@ -60,69 +57,7 @@ UEFI files:
 - [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Dual.Boot.zip)
 - [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
 
-FFU files:
-<table>
-<tr>
-<td>FFU File</td>
-<td>OS Version</td>
-<td>Notes</td>
-</tr>
-<tr>
-<td>
-For 128GB variants
-
-[OEMEP_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMEP_128GB_HalfSplit.ffu)
-
-Size: 6.54 GB
-
-SHA1: `4DAC5BDF3CEAC91CF6CEC837C9E62124B294652E`
-</td>
-<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
-<td><details>
-
-Assumed Compatibility with 256gb variants (may have issues but should work, if issues arise we're not responsible and you should be able to recover either way, the main issue is more the split being 64(Windows)/192(Android) than anything else!).
-
-1) After "Getting Ready" boot, on the second boot, the device may show a black screen, if this happens, press the power button once and it will continue to oobe after a minute. Be patient and don't press it more than once.
-</details></td>
-</tr>
-<tr>
-<td>
-For 256GB variants
-
-[OEMEP_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMEP_256GB_HalfSplit.ffu)
-
-Size: 6.48 GB
-
-SHA1: `03823926295BCD8E0F62B450BAAE4D27C2BAD797`
-</td>
-<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
-<td><details>
-
-No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo!
-
-1) After "Getting Ready" boot, on the second boot, the device may show a black screen, if this happens, press the power button once and it will continue to oobe after a minute. Be patient and don't press it more than once.
-</details></td>
-</tr>
-<tr>
-<td>
-4GB Android, everything else for Windows
-
-[OEMEP_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMEP_MaximizedForWindows.ffu)
-
-Size: 6.49 GB
-
-SHA1: `3E86F9EA584B363BC96DD6CADFFB6B212ADA702E`
-</td>
-<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
-<td><details>
-
-Official Variant: 4GB only for Android, everything else for Windows, 256GB users may have to expand the MainOS partition using Disk Management in windows by using the "Extend Partition" option.
-
-1) After "Getting Ready" boot, on the second boot, the device may show a black screen, if this happens, press the power button once and it will continue to oobe after a minute. Be patient and don't press it more than once.
-</details></td>
-</tr>
-</table>
-
+[FFU Files](https://fullflash.pvabel.net/LumiaWOA/)
 
 ### Surface Duo 2
 
@@ -131,152 +66,46 @@ UEFI Files:
 - [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.Dual.Boot.zip)
 - [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
 
-FFU Files
-<table>
-<tr>
-<td>FFU File</td>
-<td>OS Version</td>
-<td>Notes</td>
-</tr>
-<tr>
-<td>
-For 128GB variants
-
-[OEMZE_128GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMZE_128GB_HalfSplit.ffu)
-
-Size: 5.95 GB
-
-SHA1: `16442384F00F7BA5D0B8C5E5C7B43F6A35A37A67`
-</td>
-<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
-<td><details>
-
-Assumed Compatibility with 256gb and 512gb variants (may have issues but should work, if issues arise we're not responsible and you should be able to recover either way, the main issue is more the split being 64(Windows)/192(Android) than anything else!).
-
-1) After "Getting Ready" boot, on the second boot, the device may show a black screen, if this happens, press the power button once and it will continue to oobe after a minute. Be patient and don't press it more than once.
-</details></td>
-</tr>
-<tr>
-<td>
-For 256GB variants
-
-[OEMZE_256GB_HalfSplit.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMZE_256GB_HalfSplit.ffu)
-
-Size: 5.95 GB
-
-SHA1: `0A387D025EF300297E7897D1E79D3D9FA48D13CC`
-</td>
-<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
-<td><details>
-
-No Compatibility at all with 128GB, please do not flash on a 128GB Surface Duo! Assumed Compatibility with 512gb variants (may have issues but should work, if issues arise we're not responsible and you should be able to recover either way, the main issue is more the split being different than anything else!). 
-
-1) After "Getting Ready" boot, on the second boot, the device may show a black screen, if this happens, press the power button once and it will continue to oobe after a minute. Be patient and don't press it more than once.
-</details></td>
-</tr>
-<tr>
-<td>
-4GB Android, everything else for Windows
-
-[OEMZE_MaximizedForWindows.ffu](https://fullflash.pvabel.net/DuoWOA/v2406.36/OEMZE_MaximizedForWindows.ffu)
-
-Size: 5.95 GB
-
-SHA1: `152DBA85BF29ABC8817F0DB5A1F9DAA546B8AA67`
-</td>
-<td>Windows 11 Version 24H2 (26100.2) (en-US)</td>
-<td><details>
-
-Official Variant: 4GB only for Android, everything else for Windows, 256GB/512GB users may have to expand the MainOS partition using Disk Management in windows by using the "Extend Partition" option.
-
-1) After "Getting Ready" boot, on the second boot, the device may show a black screen, if this happens, press the power button once and it will continue to oobe after a minute. Be patient and don't press it more than once.
-</details></td>
-</tr>
-</table>
+[FFU Files](https://fullflash.pvabel.net/LumiaWOA/)
 
 ## Install WOA Device Manager
 
-Download WOA Device Manager using the link provided above
-
----
-
-Extract it
-
----
-
-Double tap the ```Install.cmd``` file
-
----
-
-Follow the on screen instructions.
-
----
-
-Open WOA Device Manager.
-
-![Screenshot 2024-06-22 183133](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba7b4289-1c23-4138-9428-1d9e8c90af10)
-
----
+| Steps | Illustration |
+|-|-|
+| Download WOA Device Manager using [the link provided above](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/WOA_Device_Manager.zip) | |
+| Extract it | |
+| Double tap the ```Install.cmd``` file | |
+| Follow the on screen instructions. | |
+| Open WOA Device Manager. | <img align="right" width="425" alt="Screenshot 2024-06-22 183133" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba7b4289-1c23-4138-9428-1d9e8c90af10"> |
 
 Congratulations, you successfully installed WOA Device Manager.
 
 ## Getting to FFU Loader
 
-- Plug your device into your computer inside Android™
+| Steps | Illustration |
+|-|-|
+| Plug your device into your computer inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7"> |
+| Go into the Switch Mode Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563"> |
+| Click Switch to Windows mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77"> |
+| When the device shows the Rainbow color bars on its screen, Press the Volume Down Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
+| WOA Device Manager will detect your device in UFP mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183302" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461"> |
 
-![Screenshot 2024-06-22 183159](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7)
-
----
-
-- Go into the Switch Mode Section of WOA Device Manager
-
-![Screenshot 2024-06-22 183227](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563)
-
----
-
-- Click Switch to Windows mode
-
-![Screenshot 2024-06-22 183235](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77)
-
----
-
-- When the device shows the Rainbow color bars on its screen, Press the Volume Down Key on the side of your device til you see something like shown below on screen:
-
-![Surface Duo in FFU Loader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb)
-
----
-
-- WOA Device Manager will detect your device in UFP mode
-
-![Screenshot 2024-06-22 183302](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461)
-
----
+> [!TIP]
+> In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
 
 Congratulations, you're now in FFU Loader.
 
 ## Flashing the Windows FFU Image
 
-- Go to the Flash Section of WOA Device Manager
+| Steps | Illustration |
+|-|-|
+| Go to the Flash Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183326" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6773ecbb-0de3-4cd4-9aa3-76ac02d7a273"> |
+| Pick your FFU File, and click "Flash FFU Image" | <img align="right" width="425" alt="Screenshot 2024-06-22 183344" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b6fd0499-0c34-410c-9e2d-25b331b7a2be"> |
+| You should now see the device flashing on both your computer and on the device, wait til the process is complete. | <p float="left"> <img width="45%" alt="Surface Duo in FFU Loader mode, flashing" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12"> <img width="45%" alt="Screenshot 2024-06-22 183429" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0"> </p> |
+| Wait til the process is finished, and you should be back into Android™ or a boot failure screen. | |
 
-![Screenshot 2024-06-22 183326](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6773ecbb-0de3-4cd4-9aa3-76ac02d7a273)
-
----
-
-- Pick your FFU File, and click "Flash FFU Image"
-
-![Screenshot 2024-06-22 183344](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b6fd0499-0c34-410c-9e2d-25b331b7a2be)
-
----
-
-- You should now see the device flashing on both your computer and on the device, wait til the process is complete. In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
-
-![Surface Duo in FFU Loader mode, flashing](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12)
-
-![Screenshot 2024-06-22 183429](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0)
-
----
-
-- Wait til the process is finished, and you should be back into Android™ or a boot failure screen. If you are seeing a boot failure option, see below section entitled "Reset Android™"
+> [!TIP]
+> If you are seeing a boot failure option, see below section entitled "Reset Android™"
 
 ## Reset Android™
 
@@ -284,100 +113,39 @@ If this is your first time flashing this FFU file, or you're flashing a differen
 If this isn't your case, feel free to ignore this section, Android™ should still boot fine.
 If this is your case, when booting Android™, you will get notified Android cannot boot anymore. In this screen, you must select "Factory Reset" instead of "Try again" or else, Android™ will refuse to boot again.
 
----
+You should now be seeing the Android™ Out of Box Experience (OOBE).
 
-- You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
-
-![Android™ - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
-
----
-
-- Assuming your Surface Duo is booted to Android™, plugged to your PC
-
-- Using the Microsoft Launcher, find the settings app
-
-![A1 Android™ - Open Settings](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19)
-
----
-
-- Open the Android™ Settings app
-
-![A2 Android™ - Settings Opened](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6)
-
----
-
-- Scroll down to the about section, and open it
-
-![A3 Android™ - Settings About](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118)
-
----
-
-- Scroll all the way down til you see the Build Number field
-
-![A4 Android™ - Settings About Down](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699)
-
----
-
-- Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps
-
-![A5 Android™ - Settings About Down Tap Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d)
-
----
-
-- Once done tapping 7 times, you should be seeing this popup instead
-
-![A6 Android™ - Settings About Down Tap Dev Done](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1)
-
----
-
-- Now go to the System section, you should see a new Developer options section like shown below
-
-![A7 Android™ - Settings System with Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7)
-
----
-
-- Go to the Developer options section
-
-![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
-
----
-
-- Scroll all the way down til you see the "USB debugging" option
-
-![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
-
----
-
-- And turn on the "USB debugging" option
-
-![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
+| Steps | Illustration |
+|-|-|
+| Setup your phone to confirm it works correctly. | <img align="right" width="425" alt="Android™ - OOBE" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3"> |
+| Assuming your Surface Duo is booted to Android™, plugged to your PC, Using the Microsoft Launcher, find the settings app | <img align="right" width="425" alt="A1 Android™ - Open Settings" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19"> |
+| Open the Android™ Settings app | <img align="right" width="425" alt="A2 Android™ - Settings Opened" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6"> |
+| Scroll down to the about section, and open it | <img align="right" width="425" alt="A3 Android™ - Settings About" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118"> |
+| Scroll all the way down til you see the Build Number field | <img align="right" width="425" alt="A4 Android™ - Settings About Down" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699"> |
+| Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps | <img align="right" width="425" alt="A5 Android™ - Settings About Down Tap Dev" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d"> |
+| Once done tapping 7 times, you should be seeing this popup instead | <img align="right" width="425" alt="A6 Android™ - Settings About Down Tap Dev Done" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1"> |
+| Now go to the System section, you should see a new Developer options section like shown below | <img align="right" width="425" alt="A7 Android™ - Settings System with Dev" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7"> |
+| Go to the Developer options section | <img align="right" width="425" alt="Android™ Settings System Dev Options" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0"> |
+| Scroll all the way down til you see the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0"> |
+| And turn on the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option Confirmation" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2"> |
 
 ## Boot Windows 🚀
 
 We are ready to boot for the first time!
 
-- Inside WOA Device Manager, go to switch mode, and select "Switch to Windows".
-
-![Screenshot 2024-06-22 183227](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a5fb15b1-6a43-45b5-b440-df243b076b9c)
-
-![Screenshot 2024-06-22 183235](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6)
-
----
+| Steps | Illustration |
+|-|-|
+| Inside WOA Device Manager, go to switch mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a5fb15b1-6a43-45b5-b440-df243b076b9c"> |
+| and select "Switch to Windows". | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6"> | 
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
 
----
-
 If you did everything right, Windows will now boot! Enjoy!
-
----
-
-> [!NOTE]
-> If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
 Let Windows set itself up, and come back once you're on the Windows Desktop on your Surface Duo
 
----
+> [!NOTE]
+> If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
 
 > [!NOTE]
 > If you get a BSOD (bugcheck screen) during initial setup, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
@@ -400,21 +168,16 @@ In case you want the dual boot option, then follow [this guide](/InstallWindows/
   <summary>In case you want to manually boot each time: (<b>Click to expand</b>)</summary>
   <p>
 
-- Plug your phone into your computer, inside Android™
-
-![Screenshot 2024-06-22 183159](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f66dfeff-f7c0-4c2f-a83a-ad103eae2003)
-
-- Inside WOA Device Manager, go to switch mode, and select "Switch to Windows".
-
-![Screenshot 2024-06-22 183227](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7a123c59-fa58-46a8-85f6-b715ac83ade3)
+| Steps | Illustration |
+|-|-|
+| Plug your phone into your computer, inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f66dfeff-f7c0-4c2f-a83a-ad103eae2003"> |
+| Inside WOA Device Manager, go to switch mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a5fb15b1-6a43-45b5-b440-df243b076b9c"> |
+| and select "Switch to Windows". | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6"> | 
 
 This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
 
-![Screenshot 2024-06-22 183235](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6)
-
 If you did everything right, Windows will now boot! Enjoy!
 
-**Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
   </p>
 </details>
 
