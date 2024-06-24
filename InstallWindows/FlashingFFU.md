@@ -101,7 +101,8 @@ Congratulations, you're now in FFU Loader.
 |-|-|
 | Go to the Flash Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183326" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6773ecbb-0de3-4cd4-9aa3-76ac02d7a273"> |
 | Pick your FFU File, and click "Flash FFU Image" | <img align="right" width="425" alt="Screenshot 2024-06-22 183344" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b6fd0499-0c34-410c-9e2d-25b331b7a2be"> |
-| You should now see the device flashing on both your computer and on the device, wait til the process is complete. | <p float="left"> <img width="45%" alt="Surface Duo in FFU Loader mode, flashing" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12"> <img width="45%" alt="Screenshot 2024-06-22 183429" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0"> </p> |
+| You should now see the device flashing on both your computer | <img align="right" width="425" alt="Screenshot 2024-06-22 183429" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0"> |
+| and on the device, wait til the process is complete. | <img align="right" width="425" alt="Surface Duo in FFU Loader mode, flashing" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12"> |
 | Wait til the process is finished, and you should be back into Android™ or a boot failure screen. | |
 
 > [!TIP]
