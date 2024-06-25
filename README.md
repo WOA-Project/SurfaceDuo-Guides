@@ -9,7 +9,7 @@ Guides for running Windows on Surface Duo.
 > [!NOTE]
 > Welcome 🥰! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further:
 >
-> ℹ️ We recommend you try this on a Surface Duo (1st Gen) device. While Surface Duo 2 is supported, it currently is in a proof of concept stage and not as advaced as the first device. For example, only the basic SoC buses work, there's no WiFi, no Cellular, no Sensors, no dual displays, no GPU on Surface Duo 2.
+> ℹ️ We recommend you try this on a Surface Duo (1st Gen) device. While Surface Duo 2 is supported, it currently is in a proof of concept stage and not as advanced as the first device. For example, only the basic SoC buses work, there's no WiFi, no Cellular, no Sensors, no dual displays, no GPU on Surface Duo 2.
 >
 > ℹ️ We recommend you know what you're getting into here. You need to know a bit about command line interfaces, Windows technical aspects, as this is not for the faint of heart yet! We won't teach you how to port the OS yourself, we've done this for you, but this is not for beginners or common users either. Tech Savvy people only or technical people only please, or you'll regret it or commit mistakes that may take some time to solve with us!
 >
