@@ -56,7 +56,7 @@ UEFI files:
 - [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Dual.Boot.zip)
 - [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
 
-[FFU Files](https://fullflash.pvabel.net/LumiaWOA/)
+[FFU Files](https://fullflash.pvabel.net/DuoWOA/)
 
 ### Surface Duo 2
 
@@ -65,7 +65,7 @@ UEFI Files:
 - [Dual Boot for FW 2023.501.159 (February 2024 OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.Dual.Boot.zip)
 - [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.2.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
 
-[FFU Files](https://fullflash.pvabel.net/LumiaWOA/)
+[FFU Files](https://fullflash.pvabel.net/DuoWOA/)
 
 ## Install WOA Device Manager
 
