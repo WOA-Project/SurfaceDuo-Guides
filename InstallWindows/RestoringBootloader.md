@@ -12,7 +12,6 @@ Table of Contents:
 
 ## Files/Tools Needed 📃
 
-- [WOA Device Manager](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/WOA_Device_Manager.zip)
 - A Windows PC
 
 ## Disclaimers
@@ -41,13 +40,22 @@ A normal Surface Duo, with Android™ only. Just like you had it before installi
 
 If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/InstallWindows/DualBoot.md)
 
+## Install WOA Device Manager
+
+| Steps | Illustration |
+|-|-|
+| Visit WOA Device Manager in the Microsoft Store | <a href="https://apps.microsoft.com/detail/WOA%20Device%20Manager/9pf2xmfnsbmj?mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/></a> |
+| Tap the View in Store button | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1be9c5fa-5434-4167-b23c-1899e0192134"> |
+| Tap Install | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4ffe3b30-e8a7-44a4-a7a2-57e1f105a9ab"> |
+| Wait til the installation is completed | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6c7ef3dd-13b3-4371-bae4-f6629a61cc71"> |
+| And click open | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/26e48e1b-96b8-4c87-a2a5-4d1e0049f7e9"> |
+| WOA Device Manager should now open on your screen. | <img align="right" width="425" alt="Screenshot 2024-06-22 183133" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba7b4289-1c23-4138-9428-1d9e8c90af10"> |
+
+Congratulations, you successfully installed WOA Device Manager.
+
 ## In order to relock the bootloader
 
 - Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
-
-- Open WOA Device Manager
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/376ef8db-a1c1-4031-902a-b5a028d4eb7d)
 
 - Start by turning on your Surface Duo into Android™, and unlock it
 
