@@ -87,7 +87,7 @@ Congratulations, you successfully installed WOA Device Manager.
 | Plug your device into your computer inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7"> |
 | Go into the Switch Mode Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563"> |
 | Click Switch to Windows mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77"> |
-| When the device shows the Rainbow color bars on its screen, Press the Volume Down Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
+| When the device shows the Andromeda Cat with Green Flag pole on its screen, Press the Volume Up Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
 | WOA Device Manager will detect your device in UFP mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183302" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461"> |
 
 > [!TIP]

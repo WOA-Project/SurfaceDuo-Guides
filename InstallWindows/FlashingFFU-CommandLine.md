@@ -257,7 +257,7 @@ _Image of what you should see right now: Surface Duo in Bootloader mode_
 fastboot boot uefi.img
 ```
 
-- Press the Volume Down Key on the side of your device til you see something like shown below on screen:
+- Press the Volume Up Key on the side of your device til you see something like shown below on screen:
 
 ![Surface Duo in FFU Loader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb)
 
@@ -285,7 +285,7 @@ ImageUtility.exe FlashDevice -Path <Path to the FFU File you downloaded>
 ImageUtility.exe RebootDevice
 ```
 
-- In case the bootloader menu does not automatically come up, press the volume down when running above command to be 100% sure you go into the bootloader menu.
+- In case the bootloader menu does not automatically come up, press the Volume Down when running above command to be 100% sure you go into the bootloader menu.
 
 - Run the following two commands:
 
