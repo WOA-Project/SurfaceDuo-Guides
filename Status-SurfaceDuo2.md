@@ -62,17 +62,21 @@ _No ETA will be provided for **any** of these development phases_
 
 ## Surface Accessory Compatibility
 
-| Accessory Model                   | Description                                                                                                    | Working state |
-|-----------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|
-| ✏️ Surface Pen V2 (Model 1616)    | Automatic Bluetooth Pairing, Bluetooth pairing (Unlike in Android). Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side buttons supported (remappable in the settings app). | ✅           |
-| ✏️ Surface Pen V3 (Model 1710)    | Automatic Bluetooth Pairing, Bluetooth pairing (Unlike in Android). Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). | ✅           |
-| ✏️ Surface Pen V4 (Model 1776)    | Firmware Updates available within Windows (Unlike in Android), Automatic Bluetooth Pairing, Bluetooth pairing (Unlike in Android). Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). | ✅           |
-| ✏️ Surface Slim Pen (Model 1853)  | Firmware Updates available within Windows (Unlike in Android), Automatic Bluetooth Pairing, Bluetooth pairing (Unlike in Android). Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). | ✅           |
-| ✏️ Surface Slim Pen 2 (Model 1962) | Firmware Updates available within Windows (Unlike in Android), Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. Vibration feedback supported. | ✅           |
-| ✏️ Surface Hub Pen                | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
-| ✏️ Surface Hub 2 Pen              | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
-| ✏️ Surface Classroom Pen          | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
-| ✏️ Surface Classroom Pen 2        | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
+### ✏️ Surface Pens
+
+| Name                    | Model | Supported? | Firmware Updatable? | Pairable?     | Auto Pairable? | Pressure Sensitivity | Tilt Sensitivity | Hover | Eraser | Side Button | Secondary Side Button | Zero force inking | Pressure Configurable? | Tactile signals | Notes |
+|-------------------------|-------|------------|---------------------|---------------|----------------|----------------------|------------------|-------|--------|-------------|-----------------------|-------------------|------------------------|-----------------|-------|
+| Surface Pen V2          | 1616  | ✅         | ❌                 | ✅            | ❌            | 256 levels           | Not applicable   | ✅    | ✅    | ✅          | ✅                   | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Pen V3          | 1710  | ✅         | ❌                 | ✅            | ❌            | 4096 levels          | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Pen V4          | 1776  | ✅         | ✅                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Slim Pen        | 1853  | ✅         | ✅                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Slim Pen 2      | 1962  | ✅         | ✅                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ✅                | ✅ (Surface App)      | ✅             | N/A   |
+| Surface Hub Pen         | 1640  | ✅         | ❌                 | ✅            | ❌            | 256 levels           | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Hub 2 Pen       | 1865  | ✅         | ❌                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ✅                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Classroom Pen   | 1896  | ✅         | Not applicable     | Not applicable | Not applicable | 1024 levels          | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Surface Classroom Pen 2 | 1896  | ✅         | Not applicable     | Not applicable | Not applicable | 4096 levels          | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+
+### Others
 
 | Accessory Model                   | Description                                                                                                    | Working state |
 |-----------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|
