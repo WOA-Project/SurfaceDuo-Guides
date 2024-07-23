@@ -73,7 +73,7 @@ _No ETA will be provided for **any** of these development phases_
 | ✏️ Surface Hub 2 Pen              |                                                                                                                | ✅           |
 | ✏️ Surface Classroom Pen          |                                                                                                                | ✅           |
 | ✏️ Surface Classroom Pen 2        |                                                                                                                | ✅           |
-| 🅿️ Surface UCB-C Audio Adapter    |                                                                                                                | ✅           |
+| 🅿️ Surface USB-C Audio Adapter    |                                                                                                                | ✅           |
 | 🅿️ Surface Thunderbolt 4 Dock     | No thunderbolt 4 support (unsupported by the hardware itself), USB 3 supported, Firmware updates available in the Surface App, Display out not functional due to USB C Video out not being functional. | ✅           |
 | 🅿️ Microsoft HD500 Continuum Dock | Untested, Display out not functional due to USB C Video out not being functional.                              | ❓           |
 | 🧳 Surface Travel Hub             | USB 3 supported, Firmware updates available via drivers, Display out not functional due to USB C Video out not being functional. | ✅           |
