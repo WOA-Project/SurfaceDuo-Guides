@@ -60,6 +60,28 @@ _No ETA will be provided for **any** of these development phases_
 | 🔵 Bluetooth           | Requires Clock Controller fixes                                                                                           | ❌             |
 | 🧬 Fingerprint scanner | Requires Secure FPC Applet Interface                                                                                      | ❌             |
 
+## Surface Accessory Compatibility
+
+| Accessory Model                   | Description                                                                                                    | Working state |
+|-----------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|
+| ✏️ Surface Pen V2                 |                                                                                                                | ✅           |
+| ✏️ Surface Pen V3                 |                                                                                                                | ✅           |
+| ✏️ Surface Pen V4                 |                                                                                                                | ✅           |
+| ✏️ Surface Slim Pen               |                                                                                                                | ✅           |
+| ✏️ Surface Slim Pen 2             |                                                                                                                | ✅           |
+| ✏️ Surface Hub Pen                |                                                                                                                | ✅           |
+| ✏️ Surface Hub 2 Pen              |                                                                                                                | ✅           |
+| ✏️ Surface Classroom Pen          |                                                                                                                | ✅           |
+| ✏️ Surface Classroom Pen 2        |                                                                                                                | ✅           |
+| 🅿️ Surface UCB-C Audio Adapter    |                                                                                                                | ✅           |
+| 🅿️ Surface Thunderbolt 4 Dock     | No thunderbolt 4 support (unsupported by the hardware itself), USB 3 supported, Firmware updates available in the Surface App, Display out not functional due to USB C Video out not being functional. | ✅           |
+| 🅿️ Microsoft HD500 Continuum Dock | Untested, Display out not functional due to USB C Video out not being functional.                              | ❓           |
+| 🧳 Surface Travel Hub             | USB 3 supported, Firmware updates available via drivers, Display out not functional due to USB C Video out not being functional. | ✅           |
+| 🔈 Microsoft Audio Dock           | USB 3 supported, Firmware updates available via drivers, Display out not functional due to USB C Video out not being functional. | ✅           |
+| 📔 Surface Pen Cover              |                                                                                                                | ❌           |
+| 🔈 Microsoft Modern USB-C Speaker | Untested                                                                                                       | ❓           |
+| 📺 Microsoft Presenter+           | Untested                                                                                                       | ❓           |
+
 ---
 
 _**© 2020-2024 The Duo WOA Authors**_
