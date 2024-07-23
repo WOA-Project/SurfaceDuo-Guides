@@ -78,9 +78,12 @@ Global progress: 80.88%
 | ✏️ Surface Hub 2 Pen              | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
 | ✏️ Surface Classroom Pen          | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
 | ✏️ Surface Classroom Pen 2        | Automatic Bluetooth Pairing. Full Pressure sensitivity support, tilt, hover, ink acceleration. Eraser and side button supported (remappable in the settings app). Pressure settings configurable in the Surface App. | ✅           |
+
+| Accessory Model                   | Description                                                                                                    | Working state |
+|-----------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|
 | 🔌 Surface Slim Pen Charger       | Firmware Updates available within Windows (Unlike in Android) (Can be used to enable charging Surface Slim Pen 2 or newer pens on outdated charging cradles), Automatic Bluetooth Pairing, Automatic Device wakeup on pen removal from the cradle. | ✅           |
-| 🔌 Surface Dial                   | No support for on screen radial ui yet.                                                                        | ✅           |
-| 🅿️ Surface USB-C Audio Adapter    |                                                                                                                | ✅           |
+| 🛞 Surface Dial                   | No support for on screen radial ui yet.                                                                        | ✅           |
+| 🎧 Surface USB-C Audio Adapter    |                                                                                                                | ✅           |
 | 🅿️ Surface Thunderbolt 4 Dock     | No thunderbolt 4 support (unsupported by the hardware itself), USB 3 supported, Firmware updates available in the Surface App, Display out not functional due to USB C Video out not being functional. | ✅           |
 | 🅿️ Microsoft HD500 Continuum Dock | Untested, Display out not functional due to USB C Video out not being functional.                              | ❓           |
 | 🧳 Surface Travel Hub             | USB 3 supported, Firmware updates available via drivers, Display out not functional due to USB C Video out not being functional. | ✅           |
