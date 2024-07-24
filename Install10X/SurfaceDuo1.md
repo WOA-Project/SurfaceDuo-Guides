@@ -43,7 +43,7 @@ Android™ will boot normally, and you will have to use a PC to boot Windows whe
 
 ## Unlocking the Bootloader
 
-If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader.md) guide for Surface Duo. Come back once you're done. If you already followed this guide, please skip the unlocking section.
+If not already done, please first proceed with the [Unlocking the Bootloader](/InstallWindows/UnlockingBootloader.md) guide for Surface Duo. Come back once you're done. If you already followed this guide, please skip the unlocking section.
 
 ## Acquiring all files
 
