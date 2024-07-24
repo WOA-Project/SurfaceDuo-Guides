@@ -1,4 +1,4 @@
-# Reinstall Windows on Surface Duo 2
+# Reinstall Windows on Surface Duo (1st Gen)
 
 ## Files/Tools Needed 📃
 
@@ -6,25 +6,25 @@
 
 UEFI Image:
 
-| File Name                        | Target Device |
-|----------------------------------|---------------|
-| Surface.Duo.2.UEFI.Fast.Boot.zip | Surface Duo 2 |
+| File Name                              | Target Device         |
+|----------------------------------------|-----------------------|
+| Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip | Surface Duo (1st Gen) |
 
 Windows Drivers:
 
-| File Name                                    | Target Device |
-|----------------------------------------------|---------------|
-| SurfaceDuo-Drivers-v2XXX.XX-Desktop-Zeta.zip | Surface Duo 2 |
+| File Name                                       | Target Device         |
+|-------------------------------------------------|-----------------------|
+| SurfaceDuo-Drivers-v2XXX.XX-Desktop-Epsilon.zip | Surface Duo (1st Gen) |
 
 - TWRP image:
 
 | File Name                                       | Target Device         |
 |-------------------------------------------------|-----------------------|
-| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
+| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
 
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/msc.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](/InstallWindows/ISO/GetWindows.md)
+- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](/Install/Client/ISO/GetWindows.md)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 ## Disclaimers
@@ -36,7 +36,7 @@ Windows Drivers:
 > - Do not run all commands at once.
 > - Do not commit *any* typo with *any* commands.
 > - Be familiar with command line interfaces.
-> - When using TWRP, it is normal and expected for the phone to be detected as an Asus phone and for touch to not work.
+> - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
 
 > [!IMPORTANT]
 > **THIS WILL WIPE ALL YOUR WINDOWS DATA**
@@ -110,7 +110,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy as path"
+- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 
@@ -172,7 +172,7 @@ Now the Windows Partition on your Surface Duo should be empty. Let's go ahead an
 
 ## Installing Windows
 
-- We will need our install.wim file now. If you haven't it already, you can [use this guide](/InstallWindows/ISO/GetWindows.md). When you are ready, run these commands:
+- We will need our install.wim file now. If you haven't it already, you can [use this guide](/Install/Client/ISO/GetWindows.md). When you are ready, run these commands:
 
 ```batch
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
@@ -226,9 +226,9 @@ You'll have two methods of booting Windows.
 
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
-    - Cons: Every time you update Android™, you'll have to follow [this guide](/InstallWindows/DualBoot.md)
+    - Cons: Every time you update Android™, you'll have to follow [this guide](/Install/DualBoot.md)
 
-In case you want the dual boot option, then follow [this guide](/InstallWindows/DualBoot.md)
+In case you want the dual boot option, then follow [this guide](/Install/DualBoot.md)
 
 ---
 <details>

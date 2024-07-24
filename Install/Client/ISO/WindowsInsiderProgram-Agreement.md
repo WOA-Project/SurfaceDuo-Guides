@@ -63,8 +63,8 @@ By signing-up to participate in the Program, you represent that: 1) you are the 
 
 ## Choice
 
-- [I accept above terms and conditions](/InstallWindows/ISO/WindowsInsiderProgram-Channels.md)
-- [I deny above terms and conditions](/InstallWindows/ISO/GetWindows.md)
+- [I accept above terms and conditions](/Install/Client/ISO/WindowsInsiderProgram-Channels.md)
+- [I deny above terms and conditions](/Install/Client/ISO/GetWindows.md)
 
 ---
 

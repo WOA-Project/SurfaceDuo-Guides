@@ -10,7 +10,7 @@ It depends on how you have set up your device.
 
 - If you **have** installed the Dual Boot package:
 
-⚠️ Yes, but you'll have to follow the [Dual Boot guide](/InstallWindows/DualBoot.md) again. The boot image needs to be adapted for each Android™ version that gets released. Please note that after updating Android™, you won't be able to boot it anymore until you follow the guide again.
+⚠️ Yes, but you'll have to follow the [Dual Boot guide](/Install/DualBoot.md) again. The boot image needs to be adapted for each Android™ version that gets released. Please note that after updating Android™, you won't be able to boot it anymore until you follow the guide again.
 
 ## Do you know if Microsoft Corporation had Windows running on Surface Duo?
 

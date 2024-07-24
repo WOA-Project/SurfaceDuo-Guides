@@ -4,23 +4,23 @@ Welcome!
 
 ## Installing Windows
 
-- [Surface Duo (1st Gen)](/InstallWindows/InstallWindows-SurfaceDuo1.md)
-- [Surface Duo 2 (Expert users only, extremely early and rough, not usable at all)](/InstallWindows/InstallWindows-SurfaceDuo2.md)
+- [Surface Duo (1st Gen)](/Install/Client/InstallWindows-SurfaceDuo1.md)
+- [Surface Duo 2 (Expert users only, extremely early and rough, not usable at all)](/Install/Client/InstallWindows-SurfaceDuo2.md)
 
 ## Reinstalling Windows if it was already installed
 
-- [Surface Duo (1st Gen)](/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
-- [Surface Duo 2](/InstallWindows/ReinstallWindows-SurfaceDuo2.md)
+- [Surface Duo (1st Gen)](/Install/Client/ReinstallWindows-SurfaceDuo1.md)
+- [Surface Duo 2](/Install/Client/ReinstallWindows-SurfaceDuo2.md)
 
 ## Installing and Uninstalling Dual Boot
 
-- [Surface Duo (1st Gen)](/InstallWindows/DualBoot.md)
-- [Surface Duo 2](/InstallWindows/DualBoot.md)
+- [Surface Duo (1st Gen)](/Install/DualBoot.md)
+- [Surface Duo 2](/Install/DualBoot.md)
 
 ## Uninstalling Windows without dual boot installed
 
-- [Surface Duo (1st Gen)](/InstallWindows/Uninstall-SurfaceDuo1.md)
-- [Surface Duo 2](/InstallWindows/Uninstall-SurfaceDuo2.md)
+- [Surface Duo (1st Gen)](/Install/Uninstall-SurfaceDuo1.md)
+- [Surface Duo 2](/Install/Uninstall-SurfaceDuo2.md)
 
 ## Updating Drivers and/or UEFI
 

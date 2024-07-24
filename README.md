@@ -18,26 +18,24 @@ Guides for running Windows on Surface Duo.
 ## Main Guides
 
 - [Install Windows](/InstallWindows.md)
-- [Install Windows 10X (Surface Duo (1st Gen) Only)](/Install10X/SurfaceDuo1.md)
+- [Install Windows 10X (Surface Duo (1st Gen) Only)](/Install/10X/SurfaceDuo1.md)
 
 ## Additional Guides:
 
-- [Create a Windows ISO with UUPMediaCreator](/InstallWindows/ISO/GetWindows.md)
+- [Create a Windows ISO with UUPMediaCreator](/Install/Client/ISO/GetWindows.md)
 - [Activate Windows on your Surface Duo](https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227)
 - Uninstall Windows and only keep Android™:
-    - [Surface Duo (1st Gen)](/InstallWindows/Uninstall-SurfaceDuo1.md)
-    - [Surface Duo 2](/InstallWindows/Uninstall-SurfaceDuo2.md)
-- [Dual Boot between Android™ and Windows without the need of another Computer](/InstallWindows/DualBoot.md)
+    - [Surface Duo (1st Gen)](/Install/Uninstall-SurfaceDuo1.md)
+    - [Surface Duo 2](/Install/Uninstall-SurfaceDuo2.md)
+- [Dual Boot between Android™ and Windows without the need of another Computer](/Install/DualBoot.md)
 - Reinstall Windows:
-    - [Surface Duo (1st Gen)](/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
-    - [Surface Duo 2](/InstallWindows/ReinstallWindows-SurfaceDuo2.md)
-- [Making Cellular work on Sim Unlocked AT&T Surface Duo (1st Gen) devices](/InstallWindows/ATTCellular-SurfaceDuo1.md)
+    - [Surface Duo (1st Gen)](/Install/Client/ReinstallWindows-SurfaceDuo1.md)
+    - [Surface Duo 2](/Install/Client/ReinstallWindows-SurfaceDuo2.md)
 
 ## More Resources:
 
 - [Frequently Asked Questions](/FAQ.md)
 - [Current Status of the Windows Port](/Status.md)
-- [Restore the Microsoft Store on Windows](/RestoreMicrosoftStore.md)
 - [Extract boot.img or other partitions](/Other/ExtractingPartitions.md)
 
 ## Contact

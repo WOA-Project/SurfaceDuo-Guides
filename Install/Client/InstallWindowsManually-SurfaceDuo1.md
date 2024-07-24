@@ -41,7 +41,7 @@ Windows Drivers:
 
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/msc.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](/InstallWindows/ISO/GetWindows.md)
+- An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](/Install/Client/ISO/GetWindows.md)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 ## Disclaimers
@@ -160,11 +160,11 @@ Save the file on your computer, and extract the zip file by opening it, and sele
 
 ## Unlocking the Bootloader
 
-If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader.md) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please skip the unlocking section.
+If not already done, please first proceed with the [Unlocking the Bootloader](/Install/UnlockingBootloader.md)) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please skip the unlocking section.
 
 ## Partitioning
 
-If not already done, please proceed with the [Partitioning](Partitioning-SurfaceDuo1.md) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please instead follow the [Reinstall Windows](ReinstallWindows-SurfaceDuo1.md) guide, not this one.
+If not already done, please proceed with the [Partitioning](/Install/Client/Partitioning-SurfaceDuo1.md) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please instead follow the [Reinstall Windows](/Install/Client/ReinstallWindows-SurfaceDuo1.md) guide, not this one.
 
 ## Getting to Mass Storage Mode
 
@@ -241,7 +241,7 @@ You will be able to recognize the partitions we made earlier by their size. take
 > [!WARNING]
 From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.
 
-- We will need our install.wim file now. If you haven't it already, you can [use this guide](/InstallWindows/ISO/GetWindows.md). When you are ready, run these commands:
+- We will need our install.wim file now. If you haven't it already, you can [use this guide](/Install/Client/ISO/GetWindows.md). When you are ready, run these commands:
 
 ```batch
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
@@ -320,9 +320,9 @@ You'll have two methods of booting Windows.
 
 - Enabling Dual Boot
     - Pros: You'll be able to boot Windows directly from the device
-    - Cons: Every time you update Android™, you'll have to follow [this guide](/InstallWindows/DualBoot.md)
+    - Cons: Every time you update Android™, you'll have to follow [this guide](/Install/DualBoot.md)
 
-In case you want the dual boot option, then follow [this guide](/InstallWindows/DualBoot.md)
+In case you want the dual boot option, then follow [this guide](/Install/DualBoot.md)
 
 ---
 <details>

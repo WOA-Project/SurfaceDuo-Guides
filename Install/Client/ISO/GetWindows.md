@@ -10,9 +10,9 @@ First of all, please check the compatibility list for your Surface Duo model [he
 
 Are you part of the [Windows Insider Program](https://insider.windows.com)? (_**Optional!**_ Do not register if you are not registered, this is not required.)
 
-- [No](/InstallWindows/ISO/WindowsRetail-Channels.md)
-- [Yes (I do not want to use Windows Insider Program builds)](/InstallWindows/ISO/WindowsRetail-Channels.md)
-- [Yes (I want to use Windows Insider Program builds)](/InstallWindows/ISO/WindowsInsiderProgram-Agreement.md)
+- [No](/Install/Client/ISO/WindowsRetail-Channels.md)
+- [Yes (I do not want to use Windows Insider Program builds)](/Install/Client/ISO/WindowsRetail-Channels.md)
+- [Yes (I want to use Windows Insider Program builds)](/Install/Client/ISO/WindowsInsiderProgram-Agreement.md)
 
 ---
 

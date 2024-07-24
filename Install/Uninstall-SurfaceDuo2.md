@@ -1,4 +1,4 @@
-# Uninstall Windows and revert your Surface Duo (1st Gen) to stock
+# Uninstall Windows and revert your Surface Duo 2 to stock
 
 ## Files/Tools Needed 📃
 
@@ -6,7 +6,7 @@
 
 | File Name                                       | Target Device         |
 |-------------------------------------------------|-----------------------|
-| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
+| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
 
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -73,7 +73,7 @@ Save the file on your computer, and extract the zip file by opening it, and sele
 
 ## Make sure you have not done any dual boot guide!
 
-If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/InstallWindows/DualBoot.md)
+If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/Install/DualBoot.md)
 
 ## Going to the Bootloader menu
 
@@ -121,7 +121,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
+- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 
@@ -203,77 +203,83 @@ parted /dev/block/sda
 print
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/34483136-05a4-4235-9fe4-347ec4da6ef1)
+![image](TODO)
 
 You'll get a list of partitions.
 
 > [!CAUTION]
-> Make sure that partitions 6, 7 and the last one are your esp, win and userdata partitions.
+> Make sure that partitions 8, 9 and the last one are your esp, win and userdata partitions.
 > If they aren't, you will end up damaging your device (potentially in a permanent manner), please contact us on telegram for assistance in such case.
 > It is possible for you to see more partitions than esp, win, and userdata. Typically, some devices may have partitions for the Windows Recovery Environment after the win partition and then userdata.
 > The following guidelines cover even above scenario, and can be followed safely, on both devices with just esp, win, and userdata, and the other devices, with esp, win, some recovery partitions, and userdata.
-> What remains important is that these partitions start at index 6, and you see no other partition than the aforementioned esp, win, recovery environement or userdata partitions. If you do, please reach out to us on telegram for assistance.
+> What remains important is that these partitions start at index 8, and you see no other partition than the aforementioned esp, win, recovery environement or userdata partitions. If you do, please reach out to us on telegram for assistance.
 
 > [!WARNING]
 > The next command will wipe all your windows and Android™ data. Before continuing, if you have important documents, please make sure that you have backed everything up on both Android™ and Windows.
 
-- First, in above print command, locate every partition that exist after the "misc" partition, as we can see, for us, they are esp, win, and userdata, you may have the same ones, but you may also see, esp, win, "other partitions", and userdata. These other partitions can be the windows recovery environement, but please make sure they aren't anything else. You should not be seeing partitions named "ssd", "persist", "metadata", "frp", or "misc" starting from index 6 all the way to the end. If you do, please reach out and do not continue with this guide.
+- First, in above print command, locate every partition that exist after the "misc" partition, as we can see, for us, they are esp, win, and userdata, you may have the same ones, but you may also see, esp, win, "other partitions", and userdata. These other partitions can be the windows recovery environement, but please make sure they aren't anything else. You should not be seeing partitions named "ssd", "persist", "metadata", "frp", or "misc" starting from index 8 all the way to the end. If you do, please reach out and do not continue with this guide.
 
 Here's an example of what we're keeping an eye on here for our example (remember, for you it may be different but likely not) highlited inside a red rectangle:
 
-![Image Of win/esp/userdata](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/47bd99c0-bfa9-46b7-994c-139bcc6224ae)
+![Image Of win/esp/userdata](TODO)
 
-All partitions from index 6, to the end here, must be removed, so let's proceed with removing each, in our case, we want to remove the esp partition (number 6), the win partition (number 7), and the userdata partition (number 8).
+All partitions from index 8, to the end here, must be removed, so let's proceed with removing each, in our case, we want to remove the esp partition (number 8), the win partition (number 9), and the userdata partition (number 10).
 
-- Let's start from number 6 (esp)
-
-```bash
-rm 6
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/399d5c05-87c9-4e63-a019-ad66ab3df6a8)
-
-- Then number 7 (win)
-
-```bash
-rm 7
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ad669d20-598e-4057-ada3-4bb4e8a5d312)
-
-- And lastly, for us, the last index, number 8 (userdata)
+- Let's start from number 8 (esp)
 
 ```bash
 rm 8
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/07107d91-387e-47ee-8759-50b4b3431644)
+![image](TODO)
 
-- Now that we have removed all partitions from index 6 to the last one, let's recreate user data.
+- Then number 9 (win)
+
+```bash
+rm 9
+```
+
+![image](TODO)
+
+- And lastly, for us, the last index, number 10 (userdata)
+
+```bash
+rm 10
+```
+
+![image](TODO)
+
+- Now that we have removed all partitions from index 8 to the last one, let's recreate user data.
 
 - If you have a 128GB Surface Duo model, run the following command:
 
 ```bash
-mkpart userdata ext4 51.9MB 112GB
+mkpart userdata ext4 401MB 110GB
 ```
 
 - If you have a 256GB Surface Duo model, run the following command:
 
 ```bash
-mkpart userdata ext4 51.9MB 240GB
+TODO: Please file an issue to help us!
 ```
 
-In our case we have a 256GB Surface Duo model, so we're running the second command, like so:
+- If you have a 512GB Surface Duo model, run the following command:
 
-![Image Of userdata creation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e174eee8-6dde-41b6-b5d0-d45afffba0a0)
+```bash
+TODO: Please file an issue to help us!
+```
+
+In our case we have a 128GB Surface Duo model, so we're running the first command, like so:
+
+![Image Of userdata creation](TODO)
 
 As you can see, parted notifies us the partition may not be aligned for best performance, if you get such warning as well, simply enter i like so:
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/024ccc49-f51d-4e56-a897-e26be304720b)
+![image](TODO)
 
 - Let's now run the print command:
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/9a48aac1-9e7a-4925-ad3c-855aefbc35a9)
+![image](TODO)
 
 Please confirm that you see the exact same thing as we do above, except the total storage capacity. If you do not, your device may permanently be damaged if you reboot or turn it off now. Please reach out as soon as you can to prevent rendering your device a paper weight to telegram for assistance, and remain calm and patient.
 
@@ -285,19 +291,19 @@ quit
 
 This will get you out of parted and back to the device shell.
 
-![Image Of device shell after parted quit](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/486b864f-5754-4dcd-8fdc-b0570576908e)
+![Image Of device shell after parted quit](TODO)
 
 - Now let's make the userdata partition actually usable:
 
 ```bash
-mke2fs -t ext4 /dev/block/sda6
+mke2fs -t ext4 /dev/block/sda8
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/db1a81de-db10-4912-87f2-c639c5abcaa2)
+![image](TODO)
 
 - As you can see, mke2fs notifies us, the previous partitions (esp) is here, simply confirm by answering "y" like so:
 
- ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ff4941d5-3566-4514-8826-c2640f957655)
+ ![image](TODO)
 
 - And leave the device shell
 
@@ -305,11 +311,11 @@ mke2fs -t ext4 /dev/block/sda6
 exit
 ```
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba4bd37e-a8c8-4f08-9d50-026c11ebd740)
+![image](TODO)
 
 - Once it is done, you can reboot your phone using ```adb reboot```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b29403a5-3dbf-4151-91cf-467dcc4e5c54)
+![image](TODO)
 
 - You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly if you need it.
 

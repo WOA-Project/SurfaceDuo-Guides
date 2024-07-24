@@ -38,7 +38,7 @@ A normal Surface Duo, with Android™ only. Just like you had it before installi
 
 ## Make sure you have not done any dual boot guide!
 
-If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/InstallWindows/DualBoot.md)
+If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/Install/DualBoot.md)
 
 ## Install WOA Device Manager
 
