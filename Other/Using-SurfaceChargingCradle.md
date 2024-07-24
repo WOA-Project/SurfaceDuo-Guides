@@ -20,3 +20,4 @@ The Surface Charging cradle is identical to the hardware built right into Surfac
 
 ## Demo Video (for Firmware Updates and Cradle Extra Features)
 
+https://github.com/user-attachments/assets/c32df0fd-815e-476a-a513-5335e7e05d92
