@@ -52,9 +52,9 @@ Here's how to acquire an FFU file with Windows 10X and the matching UEFI image f
 ### Surface Duo (1st Gen)
 
 UEFI files:
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2407.22/Surface.Duo.1st.Gen.UEFI-v2407.22.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2407.22/Surface.Duo.1st.Gen.UEFI-v2407.22.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2407.22/Surface.Duo.1st.Gen.UEFI-v2407.22.FD.for.making.your.own.Dual.Boot.Image.zip)
 
 [FFU Files](https://t.me/DuoWOA_FFUs/69)
 
