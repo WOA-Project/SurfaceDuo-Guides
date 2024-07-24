@@ -73,8 +73,8 @@ Global progress: 80.88%
 | Surface Slim Pen        | 1853  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
 | Surface Slim Pen 2      | 1962  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ✅                 | ✅ (Surface App)        | ❌ (HW)          | N/A   |
 | Surface Hub 2 Pen       | 1865  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ✅                 | ✅ (Surface App)        | Not applicable  | N/A   |
-| Surface Classroom Pen   | 1896/NWH-00001  | ✅          | Not applicable      | Not applicable  | Not applicable | 1024 levels          | Not applicable   | ✅     | Not applicable | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
-| Surface Classroom Pen 2 | 1896/8U3-00001  | ✅          | Not applicable      | Not applicable  | Not applicable | 4096 levels          | Not applicable   | ✅     | Not applicable | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Classroom Pen   | 1896/NWH-00001  | ✅          | Not applicable      | Not applicable  | Not applicable | 1024 levels          | Not applicable   | ✅     | Not applicable | ✅           | ✅                     | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Classroom Pen 2 | 1896/8U3-00001  | ✅          | Not applicable      | Not applicable  | Not applicable | 4096 levels          | Not applicable   | ✅     | Not applicable | ✅           | ✅                     | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
 
 The following Surface Pens are not compatible due to their use of a different technology than N-Trig:
 
