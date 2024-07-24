@@ -69,17 +69,21 @@ Global progress: 80.88%
 
 ### ✏️ Surface Pens
 
-| Name                    | Model | Supported? | Firmware Updatable? | Pairable?     | Auto Pairable? | Pressure Sensitivity | Tilt Sensitivity | Hover | Eraser | Side Button | Secondary Side Button | Zero force inking | Pressure Configurable? | Tactile signals | Notes |
-|-------------------------|-------|------------|---------------------|---------------|----------------|----------------------|------------------|-------|--------|-------------|-----------------------|-------------------|------------------------|-----------------|-------|
-| Surface Pen V2          | 1616  | ✅         | ❌                 | ✅            | ❌            | 256 levels           | Not applicable   | ✅    | ✅    | ✅          | ✅                   | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Pen V3          | 1710  | ✅         | ❌                 | ✅            | ❌            | 4096 levels          | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Pen V4          | 1776  | ✅         | ✅                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Slim Pen        | 1853  | ✅         | ✅                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Slim Pen 2      | 1962  | ✅         | ✅                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ✅                | ✅ (Surface App)      | ❌ (HW)         | N/A   |
-| Surface Hub Pen         | 1640  | ✅         | ❌                 | ✅            | ❌            | 256 levels           | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Hub 2 Pen       | 1865  | ✅         | ❌                 | ✅            | ✅            | 4096 levels          | 1024             | ✅    | ✅    | ✅          | Not applicable       | ✅                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Classroom Pen   | 1896  | ✅         | Not applicable     | Not applicable | Not applicable | 1024 levels          | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
-| Surface Classroom Pen 2 | 1896  | ✅         | Not applicable     | Not applicable | Not applicable | 4096 levels          | Not applicable   | ✅    | ✅    | ✅          | Not applicable       | ❌                | ✅ (Surface App)      | Not applicable  | N/A   |
+| Name                    | Model | Supported? | Firmware Updatable? | Pairable?       | Auto Pairable? | Pressure Sensitivity | Tilt Sensitivity | Hover | Eraser         | Side Button | Secondary Side Button | Zero force inking | Pressure Configurable? | Tactile signals | Notes |
+|-------------------------|-------|------------|---------------------|-----------------|----------------|----------------------|------------------|-------|----------------|-------------|-----------------------|-------------------|------------------------|-----------------|-------|
+| Surface Pen V2          | 1616  | ✅          | ❌                   | ✅               | ❌              | 256 levels           | Not applicable   | ✅     | Not applicable | ✅           | ✅                     | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Pen V3          | 1710  | ✅          | ❌                   | ✅               | ❌              | 4096 levels          | Not applicable   | ✅     | ✅              | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Pen V4          | 1776  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Slim Pen        | 1853  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Slim Pen 2      | 1962  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ✅                 | ✅ (Surface App)        | ❌ (HW)          | N/A   |
+| Surface Hub 2 Pen       | 1865  | ✅          | ✅                   | ✅               | ✅              | 4096 levels          | 1024             | ✅     | ✅              | ✅           | Not applicable        | ✅                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Classroom Pen   | 1896/NWH-00001  | ✅          | Not applicable      | Not applicable  | Not applicable | 1024 levels          | Not applicable   | ✅     | Not applicable | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+| Surface Classroom Pen 2 | 1896/8U3-00001  | ✅          | Not applicable      | Not applicable  | Not applicable | 4096 levels          | Not applicable   | ✅     | Not applicable | ✅           | Not applicable        | ❌                 | ✅ (Surface App)        | Not applicable  | N/A   |
+
+The following Surface Pens are not compatible due to their use of a different technology than N-Trig:
+
+- Surface Pro Pen (Original Pen Launched with Surface Pro (1st Gen) and Surface Pro 2) (5PT-00001)
+- Surface Hub Pen (Original Pen Launched with Surface Hub (1st Gen)) (Model 1640)
 
 ### Others
 
