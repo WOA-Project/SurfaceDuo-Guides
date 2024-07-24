@@ -2,50 +2,30 @@
 
 Table of Contents:
 
-1. [Files/Tools Needed](#filestools-needed-)
-2. [What you will get 🛒](#what-you-will-get-)
-3. [Steps 🛠️](#steps-%EF%B8%8F)
-    1. [Unlocking the bootloader](#unlocking-the-bootloader)
-    2. [Making the partitions](#making-the-partitions)
-    3. [Installing Windows 10X](#installing-windows-10x)
-    4. [Completing the installation](#completing-the-installation)
-    5. [Boot Windows 10X](#boot-windows-10x)
+* [Flashing a Full Flash Update Image (.FFU) on Surface Duo](#flashing-a-full-flash-update-image-ffu-on-surface-duo)
+   * [Files/Tools Needed 📃](#filestools-needed-)
+   * [What you will get 🛒](#what-you-will-get-)
+* [Steps 🛠️](#steps-️)
+   * [Unlocking the Bootloader](#unlocking-the-bootloader)
+   * [Acquiring all files](#acquiring-all-files)
+   * [Getting to FFU Loader](#getting-to-ffu-loader)
+   * [Flashing the Windows FFU Image](#flashing-the-windows-ffu-image)
+   * [Reset Android™](#reset-android)
+   * [Boot Windows 🚀](#boot-windows-)
+   * [Boot Windows again after initial installation](#boot-windows-again-after-initial-installation)
 
 ## Files/Tools Needed 📃
 
-- You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
-
-UEFI Image:
-
-| File Name                                                   | Target Device         |
-|-------------------------------------------------------------|-----------------------|
-| Surface.Duo.1st.Gen.UEFI.Secure.Boot.Disabled.Fast.Boot.zip | Surface Duo (1st Gen) |
-
-- TWRP image:
-
-| File Name                                       | Target Device         |
-|-------------------------------------------------|-----------------------|
-| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
-
-- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/parted)
-- Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/msc.tar)
-- [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- The 10X Image Files (`BS_EFIESP.img` and `OSPool.img`). You can find them [here](https://t.me/DuoWOA_Announcements/379)
-- A Windows PC to execute most of the commands in this guide
+- An FFU file containing Windows 10X for Surface Duo
+- A Windows PC to flash the device
 
 ## Disclaimers
 
 > [!WARNING]
-> - Don't create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
-> - Don't rerun the commands if you interrupt the process. You may break your partition table. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - Do not run all commands at once. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - Do not commit *any* typo with *any* commands. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - Be familiar with command line interfaces. Parted is a very *delicate* tool, anything you do may cause permanent damage to your device.
-> - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.
 
 > [!IMPORTANT]
-> **THIS WILL WIPE ALL YOUR ANDROID™ DATA**
+> **THIS WILL WIPE ALL YOUR ANDROID™ DATA AND WINDOWS DATA!**
 >
 > We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,
 >
@@ -53,448 +33,142 @@ UEFI Image:
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-❓ If you're already running Windows 10/11 on your device, you can start from [this step: Installing Windows 10X](#installing-windows-10x). Please note that you'll remove your Windows Installation if you do it.
-
-❓ If you're running an old release of 10X and want to update it or want to reinstall, start from [this step: Installing Windows 10X](#installing-windows-10x). You'll lose your 10X data if you follow this guide.
-
 ## What you will get 🛒
 
-You will end up with both Android™ and Windows 10X on your Surface Duo. Android™ and Windows 10X will both split the internal storage (64GB and 64GB or 128GB and 128GB).
+You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage.
 
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
 # Steps 🛠️
 
+## Unlocking the Bootloader
+
+If not already done, please first proceed with the [Unlocking the Bootloader](UnlockingBootloader.md) guide for Surface Duo. Come back once you're done. If you already followed this guide, please skip the unlocking section.
+
 ## Acquiring all files
 
-<details>
-    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
-    <p>
-
-
-First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
-
-![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
-
-Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
-
-![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
-
-Click on it, an EULA will open like below:
-
-![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
-
-Scroll all the way down (after reading it if that's your thing)
-
-![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
-
-Tick "I have read and agree to above terms conditions"
-
-![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
-
-And click download
-
-![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
-
-Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
-
-![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
-
-  </p>
-</details>
-
-## Unlocking the bootloader
-
-- Backup all your data. **_You will lose everything you have on Android™ and will start from scratch_**.
-
-- In Android™ settings, enable the Developer Settings menu (7 consecutive taps on Build Number), and turn on "OEM Unlock" and "USB Debugging" inside it.
-
-Assuming your Surface Duo is booted to Android™, plugged to your PC:
-
-- Open a command prompt on your PC and run this command:
-```batch
-adb reboot bootloader
-```
-- You will be rebooted to Surface Duo's bootloader.
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-From there:
-```batch
-fastboot flashing unlock
-```
-
-- You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly.
-
-![Android™ - OOBE](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3)
-
-Congratulations, you successfully unlocked your bootloader.
-
-- Assuming your Surface Duo is booted to Android™, plugged to your PC
-
-- Using the Microsoft Launcher, find the settings app
-
-![A1 Android™ - Open Settings](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19)
-
-- Open the Android™ Settings app
-
-![A2 Android™ - Settings Opened](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6)
-
-- Scroll down to the about section, and open it
-
-![A3 Android™ - Settings About](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118)
-
-- Scroll all the way down til you see the Build Number field
-
-![A4 Android™ - Settings About Down](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699)
-
-- Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps
-
-![A5 Android™ - Settings About Down Tap Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d)
-
-- Once done tapping 7 times, you should be seeing this popup instead
-
-![A6 Android™ - Settings About Down Tap Dev Done](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1)
-
-- Now go to the System section, you should see a new Developer options section like shown below
-
-![A7 Android™ - Settings System with Dev](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7)
-
-- Go to the Developer options section
-
-![Android™ Settings System Dev Options](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0)
-
-- Scroll all the way down til you see the "USB debugging" option
-
-![Android™ Settings - Dev - Debugging Option](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0)
-
-- And turn on the "USB debugging" option
-
-![Android™ Settings - Dev - Debugging Option Confirmation](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2)
-
-- Reboot back into the Bootloader mode by running this command:
-
-```batch
-adb reboot bootloader
-```
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-## Making the partitions
-
-### Booting to TWRP
-
-- Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
-
-```batch
-fastboot boot
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
-
-- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
-
-- Then go back to the Command Prompt window we started writing text in previously, and simply, right click on it with your mouse (or long press if you're on a touch device), you should now see this:
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e97d514b-a314-4faf-9622-75bdab066985)
-
-- Now you can press enter
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
-
-You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
-
-- Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:
-
-```batch
-adb shell "setenforce 0"
-adb push <path to parted that was downloaded earlier> /sdcard/
-adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
-adb shell
-```
-
-- Now we are issuing commands directly from inside Surface Duo using the PC.
-
-### Dangerous section
-
-Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired.
-
-> [!WARNING]
-> !!!! Warning reminder !!!!
->
-> ⚠️ Do not run all commands at once, instead run them one by one
->
-> ⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
->
-> ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
->
-> ⚠️ You can kill things if you do below's steps wrong
-
----
-
-<details>
-  <summary>If you want a different allocation split between Windows and Android™, you can do so. Just be aware of the following:</summary>
-  <p>
-
-```bash
-notmkpart win ntfs <REDACTED FOR EXAMPLE PURPOSES> 57344MB
-notmkpart userdata ext4 57344MB <REDACTED FOR EXAMPLE PURPOSES>
-```
-
-The commands above work like this:
-
-[tool name] [partition name in gpt] [file system] [starting offset in disk] [ending offset in disk]
-
-So if you want to change the split, all you have to do is to change the "57344MB" in above's example in both commands.
-
-  </p>
-</details>
-
----
-
-- Let's run parted and make the partitions (ONE BY ONE WITH NO TYPO!):
-
-```bash
-setenforce 0
-parted /dev/block/sda
-print
-```
-
-**Make sure that the last partition listed is numbered 6. If it is not, below's commands may DESTROY your phone in a permanent manner**
-
-Take note of original sizing, here it was 51.9MB -> 112GB (256GB variant: 51.9MB -> 240GB) and replace every occurence of 51.9MB and 112GB with your original sizing that *you noted down* (these may not differ, but if they do, replace them)
-
----
-
-<details>
-  <summary>Run these commands one by one for 128GB devices (<b>Click to expand</b>)</summary>
-  <p>
-
-__This command removes the userdata partition__
-
-```bash
-rm 6
-```
-
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning__
-
-```bash
-mkpart esp fat32 51.9MB 564MB
-```
-
-__This command creates the Windows partition.__
-
-```bash
-mkpart win ntfs 564MB 57344MB
-```
-
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 57344MB 112GB
-```
-
-__This command sets the ESP partition created earlier as an EFI system partition type.__
-
-```bash
-set 6 esp on
-```
-
-__This command leaves parted.__
-
-```bash
-quit
-```
-
-  </p>
-</details>
-
----
-
-<details>
-  <summary>Run these commands one by one for 256GB devices (<b>Click to expand</b>)</summary>
-  <p>
-
-__This command removes the userdata partition__
-
-```bash
-rm 6
-```
-
-__This command creates the EFI system partition for Windows. It is possible parted shows a warning message at this step saying the partition is not properly aligned for best performance. It is safe to ignore such warning. (Note: to ignore in parted, just type 'i' (without the quotes))__
-
-```bash
-mkpart esp fat32 51.9MB 564MB
-```
-
-__This command creates the Windows partition.__
-
-```bash
-mkpart win ntfs 564MB 114688MB
-```
-
-__This command creates the Android™ data partition back.__
-
-```bash
-mkpart userdata ext4 114688MB 240GB
-```
-
-__This command sets the ESP partition created earlier as an EFI system partition type.__
-
-```bash
-set 6 esp on
-```
-
-__This command leaves parted.__
-
-```bash
-quit
-```
-
-  </p>
-</details>
-
----
-
-This will get you out of parted.
-
-We have deleted partition 6, which was the Android™ userdata partition, and created 3 partitions: an esp partition which will contain the Windows boot files,
-a win partition that will have Windows, and the last one is the new userdata partition for Android™, just smaller.
-
-Now let's make these partitions actually usable:
-
-```bash
-setenforce 0
-mkfs.fat -F32 -s1 /dev/block/sda6
-mkfs.ntfs -f /dev/block/sda7
-mke2fs -t ext4 /dev/block/sda8
-exit
-```
-
-### End of the Dangerous section
-
-## Installing Windows 10X
-
-Reboot your phone to the Bootloader mode:
-
-```batch
-adb reboot bootloader
-```
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-<img width="265" alt="image" src="https://user-images.githubusercontent.com/29689637/229379406-f86ecc5a-1252-47bb-8a75-27b1ae540357.png">
-
-Now let's clean the partitions we've just created with fastboot:
-
-```batch
-fastboot erase win
-fastboot erase esp
-```
-<img width="475" alt="image" src="https://user-images.githubusercontent.com/29689637/229379441-759bf96f-6b79-448d-b1d4-b7ef42b427ba.png">
-
-And install the 10X images:
-
-```batch
-fastboot flash esp BS_EFIESP.img
-fastboot flash win OSPool.img
-```
-<img width="510" alt="image" src="https://user-images.githubusercontent.com/29689637/229379746-9b620153-e70e-4f56-b097-7339aef08fe4.png">
-
-This is going to take a while, especially on the second command. As you can see it took me almost 6 minutes. Take a little walk in the meantime.
-
-❓ If you're *updating* or *reinstalling* from 10X, you can stop here and reboot! You're done! ✅
-
-## Completing the Installation
-
-Start by booting TWRP (you might need to manually reboot your device into the Bootloader mode if this gets stuck):
-
-- Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
-
-```batch
-fastboot boot
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
-
-- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
-
-- Then go back to the Command Prompt window we started writing text in previously, and simply, right click on it with your mouse (or long press if you're on a touch device), you should now see this:
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e97d514b-a314-4faf-9622-75bdab066985)
-
-- Now you can press enter
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
-
-You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
-
-- Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
-
-```batch
-adb shell "setenforce 0"
-adb push <path to downloaded msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
-adb shell "sh /sdcard/msc.sh"
-```
-<img width="605" alt="image" src="https://user-images.githubusercontent.com/29689637/229380153-355063fb-4cf4-468b-9780-875b2667b79a.png">
-
-Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
-
-- Open diskpart:
-
-```batch
-diskpart
-```
-<img width="247" alt="image" src="https://user-images.githubusercontent.com/29689637/229380180-607e859e-4153-4c55-b94b-57352ba6e55f.png">
-
-- Run these commands one by one, replacing the IDs with yours:
-
-```batch
-list disk
-sel dis <id of the disk, in my case it is 5>
-list partition
-sel par <id of the part for the pool showing currently as "Primary", in my case it is 7>
-set id=E75CAF8F-F680-4CEE-AFA3-B001E56EFC2D
-```
-<img width="306" alt="image" src="https://user-images.githubusercontent.com/29689637/229380406-4f23a6c5-3223-42f0-b84c-7ff24a7443a8.png">
-<img width="323" alt="image" src="https://user-images.githubusercontent.com/29689637/229380438-97ce534f-bf8e-4a38-b928-7f5d30fdb0a7.png">
-
-We're done!
-
-- Let's exit diskpart:
-
-```batch
-exit
-```
-
-We'll need a UEFI to boot to Windows 10X.
+Here's how to acquire an FFU file with Windows 10X and the matching UEFI image for Surface Duo:
+
+### Surface Duo (1st Gen)
+
+UEFI files:
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2406.36/Surface.Duo.1st.Gen.UEFI-v2406.36.FD.for.making.your.own.Dual.Boot.Image.zip)
+
+[FFU Files](https://t.me/DuoWOA_FFUs/69)
+
+## Install WOA Device Manager
+
+| Steps | Illustration |
+|-|-|
+| Visit WOA Device Manager in the Microsoft Store | <a href="https://apps.microsoft.com/detail/WOA%20Device%20Manager/9pf2xmfnsbmj?mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/></a> |
+| Tap the View in Store button | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1be9c5fa-5434-4167-b23c-1899e0192134"> |
+| Tap Install | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4ffe3b30-e8a7-44a4-a7a2-57e1f105a9ab"> |
+| Wait til the installation is completed | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6c7ef3dd-13b3-4371-bae4-f6629a61cc71"> |
+| And click open | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/26e48e1b-96b8-4c87-a2a5-4d1e0049f7e9"> |
+| WOA Device Manager should now open on your screen. | <img align="right" width="425" alt="Screenshot 2024-06-22 183133" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba7b4289-1c23-4138-9428-1d9e8c90af10"> |
+
+Congratulations, you successfully installed WOA Device Manager.
+
+## Getting to FFU Loader
+
+| Steps | Illustration |
+|-|-|
+| Plug your device into your computer inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7"> |
+| Go into the Switch Mode Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563"> |
+| Click "Switch to Windows-mode" | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77"> |
+| When the device shows the Andromeda Cat with Green Flag pole on its screen, Press the Volume Up Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
+| WOA Device Manager will detect your device in UFP mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183302" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461"> |
+
+> [!TIP]
+> In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
+
+Congratulations, you're now in FFU Loader.
+
+## Flashing the Windows FFU Image
+
+| Steps | Illustration |
+|-|-|
+| Go to the Flash Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183326" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6773ecbb-0de3-4cd4-9aa3-76ac02d7a273"> |
+| Pick your FFU File, and click "Flash FFU Image" | <img align="right" width="425" alt="Screenshot 2024-06-22 183344" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b6fd0499-0c34-410c-9e2d-25b331b7a2be"> |
+| You should now see the device flashing on both your computer | <img align="right" width="425" alt="Screenshot 2024-06-22 183429" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0"> |
+| and on the device, wait til the process is complete. | <img align="right" width="425" alt="Surface Duo in FFU Loader mode, flashing" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12"> |
+| Wait til the process is finished, and you should be back into Android™ or a boot failure screen. | |
+
+> [!TIP]
+> If you are seeing a boot failure option, see below section entitled "Reset Android™"
+
+## Reset Android™
+
+If this is your first time flashing this FFU file, or you're flashing a different storage or layout configuration image, you will lose all of your Android™ data. Further more, you will also not have Android boot successfully.
+If this isn't your case, feel free to ignore this section, Android™ should still boot fine.
+If this is your case, when booting Android™, you will get notified Android cannot boot anymore. In this screen, you must select "Factory Reset" instead of "Try again" or else, Android™ will refuse to boot again.
+
+You should now be seeing the Android™ Out of Box Experience (OOBE).
+
+| Steps | Illustration |
+|-|-|
+| Setup your phone to confirm it works correctly. | <img align="right" width="425" alt="Android™ - OOBE" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/5f86cbbe-df08-4ba6-92aa-b7fd2a7f72b3"> |
+| Assuming your Surface Duo is booted to Android™, plugged to your PC, Using the Microsoft Launcher, find the settings app | <img align="right" width="425" alt="A1 Android™ - Open Settings" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19"> |
+| Open the Android™ Settings app | <img align="right" width="425" alt="A2 Android™ - Settings Opened" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6"> |
+| Scroll down to the about section, and open it | <img align="right" width="425" alt="A3 Android™ - Settings About" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0dad0ac3-21f3-42fd-a02c-78e9eb399118"> |
+| Scroll all the way down til you see the Build Number field | <img align="right" width="425" alt="A4 Android™ - Settings About Down" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/afac2404-9624-4298-9785-b6a21bc31699"> |
+| Press the Build number field 7 times consecutively, you should first start to see a popup after 3 taps | <img align="right" width="425" alt="A5 Android™ - Settings About Down Tap Dev" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b850bef7-2938-47a0-b781-c54178e3cf7d"> |
+| Once done tapping 7 times, you should be seeing this popup instead | <img align="right" width="425" alt="A6 Android™ - Settings About Down Tap Dev Done" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/8afef456-00a4-41e7-9653-c91a901e16c1"> |
+| Now go to the System section, you should see a new Developer options section like shown below | <img align="right" width="425" alt="A7 Android™ - Settings System with Dev" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a2de44f2-b492-450a-830a-5e7141e232b7"> |
+| Go to the Developer options section | <img align="right" width="425" alt="Android™ Settings System Dev Options" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0"> |
+| Scroll all the way down til you see the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0"> |
+| And turn on the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option Confirmation" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2"> |
 
 ## Boot Windows 🚀
 
-- Reboot your device to the Bootloader mode
+We are ready to boot for the first time!
 
-```batch
-adb reboot bootloader
-```
+| Steps | Illustration |
+|-|-|
+| Inside WOA Device Manager, go to switch mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a5fb15b1-6a43-45b5-b440-df243b076b9c"> |
+| and select "Switch to Windows-mode". | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6"> | 
 
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
+This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
 
-- Once into the Bootloader mode, let's run the UEFI, which will boot to 10X:
+If you did everything right, Windows will now boot! Enjoy!
 
-```batch
-fastboot boot uefi_nosb.img
-```
+Let Windows set itself up, and come back once you're on the Windows 10X Desktop on your Surface Duo
 
-Done! You'll now be booted into Windows 10X. ⚠️ First boot will take a bunch of minutes, so WAIT AND DON'T REBOOT!
+> [!NOTE]
+> If you get a BSOD (bugcheck screen) during initial boot, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
+
+## Boot Windows again after initial installation
+
+You'll have two methods of booting Windows.
+
+- Manual booting with a PC
+    - Pros: You can freely update Android™
+    - Cons: You will need a PC to boot to Windows
+
+- Enabling Dual Boot
+    - Pros: You'll be able to boot Windows directly from the device
+    - Cons: Every time you update Android™, you'll have to follow [this guide](/InstallWindows/DualBoot.md)
+
+In case you want the dual boot option, then follow [this guide](/InstallWindows/DualBoot.md)
+
+<details>
+  <summary>In case you want to manually boot each time: (<b>Click to expand</b>)</summary>
+  <p>
+
+| Steps | Illustration |
+|-|-|
+| Plug your phone into your computer, inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f66dfeff-f7c0-4c2f-a83a-ad103eae2003"> |
+| Inside WOA Device Manager, go to switch mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a5fb15b1-6a43-45b5-b440-df243b076b9c"> |
+| and select "Switch to Windows-mode". | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/bb4f618a-fa7c-4874-8dd6-f87181753be6"> | 
+
+This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
+
+If you did everything right, Windows 10X will now boot! Enjoy!
+
+  </p>
+</details>
 
 ---
 
