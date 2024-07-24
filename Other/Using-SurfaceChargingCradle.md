@@ -20,3 +20,8 @@ The Surface Charging cradle is identical to the hardware built right into Surfac
 
 ## Demo Video (for Firmware Updates and Cradle Extra Features)
 
+https://github.com/user-attachments/assets/c32df0fd-815e-476a-a513-5335e7e05d92
+
+## Pictures
+
+![Device Manager showing a Surface Charging Cradle USB Device Tree connected via USB-C to a Surface Duo (1st Gen)](https://github.com/user-attachments/assets/841b1552-91ec-46e4-90bc-6c2d5694f70c)
