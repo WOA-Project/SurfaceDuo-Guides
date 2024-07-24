@@ -38,10 +38,6 @@ Windows Drivers:
 
 > [!WARNING]
 > - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](/Install/DualBoot.md)
-> - ⚠️ If you are upgrading from a version older than 2301.93, you must reinstall using this guide:
->     - [Reinstall Windows (Surface Duo (1st Gen))](/Install/Client/ReinstallWindows-SurfaceDuo1.md)
->     - [Reinstall Windows (Surface Duo 2)](/Install/Client/ReinstallWindows-SurfaceDuo2.md)
-> - ⚠️ If you are upgrading from a version older than 2301.93, you must also use version Driver Updater version 1.8.0.0 or higher
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 > - Do not run all commands at once.
 > - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
