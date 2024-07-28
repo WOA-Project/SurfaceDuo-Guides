@@ -96,13 +96,18 @@ Congratulations, you're now in FFU Loader.
 | Wait til the process is finished, and you should be back into Android™ or a boot failure screen. | |
 
 > [!TIP]
-> If you are seeing a boot failure option, see below section entitled "Reset Android™"
+> If you are seeing a boot failure screen with as title "Android Recovery" and as description "Cannot load Android system.", see below section entitled "Factory Data Reset Android™"
 
-## Reset Android™
+<details>
+  <summary>Factory Data Reset Android™ (Click to expand)</summary>
+  <p>
 
-If this is your first time flashing this FFU file, or you're flashing a different storage or layout configuration image, you will lose all of your Android™ data. Further more, you will also not have Android boot successfully.
+If this is your first time flashing this FFU file, or you're flashing a different storage or layout configuration image, you will lose all of your Android™ data. Further more, you will also not have Android™ boot successfully.
 If this isn't your case, feel free to ignore this section, Android™ should still boot fine.
-If this is your case, when booting Android™, you will get notified Android cannot boot anymore. In this screen, you must select "Factory Reset" instead of "Try again" or else, Android™ will refuse to boot again.
+If this is your case, when booting Android™, you will get notified Android™ cannot boot anymore. In this screen, you must select "Factory data reset" instead of "Try again" or else, Android™ will refuse to boot again.
+
+  </p>
+</details>
 
 You should now be seeing the Android™ Out of Box Experience (OOBE).
 
