@@ -16,7 +16,8 @@ Table of Contents:
 
 ## Files/Tools Needed 📃
 
-- An FFU file for Surface Duo
+- A Surface Duo (1st Gen) or Surface Duo 2
+- [An FFU file for your Surface Duo](https://fullflash.pvabel.net/DuoWOA/)
 - A Windows PC to flash the device
 
 ## Disclaimers
@@ -134,6 +135,9 @@ Let Windows set itself up, and come back once you're on the Windows Desktop on y
 
 > [!NOTE]
 > If you get a BSOD (bugcheck screen) during initial setup, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
+
+> [!NOTE]
+> On second boot of Windows, you may be seeing "Just a moment" on both displays and then a black screen. To get out of this, unplug your USB-C cable and plug it back in.
 
 ## Boot Windows again after initial installation
 
