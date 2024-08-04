@@ -52,9 +52,9 @@ Here's how to acquire an FFU file with Windows 10X and the matching UEFI image f
 ### Surface Duo (1st Gen)
 
 UEFI files:
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2407.22/Surface.Duo.1st.Gen.UEFI-v2407.22.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2407.22/Surface.Duo.1st.Gen.UEFI-v2407.22.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2407.22/Surface.Duo.1st.Gen.UEFI-v2407.22.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2408.1/Surface.Duo.1st.Gen.UEFI-v2408.1.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2408.1/Surface.Duo.1st.Gen.UEFI-v2408.1.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2408.1/Surface.Duo.1st.Gen.UEFI-v2408.1.FD.for.making.your.own.Dual.Boot.Image.zip)
 
 [FFU Files](https://t.me/DuoWOA_FFUs/69)
 
@@ -78,7 +78,7 @@ Congratulations, you successfully installed WOA Device Manager.
 | Plug your device into your computer inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7"> |
 | Go into the Switch Mode Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563"> |
 | Click "Switch to Windows-mode" | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77"> |
-| When the device shows the Andromeda Cat with Green Flag pole on its screen, Press the Volume Up Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
+| When the device shows the //\ logo (Project Andromeda logo) on its screen, Press the Volume Up Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
 | WOA Device Manager will detect your device in UFP mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183302" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461"> |
 
 > [!TIP]
