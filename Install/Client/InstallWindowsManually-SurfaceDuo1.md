@@ -2,11 +2,18 @@
 
 ![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
 
+This guide will help you insalling Windows all manually on your Surface Duo.
+
+You will end up with both Android™ and Windows on your Surface Duo.
+
+Android™ and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
+
+Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
+
 Table of Contents:
 
 * [Install Windows on Surface Duo (1st Gen)](#install-windows-on-surface-duo-1st-gen)
    * [Files/Tools Needed](#filestools-needed)
-   * [What you will get](#what-you-will-get)
 * [Steps](#steps)
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Partitioning](#partitioning)
@@ -63,12 +70,6 @@ Windows Drivers:
 > but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
-
-## What you will get
-
-You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
-
-Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
 # Steps
 

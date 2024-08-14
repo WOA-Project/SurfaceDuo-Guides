@@ -1,5 +1,19 @@
 # Uninstall Windows and revert your Surface Duo 2 to stock
 
+This guide will help you go back to a normal Surface Duo, with Android™ only.
+
+Just like you had it before installing Windows.
+
+Android™ will have access to the whole memory back again.
+
+Your data will be erased, please make backups if you need it before proceeding!
+
+This guide works if you haven't broke anything else in the meantime.
+
+If you broke anything, this guide wont help you and will likely make things worse.
+
+Contact us instead for help!
+
 ## Files/Tools Needed
 
 - TWRP image:
@@ -24,12 +38,6 @@
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
 If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device.
-
-## What you'll get
-
-A normal Surface Duo, with Android™ only. Just like you had it before installing Windows. If you haven't broke anything else in the meantime.
-
-Android™ will have access to the whole memory back again.
 
 # Steps
 

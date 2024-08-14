@@ -1,10 +1,17 @@
 # Flashing a Full Flash Update Image (.FFU) on Surface Duo
 
+This guid will up you flash a FFU file containing Windows on your Surface Duo.
+
+You will end up with both Android™ and Windows on your Surface Duo.
+
+Android™ and Windows will both split the internal storage according to the configuration contained within the FFU file.
+
+Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
+
 Table of Contents:
 
 * [Flashing a Full Flash Update Image (.FFU) on Surface Duo](#flashing-a-full-flash-update-image-ffu-on-surface-duo)
    * [Files/Tools Needed](#filestools-needed)
-   * [What you will get](#what-you-will-get)
 * [Steps](#steps)
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Acquiring all files](#acquiring-all-files)
@@ -33,12 +40,6 @@ Table of Contents:
 > but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
-
-## What you will get
-
-You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage.
-
-Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
 # Steps
 

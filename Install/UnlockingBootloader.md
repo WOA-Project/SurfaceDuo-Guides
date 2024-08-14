@@ -4,7 +4,6 @@ Table of Contents:
 
 * [Unlocking the Bootloader on Surface Duo](#unlocking-the-bootloader-on-surface-duo)
    * [Files/Tools Needed](#filestools-needed)
-   * [What you will get](#what-you-will-get)
 * [Steps](#steps)
    * [Acquiring all files](#acquiring-all-files)
    * [Unlocking the bootloader](#unlocking-the-bootloader)
@@ -27,10 +26,6 @@ Table of Contents:
 > but this is **STILL IN PREVIEW** and things can go wrong.
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
-
-## What you will get
-
-You will end up with both Android™ and an unlocked bootloader on your Surface Duo. Android™. Your data will be erased, please make backups if you need it before proceeding!
 
 # Steps
 
