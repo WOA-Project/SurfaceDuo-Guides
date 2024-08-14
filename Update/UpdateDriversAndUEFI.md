@@ -2,10 +2,10 @@
 
 Table of Contents:
 
-1. [Files/Tools needed 📃](#filestools-needed-📃)
-2. [Steps 🛠️](#steps-🛠️)
+1. [Files/Tools needed](#filestools-needed)
+2. [Steps](#steps)
 
-## Files/Tools needed 📃
+## Files/Tools needed
 
 - You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
 
@@ -37,12 +37,12 @@ Windows Drivers:
 ## Disclaimers
 
 > [!WARNING]
-> - ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](/Install/DualBoot.md)
+> - If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](/Install/DualBoot.md)
 > - If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.
 > - Do not run all commands at once.
 > - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
 
-# Steps 🛠️
+# Steps
 
 ## Acquiring all files
 

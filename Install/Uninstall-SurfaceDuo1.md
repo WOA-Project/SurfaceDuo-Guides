@@ -1,6 +1,6 @@
 # Uninstall Windows and revert your Surface Duo (1st Gen) to stock
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - TWRP image:
 
@@ -25,13 +25,13 @@
 
 If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device.
 
-## What you'll get 🛒
+## What you'll get
 
 A normal Surface Duo, with Android™ only. Just like you had it before installing Windows. If you haven't broke anything else in the meantime.
 
 Android™ will have access to the whole memory back again.
 
-# Steps 🛠️
+# Steps
 
 ## Acquiring all files
 
@@ -464,7 +464,7 @@ Now, you may want to forbid unlocking the bootloader again for additional securi
 
 - Turn off the "OEM unlocking" option as shown above, then turn off the developer options toggle at the very top
 
-🎉 Congratulations, your Surface Duo is back to factory settings.
+Congratulations, your Surface Duo is back to factory settings.
 
 ---
 

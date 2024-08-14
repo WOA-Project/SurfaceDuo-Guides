@@ -1,6 +1,6 @@
 # How to recreate the ESP partition for Windows
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/msc.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -29,7 +29,7 @@
 > - Be familiar with command line interfaces.
 > - When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.
 
-# Steps 🛠️
+# Steps
 
 ## Acquiring all files
 

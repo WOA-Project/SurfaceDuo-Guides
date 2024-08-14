@@ -3,11 +3,11 @@
 ## A few notes
 
 > [!WARNING]
-> Welcome 🥰! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further with Surface Duo (1st Gen):
+> Welcome! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further with Surface Duo (1st Gen):
 >
-> ℹ️ We recommend you know what you're getting into here. You need to know a bit about command line interfaces, Windows technical aspects. We won't teach you how to port the OS yourself, we've done this for you, but this is not for beginners or common users either. Tech Savvy people only or technical people only please, or you'll regret it or commit mistakes!
+> We recommend you know what you're getting into here. You need to know a bit about command line interfaces, Windows technical aspects. We won't teach you how to port the OS yourself, we've done this for you, but this is not for beginners or common users either. Tech Savvy people only or technical people only please, or you'll regret it or commit mistakes!
 >
-> ℹ️ We do not recommend you buy a Surface Duo device to try this on without fully understanding what you're getting into. We do not commit to future work or potential functionality, buy the device for what it can offer you today, not tomorrow, or you'll regret it. If you already own a Surface Duo and want to try it, feel free 🙂 But do not buy this with hopes of it replacing your laptop, buy a laptop instead 🙂 (Even if this is the long term goal for us)
+> We do not recommend you buy a Surface Duo device to try this on without fully understanding what you're getting into. We do not commit to future work or potential functionality, buy the device for what it can offer you today, not tomorrow, or you'll regret it. If you already own a Surface Duo and want to try it, feel free But do not buy this with hopes of it replacing your laptop, buy a laptop instead (Even if this is the long term goal for us)
 
 There are three methods to install Windows:
 

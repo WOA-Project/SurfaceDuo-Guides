@@ -3,8 +3,8 @@
 Table of Contents:
 
 * [Enabling Dual Boot on Surface Duo](#enabling-dual-boot-on-surface-duo)
-   * [Files/Tools Needed 📃](#filestools-needed-)
-   * [Steps 🛠️](#steps-️)
+   * [Files/Tools Needed](#filestools-needed)
+   * [Steps](#steps)
       * [Getting original boot image information and files](#getting-original-boot-image-information-and-files)
       * [Patching original kernel image header and merging the UEFI with it](#patching-original-kernel-image-header-and-merging-the-uefi-with-it)
       * [Rebuilding a new boot.img file](#rebuilding-a-new-bootimg-file)
@@ -16,7 +16,7 @@ Table of Contents:
    * [How it Works](#how-it-works)
    * [Troubleshooting](#troubleshooting)
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
 
@@ -43,7 +43,7 @@ UEFI Raw FV Image:
 >
 > You cannot relock the bootloader if the boot image was modified using this guide. You will have to restore the original file to do so with instructions mentioned below. The uninstall guide also cannot be followed until you follow the restore part at the bottom of this guide.
 
-# Steps 🛠️
+# Steps
 
 ## Getting original boot image information and files
 

@@ -1,6 +1,6 @@
 # Reinstall Windows on Surface Duo (1st Gen)
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
 
@@ -47,7 +47,7 @@ Windows Drivers:
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-# Steps 🛠️
+# Steps
 
 ## Acquiring all files
 
@@ -214,7 +214,7 @@ Congratulations, you just installed your drivers!
 
 - You can now reboot your phone using ```adb reboot bootloader```.
 
-## Boot Windows 🚀
+## Boot Windows
 
 We are ready to boot!
 

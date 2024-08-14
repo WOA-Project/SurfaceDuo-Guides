@@ -1,6 +1,6 @@
 # Partitioning Surface Duo 2
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - TWRP image:
 
@@ -33,13 +33,13 @@
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-## What you will get 🛒
+## What you will get
 
 You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB or 256GB and 256GB).
 
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
-# Steps 🛠️
+# Steps
 
 ## Acquiring all files
 
@@ -213,17 +213,17 @@ Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if y
 > [!WARNING]
 > !!!! Warning reminder !!!!
 >
-> ⚠️ Do not run all commands at once, instead run them one by one
+> Do not run all commands at once, instead run them one by one
 >
-> ⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
+> DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!
 >
-> ⚠️ If you see any warning, or error, it is not normal. Contact us on telegram
+> If you see any warning, or error, it is not normal. Contact us on telegram
 >
-> ⚠️ You can kill your phone permanently if you do below's steps wrong, for real.
+> You can kill your phone permanently if you do below's steps wrong, for real.
 >
-> ⚠️ DO NOT, UNDER ANY CIRCUMSTANCES, RERUN, ANY, OF BELOW'S COMMANDS, EVEN IF A SINGLE ONE. DOING THIS WILL PERMANENTLY CAUSE HAVOC TO YOUR DEVICE. DO. NOT. RERUN. ANY. OF. THESE. COMMANDS. AFTER. RUNNING. ANY. SINGLE. ONE. OF. THEM. ONCE. You can rerun them __only__ if you completed the installation, and followed the uninstall guide, never if you messed up anything, or didn't proceed with the uninstall guide yet.
+> DO NOT, UNDER ANY CIRCUMSTANCES, RERUN, ANY, OF BELOW'S COMMANDS, EVEN IF A SINGLE ONE. DOING THIS WILL PERMANENTLY CAUSE HAVOC TO YOUR DEVICE. DO. NOT. RERUN. ANY. OF. THESE. COMMANDS. AFTER. RUNNING. ANY. SINGLE. ONE. OF. THEM. ONCE. You can rerun them __only__ if you completed the installation, and followed the uninstall guide, never if you messed up anything, or didn't proceed with the uninstall guide yet.
 >
-> ⚠️ If you end up messing up, or "forgetting" to run a command, DO NOT RERUN ANYTHING. CONTACT US IMMEDIATELY ON TELEGRAM. EXPLAIN WHAT YOU DID. POST A SCREENSHOT OF THE "print" PARTED COMMAND OUTPUT DONE LAST TO KNOW THE CURRENT STATUS AND NOT THE ONE PRIOR TO 20 OTHER COMMANDS.
+> If you end up messing up, or "forgetting" to run a command, DO NOT RERUN ANYTHING. CONTACT US IMMEDIATELY ON TELEGRAM. EXPLAIN WHAT YOU DID. POST A SCREENSHOT OF THE "print" PARTED COMMAND OUTPUT DONE LAST TO KNOW THE CURRENT STATUS AND NOT THE ONE PRIOR TO 20 OTHER COMMANDS.
 
 ---
 

@@ -10,7 +10,7 @@ Windows Insider Program's channel builds may be more unstable, and less tested f
 
 If you value stability, please follow below's commands and steps to download the latest stable version of Windows 11:
 
-# Steps 🛠️
+# Steps
 
 - Presuming you are working on a Windows AMD64 machine, download and extract the ```win-XXX.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
 

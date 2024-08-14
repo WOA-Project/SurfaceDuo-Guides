@@ -3,13 +3,13 @@
 ## A few notes
 
 > [!CAUTION]
-> Welcome 🥰! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further with Surface Duo 2:
+> Welcome! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further with Surface Duo 2:
 >
-> ℹ️ We recommend you try this on a Surface Duo (1st Gen) device. While Surface Duo 2 is supported, it currently is in a proof of concept stage, with the experience of using Windows on it being worse in _every single metric_ (including performance) and way less hardware working, and super slow speeds compared to Surface Duo (1st Gen)
+> We recommend you try this on a Surface Duo (1st Gen) device. While Surface Duo 2 is supported, it currently is in a proof of concept stage, with the experience of using Windows on it being worse in _every single metric_ (including performance) and way less hardware working, and super slow speeds compared to Surface Duo (1st Gen)
 >
-> ℹ️ We recommend you know what you're getting into here. Surface Duo 2 support is highly broken, experimental, and barely anything will work! Not even both screens will work, only one, only one CPU, it will be very slow and unusable.
+> We recommend you know what you're getting into here. Surface Duo 2 support is highly broken, experimental, and barely anything will work! Not even both screens will work, only one, only one CPU, it will be very slow and unusable.
 >
-> ℹ️ We do not recommend you buy a Surface Duo device to try this on without fully understanding what you're getting into. We do not commit to future work or potential functionality, buy the device for what it can offer you today, not tomorrow, or you'll regret it. If you already own a Surface Duo and want to try it, feel free 🙂 But do not buy this with hopes of it replacing your laptop, buy a laptop instead 🙂 (Even if this is the long term goal for us)
+> We do not recommend you buy a Surface Duo device to try this on without fully understanding what you're getting into. We do not commit to future work or potential functionality, buy the device for what it can offer you today, not tomorrow, or you'll regret it. If you already own a Surface Duo and want to try it, feel free But do not buy this with hopes of it replacing your laptop, buy a laptop instead (Even if this is the long term goal for us)
 
 There are three methods to install Windows:
 

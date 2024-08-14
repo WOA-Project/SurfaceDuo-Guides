@@ -5,19 +5,19 @@
 Table of Contents:
 
 * [Install Windows on Surface Duo (1st Gen)](#install-windows-on-surface-duo-1st-gen)
-   * [Files/Tools Needed 📃](#filestools-needed-)
-   * [What you will get 🛒](#what-you-will-get-)
-* [Steps 🛠️](#steps-️)
+   * [Files/Tools Needed](#filestools-needed)
+   * [What you will get](#what-you-will-get)
+* [Steps](#steps)
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Partitioning](#partitioning)
    * [Getting to Mass Storage Mode](#getting-to-mass-storage-mode)
    * [Going to Mass Storage](#going-to-mass-storage)
    * [Installing Windows](#installing-windows)
    * [Installing the drivers](#installing-the-drivers)
-   * [Boot Windows 🚀](#boot-windows-)
+   * [Boot Windows](#boot-windows)
    * [Boot Windows again after initial installation](#boot-windows-again-after-initial-installation)
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - You will need the following files from the [BSP Release page](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest):
 
@@ -64,13 +64,13 @@ Windows Drivers:
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-## What you will get 🛒
+## What you will get
 
 You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
 
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
-# Steps 🛠️
+# Steps
 
 ## Acquiring all files
 
@@ -287,7 +287,7 @@ You will be back into Surface Duo's bootloader.
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-## Boot Windows 🚀
+## Boot Windows
 
 We are ready to boot for the first time!
 

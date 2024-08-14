@@ -6,11 +6,11 @@ It depends on how you have set up your device.
 
 - If you've installed Windows and Android™, **without** the Dual Boot package (so you use a PC to boot to Windows), then:
 
-✅ Yes! Feel free to do so. All Android™ updates until now have worked fine even if Windows was installed.
+Yes! Feel free to do so. All Android™ updates until now have worked fine even if Windows was installed.
 
 - If you **have** installed the Dual Boot package:
 
-⚠️ Yes, but you'll have to follow the [Dual Boot guide](/Install/DualBoot.md) again. The boot image needs to be adapted for each Android™ version that gets released. Please note that after updating Android™, you won't be able to boot it anymore until you follow the guide again.
+Yes, but you'll have to follow the [Dual Boot guide](/Install/DualBoot.md) again. The boot image needs to be adapted for each Android™ version that gets released. Please note that after updating Android™, you won't be able to boot it anymore until you follow the guide again.
 
 ## Do you know if Microsoft Corporation had Windows running on Surface Duo?
 

@@ -1,12 +1,12 @@
 # Terminology
 
-This page helps define the name of a few boot mode/states and terminology you may see around so everyone is on the same page when talking about specific terms 😜
+This page helps define the name of a few boot mode/states and terminology you may see around so everyone is on the same page when talking about specific terms
 
 ## Disclaimers
 
 > [!WARNING]
 > This page is under construction
-> Rough edges are to be expected 💣
+> Rough edges are to be expected
 
 ## Official File Packages
 

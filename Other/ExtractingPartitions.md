@@ -1,6 +1,6 @@
 # Extract the boot partition or other partitions
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - A Windows PC

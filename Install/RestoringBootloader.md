@@ -3,14 +3,14 @@
 Table of Contents:
 
 * [Restoring the Bootloader on Surface Duo](#restoring-the-bootloader-on-surface-duo)
-   * [Files/Tools Needed 📃](#filestools-needed-)
-   * [What you will get 🛒](#what-you-will-get-)
-* [Steps 🛠️](#steps-️)
+   * [Files/Tools Needed](#filestools-needed)
+   * [What you will get](#what-you-will-get)
+* [Steps](#steps)
    * [Acquiring all files](#acquiring-all-files)
    * [Restoring the bootloader](#restoring-the-bootloader)
    * [The End](#the-end)
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - A Windows PC
 
@@ -30,11 +30,11 @@ Table of Contents:
 
 If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device.
 
-## What you will get 🛒
+## What you will get
 
 A normal Surface Duo, with Android™ only. Just like you had it before installing Windows. If you haven't broke anything else in the meantime. Your data will be erased, please make backups if you need it before proceeding!
 
-# Steps 🛠️
+# Steps
 
 ## Make sure you have not done any dual boot guide!
 
@@ -170,7 +170,7 @@ Now, you may want to forbid unlocking the bootloader again for additional securi
 
 - Turn off the "OEM unlocking" option as shown above, then turn off the developer options toggle at the very top
 
-🎉 Congratulations, your Surface Duo is back to factory settings.
+Congratulations, your Surface Duo is back to factory settings.
 
 ## The End
 

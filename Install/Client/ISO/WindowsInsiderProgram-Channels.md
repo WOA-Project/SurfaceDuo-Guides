@@ -17,7 +17,7 @@ As Microsoft continues to evolve the way they're building and releasing Windows 
 
 For more information about the insider program, please see the [Windows Insider Program website](https://insider.windows.com)
 
-# Steps 🛠️
+# Steps
 
 - Presuming you are working on a Windows AMD64 machine, download and extract the ```win-XXX.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
 

@@ -3,18 +3,18 @@
 Table of Contents:
 
 * [Flashing a Full Flash Update Image (.FFU) on Surface Duo](#flashing-a-full-flash-update-image-ffu-on-surface-duo)
-   * [Files/Tools Needed 📃](#filestools-needed-)
-   * [What you will get 🛒](#what-you-will-get-)
-* [Steps 🛠️](#steps-️)
+   * [Files/Tools Needed](#filestools-needed)
+   * [What you will get](#what-you-will-get)
+* [Steps](#steps)
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Acquiring all files](#acquiring-all-files)
    * [Getting to FFU Loader](#getting-to-ffu-loader)
    * [Flashing the Windows FFU Image](#flashing-the-windows-ffu-image)
    * [Reset Android™](#reset-android)
-   * [Boot Windows 🚀](#boot-windows-)
+   * [Boot Windows](#boot-windows)
    * [Boot Windows again after initial installation](#boot-windows-again-after-initial-installation)
 
-## Files/Tools Needed 📃
+## Files/Tools Needed
 
 - An FFU file containing Windows 10X for Surface Duo
 - A Windows PC to flash the device
@@ -33,13 +33,13 @@ Table of Contents:
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
-## What you will get 🛒
+## What you will get
 
 You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage.
 
 Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
 
-# Steps 🛠️
+# Steps
 
 ## Unlocking the Bootloader
 
@@ -121,7 +121,7 @@ You should now be seeing the Android™ Out of Box Experience (OOBE).
 | Scroll all the way down til you see the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0"> |
 | And turn on the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option Confirmation" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2"> |
 
-## Boot Windows 🚀
+## Boot Windows
 
 We are ready to boot for the first time!
 
