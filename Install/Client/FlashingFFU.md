@@ -1,6 +1,6 @@
 # Flashing a Full Flash Update Image (.FFU) on Surface Duo
 
-This guid will up you flash a FFU file containing Windows on your Surface Duo.
+This guide will help you flash a FFU file containing Windows on your Surface Duo.
 
 You will end up with both Android™ and Windows on your Surface Duo.
 
