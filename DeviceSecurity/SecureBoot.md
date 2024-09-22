@@ -185,7 +185,7 @@ Now that we generated valid UEFI Certificate lists and signed them, we need to e
 
 ## Generate a new System Integrity Policy
 
-This set of steps generates a new system integrity policy that will be recognized by the Windows loader to configure what certificates and signers Code Integrity will accept for kernel and user mode applications and drivers. Documentation of accepted options and parameters is at the bottom of the doucment.
+This set of steps generates a new system integrity policy that will be recognized by the Windows loader to configure what certificates and signers Code Integrity will accept for kernel and user mode applications and drivers.
 
 ### Creating the SiPolicy XML file
 
