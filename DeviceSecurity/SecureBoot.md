@@ -169,19 +169,27 @@ Now that we generated valid UEFI Certificate lists and signed them, we need to e
 
 ![image](https://user-images.githubusercontent.com/3755345/213809796-b13d3620-b509-4b74-a0bb-788d4fd33f13.png)
 
-[KEK Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/MsSecureBootDefaultVars.h#L17-L203)
+[KEK Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/Platforms/SurfaceDuoFamilyPkg/SecureBootKeys.dsc.inc#L15)
+
+[KEK File Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/Platforms/SurfaceDuoFamilyPkg/Include/Resources/SecureBoot/keystore/OEMA0-KEK.der)
 
 #### DB (db.bin.p7)
 
 ![image](https://user-images.githubusercontent.com/3755345/213809926-aa6fe964-7bd2-4f3e-9503-01616c57e325.png)
 
-[DB Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/MsSecureBootDefaultVars.h#L207-L403)
+[DB Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/Platforms/SurfaceDuoFamilyPkg/SecureBootKeys.dsc.inc#L6)
 
 #### PK (pk.bin.p7)
 
 ![image](https://user-images.githubusercontent.com/3755345/213808143-818c6148-14c1-4304-918a-fc993ea3d932.png)
 
-[PK Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/SecureBootKeyStoreLib.c#L25-L114)
+[PK Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/Platforms/SurfaceDuoFamilyPkg/SecureBootKeys.dsc.inc#L3)
+
+[PK File Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/Platforms/SurfaceDuoFamilyPkg/Include/Resources/SecureBoot/keystore/OEMA0-PK.der)
+
+### Regenerating default key store data
+
+See https://github.com/microsoft/secureboot_objects/ and https://github.com/WOA-Project/mu_andromeda_platforms/tree/main/Platforms/SurfaceDuoFamilyPkg/Include/Resources/SecureBoot/keystore/
 
 ## Generate a new System Integrity Policy
 
@@ -499,7 +507,7 @@ _Note: Please see "C:\Windows\schemas\CodeIntegrity\ExamplePolicies\DefaultWindo
     </SigningScenario>
   </SigningScenarios>
   <UpdatePolicySigners>
-    <!-- Seems like the signer that's allowed to update the policy? -->
+    <!-- The signer that's allowed to update the policy -->
     <UpdatePolicySigner SignerId="ID_SIGNER_OEMA0_KEK" />
   </UpdatePolicySigners>
   <SupplementalPolicySigners>
@@ -568,9 +576,9 @@ Now that you have a validly signed and properly formatted binary System Integrit
 
 #### SiPolicy (SiPolicy.p7b)
 
-Replace the SIPolicy bytes in the code location with your own policy to set it as the default.
+Replace the SIPolicy file in below's location with your own policy to set it as the default.
 
-[SiPolicy Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/e7c821c952da65800dfc885859227c9da1b6d373/Platforms/SurfaceDuoFamilyPkg/Driver/SecureBootProvisioningDxe/SystemIntegrityPolicyDefaultVars.h#L5-L473)
+[SiPolicy.p7b File Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/main/Platforms/SurfaceDuoFamilyPkg/Include/Resources/SecureBoot/SystemIntegrity/SiPolicy.p7b)
 
 ## Rebuilding the UEFI
 
