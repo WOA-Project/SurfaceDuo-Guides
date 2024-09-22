@@ -1,17 +1,19 @@
 # Secure Boot on Surface Duo devices with mu_andromeda_platforms
 
-Starting with version 230X.XX of SurfaceDuoPkg, Secure Boot is now supported on select Surface Duo devices.
+Starting with version 230X.XX of mu_andromeda_platforms (formerly SurfaceDuoPkg), Secure Boot is now supported on select Surface Duo devices.
 
-While SurfaceDuoPkg comes with its own set of certificates for SecureBoot, some people may be interested in using their own keys for their own security purposes.
+While mu_andromeda_platforms comes with its own set of certificates for utilizing UEFI and Windows secure boot, some people may be interested in using their own keys for their own security purposes.
 
 This guide aims to document the process to use your own certificates to sign drivers.
+
+Disclaimer: This should not be necessary for most use cases.
 
 ## Prerequisites
 
 - [A technician computer with Windows 11 version 22621 or higher](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p16-(16-inch-intel)/len101t0041)
-- [A Surface Duo](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Surface+Duo&_sacat=0&LH_TitleDesc=0&_osacat=0&_odkw=surface+duo) with [SurfaceDuoPkg](https://github.com/WOA-Project/SurfaceDuoPkg) version 230X.XX or higher
+- [A Surface Duo](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=Surface+Duo&_sacat=0&LH_TitleDesc=0&_osacat=0&_odkw=surface+duo) with [mu_andromeda_platforms](https://github.com/WOA-Project/mu_andromeda_platforms) version 230X.XX or higher
 - [A USB cable](https://www.amazon.com/Anker-Charging-MacBook-Galaxy-Charger/dp/B088NMR44C)
-- [The ability to compile SurfaceDuoPkg in order to use your own keyset](https://github.com/WOA-Project/SurfaceDuoPkg#build-instructions)
+- [The ability to compile mu_andromeda_platforms in order to use your own keyset](https://github.com/WOA-Project/mu_andromeda_platforms#build-instructions)
 - A HSM is preferred for Secure Key storage. This guide will not detail how to proceed with a HSM, but rather will show how to proceed with self signed certificate stored outside of a HSM. You will want to store certificates securely.
 - A copy of [SurfaceDuo-Drivers](https://github.com/WOA-Project/SurfaceDuo-Drivers) for your device
 - [The Windows SDK/ADK/WDK for signtool and makecat](https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#enterprise-wdk-ewdk)
@@ -167,19 +169,19 @@ Now that we generated valid UEFI Certificate lists and signed them, we need to e
 
 ![image](https://user-images.githubusercontent.com/3755345/213809796-b13d3620-b509-4b74-a0bb-788d4fd33f13.png)
 
-[KEK Byte Array Code Location](https://github.com/WOA-Project/SurfaceDuoPkg/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/MsSecureBootDefaultVars.h#L17-L203)
+[KEK Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/MsSecureBootDefaultVars.h#L17-L203)
 
 #### DB (db.bin.p7)
 
 ![image](https://user-images.githubusercontent.com/3755345/213809926-aa6fe964-7bd2-4f3e-9503-01616c57e325.png)
 
-[DB Byte Array Code Location](https://github.com/WOA-Project/SurfaceDuoPkg/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/MsSecureBootDefaultVars.h#L207-L403)
+[DB Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/MsSecureBootDefaultVars.h#L207-L403)
 
 #### PK (pk.bin.p7)
 
 ![image](https://user-images.githubusercontent.com/3755345/213808143-818c6148-14c1-4304-918a-fc993ea3d932.png)
 
-[PK Byte Array Code Location](https://github.com/WOA-Project/SurfaceDuoPkg/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/SecureBootKeyStoreLib.c#L25-L114)
+[PK Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/6ed3fb88b36ad8e5ae80901fdd328c98c5c5c748/Platforms/SurfaceDuoFamilyPkg/Library/SecureBootKeyStoreLib/SecureBootKeyStoreLib.c#L25-L114)
 
 ## Generate a new System Integrity Policy
 
@@ -568,7 +570,7 @@ Now that you have a validly signed and properly formatted binary System Integrit
 
 Replace the SIPolicy bytes in the code location with your own policy to set it as the default.
 
-[SiPolicy Byte Array Code Location](https://github.com/WOA-Project/SurfaceDuoPkg/blob/e7c821c952da65800dfc885859227c9da1b6d373/Platforms/SurfaceDuoFamilyPkg/Driver/SecureBootProvisioningDxe/SystemIntegrityPolicyDefaultVars.h#L5-L473)
+[SiPolicy Byte Array Code Location](https://github.com/WOA-Project/mu_andromeda_platforms/blob/e7c821c952da65800dfc885859227c9da1b6d373/Platforms/SurfaceDuoFamilyPkg/Driver/SecureBootProvisioningDxe/SystemIntegrityPolicyDefaultVars.h#L5-L473)
 
 ## Rebuilding the UEFI
 
