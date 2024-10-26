@@ -12,6 +12,14 @@ If you value stability, please follow below's commands and steps to download the
 
 # Steps
 
+## Option 1: Download the latest pre-made Optical Disc Image file from Microsoft
+
+This ISO is downloaded directly from Microsoft and requires no extra processing step. It may however be slightly behind what is available as latest but can be easy fixed on the device itself by checking for updates.
+
+[Download X23-81973_26100.1742.240906-0331.ge_release_svc_refresh_CLIENT_CONSUMER_A64FRE_en-us.iso from Microsoft](https://oemsoc.download.prss.microsoft.com/dbazure/X23-81973_26100.1742.240906-0331.ge_release_svc_refresh_CLIENT_CONSUMER_A64FRE_en-us.iso_688d2da0-e568-4137-91b0-21ec94894cc2?t=df8fb6b3-cdc7-44d0-a480-f09dc49f5879&P1=102816951036&P2=601&P3=2&P4=Hr%2bkSL%2bbzVZPSXl6l8bx9q7f%2bAdjvgFIdkp19X5XqWvjBzYR7eVBK1FEHFozCXHcYJhWr0lcJE%2fsu93U8iEz%2b0j2qORHIzxWKtgSU0bQZUhRL9HkNGlltGXZ%2fpjPxVFKV0uw6UihUdrpDoEnbWcAS0AzWv0Q6c2QNNysts54wLJBi%2fzM5PD%2bqBgiTZjIqv7rWntXjc8noHTRIe6TllHR2iy2sQdsn1AyVbxXQhP8ZbkLb9nzjTd13kaAxDKaneOT3Tj5V2hBf1T1p8%2f3e2%2fmLeJKjJS4Ys%2b7CGbleTDbHh5KZPhQ98WsWtp38u%2bXGtS9kQyza7zF9rGFD6M55gspKw%3d%3d)
+
+## Option 2: Make the latest pre-made Optical Disc Image file on your own using Windows Update (newer versions)
+
 - Presuming you are working on a Windows AMD64 machine, download and extract the ```win-XXX.zip``` file from [the UUPMediaCreator repo](https://github.com/gus33000/UUPMediaCreator/releases/latest).
 
 What version do I download?
