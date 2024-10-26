@@ -41,7 +41,7 @@ NOTE: For apps to be included in the image for Windows 11 Version 22H1 or higher
 
 - Navigate to the directory you extracted the downloaded ZIP file onto, you should see files like ```uupdownload.exe``` inside.
 
-## Download commands
+### Download commands
 
 -  Inside the directory, open command prompt and run one of following commands (depending on what version of Windows you would like to use):
 
@@ -60,7 +60,7 @@ use the standard Windows language pack commands. Installing the right language p
 - Once the download is completed, you will see a new folder with prefix "10.0.22000..." (or something different!) created inside the extracted folder. This
   contains all the required Windows files.
 
-## Creation commands
+### Creation commands
 
 Let's create an ISO from the Windows build download.
 
