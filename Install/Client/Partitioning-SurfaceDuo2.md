@@ -394,11 +394,29 @@ If you somehow break entirely your partition table, you might be interested in t
 
 ```bash
 mkpart ssd 6s 7s
+```
+
+```bash
 mkpart persist 8s 8199s
+```
+
+```bash
 mkpart metadata 8200s 12295s
+```
+
+```bash
 mkpart frp 12296s 12423s
+```
+
+```bash
 mkpart misc 12424s 12679s
+```
+
+```bash
 mkpart rawdump 12680s 89479s
+```
+
+```bash
 mkpart vm-data 89480s 97835s
 ```
 
@@ -411,7 +429,7 @@ The offsets are valid for both the Surface Duo 2 128GB model, and the Surface Du
 
 ---
 
-_**© 2020-2024 The Duo WOA Authors**_
+_**© 2020-2025 The Duo WOA Authors**_
 
 _Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Surface Duo, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Android is a registered trademark of Google LLC. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface._
 

@@ -49,11 +49,11 @@ Here's how to acquire an FFU file with Windows 10X and the matching UEFI image f
 ### Surface Duo (1st Gen)
 
 UEFI files:
-- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2411.80/Surface.Duo.1st.Gen.UEFI-v2411.80.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2411.80/Surface.Duo.1st.Gen.UEFI-v2411.80.Dual.Boot.zip)
-- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2411.80/Surface.Duo.1st.Gen.UEFI-v2411.80.FD.for.making.your.own.Dual.Boot.Image.zip)
+- [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2412.74/Surface.Duo.1st.Gen.UEFI-v2412.74.Fast.Boot.zip)
+- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2412.74/Surface.Duo.1st.Gen.UEFI-v2412.74.Dual.Boot.zip)
+- [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2412.74/Surface.Duo.1st.Gen.UEFI-v2412.74.FD.for.making.your.own.Dual.Boot.Image.zip)
 
-[Windows 10X FFU File](https://fullflash.pvabel.net/DuoWOA/v2411.80/OEMEP_WCOSCDG_MaximizedForWindows.7z)
+[Windows 10X FFU File](https://fullflash.pvabel.net/DuoWOA/v2412.74/OEMEP_WCOSCDG_MaximizedForWindows.7z)
 
 ## Install WOA Device Manager
 
@@ -169,7 +169,7 @@ If you did everything right, Windows 10X will now boot! Enjoy!
 
 ---
 
-_**© 2020-2024 The Duo WOA Authors**_
+_**© 2020-2025 The Duo WOA Authors**_
 
 _Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Surface Duo, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Android is a registered trademark of Google LLC. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface._
 
