@@ -53,7 +53,7 @@ UEFI files:
 - [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo (1st Gen) devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2412.74/Surface.Duo.1st.Gen.UEFI-v2412.74.Dual.Boot.zip)
 - [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2412.74/Surface.Duo.1st.Gen.UEFI-v2412.74.FD.for.making.your.own.Dual.Boot.Image.zip)
 
-[Windows 10X FFU File](https://fullflash.pvabel.net/DuoWOA/v2412.74/OEMEP_WCOSCDG_MaximizedForWindows.7z)
+[Windows 10X FFU File](https://fullflash.pvabel.net/DuoWOA/v2411.80/OEMEP_WCOSCDG_MaximizedForWindows.7z)
 
 ## Install WOA Device Manager
 
