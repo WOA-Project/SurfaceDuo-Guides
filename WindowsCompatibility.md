@@ -35,7 +35,7 @@ Surface Duo (1st Gen) and Surface Duo 2 currently supports the following Windows
 
 1: This version of Windows does not support the System on Chip (SoC).
 
-2: This version of Windows is not actively tested or developped against anymore. It may suffer from some intermittent compatibility issues with newer Driver Releases. It is however meant to have the same hardware support as newer versions of Windows due to no technical limitation with the drivers. It can also be used to reieve the ICan0 value to setup phone / cellular call binding on newer versions of Windows.
+2: This version of Windows is not actively tested or developped against anymore. It may suffer from some intermittent compatibility issues with newer Driver Releases. It is however meant to have the same hardware support as newer versions of Windows due to no technical limitation with the drivers. It can also be used to retreive the ICan0 value to setup phone / cellular call binding on newer versions of Windows.
 
 3: While this version fully supports the SoC Core hardware (Timer, Interrupt Controller etc...), the WDF versions supported predate 2.25. Therefore, drivers built using newer WDF versions (like the current ones) will not run on this version without severe modifications. Versions higher fully work due to the "build on newer, run on older" principle. For more information, read [this documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/building-a-wdf-driver-for-multiple-versions-of-windows) on the subject.
 
@@ -54,3 +54,4 @@ _**Limited emergency calling**_
 _Running Windows on your Surface Duo is not a replacement for a proper phone operating system and does not have emergency calling capabilities._
 
 _**Hello from Seattle (US), France, Italy.**_
+
