@@ -173,12 +173,12 @@ Take note of all the lines that get output from this command. In my case, it's o
 - Next we need to retrieve our mount point for our partition, to do so, run this command:
 
 ```bash
-ls -al /dev/block/platform/soc/[the last line we took note of]/by-name/
+ls -al /dev/block/platform/soc/[the last line we took note of]/by-name/ | grep boot
 ```
 
-*In my case: `ls -al /dev/block/platform/soc/1d84000.ufshc/by-name/`*
+*In my case: `ls -al /dev/block/platform/soc/1d84000.ufshc/by-name/ | grep boot`*
 
-- This is going to output a lot of lines, with each partition name having its mount point. Look for the line that says `boot_[your slot]`:
+- This is going to output two lines, one for each boot partition. Look for the line that says `boot_[your slot]`:
 
 <img width="506" alt="image" src="https://user-images.githubusercontent.com/29689637/222557262-7cbe0114-a218-4d60-9da3-2e04a9733bd6.png">
 
@@ -215,5 +215,6 @@ _Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the M
 _**Limited emergency calling**_
 
 _Running Windows on your Surface Duo is not a replacement for a proper phone operating system and does not have emergency calling capabilities._
+
 
 _**Hello from Seattle (US), France, Italy.**_
