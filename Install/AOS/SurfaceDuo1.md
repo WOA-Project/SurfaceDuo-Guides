@@ -134,7 +134,7 @@ If you did everything right, Windows will now boot! Enjoy!
 Let Windows set itself up, and come back once you're on the Windows 8828080 Whiteboard on your Surface Duo
 
 > [!NOTE]
-> If you get a BSOD (bugcheck screen) during initial boot, you can try erasing both the esp and win partitions using "fastboot erase esp" and "fastboot erase win", and reflash the FFU file, then it should work. This issue will get fixed in later FFU revisions.
+> If you get stuck in the UEFI with no spinner showing up, fully power off the device. Turn it back on, go straight to the bootloader menu by holding volume down on boot. (Make sure android never gets a chance to boot), and try to "Switch to Windows-mode" again in WOA Device Manager. You may have to try this procedure a few times.
 
 ## Boot Windows again after initial installation
 
