@@ -60,6 +60,14 @@ Congratulations, you successfully installed WOA Device Manager.
 | Go to the Developer options section | <img align="right" width="425" alt="Android™ Settings System Dev Options" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ffbbcee9-98ab-4b83-8eaa-57487c1c1cf0"> |
 | Scroll all the way down til you see the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3847fdcb-c19c-4c5d-aa4c-00a60e85c2b0"> |
 | And turn on the "USB debugging" option | <img align="right" width="425" alt="Android™ Settings - Dev - Debugging Option Confirmation" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/60b52b98-8c6a-4845-833d-470378206fb2"> |
+
+> [!TIP]
+> If you see no device listed, check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following image below this notice.
+> It is possible certain computers see no update offered (like Windows ARM64 Computers or other older machines with no functional Windows Update). If this is your case, we also provide Drivers for you to download
+> at the following location, you will have to install them using Device Manager on your PC. [Download USB Drivers](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/USB-Drivers.zip)
+
+| Steps | Illustration |
+|-|-|
 | WOA Device Manager should now stop showing the previous error banner after you allowed the connection | <img align="right" width="425" alt="" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7"> |
 | In WOA Device Manager, go to Unlock Bootloader | <img align="right" width="425" alt="" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/7de4bb51-df43-4522-88a5-01de746ff811"> |
 | And click Unlock Bootloader | <img align="right" width="425" alt="" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/13fe6509-6469-49ce-8d3a-fab76eb3a82e"> |
