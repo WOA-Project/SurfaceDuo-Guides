@@ -30,34 +30,34 @@ _No ETA will be provided for **any** of these development phases_
 | 💻 Lid Hall sensor     |                                                                                                                           | ✅             |
 | 📦 UFS                 |                                                                                                                           | ✅             |
 | 📲 Left Display Panel  |                                                                                                                           | ✅             |
-| 🔋 Battery 1           |                                                                                                                           | ❌ (Errata with latest update) |
-| 🔋 Battery 2           |                                                                                                                           | ❌ (Errata with latest update) |
-| 🔌 Charger             |                                                                                                                           | ❌ (Errata with latest update) |
-| 🪵 USB C               |                                                                                                                           | ❌ (Errata with latest update) |
-| ✏️ Left Pen Digitizer  | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
-| ✏️ Right Pen Digitizer | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
-| 👆 Left Multi Touch    | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
-| 👆 Right Multi Touch   | Requires disabling one of the Touch Pen processors for now because the GPU driver is unavailable (requires Windows vNext) | ⚠️             |
-| 🧭 Sensors             | Not all sensors are available                                                                                             | ❌ (Errata with latest update) |
-| 🧮 SoC Cores           | Prime core frequency isn't scaled up                                                                                      | ⚠️             |
-| ♋ Cellular Calls      | Requires Modem Processor Subsystem                                                                                        | ❌             |
-| ♋ Cellular Data       | Requires Modem Processor Subsystem                                                                                        | ❌             |
-| ♋ Cellular eSIM       | Requires Modem Processor Subsystem                                                                                        | ❌             |
-| ♋ Cellular Texts      | Requires Modem Processor Subsystem                                                                                        | ❌             |
-| ♋ Cellular VoLTE      | Requires Modem Processor Subsystem                                                                                        | ❌             |
-| ♋ WiFi                | Requires PCIe                                                                                                             | ❌             |
-| 🎆 GPU                 | Requires Clock Controller fixes                                                                                           | ❌             |
+| 🔋 Battery 1           |                                                                                                                           | ✅             |
+| 🔋 Battery 2           |                                                                                                                           | ✅             |
+| 🔌 Charger             |                                                                                                                           | ✅             |
+| 🪵 USB C               |                                                                                                                           | ✅             |
+| ✏️ Left Pen Digitizer  |                                                                                                                           | ✅             |
+| ✏️ Right Pen Digitizer |                                                                                                                           | ✅             |
+| 👆 Left Multi Touch    |                                                                                                                           | ✅             |
+| 👆 Right Multi Touch   |                                                                                                                           | ✅             |
+| 🧭 Sensors             | Not all sensors are available                                                                                             | ✅             |
+| 🧮 SoC Cores           |                                                                                                                           | ✅             |
+| ♋ Cellular Calls      |                                                                                                                           | ✅             |
+| ♋ Cellular Data       |                                                                                                                           | ✅             |
+| ♋ Cellular eSIM       |                                                                                                                           | ✅             |
+| ♋ Cellular Texts      |                                                                                                                           | ✅             |
+| ♋ Cellular VoLTE      |                                                                                                                           | ✅             |
+| ♋ WiFi                |                                                                                                                           | ✅             |
+| 🎆 GPU                 |                                                                                                                           | ✅             |
 | 🏷️ NFC                 | Requires Secure NFC Applet Interface                                                                                      | ❌             |
 | 📌 GPS                 | Requires Modem Processor Subsystem                                                                                        | ❌             |
-| 📲 Right Display Panel | Requires GPU                                                                                                              | ❌             |
-| 📳 Vibration motor     | Requires PMIC Driver for Haptics                                                                                          | ❌             |
-| 📸 Camera Flash        | Requires Camera Subsystem                                                                                                 | ❌             |
+| 📲 Right Display Panel |                                                                                                                           | ✅             |
+| 📳 Vibration motor     |                                                                                                                           | ✅             |
+| 📸 Camera Flash        |                                                                                                                           | ✅             |
 | 📸 Camera Sensors      | Requires Camera Subsystem                                                                                                 | ❌             |
 | 📸 ToF Sensor          | Requires Camera Subsystem                                                                                                 | ❌             |
-| 📺 HDMI / DP out       | Requires GPU                                                                                                              | ❌             |
-| 📽️ Miracast            | Requires GPU and requires WiFi                                                                                            | ❌             |
+| 📺 HDMI / DP out       |                                                                                                                           | ✅             |
+| 📽️ Miracast            |                                                                                                                           | ✅             |
 | 🔊 Audio               | Requires Board Database file and Speaker Ic driver                                                                        | ❌             |
-| 🔵 Bluetooth           | Requires Clock Controller fixes                                                                                           | ❌             |
+| 🔵 Bluetooth           |                                                                                                                           | ✅             |
 | 🧬 Fingerprint scanner | Requires Secure FPC Applet Interface                                                                                      | ❌             |
 
 ## Surface Accessory Compatibility
