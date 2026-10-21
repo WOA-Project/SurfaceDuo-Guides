@@ -20,6 +20,7 @@ Guides for running Windows on Surface Duo.
 - [Install Windows](/InstallWindows.md)
 - [Install Windows 10X (Surface Duo (1st Gen) Only)](/Install/10X/SurfaceDuo1.md)
 - [Install Windows 8828080 (also Known as Andromeda OS) (Surface Duo (1st Gen) Only)](/Install/AOS/SurfaceDuo1.md)
+- [Install Windows 8828080 (also Known as Andromeda OS) (Surface Duo 2 Only)](/Install/AOS/SurfaceDuo2.md)
 
 ## Additional Guides:
 
