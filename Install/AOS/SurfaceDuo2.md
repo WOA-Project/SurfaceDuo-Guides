@@ -50,7 +50,7 @@ Here's how to acquire an FFU file with Windows 8828080 and the matching UEFI ima
 
 UEFI files:
 - [Fast Boot](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2611.XX/Surface.Duo.2.UEFI-v2611.XX.Fast.Boot.zip)
-- [Dual Boot for FW 2022.902.48 (Latest OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2611.XX/Surface.Duo.2.UEFI-v2611.XX.Dual.Boot.zip)
+- [Dual Boot for FW 2023.501.541 (Latest OTA for Surface Duo 2 devices)](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2611.XX/Surface.Duo.2.UEFI-v2611.XX.Dual.Boot.zip)
 - [FD for making your own Dual Boot Image](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/download/2611.XX/Surface.Duo.2.UEFI-v2611.XX.FD.for.making.your.own.Dual.Boot.Image.zip)
 
 [Windows 8828080 FFU File](https://fullflash.pvabel.net/DuoWOA/andromeda2/)
