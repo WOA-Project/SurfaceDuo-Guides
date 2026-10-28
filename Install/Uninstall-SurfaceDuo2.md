@@ -16,15 +16,9 @@ Contact us instead for help!
 
 ## Files/Tools Needed
 
-- TWRP image:
-
-| File Name                                       | Target Device         |
-|-------------------------------------------------|-----------------------|
-| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
-
-- Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/parted)
-- [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
-- A PC.
+- A Surface Duo 2
+- [An Uninstall FFU file for your Surface Duo 2](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/OEMZE_Uninstall.ffu)
+- A Windows PC to flash the device
 
 ## Disclaimers
 
@@ -41,289 +35,86 @@ If you caused modifications to Android™ system partitions and are not knowingl
 
 # Steps
 
-## Acquiring all files
-
-<details>
-    <summary>Here's how to acquire the Android SDK Platform Tools: <b>Click to expand</b></summary>
-    <p>
-
-
-First, start by going to the [Android Platform SDK download page](https://developer.android.com/studio/releases/platform-tools) on your computer.
-
-![SDK-1-Top](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4c1c3762-24d8-4150-ac69-670738eb62c1)
-
-Once on the page, scroll a little bit down til you see the link to download the platform tools for Windows.
-
-![SDK-2-Mid](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/cd14a232-4995-480f-a061-54507e83cf41)
-
-Click on it, an EULA will open like below:
-
-![SDK-3-EULA](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/16d6b7df-ab56-414c-b1a5-561ec6b3ae4e)
-
-Scroll all the way down (after reading it if that's your thing)
-
-![SDK-4-EULA-Bottom](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1368b2b0-74b8-4a7c-9aff-df2ca25c2f42)
-
-Tick "I have read and agree to above terms conditions"
-
-![SDK-5-EULA-TICK (alt)](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02905fa2-64b8-426b-b42f-c1bb88eaa88a)
-
-And click download
-
-![SDK-5-EULA-TICK](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0983f27a-76e7-4fda-ac4d-adaa56702e90)
-
-Save the file on your computer, and extract the zip file by opening it, and selecting extract all.
-
-![SDK-6-DL](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/adc1bba0-6118-418e-9005-e2db12860893)
-
-  </p>
-</details>
-
 ## Make sure you have not done any dual boot guide!
 
 If you have followed a guide to use dual boot, please first remove dual boot by following the uninstall section in the dual boot guide, this is important: [DualBoot](/Install/DualBoot.md)
 
-## Going to the Bootloader menu
+## Acquiring all files
 
-- Start by turning on your Surface Duo into Android™, and unlock it
+Acquire the Uninstall FFU file for Surface Duo 2:
 
-- Open a command prompt on your PC
+[Uninstall FFU](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/OEMEP_Uninstall.ffu)
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ab36aa10-6617-4680-ac06-bb58b7a0c3bb)
+## Install WOA Device Manager
 
-- Go to the folder where you extracted the Google Android™ Platform tools using the CD command and the path of the folder, like so:
+| Steps | Illustration |
+|-|-|
+| Visit WOA Device Manager in the Microsoft Store | <a href="https://apps.microsoft.com/detail/WOA%20Device%20Manager/9pf2xmfnsbmj?mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/></a> |
+| Tap the View in Store button | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/1be9c5fa-5434-4167-b23c-1899e0192134"> |
+| Tap Install | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/4ffe3b30-e8a7-44a4-a7a2-57e1f105a9ab"> |
+| Wait til the installation is completed | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6c7ef3dd-13b3-4371-bae4-f6629a61cc71"> |
+| And click open | <img align="right" width="425" alt="image"  src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/26e48e1b-96b8-4c87-a2a5-4d1e0049f7e9"> |
+| WOA Device Manager should now open on your screen. | <img align="right" width="425" alt="Screenshot 2024-06-22 183133" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ba7b4289-1c23-4138-9428-1d9e8c90af10"> |
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24760f21-dc1b-48e6-9ae3-0aeb16f8953c)
+Congratulations, you successfully installed WOA Device Manager.
 
-- Run the following command to ensure your phone is detected by your PC
-
-```batch
-adb devices
-```
+## Getting to FFU Loader
 
 > [!TIP]
 > If you see no device listed, check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you're good to go, you should see the following image below this notice.
 > It is possible certain computers see no update offered (like Windows ARM64 Computers or other older machines with no functional Windows Update). If this is your case, we also provide Drivers for you to download
 > at the following location, you will have to install them using Device Manager on your PC. [Download USB Drivers](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/USB-Drivers.zip)
 
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b3a8b091-1b34-47e4-bd6e-c286ee808f14)
-
-- Run the following command now
-
-```batch
-adb reboot bootloader
-```
-
-You will be rebooted to Surface Duo's bootloader.
-
-![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
-_Image of what you should see right now: Surface Duo in Bootloader mode_
-
-## Booting to TWRP
-
-- Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
-
-```batch
-fastboot boot
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
-
-- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy as path"
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
-
-- Then go back to the Command Prompt window we started writing text in previously, and simply, right click on it with your mouse (or long press if you're on a touch device), you should now see this:
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e97d514b-a314-4faf-9622-75bdab066985)
-
-- Now you can press enter
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
-
-You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
-
-## Restoring the original partitions
-
-- Once booted into TWRP, start by running the following command to make sure everything we do is accepted by the device:
-
-```batch
-adb shell "setenforce 0"
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/80cd7c2f-e6e0-4078-9445-3fe245c5d0ca)
-
-- Now, let's copy parted onto the device, first, start by typing the following text, but do not press enter just yet
-
-```batch
-adb push
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/e318851b-aac0-460b-be26-d5d40f4dfb67)
-
-- Go find the parted file you downloaded earlier, right click it, click "Copy as path"
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/947f8fc2-4d55-4fad-8507-615e8257b537)
-
-- Then go back to the Command Prompt window we started writing text in previously, and simply, right click on it with your mouse (or long press if you're on a touch device), you should now see this:
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/d422e848-fbcc-4871-85b2-db64b3347cf3)
-
-- And now, continue to write the rest of the command, like so:
-
-```batch
- /sdcard/
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/75736db7-475f-4c3d-94af-d7d3ac5e3b5a)
-
-- Now you can press enter
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fe732f9b-d5fd-4049-863b-047a94013e31)
-
-- Now let's install parted correctly onto the TWRP image, by running the following command
-
-```batch
-adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/787b7ae3-8fdf-43cd-9d06-341c5615f930)
-
-- Now, let's open a shell onto the device, by running the following command
-
-```batch
-adb shell
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/972acc7b-6d28-40eb-883e-81c70cf9ad43)
-
-- Let's now run parted:
-
-```bash
-parted /dev/block/sda
-```
-
-![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/94775441-8ffc-4fd5-bcdb-872704268078)
-
-- And let's execute parted's print command:
-
-```bash
-print
-```
-
-![image](TODO)
-
-You'll get a list of partitions.
-
-> [!CAUTION]
-> Make sure that partitions 8, 9 and the last one are your esp, win and userdata partitions.
-> If they aren't, you will end up damaging your device (potentially in a permanent manner), please contact us on telegram for assistance in such case.
-> It is possible for you to see more partitions than esp, win, and userdata. Typically, some devices may have partitions for the Windows Recovery Environment after the win partition and then userdata.
-> The following guidelines cover even above scenario, and can be followed safely, on both devices with just esp, win, and userdata, and the other devices, with esp, win, some recovery partitions, and userdata.
-> What remains important is that these partitions start at index 8, and you see no other partition than the aforementioned esp, win, recovery environement or userdata partitions. If you do, please reach out to us on telegram for assistance.
-
-> [!WARNING]
-> The next command will wipe all your windows and Android™ data. Before continuing, if you have important documents, please make sure that you have backed everything up on both Android™ and Windows.
-
-- First, in above print command, locate every partition that exist after the "misc" partition, as we can see, for us, they are esp, win, and userdata, you may have the same ones, but you may also see, esp, win, "other partitions", and userdata. These other partitions can be the windows recovery environement, but please make sure they aren't anything else. You should not be seeing partitions named "ssd", "persist", "metadata", "frp", or "misc" starting from index 8 all the way to the end. If you do, please reach out and do not continue with this guide.
-
-Here's an example of what we're keeping an eye on here for our example (remember, for you it may be different but likely not) highlited inside a red rectangle:
-
-![Image Of win/esp/userdata](TODO)
-
-All partitions from index 8, to the end here, must be removed, so let's proceed with removing each, in our case, we want to remove the esp partition (number 8), the win partition (number 9), and the userdata partition (number 10).
-
-- Let's start from number 8 (esp)
-
-```bash
-rm 8
-```
-
-![image](TODO)
-
-- Then number 9 (win)
-
-```bash
-rm 9
-```
-
-![image](TODO)
-
-- And lastly, for us, the last index, number 10 (userdata)
-
-```bash
-rm 10
-```
-
-![image](TODO)
-
-- Now that we have removed all partitions from index 8 to the last one, let's recreate user data.
-
-- If you have a 128GB Surface Duo model, run the following command:
-
-```bash
-mkpart userdata ext4 401MB 110GB
-```
-
-- If you have a 256GB Surface Duo model, run the following command:
-
-```bash
-TODO: Please file an issue to help us!
-```
-
-- If you have a 512GB Surface Duo model, run the following command:
-
-```bash
-TODO: Please file an issue to help us!
-```
-
-In our case we have a 128GB Surface Duo model, so we're running the first command, like so:
-
-![Image Of userdata creation](TODO)
-
-As you can see, parted notifies us the partition may not be aligned for best performance, if you get such warning as well, simply enter i like so:
-
-![image](TODO)
-
-- Let's now run the print command:
-
-![image](TODO)
-
-Please confirm that you see the exact same thing as we do above, except the total storage capacity. If you do not, your device may permanently be damaged if you reboot or turn it off now. Please reach out as soon as you can to prevent rendering your device a paper weight to telegram for assistance, and remain calm and patient.
-
-- Let's now leave parted after confirming we did well previously:
-
-```bash
-quit
-```
-
-This will get you out of parted and back to the device shell.
-
-![Image Of device shell after parted quit](TODO)
-
-- Now let's make the userdata partition actually usable:
-
-```bash
-mke2fs -t ext4 /dev/block/sda8
-```
-
-![image](TODO)
-
-- As you can see, mke2fs notifies us, the previous partitions (esp) is here, simply confirm by answering "y" like so:
-
- ![image](TODO)
-
-- And leave the device shell
-
-```bash
-exit
-```
-
-![image](TODO)
-
-- Once it is done, you can reboot your phone using ```adb reboot```. You will be able to boot to Android™ and your phone should work normally. In case it doesn't you likely messed up something above.
-
-![image](TODO)
+| Steps | Illustration |
+|-|-|
+| Plug your device into your computer inside Android™ | <img align="right" width="425" alt="Screenshot 2024-06-22 183159" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/001215d0-4bbb-4ba1-839c-552890fbc1b7"> |
+| Go into the Manual Mode Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183227" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/95732dc8-10c5-472f-b6ca-89c9ba8f0563"> |
+| Click "Switch to Windows-mode" | <img align="right" width="425" alt="Screenshot 2024-06-22 183235" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/805dc2cc-0db2-472a-9f6d-7597b4336e77"> |
+| When the device shows the //\ logo (Project Andromeda logo) on its screen, Press the Volume Up Key on the side of your device til you see something like shown below on screen: | <img align="right" width="425" alt="Surface Duo in FFU Loader mode" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/f35ba53d-70c6-41de-9cca-ad31368a35fb"> |
+| WOA Device Manager will detect your device in UFP mode | <img align="right" width="425" alt="Screenshot 2024-06-22 183302" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/90c5d4a3-4b37-4486-8920-8b0e14e0b461"> |
+
+> [!TIP]
+> In case the PC complains the device was not found, try using an USB-2 port or cable that downgrades your connection to USB-2, there are known issues with the UEFI that prevent USB-3 from functioning properly at the moment, and will be addressed in a future update.
+
+Congratulations, you're now in FFU Loader.
+
+## Flashing the Uninstall FFU Image
+
+| Steps | Illustration |
+|-|-|
+| Go to the Flash Section of WOA Device Manager | <img align="right" width="425" alt="Screenshot 2024-06-22 183326" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/6773ecbb-0de3-4cd4-9aa3-76ac02d7a273"> |
+| Pick your FFU File, and click "Flash FFU Image" | <img align="right" width="425" alt="Screenshot 2024-06-22 183344" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b6fd0499-0c34-410c-9e2d-25b331b7a2be"> |
+| You should now see the device flashing on both your computer | <img align="right" width="425" alt="Screenshot 2024-06-22 183429" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/171d458f-5c89-4af8-86fd-06bfb59d4dd0"> |
+| and on the device, wait til the process is complete. | <img align="right" width="425" alt="Surface Duo in FFU Loader mode, flashing" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/a0d8af6c-5b30-4afd-85d3-58249accde12"> |
+| Wait til the process is finished, and you should be back into Android™ or a boot failure screen. | |
+
+> [!TIP]
+> If you are seeing a boot failure screen with as title "Android Recovery" and as description "Cannot load Android system.", see below section entitled "Factory Data Reset Android™"
+
+<details>
+  <summary>Factory Data Reset Android™ (Click to expand)</summary>
+  <p>
+
+If this is your first time flashing this FFU file, or you're flashing a different storage or layout configuration image, you will lose all of your Android™ data. Further more, you will also not have Android™ boot successfully.
+If this isn't your case, feel free to ignore this section, Android™ should still boot fine.
+If this is your case, when booting Android™, you will get notified Android™ cannot boot anymore. In this screen, you must select "Factory data reset" instead of "Try again" or else, Android™ will refuse to boot again.
+
+You can skip ahead the below's Factory Data Reset Android™ section alltogether and jump straight to relocking the next one.
+
+  </p>
+</details>
+
+## Resetting Android to restore all usable storage space
+
+| Steps | Illustration |
+|-|-|
+| Assuming your Surface Duo is booted to Android™, plugged to your PC, Using the Microsoft Launcher, find the settings app | <img align="right" width="425" alt="A1 Android™ - Open Settings" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/36ef925c-fe98-4ec6-9861-c1037d8ced19"> |
+| Open the Android™ Settings app | <img align="right" width="425" alt="A2 Android™ - Settings Opened" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6"> |
+| Scroll down to the System section, and open it | |
+| Open the Reset options section | |
+| Tap on "Erase all data (factory reset) | |
+| Confirm by tapping on the bottom right "Erase all data" button. You do not have to erase downloaded SIMs (eSIMs) if asked. | |
+| Android should now factory reset | |
 
 - You should now be seeing the Android™ Out of Box Experience (OOBE). Setup your phone to confirm it works correctly if you need it.
 
