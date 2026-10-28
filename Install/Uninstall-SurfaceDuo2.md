@@ -99,12 +99,12 @@ If this is your first time flashing this FFU file, or you're flashing a differen
 If this isn't your case, feel free to ignore this section, Android™ should still boot fine.
 If this is your case, when booting Android™, you will get notified Android™ cannot boot anymore. In this screen, you must select "Factory data reset" instead of "Try again" or else, Android™ will refuse to boot again.
 
-You can skip ahead the below's Factory Data Reset Android™ section alltogether and jump straight to relocking the next one.
+You can skip ahead the below's "Resetting Android™ to restore all usable storage space" section alltogether and jump straight to the next one.
 
   </p>
 </details>
 
-## Resetting Android to restore all usable storage space
+## Resetting Android™ to restore all usable storage space
 
 | Steps | Illustration |
 |-|-|
