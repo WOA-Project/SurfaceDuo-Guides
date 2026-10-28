@@ -112,7 +112,7 @@ You can skip ahead the below's "Resetting Android™ to restore all usable stora
 | Open the Android™ Settings app | <img align="right" width="425" alt="A2 Android™ - Settings Opened" src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/02b78630-d2b2-4211-abe1-c89255fe9bc6"> |
 | Scroll down to the System section, and open it | |
 | Open the Reset options section | |
-| Tap on "Erase all data (factory reset) | |
+| Tap on "Erase all data (factory reset)" | |
 | Confirm by tapping on the bottom right "Erase all data" button. You do not have to erase downloaded SIMs (eSIMs) if asked. | |
 | Android should now factory reset | |
 
