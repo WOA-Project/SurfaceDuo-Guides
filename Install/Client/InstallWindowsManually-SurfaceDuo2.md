@@ -39,11 +39,11 @@ Windows Drivers:
 |----------------------------------------------|---------------|
 | SurfaceDuo-Drivers-v2XXX.XX-Desktop-Zeta.zip | Surface Duo 2 |
 
-- TWRP image:
+- Headless recovery image:
 
 | File Name                                       | Target Device         |
 |-------------------------------------------------|-----------------------|
-| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
+| [surfaceduo2-headless.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-headless.img) | Surface Duo 2         |
 
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/parted)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/msc.tar)
@@ -155,9 +155,9 @@ If not already done, please proceed with the [Partitioning](/Install/Client/Part
 
 ```batch
 adb shell "setenforce 0"
-adb push <path to downloaded msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
-adb shell "sh /sdcard/msc.sh"
+adb push <path to downloaded msc.tar> /tmp/
+adb shell "tar -xf /tmp/msc.tar -C /tmp --no-same-owner"
+adb shell "sh /tmp/msc.sh"
 ```
 
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.

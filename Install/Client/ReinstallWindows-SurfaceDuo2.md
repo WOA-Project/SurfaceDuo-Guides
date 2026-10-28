@@ -16,11 +16,11 @@ Windows Drivers:
 |----------------------------------------------|---------------|
 | SurfaceDuo-Drivers-v2XXX.XX-Desktop-Zeta.zip | Surface Duo 2 |
 
-- TWRP image:
+- Headless recovery image:
 
 | File Name                                       | Target Device         |
 |-------------------------------------------------|-----------------------|
-| [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-twrp.img) | Surface Duo 2         |
+| [surfaceduo2-headless.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo2-headless.img) | Surface Duo 2         |
 
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/msc.tar)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -98,9 +98,9 @@ adb reboot bootloader
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-Now let's boot TWRP:
+Now let's boot the recovery image:
 
-### Booting to TWRP
+### Booting the Recovery Image
 
 - Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
 
@@ -110,7 +110,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy as path"
+- Go find the surfaceduo2-headless.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 
@@ -122,17 +122,17 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
 
-You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
+The phone will show a static host-connection message; continue using the PC.
 
-Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal.
+The recovery environment runs without its touchscreen UI.
 
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
 ```batch
 adb shell "setenforce 0"
-adb push <path to downloaded msc.tar> /sdcard/
-adb shell "tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"
-adb shell "sh /sdcard/msc.sh"
+adb push <path to downloaded msc.tar> /tmp/
+adb shell "tar -xf /tmp/msc.tar -C /tmp --no-same-owner"
+adb shell "sh /tmp/msc.sh"
 ```
 
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.

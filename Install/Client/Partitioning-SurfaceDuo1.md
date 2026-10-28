@@ -2,11 +2,11 @@
 
 ## Files/Tools Needed
 
-- TWRP image:
+- Headless recovery image:
 
 | File Name                                       | Target Device         |
 |-------------------------------------------------|-----------------------|
-| [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-twrp.img) | Surface Duo (1st Gen) |
+| [surfaceduo1-headless.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/surfaceduo1-headless.img) | Surface Duo (1st Gen) |
 
 - Parted: [parted](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/Files/parted)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
@@ -109,7 +109,7 @@ You will be rebooted to Surface Duo's bootloader.
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-## Booting to TWRP
+## Booting the Recovery Image
 
 - Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
 
@@ -119,7 +119,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
+- Go find the surfaceduo1-headless.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 
@@ -131,9 +131,9 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
 
-You will now boot to TWRP. Touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and continue along.
+The phone will show a static host-connection message while the recovery environment runs in the background. Keep the phone plugged to your PC and continue along.
 
-## Preparing TWRP
+## Preparing the Recovery Environment
 
 - Once booted into TWRP, start by running the following command to make sure everything we do is accepted by the device:
 
@@ -162,7 +162,7 @@ adb push
 - And now, continue to write the rest of the command, like so:
 
 ```batch
- /sdcard/
+ /tmp/
 ```
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/75736db7-475f-4c3d-94af-d7d3ac5e3b5a)
@@ -171,10 +171,10 @@ adb push
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/fe732f9b-d5fd-4049-863b-047a94013e31)
 
-- Now let's install parted correctly onto the TWRP image, by running the following command
+- Now let's install parted into the recovery environment, by running the following command
 
 ```batch
-adb shell "mv /sdcard/parted /sbin/parted && chmod 755 /sbin/parted"
+adb shell "mv /tmp/parted /sbin/parted && chmod 755 /sbin/parted"
 ```
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/787b7ae3-8fdf-43cd-9d06-341c5615f930)
