@@ -30,23 +30,23 @@ _No ETA will be provided for **any** of these development phases_
 | 💻 Lid Hall sensor     |                                                                                                                           | ✅             |
 | 📦 UFS                 |                                                                                                                           | ✅             |
 | 📲 Left Display Panel  |                                                                                                                           | ✅             |
-| 🔋 Battery 1           |                                                                                                                           | ✅             |
-| 🔋 Battery 2           |                                                                                                                           | ✅             |
-| 🔌 Charger             |                                                                                                                           | ✅             |
-| 🪵 USB C               |                                                                                                                           | ✅             |
+| 📲 Right Display Panel |                                                                                                                           | ✅             |
 | ✏️ Left Pen Digitizer  |                                                                                                                           | ✅             |
 | ✏️ Right Pen Digitizer |                                                                                                                           | ✅             |
 | 👆 Left Multi Touch    |                                                                                                                           | ✅             |
 | 👆 Right Multi Touch   |                                                                                                                           | ✅             |
-| ♋ WiFi                |                                                                                                                           | ✅             |
-| 📲 Right Display Panel |                                                                                                                           | ✅             |
+| 🔋 Battery 1           |                                                                                                                           | ✅             |
+| 🔋 Battery 2           |                                                                                                                           | ✅             |
+| 🔌 Charger             |                                                                                                                           | ✅             |
+| 🪵 USB C               |                                                                                                                           | ✅             |
 | 🔵 Bluetooth           |                                                                                                                           | ✅             |
-| 🧮 SoC Cores           | Prime core frequency isn't scaled up                                                                                      | ⚠️             |
+| ♋ WiFi                |                                                                                                                           | ✅             |
 | ♋ Cellular Calls      | Requires Modem Processor Subsystem                                                                                        | ⚠️             |
 | ♋ Cellular Data       | Requires Modem Processor Subsystem                                                                                        | ⚠️             |
 | ♋ Cellular eSIM       | Requires Modem Processor Subsystem                                                                                        | ⚠️             |
 | ♋ Cellular Texts      | Requires Modem Processor Subsystem                                                                                        | ⚠️             |
 | ♋ Cellular VoLTE      | Requires Modem Processor Subsystem                                                                                        | ⚠️             |
+| 🧮 SoC Cores           | Prime core frequency isn't scaled up                                                                                      | ⚠️             |
 | 🧭 Sensors             | Not all sensors are available                                                                                             | ❌ (Errata with latest update) |
 | 🎆 GPU                 | Requires Clock Controller fixes                                                                                           | ❌             |
 | 🏷️ NFC                 | Requires Secure NFC Applet Interface                                                                                      | ❌             |
