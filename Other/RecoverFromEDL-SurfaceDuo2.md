@@ -11,6 +11,32 @@ Typical symptoms include:
 
 This guide restores a functional Surface Duo 2 bootloader using an EDL recovery package and then returns the device to Microsoft's official Android recovery process.
 
+EDL (Emergency Download Mode) is a Qualcomm recovery mode used when the device cannot boot Android™, Recovery, or the Bootloader normally.
+
+When a Surface Duo 2 enters EDL mode, both displays usually remain completely black, giving the impression that the device is dead. Fortunately, in most cases, the device can still be recovered.
+
+## Table of Contents
+
+- [Files/Tools Needed](#filestools-needed)
+- [Disclaimers](#disclaimers)
+- [Steps](#steps)
+  - [Acquiring all files](#acquiring-all-files)
+  - [Entering EDL Mode](#entering-edl-mode)
+  - [Installing Qualcomm Drivers](#installing-qualcomm-drivers)
+  - [Flashing the Bootloader](#flashing-the-bootloader)
+  - [Confirming Success](#confirming-success)
+  - [Returning To Recovery](#returning-to-recovery)
+  - [Why A Recovery Image Is Still Required](#why-a-recovery-image-is-still-required)
+  - [Downloading an Official Recovery Image](#downloading-an-official-recovery-image)
+  - [Entering Recovery Mode Manually](#entering-recovery-mode-manually)
+  - [Installing the Recovery Image](#installing-the-recovery-image)
+  - [Recovery Complete](#recovery-complete)
+- [Troubleshooting](#troubleshooting)
+  - [Device Remains Black After Running edl_flash_bl.cmd](#device-remains-black-after-running-edl_flash_blcmd)
+  - [Fastboot Cannot Detect The Device](#fastboot-cannot-detect-the-device)
+  - [Device Keeps Returning To Bootloader](#device-keeps-returning-to-bootloader)
+  - [Device Still Does Not Boot](#device-still-does-not-boot)
+
 ## Files/Tools Needed
 
 | File Name | Target Device |
@@ -93,24 +119,19 @@ Typical signs of EDL mode include:
 - No bootloader menu appears
 - Device appears as a Qualcomm device when connected via USB
 
-To manually force a Surface Duo 2 into EDL mode:
+To force a Surface Duo 2 into EDL mode:
 
-1. Disconnect USB.
+1. Disconnect all USB cables.
 2. Press and hold:
 
 ```text
 Power + Volume Down
 ```
 
-3. Continue holding both buttons for approximately:
+3. Continue holding both buttons for approximately 18 seconds.
+4. Connect the USB cable to the PC.
 
-```text
-18 seconds
-```
-
-4. Connect USB to your PC.
-
-The displays will remain black.
+The displays will remain completely black.
 
 This is expected.
 
@@ -142,6 +163,12 @@ Allow installation to complete.
 Once complete, the device should show up as a Qualcomm device rather than an unknown device.
 
 ## Flashing the Bootloader
+
+> [!WARNING]
+>
+> Do not disconnect the USB cable while the EDL recovery package is flashing.
+>
+> Interrupting the flashing process may leave the device in an unrecoverable state.
 
 Extract:
 
@@ -202,10 +229,23 @@ fastboot set_active other
 fastboot reboot recovery
 ```
 
+> [!NOTE]
+> The recovery package intentionally lands in a bootloader-only state.
+>
+> Running `set_active other` twice ensures the secondary slot becomes active and allows Android Recovery to boot correctly.
+
 The device should reboot into Android Recovery.
 
 ![Surface Duo in Locked Recovery mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/0198103d-d44d-40d5-af45-8e60744dfb96)
 _Image of what you should see right now: Surface Duo in Locked Recovery mode_
+
+## Why A Recovery Image Is Still Required
+
+The EDL package only restores enough bootloader functionality to recover the device.
+
+It does **not** restore Android™ itself.
+
+To return the phone to a fully working state, Microsoft's official Surface Recovery Image must still be installed after the bootloader has been recovered.
 
 ## Downloading an Official Recovery Image
 
@@ -302,6 +342,18 @@ Reboot system now
 3. Press the Power button.
 
 The device should now boot normally into Android™.
+
+## Recovery Complete
+
+If everything completed successfully:
+
+- The device is no longer stuck in EDL mode
+- Android™ boots normally
+- Recovery Mode works again
+- Fastboot works again
+- The device can receive future OTA updates normally
+
+Congratulations, your Surface Duo 2 has been recovered successfully.
 
 ## Troubleshooting
 
